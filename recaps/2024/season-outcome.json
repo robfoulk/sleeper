@@ -1,0 +1,99 @@
+{
+  "Champion": {
+    "FinalPlace": 1,
+    "DraftPick": 8,
+    "UserId": "1121459919724728320",
+    "OwnerRealName": "Jake",
+    "TeamName": "CeeDeez Nuts",
+    "RegularSeasonWins": 12,
+    "RegularSeasonLosses": 5,
+    "RegularSeasonTies": 0,
+    "RegularSeasonPointsFor": 3206.08,
+    "Path": "Won championship"
+  },
+  "RunnerUp": {
+    "FinalPlace": 2,
+    "DraftPick": 7,
+    "UserId": "1122570164190466048",
+    "OwnerRealName": "Eric",
+    "TeamName": "Chase Brown Tanks",
+    "RegularSeasonWins": 11,
+    "RegularSeasonLosses": 6,
+    "RegularSeasonTies": 0,
+    "RegularSeasonPointsFor": 3040.36,
+    "Path": "Lost in championship"
+  },
+  "ThirdPlace": {
+    "FinalPlace": 3,
+    "DraftPick": 6,
+    "UserId": "1112856951387414528",
+    "OwnerRealName": "Rob",
+    "TeamName": "Also too old to run",
+    "RegularSeasonWins": 13,
+    "RegularSeasonLosses": 4,
+    "RegularSeasonTies": 0,
+    "RegularSeasonPointsFor": 3208.36,
+    "Path": "Won 3rd-place game"
+  },
+  "FourthPlace": {
+    "FinalPlace": 4,
+    "DraftPick": 5,
+    "UserId": "1121310424491864064",
+    "OwnerRealName": "Devin",
+    "TeamName": "GibbMeDaRock",
+    "RegularSeasonWins": 10,
+    "RegularSeasonLosses": 7,
+    "RegularSeasonTies": 0,
+    "RegularSeasonPointsFor": 3129.74,
+    "Path": "Lost 3rd-place game"
+  },
+  "ConsolationFifth": {
+    "FinalPlace": 5,
+    "DraftPick": 1,
+    "UserId": "1125536159003799552",
+    "OwnerRealName": "Dakota",
+    "TeamName": "BearDown",
+    "RegularSeasonWins": 12,
+    "RegularSeasonLosses": 5,
+    "RegularSeasonTies": 0,
+    "RegularSeasonPointsFor": 3022.36,
+    "Path": "Won consolation final (1.01)"
+  },
+  "ConsolationSixth": {
+    "FinalPlace": 6,
+    "DraftPick": 2,
+    "UserId": "1122536845449072640",
+    "OwnerRealName": "Dave",
+    "TeamName": "Hauwk Tua",
+    "RegularSeasonWins": 4,
+    "RegularSeasonLosses": 13,
+    "RegularSeasonTies": 0,
+    "RegularSeasonPointsFor": 2705.68,
+    "Path": "Lost consolation final"
+  },
+  "ConsolationSeventh": {
+    "FinalPlace": 7,
+    "DraftPick": 3,
+    "UserId": "1123415443601010688",
+    "OwnerRealName": "Brian",
+    "TeamName": "Steel City",
+    "RegularSeasonWins": 5,
+    "RegularSeasonLosses": 12,
+    "RegularSeasonTies": 0,
+    "RegularSeasonPointsFor": 2771.66,
+    "Path": "Won 7th-place game"
+  },
+  "ConsolationLast": {
+    "FinalPlace": 8,
+    "DraftPick": 4,
+    "UserId": "1121310753874604032",
+    "OwnerRealName": "Michael",
+    "TeamName": "Code 3",
+    "RegularSeasonWins": 1,
+    "RegularSeasonLosses": 16,
+    "RegularSeasonTies": 0,
+    "RegularSeasonPointsFor": 2539.14,
+    "Path": "Lost 7th-place game (finishes last; forfeits a keeper)"
+  },
+  "LastPlaceKeeperPenalty": "Forfeits one keeper next year (3 of 4)."
+}

@@ -1,0 +1,109 @@
+{
+  "Season": 2024,
+  "LeagueId": "1112858215559057408",
+  "GeneratedAt": "2026-04-27T01:38:07.6171662+00:00",
+  "Awards": [
+    {
+      "Name": "Single-Week Showstopper",
+      "Description": "Most points scored by any team in a single week of the season.",
+      "UserId": "1121310424491864064",
+      "OwnerRealName": "Devin",
+      "TeamName": "GibbMeDaRock",
+      "Metric": "single-week points for",
+      "Value": 249.76,
+      "Week": 7,
+      "Citation": "Scored 249.76 in week 7."
+    },
+    {
+      "Name": "The Cold Front",
+      "Description": "Fewest points scored by any team in a single non-zero week.",
+      "UserId": "1121310753874604032",
+      "OwnerRealName": "Michael",
+      "TeamName": "Code 3",
+      "Metric": "single-week points for",
+      "Value": 107.74,
+      "Week": 4,
+      "Citation": "Scored 107.74 in week 4."
+    },
+    {
+      "Name": "Biggest Blowout",
+      "Description": "Largest single-game margin of victory.",
+      "UserId": "1121310424491864064",
+      "TeamName": "GibbMeDaRock",
+      "Metric": "margin of victory",
+      "Value": 100.20,
+      "Week": 7,
+      "Citation": "GibbMeDaRock 249.76 def. Hauwk Tua 149.56 (week 7)."
+    },
+    {
+      "Name": "Razor\u0027s Edge",
+      "Description": "Narrowest single-game margin of victory.",
+      "UserId": "1121310424491864064",
+      "TeamName": "GibbMeDaRock",
+      "Metric": "margin of victory",
+      "Value": 0.08,
+      "Week": 10,
+      "Citation": "GibbMeDaRock 152.44 def. Code 3 152.36 (week 10)."
+    },
+    {
+      "Name": "Upset of the Year",
+      "Description": "Biggest victory by a team whose power-rank entering the week was worse than its opponent\u0027s.",
+      "UserId": "1122536845449072640",
+      "TeamName": "Hauwk Tua",
+      "Metric": "margin of victory (lower-power-ranked team)",
+      "Value": 72.84,
+      "Week": 4,
+      "Citation": "Hauwk Tua (power #8) over Code 3 (power #7) by 72.84 (week 4)."
+    },
+    {
+      "Name": "Points Crown",
+      "Description": "Most regular-season points scored.",
+      "UserId": "1112856951387414528",
+      "OwnerRealName": "Rob",
+      "TeamName": "Also too old to run",
+      "Metric": "regular-season points for",
+      "Value": 2856.20,
+      "Citation": "Scored 2856.20 across the regular season."
+    },
+    {
+      "Name": "Iron Team",
+      "Description": "Longest regular-season winning streak.",
+      "UserId": "1112856951387414528",
+      "OwnerRealName": "Rob",
+      "TeamName": "Also too old to run",
+      "Metric": "consecutive regular-season wins",
+      "Value": 6,
+      "Citation": "Won 6 regular-season games in a row."
+    },
+    {
+      "Name": "The Cooler",
+      "Description": "Longest regular-season losing streak.",
+      "UserId": "1121310753874604032",
+      "OwnerRealName": "Michael",
+      "TeamName": "Code 3",
+      "Metric": "consecutive regular-season losses",
+      "Value": 12,
+      "Citation": "Lost 12 regular-season games in a row."
+    },
+    {
+      "Name": "Comeback Team",
+      "Description": "Biggest power-rank improvement from week 1 to week 15.",
+      "UserId": "1121310424491864064",
+      "OwnerRealName": "Devin",
+      "TeamName": "GibbMeDaRock",
+      "Metric": "power-rank delta (W1 \u2192 final regular-season week, lower is better)",
+      "Value": 6,
+      "Citation": "Climbed 6 power-rank spots between week 1 and week 15."
+    },
+    {
+      "Name": "Heartbreak of the Year",
+      "Description": "Most regular-season losses by 5 points or fewer.",
+      "UserId": "1121310753874604032",
+      "OwnerRealName": "Michael",
+      "TeamName": "Code 3",
+      "Metric": "close losses (margin \u2264 5)",
+      "Value": 2,
+      "Citation": "Suffered 2 regular-season losses by 5 points or fewer."
+    }
+  ]
+}

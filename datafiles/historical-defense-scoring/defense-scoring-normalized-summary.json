@@ -1,0 +1,174 @@
+{
+  "source": "C:\\class\\sleeper\\sample def scoring.txt",
+  "csv": "C:\\class\\sleeper\\datafiles\\historical-defense-scoring\\defense-scoring-normalized.csv",
+  "xlsx": "C:\\class\\sleeper\\datafiles\\historical-defense-scoring\\defense-scoring-normalized.xlsx",
+  "records": 64,
+  "by_season": {
+    "2024": 32,
+    "2025": 32
+  },
+  "columns": [
+    "season",
+    "team_abbr",
+    "team",
+    "team_display_source",
+    "bye_week",
+    "final_result",
+    "points_for",
+    "points_against",
+    "venue",
+    "opponent",
+    "owner_username",
+    "pts",
+    "rost_pct",
+    "def_td",
+    "kr_td",
+    "st_td",
+    "ff",
+    "int",
+    "pt_allow",
+    "sack",
+    "tkl",
+    "fum_rec",
+    "qb_hit",
+    "source_start_line",
+    "source_final_line",
+    "source_team_lines",
+    "metric_source_lines"
+  ],
+  "anomaly_count": 22,
+  "anomalies": [
+    {
+      "source_line": 105,
+      "team_abbr": "GB",
+      "season": 2025,
+      "issue": "missing_owner"
+    },
+    {
+      "source_line": 189,
+      "team_abbr": "WAS",
+      "season": 2025,
+      "issue": "missing_owner"
+    },
+    {
+      "source_line": 259,
+      "team_abbr": "DAL",
+      "season": 2025,
+      "issue": "missing_owner"
+    },
+    {
+      "source_line": 292,
+      "team_abbr": "LV",
+      "season": 2025,
+      "issue": "missing_owner"
+    },
+    {
+      "source_line": 308,
+      "team_abbr": "ATL",
+      "season": 2025,
+      "issue": "missing_owner"
+    },
+    {
+      "source_line": 341,
+      "team_abbr": "TEN",
+      "season": 2025,
+      "issue": "missing_owner"
+    },
+    {
+      "source_line": 391,
+      "team_abbr": "MIA",
+      "season": 2025,
+      "issue": "missing_owner"
+    },
+    {
+      "source_line": 424,
+      "team_abbr": "CIN",
+      "season": 2025,
+      "issue": "missing_owner"
+    },
+    {
+      "source_line": 473,
+      "team_abbr": "CHI",
+      "season": 2025,
+      "issue": "missing_owner"
+    },
+    {
+      "source_line": 489,
+      "team_abbr": "ARI",
+      "season": 2025,
+      "issue": "missing_owner"
+    },
+    {
+      "source_line": 505,
+      "team_abbr": "NYJ",
+      "season": 2025,
+      "issue": "missing_owner"
+    },
+    {
+      "source_line": 590,
+      "team_abbr": "GB",
+      "season": 2024,
+      "issue": "missing_owner"
+    },
+    {
+      "source_line": 675,
+      "team_abbr": "CHI",
+      "season": 2024,
+      "issue": "missing_owner"
+    },
+    {
+      "source_line": 743,
+      "team_abbr": "DAL",
+      "season": 2024,
+      "issue": "missing_owner"
+    },
+    {
+      "source_line": 810,
+      "team_abbr": "ARI",
+      "season": 2024,
+      "issue": "missing_owner"
+    },
+    {
+      "source_line": 826,
+      "team_abbr": "CIN",
+      "season": 2024,
+      "issue": "missing_owner"
+    },
+    {
+      "source_line": 876,
+      "team_abbr": "NYJ",
+      "season": 2024,
+      "issue": "missing_owner"
+    },
+    {
+      "source_line": 892,
+      "team_abbr": "ATL",
+      "season": 2024,
+      "issue": "missing_owner"
+    },
+    {
+      "source_line": 925,
+      "team_abbr": "WAS",
+      "season": 2024,
+      "issue": "missing_owner"
+    },
+    {
+      "source_line": 959,
+      "team_abbr": "MIA",
+      "season": 2024,
+      "issue": "missing_owner"
+    },
+    {
+      "source_line": 993,
+      "team_abbr": "TEN",
+      "season": 2024,
+      "issue": "missing_owner"
+    },
+    {
+      "source_line": 1009,
+      "team_abbr": "LV",
+      "season": 2024,
+      "issue": "missing_owner"
+    }
+  ]
+}

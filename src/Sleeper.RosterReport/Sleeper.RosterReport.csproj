@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\Sleeper.Api\Sleeper.Api.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Azure.AI.Projects" Version="2.0.1" />
+    <PackageReference Include="Azure.Identity" Version="1.21.0" />
+    <PackageReference Include="Microsoft.Agents.AI" Version="1.3.0" />
+    <PackageReference Include="Microsoft.Agents.AI.Foundry" Version="1.3.0" />
+    <PackageReference Include="OpenAI" Version="2.10.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="10.0.7" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="10.0.7" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="10.0.7" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="10.0.6" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="10.0.6" />
+    <PackageReference Include="YamlDotNet" Version="16.2.1" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <UserSecretsId>1596a4c3-6354-41a4-8a3b-ce45f4cd8d56</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Update="appsettings*.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

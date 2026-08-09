@@ -1,0 +1,41 @@
+{
+  "_comment": "Weekly emotional theme & tone anchor for each recap. The Intro should reflect the Vibe; BanLifts allow specific phrases that are normally on the global ban list when the week's energy calls for them.",
+  "GlobalBannedPhrases": [
+    "refine their lineups",
+    "must regroup",
+    "look to refine",
+    "ebb and flow",
+    "unpredictable nature of fantasy football",
+    "underscores the importance",
+    "as both owners look",
+    "look to build momentum",
+    "navigate the competitive landscape",
+    "showcased their aspirations",
+    "thriller",
+    "showdown",
+    "electrifying",
+    "lit up the field",
+    "high-stakes battle",
+    "fantasy prowess",
+    "decisive victory"
+  ],
+  "Weeks": [
+    { "Week": 1,  "Title": "Opening Day",                     "Vibe": "Excitement and fresh starts. Everyone is undefeated for one more week. The slate is clean, expectations are high, and the first surprises tell us nothing — but we'll talk about them anyway.",                "BanLifts": ["thriller", "showdown"] },
+    { "Week": 2,  "Title": "Sample Size of Two",              "Vibe": "First reads are sharpening. A 2-0 start means something now; an 0-2 start means more. We're not panicking, but we're watching.",                                                                                       "BanLifts": ["look to build momentum"] },
+    { "Week": 3,  "Title": "The Quarter Pole",                "Vibe": "Patterns are emerging. The hot teams have a profile; the cold teams have a problem. Bye weeks loom; depth gets tested.",                                                                                                   "BanLifts": ["navigate the competitive landscape"] },
+    { "Week": 4,  "Title": "Quarter-Pole Patterns",           "Vibe": "Patterns are emerging. The hot teams have a profile; the cold teams have a problem. NFL byes haven't hit yet — depth is still theoretical, but the wire is heating up.",                                                       "BanLifts": ["look to refine"] },
+    { "Week": 5,  "Title": "Byes Begin",                       "Vibe": "NFL bye weeks start now. Roster construction starts mattering as much as luck — who built for resiliency, who didn't. The waiver wire is officially a battleground.",                                                          "BanLifts": ["must regroup"] },
+    { "Week": 6,  "Title": "Trust the Tape",                  "Vibe": "Six games in — early-season noise is settling out. Real contenders have separated themselves; pretenders are running out of excuses. Bye-week landmines still loom.",                                                            "BanLifts": ["underscores the importance"] },
+    { "Week": 7,  "Title": "Mid-Season Identity",             "Vibe": "Teams are who they are. Trade chatter ramps up as bottom-half teams decide whether to push or fold.",                                                                                                                       "BanLifts": ["as both owners look"] },
+    { "Week": 8,  "Title": "The Halfway Mark",                "Vibe": "Halftime of the regular season. The leaderboard has earned a long stare. Playoff math becomes real for the first time.",                                                                                                    "BanLifts": ["ebb and flow"] },
+    { "Week": 9,  "Title": "Buyers and Sellers",              "Vibe": "Two weeks until the trade deadline. Contenders shop for help; bottom-half teams decide whether to push for the bracket or sell for picks. The rosters you see now are not the rosters that finish.",                       "BanLifts": ["showcased their aspirations"] },
+    { "Week": 10, "Title": "Last Call to Trade",              "Vibe": "Trades freeze at the end of the week. Last-call urgency. Every move now is leveraged. After this week, you ride the roster you have.",                                                                                              "BanLifts": ["high-stakes battle"] },
+    { "Week": 11, "Title": "Deep in the Grind",               "Vibe": "Trade deadline has passed — every team is locked in. Five weeks left, four playoff spots, and the fatigue is real, for players and managers both. The deep-in-the-season grind separates teams that prepared for this from teams that didn't.",        "BanLifts": ["unpredictable nature of fantasy football"] },
+    { "Week": 12, "Title": "The Stretch Run",                 "Vibe": "Three games left to decide a season. Rest-of-season schedules get studied. Every margin counts toward the PF tiebreaker.",                                                                                                  "BanLifts": ["look to build momentum"] },
+    { "Week": 13, "Title": "Bubble Watch Begins",             "Vibe": "Two regular-season games to go. The bubble teams stop pretending — every snap is a playoff snap.",                                                                                                                          "BanLifts": ["high-stakes battle"] },
+    { "Week": 14, "Title": "Penultimate",                     "Vibe": "Win and you're probably in. Lose and the math gets ugly. The line between \"controls own destiny\" and \"needs help\" runs through this week.",                                                                             "BanLifts": ["high-stakes battle", "decisive victory"] },
+    { "Week": 15, "Title": "Bracket Lock",                    "Vibe": "Final regular-season week. Seeds get locked, last place gets sealed (and a keeper gets forfeited), and we find out who limps into the bracket vs who roars in. Stakes are unmistakable.",                                    "BanLifts": ["high-stakes battle", "decisive victory"] },
+    { "Week": 16, "Title": "Semifinals — Win or Go Home",     "Vibe": "This is the playoffs. Two semifinal games decide who plays for the trophy next week — everything since Week 1 has been auditioning for these forty-eight hours. Single elimination, no tomorrow for the loser, every start/sit decision is its own essay. Treat the two semifinal matchups as the headline acts; the consolation games are the undercard, playing for the 1.01 pick and the dignity of not finishing last. Lead with the bracket. Name the seeds. This is what we've been doing all year.",                                                  "BanLifts": ["thriller", "showdown", "high-stakes battle", "decisive victory", "electrifying"] },
+    { "Week": 17, "Title": "Championship Week",               "Vibe": "The Championship. One game, one trophy, the whole season distilled. The two teams that survived Week 16 play for the title that the league has been chasing since opening day. Frame this as the main event — the championship matchup gets top billing, full context, and room to breathe. The 3rd-place game and the 1.01-pick consolation final still matter and get covered, but they are the supporting card. Last place (and a forfeited keeper) is on the line at the bottom. This is the only week we let ourselves write big. This is what we've been doing all year.",                                              "BanLifts": ["thriller", "showdown", "electrifying", "lit up the field", "high-stakes battle", "decisive victory", "fantasy prowess"] }
+  ]
+}

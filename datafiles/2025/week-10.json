@@ -1,0 +1,2792 @@
+{
+  "season": "2025",
+  "week": 10,
+  "league_id": "1180276953741729792",
+  "league_name": "FoulknFootball",
+  "captured_at_utc": "2026-04-26T20:58:20.8233984Z",
+  "note": "Kickoff-locked roster snapshot derived from /league/{id}/matchups/{week}. Includes starters and bench at lock time, with per-player points scored that week.",
+  "teams": [
+    {
+      "roster_id": 1,
+      "user_id": "1112856951387414528",
+      "username": "",
+      "display_name": "robfoulk",
+      "team_name": "Unstoppable Farce",
+      "matchup_id": 3,
+      "points": 199.52,
+      "starters": [
+        {
+          "player_id": "11563",
+          "label": "Bo Nix (QB, DEN)",
+          "points": 5.8
+        },
+        {
+          "player_id": "6904",
+          "label": "Jalen Hurts (QB, PHI)",
+          "points": 12.02
+        },
+        {
+          "player_id": "12474",
+          "label": "Woody Marks (RB, HOU)",
+          "points": 14.1
+        },
+        {
+          "player_id": "9226",
+          "label": "De\u0027Von Achane (RB, MIA)",
+          "points": 34.5
+        },
+        {
+          "player_id": "11647",
+          "label": "Kimani Vidal (RB, LAC)",
+          "points": 16.8
+        },
+        {
+          "player_id": "3198",
+          "label": "Derrick Henry (RB, BAL)",
+          "points": 8.4
+        },
+        {
+          "player_id": "11635",
+          "label": "Ladd McConkey (WR, LAC)",
+          "points": 16.7
+        },
+        {
+          "player_id": "8167",
+          "label": "Christian Watson (WR, GB)",
+          "points": 4.5
+        },
+        {
+          "player_id": "7049",
+          "label": "Jauan Jennings (WR, FA)",
+          "points": 11.1
+        },
+        {
+          "player_id": "6149",
+          "label": "Darius Slayton (WR, NYG)",
+          "points": 8.9
+        },
+        {
+          "player_id": "12517",
+          "label": "Colston Loveland (TE, CHI)",
+          "points": 5.5
+        },
+        {
+          "player_id": "12493",
+          "label": "Oronde Gadsden (TE, LAC)",
+          "points": 1.3
+        },
+        {
+          "player_id": "4199",
+          "label": "Aaron Jones (RB, MIN)",
+          "points": 12.9
+        },
+        {
+          "player_id": "12533",
+          "label": "Jacory Croskey-Merritt (RB, WAS)",
+          "points": 3.0
+        },
+        {
+          "player_id": "3678",
+          "label": "Wil Lutz (K, DEN)",
+          "points": 4.0
+        },
+        {
+          "player_id": "5189",
+          "label": "Eddy Pineiro (K, SF)",
+          "points": 1.0
+        },
+        {
+          "player_id": "HOU",
+          "label": "Houston Texans (DEF, HOU)",
+          "points": 16.0
+        },
+        {
+          "player_id": "SEA",
+          "label": "Seattle Seahawks (DEF, SEA)",
+          "points": 23.0
+        }
+      ],
+      "bench": [
+        {
+          "player_id": "10219",
+          "label": "Chris Rodriguez (RB, JAX)",
+          "points": 7.6
+        },
+        {
+          "player_id": "10222",
+          "label": "Jayden Reed (WR, GB)",
+          "points": 0.0
+        },
+        {
+          "player_id": "11589",
+          "label": "Trey Benson (RB, ARI)",
+          "points": 0.0
+        },
+        {
+          "player_id": "11624",
+          "label": "Xavier Worthy (WR, KC)",
+          "points": 0.0
+        },
+        {
+          "player_id": "11631",
+          "label": "Brian Thomas (WR, JAX)",
+          "points": 0.0
+        },
+        {
+          "player_id": "11637",
+          "label": "Keon Coleman (WR, BUF)",
+          "points": 10.6
+        },
+        {
+          "player_id": "12530",
+          "label": "Travis Hunter (WR, JAX)",
+          "points": 0.0
+        },
+        {
+          "player_id": "4098",
+          "label": "Kareem Hunt (RB, FA)",
+          "points": 0.0
+        },
+        {
+          "player_id": "5012",
+          "label": "Mark Andrews (TE, BAL)",
+          "points": 7.4
+        },
+        {
+          "player_id": "6130",
+          "label": "Devin Singletary (RB, NYG)",
+          "points": 7.3
+        },
+        {
+          "player_id": "7523",
+          "label": "Trevor Lawrence (QB, JAX)",
+          "points": 9.82
+        },
+        {
+          "player_id": "7553",
+          "label": "Kyle Pitts (TE, ATL)",
+          "points": 3.8
+        },
+        {
+          "player_id": "GB",
+          "label": "Green Bay Packers (DEF, GB)",
+          "points": 7.0
+        },
+        {
+          "player_id": "LAC",
+          "label": "Los Angeles Chargers (DEF, LAC)",
+          "points": 15.0
+        }
+      ],
+      "roster": [
+        {
+          "player_id": "10219",
+          "label": "Chris Rodriguez (RB, JAX)",
+          "points": 7.6,
+          "started": false
+        },
+        {
+          "player_id": "10222",
+          "label": "Jayden Reed (WR, GB)",
+          "points": 0.0,
+          "started": false
+        },
+        {
+          "player_id": "11563",
+          "label": "Bo Nix (QB, DEN)",
+          "points": 5.8,
+          "started": true
+        },
+        {
+          "player_id": "11589",
+          "label": "Trey Benson (RB, ARI)",
+          "points": 0.0,
+          "started": false
+        },
+        {
+          "player_id": "11624",
+          "label": "Xavier Worthy (WR, KC)",
+          "points": 0.0,
+          "started": false
+        },
+        {
+          "player_id": "11631",
+          "label": "Brian Thomas (WR, JAX)",
+          "points": 0.0,
+          "started": false
+        },
+        {
+          "player_id": "11635",
+          "label": "Ladd McConkey (WR, LAC)",
+          "points": 16.7,
+          "started": true
+        },
+        {
+          "player_id": "11637",
+          "label": "Keon Coleman (WR, BUF)",
+          "points": 10.6,
+          "started": false
+        },
+        {
+          "player_id": "11647",
+          "label": "Kimani Vidal (RB, LAC)",
+          "points": 16.8,
+          "started": true
+        },
+        {
+          "player_id": "12474",
+          "label": "Woody Marks (RB, HOU)",
+          "points": 14.1,
+          "started": true
+        },
+        {
+          "player_id": "12493",
+          "label": "Oronde Gadsden (TE, LAC)",
+          "points": 1.3,
+          "started": true
+        },
+        {
+          "player_id": "12517",
+          "label": "Colston Loveland (TE, CHI)",
+          "points": 5.5,
+          "started": true
+        },
+        {
+          "player_id": "12530",
+          "label": "Travis Hunter (WR, JAX)",
+          "points": 0.0,
+          "started": false
+        },
+        {
+          "player_id": "12533",
+          "label": "Jacory Croskey-Merritt (RB, WAS)",
+          "points": 3.0,
+          "started": true
+        },
+        {
+          "player_id": "3198",
+          "label": "Derrick Henry (RB, BAL)",
+          "points": 8.4,
+          "started": true
+        },
+        {
+          "player_id": "3678",
+          "label": "Wil Lutz (K, DEN)",
+          "points": 4.0,
+          "started": true
+        },
+        {
+          "player_id": "4098",
+          "label": "Kareem Hunt (RB, FA)",
+          "points": 0.0,
+          "started": false
+        },
+        {
+          "player_id": "4199",
+          "label": "Aaron Jones (RB, MIN)",
+          "points": 12.9,
+          "started": true
+        },
+        {
+          "player_id": "5012",
+          "label": "Mark Andrews (TE, BAL)",
+          "points": 7.4,
+          "started": false
+        },
+        {
+          "player_id": "5189",
+          "label": "Eddy Pineiro (K, SF)",
+          "points": 1.0,
+          "started": true
+        },
+        {
+          "player_id": "6130",
+          "label": "Devin Singletary (RB, NYG)",
+          "points": 7.3,
+          "started": false
+        },
+        {
+          "player_id": "6149",
+          "label": "Darius Slayton (WR, NYG)",
+          "points": 8.9,
+          "started": true
+        },
+        {
+          "player_id": "6904",
+          "label": "Jalen Hurts (QB, PHI)",
+          "points": 12.02,
+          "started": true
+        },
+        {
+          "player_id": "7049",
+          "label": "Jauan Jennings (WR, FA)",
+          "points": 11.1,
+          "started": true
+        },
+        {
+          "player_id": "7523",
+          "label": "Trevor Lawrence (QB, JAX)",
+          "points": 9.82,
+          "started": false
+        },
+        {
+          "player_id": "7553",
+          "label": "Kyle Pitts (TE, ATL)",
+          "points": 3.8,
+          "started": false
+        },
+        {
+          "player_id": "8167",
+          "label": "Christian Watson (WR, GB)",
+          "points": 4.5,
+          "started": true
+        },
+        {
+          "player_id": "9226",
+          "label": "De\u0027Von Achane (RB, MIA)",
+          "points": 34.5,
+          "started": true
+        },
+        {
+          "player_id": "GB",
+          "label": "Green Bay Packers (DEF, GB)",
+          "points": 7.0,
+          "started": false
+        },
+        {
+          "player_id": "HOU",
+          "label": "Houston Texans (DEF, HOU)",
+          "points": 16.0,
+          "started": true
+        },
+        {
+          "player_id": "LAC",
+          "label": "Los Angeles Chargers (DEF, LAC)",
+          "points": 15.0,
+          "started": false
+        },
+        {
+          "player_id": "SEA",
+          "label": "Seattle Seahawks (DEF, SEA)",
+          "points": 23.0,
+          "started": true
+        }
+      ]
+    },
+    {
+      "roster_id": 2,
+      "user_id": "1121310424491864064",
+      "username": "",
+      "display_name": "Dbfoulkrod",
+      "team_name": "Amon Another level ",
+      "matchup_id": 2,
+      "points": 144.64,
+      "starters": [
+        {
+          "player_id": "9228",
+          "label": "Bryce Young (QB, CAR)",
+          "points": 1.56
+        },
+        {
+          "player_id": "12508",
+          "label": "Jaxson Dart (QB, NYG)",
+          "points": 26.28
+        },
+        {
+          "player_id": "5892",
+          "label": "David Montgomery (RB, HOU)",
+          "points": 9.1
+        },
+        {
+          "player_id": "12534",
+          "label": "Kyle Monangai (RB, CHI)",
+          "points": 8.8
+        },
+        {
+          "player_id": "6806",
+          "label": "J.K. Dobbins (RB, DEN)",
+          "points": 8.4
+        },
+        {
+          "player_id": "4866",
+          "label": "Saquon Barkley (RB, PHI)",
+          "points": 10.1
+        },
+        {
+          "player_id": "4454",
+          "label": "Kendrick Bourne (WR, ARI)",
+          "points": 1.9
+        },
+        {
+          "player_id": "7525",
+          "label": "DeVonta Smith (WR, PHI)",
+          "points": 12.9
+        },
+        {
+          "player_id": "2449",
+          "label": "Stefon Diggs (WR, FA)",
+          "points": 10.6
+        },
+        {
+          "player_id": "7547",
+          "label": "Amon-Ra St. Brown (WR, DET)",
+          "points": 11.8
+        },
+        {
+          "player_id": "11600",
+          "label": "Ja\u0027Tavion Sanders (TE, CAR)",
+          "points": 3.2
+        },
+        {
+          "player_id": "3214",
+          "label": "Hunter Henry (TE, NE)",
+          "points": 0.9
+        },
+        {
+          "player_id": "8144",
+          "label": "Chris Olave (WR, NO)",
+          "points": 16.4
+        },
+        {
+          "player_id": "6794",
+          "label": "Justin Jefferson (WR, MIN)",
+          "points": 3.7
+        },
+        {
+          "player_id": "12961",
+          "label": "Ryan Fitzgerald (K, CAR)",
+          "points": 1.0
+        },
+        {
+          "player_id": "1433",
+          "label": "Brandon McManus (K, GB)",
+          "points": 1.0
+        },
+        {
+          "player_id": "BAL",
+          "label": "Baltimore Ravens (DEF, BAL)",
+          "points": 9.0
+        },
+        {
+          "player_id": "ARI",
+          "label": "Arizona Cardinals (DEF, ARI)",
+          "points": 8.0
+        }
+      ],
+      "bench": [
+        {
+          "player_id": "1166",
+          "label": "Kirk Cousins (QB, LV)",
+          "points": 0.0
+        },
+        {
+          "player_id": "12471",
+          "label": "DJ Giddens (RB, IND)",
+          "points": 0.0
+        },
+        {
+          "player_id": "12499",
+          "label": "Elic Ayomanor (WR, TEN)",
+          "points": 0.0
+        },
+        {
+          "player_id": "12504",
+          "label": "Kaleb Johnson (RB, PIT)",
+          "points": 0.3
+        },
+        {
+          "player_id": "12670",
+          "label": "KeAndre Lambert-Smith (WR, LAC)",
+          "points": 0.0
+        },
+        {
+          "player_id": "4039",
+          "label": "Cooper Kupp (WR, SEA)",
+          "points": 7.4
+        },
+        {
+          "player_id": "5022",
+          "label": "Dallas Goedert (TE, PHI)",
+          "points": 4.3
+        },
+        {
+          "player_id": "5967",
+          "label": "Tony Pollard (RB, TEN)",
+          "points": 0.0
+        },
+        {
+          "player_id": "6770",
+          "label": "Joe Burrow (QB, CIN)",
+          "points": 0.0
+        },
+        {
+          "player_id": "7591",
+          "label": "Justin Fields (QB, KC)",
+          "points": 6.96
+        },
+        {
+          "player_id": "7839",
+          "label": "Evan McPherson (K, CIN)",
+          "points": 0.0
+        },
+        {
+          "player_id": "8132",
+          "label": "Tyler Allgeier (RB, ARI)",
+          "points": 17.7
+        }
+      ],
+      "roster": [
+        {
+          "player_id": "11600",
+          "label": "Ja\u0027Tavion Sanders (TE, CAR)",
+          "points": 3.2,
+          "started": true
+        },
+        {
+          "player_id": "1166",
+          "label": "Kirk Cousins (QB, LV)",
+          "points": 0.0,
+          "started": false
+        },
+        {
+          "player_id": "12471",
+          "label": "DJ Giddens (RB, IND)",
+          "points": 0.0,
+          "started": false
+        },
+        {
+          "player_id": "12499",
+          "label": "Elic Ayomanor (WR, TEN)",
+          "points": 0.0,
+          "started": false
+        },
+        {
+          "player_id": "12504",
+          "label": "Kaleb Johnson (RB, PIT)",
+          "points": 0.3,
+          "started": false
+        },
+        {
+          "player_id": "12508",
+          "label": "Jaxson Dart (QB, NYG)",
+          "points": 26.28,
+          "started": true
+        },
+        {
+          "player_id": "12534",
+          "label": "Kyle Monangai (RB, CHI)",
+          "points": 8.8,
+          "started": true
+        },
+        {
+          "player_id": "12670",
+          "label": "KeAndre Lambert-Smith (WR, LAC)",
+          "points": 0.0,
+          "started": false
+        },
+        {
+          "player_id": "12961",
+          "label": "Ryan Fitzgerald (K, CAR)",
+          "points": 1.0,
+          "started": true
+        },
+        {
+          "player_id": "1433",
+          "label": "Brandon McManus (K, GB)",
+          "points": 1.0,
+          "started": true
+        },
+        {
+          "player_id": "2449",
+          "label": "Stefon Diggs (WR, FA)",
+          "points": 10.6,
+          "started": true
+        },
+        {
+          "player_id": "3214",
+          "label": "Hunter Henry (TE, NE)",
+          "points": 0.9,
+          "started": true
+        },
+        {
+          "player_id": "4039",
+          "label": "Cooper Kupp (WR, SEA)",
+          "points": 7.4,
+          "started": false
+        },
+        {
+          "player_id": "4454",
+          "label": "Kendrick Bourne (WR, ARI)",
+          "points": 1.9,
+          "started": true
+        },
+        {
+          "player_id": "4866",
+          "label": "Saquon Barkley (RB, PHI)",
+          "points": 10.1,
+          "started": true
+        },
+        {
+          "player_id": "5022",
+          "label": "Dallas Goedert (TE, PHI)",
+          "points": 4.3,
+          "started": false
+        },
+        {
+          "player_id": "5892",
+          "label": "David Montgomery (RB, HOU)",
+          "points": 9.1,
+          "started": true
+        },
+        {
+          "player_id": "5967",
+          "label": "Tony Pollard (RB, TEN)",
+          "points": 0.0,
+          "started": false
+        },
+        {
+          "player_id": "6770",
+          "label": "Joe Burrow (QB, CIN)",
+          "points": 0.0,
+          "started": false
+        },
+        {
+          "player_id": "6794",
+          "label": "Justin Jefferson (WR, MIN)",
+          "points": 3.7,
+          "started": true
+        },
+        {
+          "player_id": "6806",
+          "label": "J.K. Dobbins (RB, DEN)",
+          "points": 8.4,
+          "started": true
+        },
+        {
+          "player_id": "7525",
+          "label": "DeVonta Smith (WR, PHI)",
+          "points": 12.9,
+          "started": true
+        },
+        {
+          "player_id": "7547",
+          "label": "Amon-Ra St. Brown (WR, DET)",
+          "points": 11.8,
+          "started": true
+        },
+        {
+          "player_id": "7591",
+          "label": "Justin Fields (QB, KC)",
+          "points": 6.96,
+          "started": false
+        },
+        {
+          "player_id": "7839",
+          "label": "Evan McPherson (K, CIN)",
+          "points": 0.0,
+          "started": false
+        },
+        {
+          "player_id": "8132",
+          "label": "Tyler Allgeier (RB, ARI)",
+          "points": 17.7,
+          "started": false
+        },
+        {
+          "player_id": "8144",
+          "label": "Chris Olave (WR, NO)",
+          "points": 16.4,
+          "started": true
+        },
+        {
+          "player_id": "9228",
+          "label": "Bryce Young (QB, CAR)",
+          "points": 1.56,
+          "started": true
+        },
+        {
+          "player_id": "ARI",
+          "label": "Arizona Cardinals (DEF, ARI)",
+          "points": 8.0,
+          "started": true
+        },
+        {
+          "player_id": "BAL",
+          "label": "Baltimore Ravens (DEF, BAL)",
+          "points": 9.0,
+          "started": true
+        }
+      ]
+    },
+    {
+      "roster_id": 3,
+      "user_id": "1121310753874604032",
+      "username": "",
+      "display_name": "mafoulk",
+      "team_name": "Disappointment",
+      "matchup_id": 1,
+      "points": 180.32,
+      "starters": [
+        {
+          "player_id": "11564",
+          "label": "Drake Maye (QB, NE)",
+          "points": 18.1
+        },
+        {
+          "player_id": "4892",
+          "label": "Baker Mayfield (QB, TB)",
+          "points": 22.92
+        },
+        {
+          "player_id": "8228",
+          "label": "Jaylen Warren (RB, PIT)",
+          "points": 9.1
+        },
+        {
+          "player_id": "9221",
+          "label": "Jahmyr Gibbs (RB, DET)",
+          "points": 35.2
+        },
+        {
+          "player_id": "12490",
+          "label": "Bhayshul Tuten (RB, JAX)",
+          "points": 1.0
+        },
+        {
+          "player_id": "8151",
+          "label": "Kenneth Walker (RB, KC)",
+          "points": 7.0
+        },
+        {
+          "player_id": "8125",
+          "label": "Calvin Austin (WR, NYG)",
+          "points": 1.4
+        },
+        {
+          "player_id": "5859",
+          "label": "A.J. Brown (WR, PHI)",
+          "points": 1.3
+        },
+        {
+          "player_id": "8142",
+          "label": "Alec Pierce (WR, IND)",
+          "points": 14.4
+        },
+        {
+          "player_id": "4983",
+          "label": "DJ Moore (WR, BUF)",
+          "points": 0.0
+        },
+        {
+          "player_id": "4217",
+          "label": "George Kittle (TE, SF)",
+          "points": 14.4
+        },
+        {
+          "player_id": "12518",
+          "label": "Tyler Warren (TE, IND)",
+          "points": 9.9
+        },
+        {
+          "player_id": "5947",
+          "label": "Jakobi Meyers (WR, JAX)",
+          "points": 4.1
+        },
+        {
+          "player_id": "5846",
+          "label": "DK Metcalf (WR, PIT)",
+          "points": 3.5
+        },
+        {
+          "player_id": "11792",
+          "label": "Will Reichard (K, MIN)",
+          "points": 7.0
+        },
+        {
+          "player_id": "12711",
+          "label": "Tyler Loop (K, BAL)",
+          "points": 13.0
+        },
+        {
+          "player_id": "CLE",
+          "label": "Cleveland Browns (DEF, CLE)",
+          "points": 5.0
+        },
+        {
+          "player_id": "PHI",
+          "label": "Philadelphia Eagles (DEF, PHI)",
+          "points": 13.0
+        }
+      ],
+      "bench": [
+        {
+          "player_id": "11533",
+          "label": "Brandon Aubrey (K, DAL)",
+          "points": 0.0
+        },
+        {
+          "player_id": "11638",
+          "label": "Ricky Pearsall (WR, SF)",
+          "points": 0.0
+        },
+        {
+          "player_id": "11994",
+          "label": "Kameron Johnson (WR, TB)",
+          "points": 1.1
+        },
+        {
+          "player_id": "19",
+          "label": "Joe Flacco (QB, CIN)",
+          "points": 0.0
+        },
+        {
+          "player_id": "3200",
+          "label": "Sterling Shepard (WR, FA)",
+          "points": 3.1
+        },
+        {
+          "player_id": "4219",
+          "label": "Jeremy McNichols (RB, WAS)",
+          "points": 2.9
+        },
+        {
+          "player_id": "6768",
+          "label": "Tua Tagovailoa (QB, ATL)",
+          "points": 10.82
+        },
+        {
+          "player_id": "6801",
+          "label": "Tee Higgins (WR, CIN)",
+          "points": 0.0
+        },
+        {
+          "player_id": "7611",
+          "label": "Rhamondre Stevenson (RB, NE)",
+          "points": 0.0
+        },
+        {
+          "player_id": "8110",
+          "label": "Jake Ferguson (TE, DAL)",
+          "points": 0.0
+        },
+        {
+          "player_id": "8205",
+          "label": "Isiah Pacheco (RB, DET)",
+          "points": 0.0
+        },
+        {
+          "player_id": "DAL",
+          "label": "Dallas Cowboys (DEF, DAL)",
+          "points": 0.0
+        },
+        {
+          "player_id": "LV",
+          "label": "Las Vegas Raiders (DEF, LV)",
+          "points": 10.0
+        }
+      ],
+      "roster": [
+        {
+          "player_id": "11533",
+          "label": "Brandon Aubrey (K, DAL)",
+          "points": 0.0,
+          "started": false
+        },
+        {
+          "player_id": "11564",
+          "label": "Drake Maye (QB, NE)",
+          "points": 18.1,
+          "started": true
+        },
+        {
+          "player_id": "11638",
+          "label": "Ricky Pearsall (WR, SF)",
+          "points": 0.0,
+          "started": false
+        },
+        {
+          "player_id": "11792",
+          "label": "Will Reichard (K, MIN)",
+          "points": 7.0,
+          "started": true
+        },
+        {
+          "player_id": "11994",
+          "label": "Kameron Johnson (WR, TB)",
+          "points": 1.1,
+          "started": false
+        },
+        {
+          "player_id": "12490",
+          "label": "Bhayshul Tuten (RB, JAX)",
+          "points": 1.0,
+          "started": true
+        },
+        {
+          "player_id": "12518",
+          "label": "Tyler Warren (TE, IND)",
+          "points": 9.9,
+          "started": true
+        },
+        {
+          "player_id": "12711",
+          "label": "Tyler Loop (K, BAL)",
+          "points": 13.0,
+          "started": true
+        },
+        {
+          "player_id": "19",
+          "label": "Joe Flacco (QB, CIN)",
+          "points": 0.0,
+          "started": false
+        },
+        {
+          "player_id": "3200",
+          "label": "Sterling Shepard (WR, FA)",
+          "points": 3.1,
+          "started": false
+        },
+        {
+          "player_id": "4217",
+          "label": "George Kittle (TE, SF)",
+          "points": 14.4,
+          "started": true
+        },
+        {
+          "player_id": "4219",
+          "label": "Jeremy McNichols (RB, WAS)",
+          "points": 2.9,
+          "started": false
+        },
+        {
+          "player_id": "4892",
+          "label": "Baker Mayfield (QB, TB)",
+          "points": 22.92,
+          "started": true
+        },
+        {
+          "player_id": "4983",
+          "label": "DJ Moore (WR, BUF)",
+          "points": 0.0,
+          "started": true
+        },
+        {
+          "player_id": "5846",
+          "label": "DK Metcalf (WR, PIT)",
+          "points": 3.5,
+          "started": true
+        },
+        {
+          "player_id": "5859",
+          "label": "A.J. Brown (WR, PHI)",
+          "points": 1.3,
+          "started": true
+        },
+        {
+          "player_id": "5947",
+          "label": "Jakobi Meyers (WR, JAX)",
+          "points": 4.1,
+          "started": true
+        },
+        {
+          "player_id": "6768",
+          "label": "Tua Tagovailoa (QB, ATL)",
+          "points": 10.82,
+          "started": false
+        },
+        {
+          "player_id": "6801",
+          "label": "Tee Higgins (WR, CIN)",
+          "points": 0.0,
+          "started": false
+        },
+        {
+          "player_id": "7611",
+          "label": "Rhamondre Stevenson (RB, NE)",
+          "points": 0.0,
+          "started": false
+        },
+        {
+          "player_id": "8110",
+          "label": "Jake Ferguson (TE, DAL)",
+          "points": 0.0,
+          "started": false
+        },
+        {
+          "player_id": "8125",
+          "label": "Calvin Austin (WR, NYG)",
+          "points": 1.4,
+          "started": true
+        },
+        {
+          "player_id": "8142",
+          "label": "Alec Pierce (WR, IND)",
+          "points": 14.4,
+          "started": true
+        },
+        {
+          "player_id": "8151",
+          "label": "Kenneth Walker (RB, KC)",
+          "points": 7.0,
+          "started": true
+        },
+        {
+          "player_id": "8205",
+          "label": "Isiah Pacheco (RB, DET)",
+          "points": 0.0,
+          "started": false
+        },
+        {
+          "player_id": "8228",
+          "label": "Jaylen Warren (RB, PIT)",
+          "points": 9.1,
+          "started": true
+        },
+        {
+          "player_id": "9221",
+          "label": "Jahmyr Gibbs (RB, DET)",
+          "points": 35.2,
+          "started": true
+        },
+        {
+          "player_id": "CLE",
+          "label": "Cleveland Browns (DEF, CLE)",
+          "points": 5.0,
+          "started": true
+        },
+        {
+          "player_id": "DAL",
+          "label": "Dallas Cowboys (DEF, DAL)",
+          "points": 0.0,
+          "started": false
+        },
+        {
+          "player_id": "LV",
+          "label": "Las Vegas Raiders (DEF, LV)",
+          "points": 10.0,
+          "started": false
+        },
+        {
+          "player_id": "PHI",
+          "label": "Philadelphia Eagles (DEF, PHI)",
+          "points": 13.0,
+          "started": true
+        }
+      ]
+    },
+    {
+      "roster_id": 4,
+      "user_id": "1121459919724728320",
+      "username": "",
+      "display_name": "jfoulkrod",
+      "team_name": "Seasonal Depression",
+      "matchup_id": 1,
+      "points": 154.32,
+      "starters": [
+        {
+          "player_id": "5870",
+          "label": "Daniel Jones (QB, IND)",
+          "points": 15.5
+        },
+        {
+          "player_id": "4943",
+          "label": "Sam Darnold (QB, SEA)",
+          "points": 4.92
+        },
+        {
+          "player_id": "6790",
+          "label": "D\u0027Andre Swift (RB, CHI)",
+          "points": 9.8
+        },
+        {
+          "player_id": "5850",
+          "label": "Josh Jacobs (RB, GB)",
+          "points": 14.7
+        },
+        {
+          "player_id": "12527",
+          "label": "Ashton Jeanty (RB, LV)",
+          "points": 12.3
+        },
+        {
+          "player_id": "8136",
+          "label": "Rachaad White (RB, WAS)",
+          "points": 5.4
+        },
+        {
+          "player_id": "9493",
+          "label": "Puka Nacua (WR, LAR)",
+          "points": 12.4
+        },
+        {
+          "player_id": "6819",
+          "label": "Michael Pittman (WR, PIT)",
+          "points": 1.9
+        },
+        {
+          "player_id": "9754",
+          "label": "Quentin Johnston (WR, LAC)",
+          "points": 4.2
+        },
+        {
+          "player_id": "8146",
+          "label": "Garrett Wilson (WR, NYJ)",
+          "points": 0.0
+        },
+        {
+          "player_id": "11603",
+          "label": "AJ Barner (TE, SEA)",
+          "points": 0.3
+        },
+        {
+          "player_id": "11597",
+          "label": "Theo Johnson (TE, NYG)",
+          "points": 7.5
+        },
+        {
+          "player_id": "8148",
+          "label": "Jameson Williams (WR, DET)",
+          "points": 17.9
+        },
+        {
+          "player_id": "9756",
+          "label": "Jordan Addison (WR, MIN)",
+          "points": 3.5
+        },
+        {
+          "player_id": "8259",
+          "label": "Cameron Dicker (K, LAC)",
+          "points": 13.0
+        },
+        {
+          "player_id": "4666",
+          "label": "Younghoe Koo (K, FA)",
+          "points": 8.0
+        },
+        {
+          "player_id": "DEN",
+          "label": "Denver Broncos (DEF, DEN)",
+          "points": 15.0
+        },
+        {
+          "player_id": "CHI",
+          "label": "Chicago Bears (DEF, CHI)",
+          "points": 8.0
+        }
+      ],
+      "bench": [
+        {
+          "player_id": "10213",
+          "label": "Tre Tucker (WR, LV)",
+          "points": 3.5
+        },
+        {
+          "player_id": "11435",
+          "label": "Emanuel Wilson (RB, SEA)",
+          "points": 0.4
+        },
+        {
+          "player_id": "11565",
+          "label": "J.J. McCarthy (QB, MIN)",
+          "points": 14.72
+        },
+        {
+          "player_id": "12519",
+          "label": "Luther Burden (WR, CHI)",
+          "points": 5.1
+        },
+        {
+          "player_id": "12535",
+          "label": "Isaac TeSlaa (WR, DET)",
+          "points": 1.1
+        },
+        {
+          "player_id": "3451",
+          "label": "Ka\u0027imi Fairbairn (K, HOU)",
+          "points": 0.0
+        },
+        {
+          "player_id": "7567",
+          "label": "Kenneth Gainwell (RB, TB)",
+          "points": 0.4
+        },
+        {
+          "player_id": "7588",
+          "label": "Javonte Williams (RB, DAL)",
+          "points": 0.0
+        },
+        {
+          "player_id": "8134",
+          "label": "Khalil Shakir (WR, BUF)",
+          "points": 5.8
+        },
+        {
+          "player_id": "8183",
+          "label": "Brock Purdy (QB, SF)",
+          "points": 0.0
+        },
+        {
+          "player_id": "9225",
+          "label": "Tank Bigsby (RB, PHI)",
+          "points": 0.7
+        },
+        {
+          "player_id": "9481",
+          "label": "Luke Musgrave (TE, GB)",
+          "points": 2.3
+        }
+      ],
+      "roster": [
+        {
+          "player_id": "10213",
+          "label": "Tre Tucker (WR, LV)",
+          "points": 3.5,
+          "started": false
+        },
+        {
+          "player_id": "11435",
+          "label": "Emanuel Wilson (RB, SEA)",
+          "points": 0.4,
+          "started": false
+        },
+        {
+          "player_id": "11565",
+          "label": "J.J. McCarthy (QB, MIN)",
+          "points": 14.72,
+          "started": false
+        },
+        {
+          "player_id": "11597",
+          "label": "Theo Johnson (TE, NYG)",
+          "points": 7.5,
+          "started": true
+        },
+        {
+          "player_id": "11603",
+          "label": "AJ Barner (TE, SEA)",
+          "points": 0.3,
+          "started": true
+        },
+        {
+          "player_id": "12519",
+          "label": "Luther Burden (WR, CHI)",
+          "points": 5.1,
+          "started": false
+        },
+        {
+          "player_id": "12527",
+          "label": "Ashton Jeanty (RB, LV)",
+          "points": 12.3,
+          "started": true
+        },
+        {
+          "player_id": "12535",
+          "label": "Isaac TeSlaa (WR, DET)",
+          "points": 1.1,
+          "started": false
+        },
+        {
+          "player_id": "3451",
+          "label": "Ka\u0027imi Fairbairn (K, HOU)",
+          "points": 0.0,
+          "started": false
+        },
+        {
+          "player_id": "4666",
+          "label": "Younghoe Koo (K, FA)",
+          "points": 8.0,
+          "started": true
+        },
+        {
+          "player_id": "4943",
+          "label": "Sam Darnold (QB, SEA)",
+          "points": 4.92,
+          "started": true
+        },
+        {
+          "player_id": "5850",
+          "label": "Josh Jacobs (RB, GB)",
+          "points": 14.7,
+          "started": true
+        },
+        {
+          "player_id": "5870",
+          "label": "Daniel Jones (QB, IND)",
+          "points": 15.5,
+          "started": true
+        },
+        {
+          "player_id": "6790",
+          "label": "D\u0027Andre Swift (RB, CHI)",
+          "points": 9.8,
+          "started": true
+        },
+        {
+          "player_id": "6819",
+          "label": "Michael Pittman (WR, PIT)",
+          "points": 1.9,
+          "started": true
+        },
+        {
+          "player_id": "7567",
+          "label": "Kenneth Gainwell (RB, TB)",
+          "points": 0.4,
+          "started": false
+        },
+        {
+          "player_id": "7588",
+          "label": "Javonte Williams (RB, DAL)",
+          "points": 0.0,
+          "started": false
+        },
+        {
+          "player_id": "8134",
+          "label": "Khalil Shakir (WR, BUF)",
+          "points": 5.8,
+          "started": false
+        },
+        {
+          "player_id": "8136",
+          "label": "Rachaad White (RB, WAS)",
+          "points": 5.4,
+          "started": true
+        },
+        {
+          "player_id": "8146",
+          "label": "Garrett Wilson (WR, NYJ)",
+          "points": 0.0,
+          "started": true
+        },
+        {
+          "player_id": "8148",
+          "label": "Jameson Williams (WR, DET)",
+          "points": 17.9,
+          "started": true
+        },
+        {
+          "player_id": "8183",
+          "label": "Brock Purdy (QB, SF)",
+          "points": 0.0,
+          "started": false
+        },
+        {
+          "player_id": "8259",
+          "label": "Cameron Dicker (K, LAC)",
+          "points": 13.0,
+          "started": true
+        },
+        {
+          "player_id": "9225",
+          "label": "Tank Bigsby (RB, PHI)",
+          "points": 0.7,
+          "started": false
+        },
+        {
+          "player_id": "9481",
+          "label": "Luke Musgrave (TE, GB)",
+          "points": 2.3,
+          "started": false
+        },
+        {
+          "player_id": "9493",
+          "label": "Puka Nacua (WR, LAR)",
+          "points": 12.4,
+          "started": true
+        },
+        {
+          "player_id": "9754",
+          "label": "Quentin Johnston (WR, LAC)",
+          "points": 4.2,
+          "started": true
+        },
+        {
+          "player_id": "9756",
+          "label": "Jordan Addison (WR, MIN)",
+          "points": 3.5,
+          "started": true
+        },
+        {
+          "player_id": "CHI",
+          "label": "Chicago Bears (DEF, CHI)",
+          "points": 8.0,
+          "started": true
+        },
+        {
+          "player_id": "DEN",
+          "label": "Denver Broncos (DEF, DEN)",
+          "points": 15.0,
+          "started": true
+        }
+      ]
+    },
+    {
+      "roster_id": 5,
+      "user_id": "1122536845449072640",
+      "username": "",
+      "display_name": "asmartaleck1",
+      "team_name": "He hate me",
+      "matchup_id": 3,
+      "points": 193.38,
+      "starters": [
+        {
+          "player_id": "4984",
+          "label": "Josh Allen (QB, BUF)",
+          "points": 19.34
+        },
+        {
+          "player_id": "4881",
+          "label": "Lamar Jackson (QB, BAL)",
+          "points": 16.64
+        },
+        {
+          "player_id": "8150",
+          "label": "Kyren Williams (RB, LAR)",
+          "points": 20.4
+        },
+        {
+          "player_id": "12529",
+          "label": "TreVeyon Henderson (RB, NE)",
+          "points": 27.0
+        },
+        {
+          "player_id": "8138",
+          "label": "James Cook (RB, BUF)",
+          "points": 5.7
+        },
+        {
+          "player_id": "4035",
+          "label": "Alvin Kamara (RB, NO)",
+          "points": 11.5
+        },
+        {
+          "player_id": "2133",
+          "label": "Davante Adams (WR, LAR)",
+          "points": 13.7
+        },
+        {
+          "player_id": "9488",
+          "label": "Jaxon Smith-Njigba (WR, SEA)",
+          "points": 15.3
+        },
+        {
+          "player_id": "12514",
+          "label": "Emeka Egbuka (WR, TB)",
+          "points": 17.5
+        },
+        {
+          "player_id": "12526",
+          "label": "Tetairoa McMillan (WR, CAR)",
+          "points": 6.0
+        },
+        {
+          "player_id": "10859",
+          "label": "Sam LaPorta (TE, DET)",
+          "points": 5.3
+        },
+        {
+          "player_id": "11604",
+          "label": "Brock Bowers (TE, LV)",
+          "points": 2.7
+        },
+        {
+          "player_id": "8112",
+          "label": "Drake London (WR, ATL)",
+          "points": 18.4
+        },
+        {
+          "player_id": "1479",
+          "label": "Keenan Allen (WR, FA)",
+          "points": 1.9
+        },
+        {
+          "player_id": "4233",
+          "label": "Zane Gonzalez (K, MIA)",
+          "points": 5.0
+        },
+        {
+          "player_id": "12015",
+          "label": "Harrison Mevis (K, LAR)",
+          "points": 6.0
+        },
+        {
+          "player_id": "CAR",
+          "label": "Carolina Panthers (DEF, CAR)",
+          "points": 4.0
+        },
+        {
+          "player_id": "SF",
+          "label": "San Francisco 49ers (DEF, SF)",
+          "points": -3.0
+        }
+      ],
+      "bench": [
+        {
+          "player_id": "10229",
+          "label": "Rashee Rice (WR, KC)",
+          "points": 0.0
+        },
+        {
+          "player_id": "11571",
+          "label": "Isaiah Davis (RB, NYJ)",
+          "points": 1.1
+        },
+        {
+          "player_id": "12489",
+          "label": "RJ Harvey (RB, DEN)",
+          "points": 1.8
+        },
+        {
+          "player_id": "12501",
+          "label": "Matthew Golden (WR, GB)",
+          "points": 0.0
+        },
+        {
+          "player_id": "12506",
+          "label": "Harold Fannin (TE, CLE)",
+          "points": 4.4
+        },
+        {
+          "player_id": "3163",
+          "label": "Jared Goff (QB, DET)",
+          "points": 24.8
+        },
+        {
+          "player_id": "421",
+          "label": "Matthew Stafford (QB, LAR)",
+          "points": 26.9
+        },
+        {
+          "player_id": "4227",
+          "label": "Harrison Butker (K, KC)",
+          "points": 0.0
+        },
+        {
+          "player_id": "6938",
+          "label": "Cam Akers (RB, SEA)",
+          "points": 0.0
+        },
+        {
+          "player_id": "7594",
+          "label": "Chuba Hubbard (RB, CAR)",
+          "points": 1.5
+        },
+        {
+          "player_id": "8111",
+          "label": "Cade Otton (TE, TB)",
+          "points": 8.2
+        },
+        {
+          "player_id": "9487",
+          "label": "Parker Washington (WR, JAX)",
+          "points": 14.9
+        }
+      ],
+      "roster": [
+        {
+          "player_id": "10229",
+          "label": "Rashee Rice (WR, KC)",
+          "points": 0.0,
+          "started": false
+        },
+        {
+          "player_id": "10859",
+          "label": "Sam LaPorta (TE, DET)",
+          "points": 5.3,
+          "started": true
+        },
+        {
+          "player_id": "11571",
+          "label": "Isaiah Davis (RB, NYJ)",
+          "points": 1.1,
+          "started": false
+        },
+        {
+          "player_id": "11604",
+          "label": "Brock Bowers (TE, LV)",
+          "points": 2.7,
+          "started": true
+        },
+        {
+          "player_id": "12015",
+          "label": "Harrison Mevis (K, LAR)",
+          "points": 6.0,
+          "started": true
+        },
+        {
+          "player_id": "12489",
+          "label": "RJ Harvey (RB, DEN)",
+          "points": 1.8,
+          "started": false
+        },
+        {
+          "player_id": "12501",
+          "label": "Matthew Golden (WR, GB)",
+          "points": 0.0,
+          "started": false
+        },
+        {
+          "player_id": "12506",
+          "label": "Harold Fannin (TE, CLE)",
+          "points": 4.4,
+          "started": false
+        },
+        {
+          "player_id": "12514",
+          "label": "Emeka Egbuka (WR, TB)",
+          "points": 17.5,
+          "started": true
+        },
+        {
+          "player_id": "12526",
+          "label": "Tetairoa McMillan (WR, CAR)",
+          "points": 6.0,
+          "started": true
+        },
+        {
+          "player_id": "12529",
+          "label": "TreVeyon Henderson (RB, NE)",
+          "points": 27.0,
+          "started": true
+        },
+        {
+          "player_id": "1479",
+          "label": "Keenan Allen (WR, FA)",
+          "points": 1.9,
+          "started": true
+        },
+        {
+          "player_id": "2133",
+          "label": "Davante Adams (WR, LAR)",
+          "points": 13.7,
+          "started": true
+        },
+        {
+          "player_id": "3163",
+          "label": "Jared Goff (QB, DET)",
+          "points": 24.8,
+          "started": false
+        },
+        {
+          "player_id": "4035",
+          "label": "Alvin Kamara (RB, NO)",
+          "points": 11.5,
+          "started": true
+        },
+        {
+          "player_id": "421",
+          "label": "Matthew Stafford (QB, LAR)",
+          "points": 26.9,
+          "started": false
+        },
+        {
+          "player_id": "4227",
+          "label": "Harrison Butker (K, KC)",
+          "points": 0.0,
+          "started": false
+        },
+        {
+          "player_id": "4233",
+          "label": "Zane Gonzalez (K, MIA)",
+          "points": 5.0,
+          "started": true
+        },
+        {
+          "player_id": "4881",
+          "label": "Lamar Jackson (QB, BAL)",
+          "points": 16.64,
+          "started": true
+        },
+        {
+          "player_id": "4984",
+          "label": "Josh Allen (QB, BUF)",
+          "points": 19.34,
+          "started": true
+        },
+        {
+          "player_id": "6938",
+          "label": "Cam Akers (RB, SEA)",
+          "points": 0.0,
+          "started": false
+        },
+        {
+          "player_id": "7594",
+          "label": "Chuba Hubbard (RB, CAR)",
+          "points": 1.5,
+          "started": false
+        },
+        {
+          "player_id": "8111",
+          "label": "Cade Otton (TE, TB)",
+          "points": 8.2,
+          "started": false
+        },
+        {
+          "player_id": "8112",
+          "label": "Drake London (WR, ATL)",
+          "points": 18.4,
+          "started": true
+        },
+        {
+          "player_id": "8138",
+          "label": "James Cook (RB, BUF)",
+          "points": 5.7,
+          "started": true
+        },
+        {
+          "player_id": "8150",
+          "label": "Kyren Williams (RB, LAR)",
+          "points": 20.4,
+          "started": true
+        },
+        {
+          "player_id": "9487",
+          "label": "Parker Washington (WR, JAX)",
+          "points": 14.9,
+          "started": false
+        },
+        {
+          "player_id": "9488",
+          "label": "Jaxon Smith-Njigba (WR, SEA)",
+          "points": 15.3,
+          "started": true
+        },
+        {
+          "player_id": "CAR",
+          "label": "Carolina Panthers (DEF, CAR)",
+          "points": 4.0,
+          "started": true
+        },
+        {
+          "player_id": "SF",
+          "label": "San Francisco 49ers (DEF, SF)",
+          "points": -3.0,
+          "started": true
+        }
+      ]
+    },
+    {
+      "roster_id": 6,
+      "user_id": "1122570164190466048",
+      "username": "",
+      "display_name": "ebmookie",
+      "team_name": "Sanders Boutte on Sunday",
+      "matchup_id": 4,
+      "points": 152.9,
+      "starters": [
+        {
+          "player_id": "11559",
+          "label": "Michael Penix (QB, ATL)",
+          "points": 10.98
+        },
+        {
+          "player_id": "2307",
+          "label": "Marcus Mariota (QB, WAS)",
+          "points": 18.72
+        },
+        {
+          "player_id": "4034",
+          "label": "Christian McCaffrey (RB, SF)",
+          "points": 9.6
+        },
+        {
+          "player_id": "8155",
+          "label": "Breece Hall (RB, NYJ)",
+          "points": 18.5
+        },
+        {
+          "player_id": "9753",
+          "label": "Zach Charbonnet (RB, SEA)",
+          "points": 14.3
+        },
+        {
+          "player_id": "7021",
+          "label": "Rico Dowdle (RB, PIT)",
+          "points": 12.3
+        },
+        {
+          "player_id": "12497",
+          "label": "Tory Horton (WR, SEA)",
+          "points": 0.0
+        },
+        {
+          "player_id": "6271",
+          "label": "Olamide Zaccheaus (WR, ATL)",
+          "points": 0.5
+        },
+        {
+          "player_id": "8676",
+          "label": "Rashid Shaheed (WR, SEA)",
+          "points": 2.3
+        },
+        {
+          "player_id": "5045",
+          "label": "Courtland Sutton (WR, DEN)",
+          "points": 2.4
+        },
+        {
+          "player_id": "8130",
+          "label": "Trey McBride (TE, ARI)",
+          "points": 18.7
+        },
+        {
+          "player_id": "12498",
+          "label": "Mason Taylor (TE, NYJ)",
+          "points": 0.4
+        },
+        {
+          "player_id": "11627",
+          "label": "Troy Franklin (WR, DEN)",
+          "points": 10.0
+        },
+        {
+          "player_id": "4988",
+          "label": "Nick Chubb (RB, FA)",
+          "points": 5.2
+        },
+        {
+          "player_id": "2747",
+          "label": "Jason Myers (K, SEA)",
+          "points": 14.0
+        },
+        {
+          "player_id": "6650",
+          "label": "Chase McLaughlin (K, TB)",
+          "points": 5.0
+        },
+        {
+          "player_id": "BUF",
+          "label": "Buffalo Bills (DEF, BUF)",
+          "points": 3.0
+        },
+        {
+          "player_id": "LAR",
+          "label": "Los Angeles Rams (DEF, LAR)",
+          "points": 7.0
+        }
+      ],
+      "bench": [
+        {
+          "player_id": "11566",
+          "label": "Jayden Daniels (QB, WAS)",
+          "points": 0.0
+        },
+        {
+          "player_id": "11586",
+          "label": "Blake Corum (RB, LAR)",
+          "points": 5.6
+        },
+        {
+          "player_id": "12541",
+          "label": "Dont\u0027e Thornton (WR, LV)",
+          "points": 0.4
+        },
+        {
+          "player_id": "4981",
+          "label": "Calvin Ridley (WR, TEN)",
+          "points": 0.0
+        },
+        {
+          "player_id": "5927",
+          "label": "Terry McLaurin (WR, WAS)",
+          "points": 0.0
+        },
+        {
+          "player_id": "6786",
+          "label": "CeeDee Lamb (WR, DAL)",
+          "points": 0.0
+        },
+        {
+          "player_id": "6803",
+          "label": "Brandon Aiyuk (WR, SF)",
+          "points": 0.0
+        },
+        {
+          "player_id": "9224",
+          "label": "Chase Brown (RB, CIN)",
+          "points": 0.0
+        },
+        {
+          "player_id": "9504",
+          "label": "Kayshon Boutte (WR, NE)",
+          "points": 0.0
+        },
+        {
+          "player_id": "9508",
+          "label": "Tyjae Spears (RB, TEN)",
+          "points": 0.0
+        },
+        {
+          "player_id": "9758",
+          "label": "C.J. Stroud (QB, HOU)",
+          "points": 0.0
+        },
+        {
+          "player_id": "KC",
+          "label": "Kansas City Chiefs (DEF, KC)",
+          "points": 0.0
+        }
+      ],
+      "roster": [
+        {
+          "player_id": "11559",
+          "label": "Michael Penix (QB, ATL)",
+          "points": 10.98,
+          "started": true
+        },
+        {
+          "player_id": "11566",
+          "label": "Jayden Daniels (QB, WAS)",
+          "points": 0.0,
+          "started": false
+        },
+        {
+          "player_id": "11586",
+          "label": "Blake Corum (RB, LAR)",
+          "points": 5.6,
+          "started": false
+        },
+        {
+          "player_id": "11627",
+          "label": "Troy Franklin (WR, DEN)",
+          "points": 10.0,
+          "started": true
+        },
+        {
+          "player_id": "12497",
+          "label": "Tory Horton (WR, SEA)",
+          "points": 0.0,
+          "started": true
+        },
+        {
+          "player_id": "12498",
+          "label": "Mason Taylor (TE, NYJ)",
+          "points": 0.4,
+          "started": true
+        },
+        {
+          "player_id": "12541",
+          "label": "Dont\u0027e Thornton (WR, LV)",
+          "points": 0.4,
+          "started": false
+        },
+        {
+          "player_id": "2307",
+          "label": "Marcus Mariota (QB, WAS)",
+          "points": 18.72,
+          "started": true
+        },
+        {
+          "player_id": "2747",
+          "label": "Jason Myers (K, SEA)",
+          "points": 14.0,
+          "started": true
+        },
+        {
+          "player_id": "4034",
+          "label": "Christian McCaffrey (RB, SF)",
+          "points": 9.6,
+          "started": true
+        },
+        {
+          "player_id": "4981",
+          "label": "Calvin Ridley (WR, TEN)",
+          "points": 0.0,
+          "started": false
+        },
+        {
+          "player_id": "4988",
+          "label": "Nick Chubb (RB, FA)",
+          "points": 5.2,
+          "started": true
+        },
+        {
+          "player_id": "5045",
+          "label": "Courtland Sutton (WR, DEN)",
+          "points": 2.4,
+          "started": true
+        },
+        {
+          "player_id": "5927",
+          "label": "Terry McLaurin (WR, WAS)",
+          "points": 0.0,
+          "started": false
+        },
+        {
+          "player_id": "6271",
+          "label": "Olamide Zaccheaus (WR, ATL)",
+          "points": 0.5,
+          "started": true
+        },
+        {
+          "player_id": "6650",
+          "label": "Chase McLaughlin (K, TB)",
+          "points": 5.0,
+          "started": true
+        },
+        {
+          "player_id": "6786",
+          "label": "CeeDee Lamb (WR, DAL)",
+          "points": 0.0,
+          "started": false
+        },
+        {
+          "player_id": "6803",
+          "label": "Brandon Aiyuk (WR, SF)",
+          "points": 0.0,
+          "started": false
+        },
+        {
+          "player_id": "7021",
+          "label": "Rico Dowdle (RB, PIT)",
+          "points": 12.3,
+          "started": true
+        },
+        {
+          "player_id": "8130",
+          "label": "Trey McBride (TE, ARI)",
+          "points": 18.7,
+          "started": true
+        },
+        {
+          "player_id": "8155",
+          "label": "Breece Hall (RB, NYJ)",
+          "points": 18.5,
+          "started": true
+        },
+        {
+          "player_id": "8676",
+          "label": "Rashid Shaheed (WR, SEA)",
+          "points": 2.3,
+          "started": true
+        },
+        {
+          "player_id": "9224",
+          "label": "Chase Brown (RB, CIN)",
+          "points": 0.0,
+          "started": false
+        },
+        {
+          "player_id": "9504",
+          "label": "Kayshon Boutte (WR, NE)",
+          "points": 0.0,
+          "started": false
+        },
+        {
+          "player_id": "9508",
+          "label": "Tyjae Spears (RB, TEN)",
+          "points": 0.0,
+          "started": false
+        },
+        {
+          "player_id": "9753",
+          "label": "Zach Charbonnet (RB, SEA)",
+          "points": 14.3,
+          "started": true
+        },
+        {
+          "player_id": "9758",
+          "label": "C.J. Stroud (QB, HOU)",
+          "points": 0.0,
+          "started": false
+        },
+        {
+          "player_id": "BUF",
+          "label": "Buffalo Bills (DEF, BUF)",
+          "points": 3.0,
+          "started": true
+        },
+        {
+          "player_id": "KC",
+          "label": "Kansas City Chiefs (DEF, KC)",
+          "points": 0.0,
+          "started": false
+        },
+        {
+          "player_id": "LAR",
+          "label": "Los Angeles Rams (DEF, LAR)",
+          "points": 7.0,
+          "started": true
+        }
+      ]
+    },
+    {
+      "roster_id": 7,
+      "user_id": "1123415443601010688",
+      "username": "",
+      "display_name": "Evenkeel75",
+      "team_name": "First in and First Out?",
+      "matchup_id": 4,
+      "points": 193.24,
+      "starters": [
+        {
+          "player_id": "6804",
+          "label": "Jordan Love (QB, GB)",
+          "points": 7.84
+        },
+        {
+          "player_id": "6797",
+          "label": "Justin Herbert (QB, LAC)",
+          "points": 14.7
+        },
+        {
+          "player_id": "7543",
+          "label": "Travis Etienne (RB, NO)",
+          "points": 13.7
+        },
+        {
+          "player_id": "9509",
+          "label": "Bijan Robinson (RB, ATL)",
+          "points": 8.8
+        },
+        {
+          "player_id": "6813",
+          "label": "Jonathan Taylor (RB, IND)",
+          "points": 46.6
+        },
+        {
+          "player_id": "12512",
+          "label": "Quinshon Judkins (RB, CLE)",
+          "points": 8.5
+        },
+        {
+          "player_id": "8121",
+          "label": "Romeo Doubs (WR, NE)",
+          "points": 0.5
+        },
+        {
+          "player_id": "11620",
+          "label": "Rome Odunze (WR, CHI)",
+          "points": 14.6
+        },
+        {
+          "player_id": "7569",
+          "label": "Nico Collins (WR, HOU)",
+          "points": 15.6
+        },
+        {
+          "player_id": "7526",
+          "label": "Jaylen Waddle (WR, DEN)",
+          "points": 14.4
+        },
+        {
+          "player_id": "10236",
+          "label": "Dalton Kincaid (TE, BUF)",
+          "points": 3.7
+        },
+        {
+          "player_id": "5844",
+          "label": "T.J. Hockenson (TE, MIN)",
+          "points": 0.8
+        },
+        {
+          "player_id": "9997",
+          "label": "Zay Flowers (WR, BAL)",
+          "points": 8.1
+        },
+        {
+          "player_id": "11199",
+          "label": "Emari Demercado (RB, KC)",
+          "points": 10.4
+        },
+        {
+          "player_id": "5230",
+          "label": "Michael Badgley (K, FA)",
+          "points": 6.0
+        },
+        {
+          "player_id": "11539",
+          "label": "Jake Bates (K, DET)",
+          "points": 11.0
+        },
+        {
+          "player_id": "DET",
+          "label": "Detroit Lions (DEF, DET)",
+          "points": 2.0
+        },
+        {
+          "player_id": "IND",
+          "label": "Indianapolis Colts (DEF, IND)",
+          "points": 6.0
+        }
+      ],
+      "bench": [
+        {
+          "player_id": "11584",
+          "label": "Bucky Irving (RB, TB)",
+          "points": 0.0
+        },
+        {
+          "player_id": "4046",
+          "label": "Patrick Mahomes (QB, KC)",
+          "points": 0.0
+        },
+        {
+          "player_id": "4195",
+          "label": "Jake Elliott (K, PHI)",
+          "points": 4.0
+        },
+        {
+          "player_id": "5001",
+          "label": "Dalton Schultz (TE, HOU)",
+          "points": 11.3
+        },
+        {
+          "player_id": "5848",
+          "label": "Marquise Brown (WR, PHI)",
+          "points": 0.0
+        },
+        {
+          "player_id": "5995",
+          "label": "Justice Hill (RB, BAL)",
+          "points": 7.3
+        },
+        {
+          "player_id": "6783",
+          "label": "Jerry Jeudy (WR, CLE)",
+          "points": 13.8
+        },
+        {
+          "player_id": "7002",
+          "label": "Juwan Johnson (TE, NO)",
+          "points": 15.2
+        },
+        {
+          "player_id": "96",
+          "label": "Aaron Rodgers (QB, FA)",
+          "points": 6.44
+        },
+        {
+          "player_id": "JAX",
+          "label": "Jacksonville Jaguars (DEF, JAX)",
+          "points": 11.0
+        },
+        {
+          "player_id": "TB",
+          "label": "Tampa Bay Buccaneers (DEF, TB)",
+          "points": 2.0
+        }
+      ],
+      "roster": [
+        {
+          "player_id": "10236",
+          "label": "Dalton Kincaid (TE, BUF)",
+          "points": 3.7,
+          "started": true
+        },
+        {
+          "player_id": "11199",
+          "label": "Emari Demercado (RB, KC)",
+          "points": 10.4,
+          "started": true
+        },
+        {
+          "player_id": "11539",
+          "label": "Jake Bates (K, DET)",
+          "points": 11.0,
+          "started": true
+        },
+        {
+          "player_id": "11584",
+          "label": "Bucky Irving (RB, TB)",
+          "points": 0.0,
+          "started": false
+        },
+        {
+          "player_id": "11620",
+          "label": "Rome Odunze (WR, CHI)",
+          "points": 14.6,
+          "started": true
+        },
+        {
+          "player_id": "12512",
+          "label": "Quinshon Judkins (RB, CLE)",
+          "points": 8.5,
+          "started": true
+        },
+        {
+          "player_id": "4046",
+          "label": "Patrick Mahomes (QB, KC)",
+          "points": 0.0,
+          "started": false
+        },
+        {
+          "player_id": "4195",
+          "label": "Jake Elliott (K, PHI)",
+          "points": 4.0,
+          "started": false
+        },
+        {
+          "player_id": "5001",
+          "label": "Dalton Schultz (TE, HOU)",
+          "points": 11.3,
+          "started": false
+        },
+        {
+          "player_id": "5230",
+          "label": "Michael Badgley (K, FA)",
+          "points": 6.0,
+          "started": true
+        },
+        {
+          "player_id": "5844",
+          "label": "T.J. Hockenson (TE, MIN)",
+          "points": 0.8,
+          "started": true
+        },
+        {
+          "player_id": "5848",
+          "label": "Marquise Brown (WR, PHI)",
+          "points": 0.0,
+          "started": false
+        },
+        {
+          "player_id": "5995",
+          "label": "Justice Hill (RB, BAL)",
+          "points": 7.3,
+          "started": false
+        },
+        {
+          "player_id": "6783",
+          "label": "Jerry Jeudy (WR, CLE)",
+          "points": 13.8,
+          "started": false
+        },
+        {
+          "player_id": "6797",
+          "label": "Justin Herbert (QB, LAC)",
+          "points": 14.7,
+          "started": true
+        },
+        {
+          "player_id": "6804",
+          "label": "Jordan Love (QB, GB)",
+          "points": 7.84,
+          "started": true
+        },
+        {
+          "player_id": "6813",
+          "label": "Jonathan Taylor (RB, IND)",
+          "points": 46.6,
+          "started": true
+        },
+        {
+          "player_id": "7002",
+          "label": "Juwan Johnson (TE, NO)",
+          "points": 15.2,
+          "started": false
+        },
+        {
+          "player_id": "7526",
+          "label": "Jaylen Waddle (WR, DEN)",
+          "points": 14.4,
+          "started": true
+        },
+        {
+          "player_id": "7543",
+          "label": "Travis Etienne (RB, NO)",
+          "points": 13.7,
+          "started": true
+        },
+        {
+          "player_id": "7569",
+          "label": "Nico Collins (WR, HOU)",
+          "points": 15.6,
+          "started": true
+        },
+        {
+          "player_id": "8121",
+          "label": "Romeo Doubs (WR, NE)",
+          "points": 0.5,
+          "started": true
+        },
+        {
+          "player_id": "9509",
+          "label": "Bijan Robinson (RB, ATL)",
+          "points": 8.8,
+          "started": true
+        },
+        {
+          "player_id": "96",
+          "label": "Aaron Rodgers (QB, FA)",
+          "points": 6.44,
+          "started": false
+        },
+        {
+          "player_id": "9997",
+          "label": "Zay Flowers (WR, BAL)",
+          "points": 8.1,
+          "started": true
+        },
+        {
+          "player_id": "DET",
+          "label": "Detroit Lions (DEF, DET)",
+          "points": 2.0,
+          "started": true
+        },
+        {
+          "player_id": "IND",
+          "label": "Indianapolis Colts (DEF, IND)",
+          "points": 6.0,
+          "started": true
+        },
+        {
+          "player_id": "JAX",
+          "label": "Jacksonville Jaguars (DEF, JAX)",
+          "points": 11.0,
+          "started": false
+        },
+        {
+          "player_id": "TB",
+          "label": "Tampa Bay Buccaneers (DEF, TB)",
+          "points": 2.0,
+          "started": false
+        }
+      ]
+    },
+    {
+      "roster_id": 8,
+      "user_id": "1125536159003799552",
+      "username": "",
+      "display_name": "NOTDoda",
+      "team_name": "BearDown",
+      "matchup_id": 2,
+      "points": 108.0,
+      "starters": [
+        {
+          "player_id": "11560",
+          "label": "Caleb Williams (QB, CHI)",
+          "points": 25.1
+        },
+        {
+          "player_id": "3294",
+          "label": "Dak Prescott (QB, DAL)",
+          "points": 0.0
+        },
+        {
+          "player_id": "8122",
+          "label": "Zonovan Knight (RB, ARI)",
+          "points": 3.3
+        },
+        {
+          "player_id": "11655",
+          "label": "Tyrone Tracy (RB, NYG)",
+          "points": 7.1
+        },
+        {
+          "player_id": "8154",
+          "label": "Brian Robinson (RB, ATL)",
+          "points": 10.5
+        },
+        {
+          "player_id": "8408",
+          "label": "Jordan Mason (RB, MIN)",
+          "points": 3.1
+        },
+        {
+          "player_id": "9500",
+          "label": "Josh Downs (WR, IND)",
+          "points": 0.3
+        },
+        {
+          "player_id": "5872",
+          "label": "Deebo Samuel (WR, FA)",
+          "points": 8.9
+        },
+        {
+          "player_id": "11626",
+          "label": "Xavier Legette (WR, CAR)",
+          "points": 0.0
+        },
+        {
+          "player_id": "7090",
+          "label": "Darnell Mooney (WR, NYG)",
+          "points": 1.7
+        },
+        {
+          "player_id": "4033",
+          "label": "David Njoku (TE, FA)",
+          "points": 8.1
+        },
+        {
+          "player_id": "1339",
+          "label": "Zach Ertz (TE, FA)",
+          "points": 5.4
+        },
+        {
+          "player_id": "8126",
+          "label": "Wan\u0027Dale Robinson (WR, TEN)",
+          "points": 6.2
+        },
+        {
+          "player_id": "11628",
+          "label": "Marvin Harrison (WR, ARI)",
+          "points": 11.3
+        },
+        {
+          "player_id": "1945",
+          "label": "Chris Boswell (K, PIT)",
+          "points": 6.0
+        },
+        {
+          "player_id": "6083",
+          "label": "Matt Gay (K, LV)",
+          "points": 4.0
+        },
+        {
+          "player_id": "PIT",
+          "label": "Pittsburgh Steelers (DEF, PIT)",
+          "points": 5.0
+        },
+        {
+          "player_id": "NE",
+          "label": "New England Patriots (DEF, NE)",
+          "points": 2.0
+        }
+      ],
+      "bench": [
+        {
+          "player_id": "11786",
+          "label": "Cam Little (K, JAX)",
+          "points": 13.0
+        },
+        {
+          "player_id": "12507",
+          "label": "Omarion Hampton (RB, LAC)",
+          "points": 0.0
+        },
+        {
+          "player_id": "1466",
+          "label": "Travis Kelce (TE, KC)",
+          "points": 0.0
+        },
+        {
+          "player_id": "2020",
+          "label": "Cairo Santos (K, CHI)",
+          "points": 6.0
+        },
+        {
+          "player_id": "3161",
+          "label": "Carson Wentz (QB, MIN)",
+          "points": 0.0
+        },
+        {
+          "player_id": "3257",
+          "label": "Jacoby Brissett (QB, ARI)",
+          "points": 19.42
+        },
+        {
+          "player_id": "4144",
+          "label": "Jonnu Smith (TE, FA)",
+          "points": 0.4
+        },
+        {
+          "player_id": "7564",
+          "label": "Ja\u0027Marr Chase (WR, CIN)",
+          "points": 0.0
+        },
+        {
+          "player_id": "7571",
+          "label": "Rashod Bateman (WR, BAL)",
+          "points": 3.0
+        },
+        {
+          "player_id": "8123",
+          "label": "Hassan Haskins (RB, FA)",
+          "points": 0.0
+        },
+        {
+          "player_id": "8137",
+          "label": "George Pickens (WR, DAL)",
+          "points": 0.0
+        },
+        {
+          "player_id": "NYG",
+          "label": "New York Giants (DEF, NYG)",
+          "points": 0.0
+        }
+      ],
+      "roster": [
+        {
+          "player_id": "11560",
+          "label": "Caleb Williams (QB, CHI)",
+          "points": 25.1,
+          "started": true
+        },
+        {
+          "player_id": "11626",
+          "label": "Xavier Legette (WR, CAR)",
+          "points": 0.0,
+          "started": true
+        },
+        {
+          "player_id": "11628",
+          "label": "Marvin Harrison (WR, ARI)",
+          "points": 11.3,
+          "started": true
+        },
+        {
+          "player_id": "11655",
+          "label": "Tyrone Tracy (RB, NYG)",
+          "points": 7.1,
+          "started": true
+        },
+        {
+          "player_id": "11786",
+          "label": "Cam Little (K, JAX)",
+          "points": 13.0,
+          "started": false
+        },
+        {
+          "player_id": "12507",
+          "label": "Omarion Hampton (RB, LAC)",
+          "points": 0.0,
+          "started": false
+        },
+        {
+          "player_id": "1339",
+          "label": "Zach Ertz (TE, FA)",
+          "points": 5.4,
+          "started": true
+        },
+        {
+          "player_id": "1466",
+          "label": "Travis Kelce (TE, KC)",
+          "points": 0.0,
+          "started": false
+        },
+        {
+          "player_id": "1945",
+          "label": "Chris Boswell (K, PIT)",
+          "points": 6.0,
+          "started": true
+        },
+        {
+          "player_id": "2020",
+          "label": "Cairo Santos (K, CHI)",
+          "points": 6.0,
+          "started": false
+        },
+        {
+          "player_id": "3161",
+          "label": "Carson Wentz (QB, MIN)",
+          "points": 0.0,
+          "started": false
+        },
+        {
+          "player_id": "3257",
+          "label": "Jacoby Brissett (QB, ARI)",
+          "points": 19.42,
+          "started": false
+        },
+        {
+          "player_id": "3294",
+          "label": "Dak Prescott (QB, DAL)",
+          "points": 0.0,
+          "started": true
+        },
+        {
+          "player_id": "4033",
+          "label": "David Njoku (TE, FA)",
+          "points": 8.1,
+          "started": true
+        },
+        {
+          "player_id": "4144",
+          "label": "Jonnu Smith (TE, FA)",
+          "points": 0.4,
+          "started": false
+        },
+        {
+          "player_id": "5872",
+          "label": "Deebo Samuel (WR, FA)",
+          "points": 8.9,
+          "started": true
+        },
+        {
+          "player_id": "6083",
+          "label": "Matt Gay (K, LV)",
+          "points": 4.0,
+          "started": true
+        },
+        {
+          "player_id": "7090",
+          "label": "Darnell Mooney (WR, NYG)",
+          "points": 1.7,
+          "started": true
+        },
+        {
+          "player_id": "7564",
+          "label": "Ja\u0027Marr Chase (WR, CIN)",
+          "points": 0.0,
+          "started": false
+        },
+        {
+          "player_id": "7571",
+          "label": "Rashod Bateman (WR, BAL)",
+          "points": 3.0,
+          "started": false
+        },
+        {
+          "player_id": "8122",
+          "label": "Zonovan Knight (RB, ARI)",
+          "points": 3.3,
+          "started": true
+        },
+        {
+          "player_id": "8123",
+          "label": "Hassan Haskins (RB, FA)",
+          "points": 0.0,
+          "started": false
+        },
+        {
+          "player_id": "8126",
+          "label": "Wan\u0027Dale Robinson (WR, TEN)",
+          "points": 6.2,
+          "started": true
+        },
+        {
+          "player_id": "8137",
+          "label": "George Pickens (WR, DAL)",
+          "points": 0.0,
+          "started": false
+        },
+        {
+          "player_id": "8154",
+          "label": "Brian Robinson (RB, ATL)",
+          "points": 10.5,
+          "started": true
+        },
+        {
+          "player_id": "8408",
+          "label": "Jordan Mason (RB, MIN)",
+          "points": 3.1,
+          "started": true
+        },
+        {
+          "player_id": "9500",
+          "label": "Josh Downs (WR, IND)",
+          "points": 0.3,
+          "started": true
+        },
+        {
+          "player_id": "NE",
+          "label": "New England Patriots (DEF, NE)",
+          "points": 2.0,
+          "started": true
+        },
+        {
+          "player_id": "NYG",
+          "label": "New York Giants (DEF, NYG)",
+          "points": 0.0,
+          "started": false
+        },
+        {
+          "player_id": "PIT",
+          "label": "Pittsburgh Steelers (DEF, PIT)",
+          "points": 5.0,
+          "started": true
+        }
+      ]
+    }
+  ]
+}

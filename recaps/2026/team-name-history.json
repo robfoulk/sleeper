@@ -1,0 +1,51 @@
+{
+  "Season": 2026,
+  "Snapshots": [
+    {
+      "Week": 1,
+      "GeneratedAt": "2026-04-26T17:47:38.2440148+00:00",
+      "OwnerNames": {
+        "1112856951387414528": {
+          "DisplayName": "robfoulk",
+          "TeamName": "Unstoppable Farce",
+          "Username": ""
+        },
+        "1121310424491864064": {
+          "DisplayName": "Dbfoulkrod",
+          "TeamName": "Amon Another level ",
+          "Username": ""
+        },
+        "1121310753874604032": {
+          "DisplayName": "mafoulk",
+          "TeamName": "Disappointment",
+          "Username": ""
+        },
+        "1121459919724728320": {
+          "DisplayName": "jfoulkrod",
+          "TeamName": "Seasonal Depression",
+          "Username": ""
+        },
+        "1122536845449072640": {
+          "DisplayName": "asmartaleck1",
+          "TeamName": "He hate me",
+          "Username": ""
+        },
+        "1122570164190466048": {
+          "DisplayName": "ebmookie",
+          "TeamName": "Sanders Boutte on Sunday",
+          "Username": ""
+        },
+        "1123415443601010688": {
+          "DisplayName": "Evenkeel75",
+          "TeamName": "Tri-Lams",
+          "Username": ""
+        },
+        "1334313985066958848": {
+          "DisplayName": "Von937",
+          "TeamName": "Von ",
+          "Username": ""
+        }
+      }
+    }
+  ]
+}

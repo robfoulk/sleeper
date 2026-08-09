@@ -1,0 +1,20 @@
+Asset movement audit: 2024
+League: 1112858215559057408
+Week 1 assets: 241
+Exit classes: Dropped=41, Retained=148, Trade=12, WaiverOrFreeAgentMove=40
+Starts for original roster: 1791
+Starts for another roster: 206
+
+Traded Week 1 assets
+- W4: David Montgomery (RB, HOU) R5->R4; starts original/elsewhere 2/11; sender package received players [Zamir White (RB)], picks [2025 R3].
+- W4: Zamir White (RB, FA) R4->R5; starts original/elsewhere 2/5; sender package received players [David Montgomery (RB)], picks [2025 R10].
+- W6: George Kittle (TE, SF) R3->R4; starts original/elsewhere 4/9; sender package received players [Mark Andrews (TE)], picks [2025 R5, 2025 R8].
+- W6: Mark Andrews (TE, BAL) R4->R3; starts original/elsewhere 3/9; sender package received players [George Kittle (TE)], picks [2025 R14, 2025 R7].
+- W7: Mike Evans (WR, SF) R3->R1; starts original/elsewhere 5/7; sender package received players [Darius Slayton (WR)], picks [2025 R5].
+- W8: D'Andre Swift (RB, CHI) R5->R1; starts original/elsewhere 6/9; sender package received players [Jerome Ford (RB)], picks [].
+- W8: Jamaal Williams (RB, FA) R2->R5; starts original/elsewhere 0/2; sender package received players [Josh Jacobs (RB)], picks [2025 R24].
+- W8: Jerome Ford (RB, WAS) R1->R5; starts original/elsewhere 5/7; sender package received players [D'Andre Swift (RB)], picks [2025 R8].
+- W8: Josh Jacobs (RB, GB) R5->R2; starts original/elsewhere 7/8; sender package received players [Jamaal Williams (RB)], picks [2025 R3].
+- W9: Brian Thomas (WR, JAX) R5->R1; starts original/elsewhere 8/7; sender package received players [New England Patriots (DEF)], picks [2025 R7].
+- W9: Jameson Williams (WR, DET) R5->R8; starts original/elsewhere 5/8; sender package received players [Wan'Dale Robinson (WR)], picks [2025 R2].
+- W9: Wan'Dale Robinson (WR, TEN) R8->R5; starts original/elsewhere 2/0; sender package received players [Jameson Williams (WR)], picks [2025 R6].

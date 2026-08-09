@@ -1,0 +1,170 @@
+{
+  "Season": 2025,
+  "LeagueId": "1180276953741729792",
+  "LeagueName": "FoulknFootball",
+  "GeneratedAt": "2026-04-27T01:00:10.2889884+00:00",
+  "Artifacts": [
+    {
+      "Path": "season.md",
+      "Kind": "season-recap-markdown",
+      "ContentType": "text/markdown",
+      "Description": "Composed season-in-review document (humans \u002B agents)."
+    },
+    {
+      "Path": "season-aggregate.json",
+      "Kind": "season-aggregate",
+      "ContentType": "application/json",
+      "Description": "Per-team weekly series, season highs/lows, weekly champions, final outcome. Source of truth for every chart."
+    },
+    {
+      "Path": "season-awards.json",
+      "Kind": "season-awards",
+      "ContentType": "application/json",
+      "Description": "Deterministic awards (name, winner, metric, citation). The agent narrates these; it does not pick them."
+    },
+    {
+      "Path": "season-outcome.json",
+      "Kind": "season-outcome",
+      "ContentType": "application/json",
+      "Description": "Final placements \u002B next year\u0027s draft picks."
+    },
+    {
+      "Path": "power-history.json",
+      "Kind": "power-history",
+      "ContentType": "application/json",
+      "Description": "Per-week power-rank snapshots written by the weekly recap pipeline."
+    },
+    {
+      "Path": "team-name-history.json",
+      "Kind": "team-name-history",
+      "ContentType": "application/json",
+      "Description": "Owner team-name changes by week."
+    },
+    {
+      "Path": "charts/power-rank-trajectory.svg",
+      "Kind": "chart-svg",
+      "ContentType": "image/svg\u002Bxml",
+      "Description": "Power-rank trajectory chart. Derived from season-aggregate.json#Teams[].Weekly[].PowerRank."
+    },
+    {
+      "Path": "charts/cumulative-points-differential.svg",
+      "Kind": "chart-svg",
+      "ContentType": "image/svg\u002Bxml",
+      "Description": "Cumulative PF \u2212 PA differential chart (regular season). Derived from season-aggregate.json#Teams[].Weekly[].CumulativePointsDifferential."
+    },
+    {
+      "Path": "charts/cumulative-record.svg",
+      "Kind": "chart-svg",
+      "ContentType": "image/svg\u002Bxml",
+      "Description": "Cumulative W-L chart. Derived from season-aggregate.json#Teams[].Weekly[].(CumulativeWins-CumulativeLosses)."
+    },
+    {
+      "Path": "charts/weekly-score-rank.svg",
+      "Kind": "chart-svg",
+      "ContentType": "image/svg\u002Bxml",
+      "Description": "Weekly score-rank chart. Derived from season-aggregate.json#Teams[].Weekly[].ScoreRank."
+    },
+    {
+      "Path": "week-01.md",
+      "Kind": "weekly-recap-markdown",
+      "ContentType": "text/markdown",
+      "Description": "Week 1 recap."
+    },
+    {
+      "Path": "week-02.md",
+      "Kind": "weekly-recap-markdown",
+      "ContentType": "text/markdown",
+      "Description": "Week 2 recap."
+    },
+    {
+      "Path": "week-03.md",
+      "Kind": "weekly-recap-markdown",
+      "ContentType": "text/markdown",
+      "Description": "Week 3 recap."
+    },
+    {
+      "Path": "week-04.md",
+      "Kind": "weekly-recap-markdown",
+      "ContentType": "text/markdown",
+      "Description": "Week 4 recap."
+    },
+    {
+      "Path": "week-05.md",
+      "Kind": "weekly-recap-markdown",
+      "ContentType": "text/markdown",
+      "Description": "Week 5 recap."
+    },
+    {
+      "Path": "week-06.md",
+      "Kind": "weekly-recap-markdown",
+      "ContentType": "text/markdown",
+      "Description": "Week 6 recap."
+    },
+    {
+      "Path": "week-07.md",
+      "Kind": "weekly-recap-markdown",
+      "ContentType": "text/markdown",
+      "Description": "Week 7 recap."
+    },
+    {
+      "Path": "week-08.md",
+      "Kind": "weekly-recap-markdown",
+      "ContentType": "text/markdown",
+      "Description": "Week 8 recap."
+    },
+    {
+      "Path": "week-09.md",
+      "Kind": "weekly-recap-markdown",
+      "ContentType": "text/markdown",
+      "Description": "Week 9 recap."
+    },
+    {
+      "Path": "week-10.md",
+      "Kind": "weekly-recap-markdown",
+      "ContentType": "text/markdown",
+      "Description": "Week 10 recap."
+    },
+    {
+      "Path": "week-11.md",
+      "Kind": "weekly-recap-markdown",
+      "ContentType": "text/markdown",
+      "Description": "Week 11 recap."
+    },
+    {
+      "Path": "week-12.md",
+      "Kind": "weekly-recap-markdown",
+      "ContentType": "text/markdown",
+      "Description": "Week 12 recap."
+    },
+    {
+      "Path": "week-13.md",
+      "Kind": "weekly-recap-markdown",
+      "ContentType": "text/markdown",
+      "Description": "Week 13 recap."
+    },
+    {
+      "Path": "week-14.md",
+      "Kind": "weekly-recap-markdown",
+      "ContentType": "text/markdown",
+      "Description": "Week 14 recap."
+    },
+    {
+      "Path": "week-15.md",
+      "Kind": "weekly-recap-markdown",
+      "ContentType": "text/markdown",
+      "Description": "Week 15 recap."
+    },
+    {
+      "Path": "week-16.md",
+      "Kind": "weekly-recap-markdown",
+      "ContentType": "text/markdown",
+      "Description": "Week 16 recap."
+    },
+    {
+      "Path": "week-17.md",
+      "Kind": "weekly-recap-markdown",
+      "ContentType": "text/markdown",
+      "Description": "Week 17 recap."
+    }
+  ]
+}

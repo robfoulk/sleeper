@@ -1,0 +1,833 @@
+{
+  "Season": 2025,
+  "Snapshots": [
+    {
+      "Week": 1,
+      "GeneratedAt": "2026-04-27T00:26:30.9083534+00:00",
+      "OwnerNames": {
+        "1112856951387414528": {
+          "DisplayName": "robfoulk",
+          "TeamName": "Unstoppable Farce",
+          "Username": "robfoulk"
+        },
+        "1121310424491864064": {
+          "DisplayName": "Dbfoulkrod",
+          "TeamName": "Amon Another level ",
+          "Username": "Dbfoulkrod"
+        },
+        "1121310753874604032": {
+          "DisplayName": "mafoulk",
+          "TeamName": "Disappointment",
+          "Username": "mafoulk"
+        },
+        "1121459919724728320": {
+          "DisplayName": "jfoulkrod",
+          "TeamName": "Seasonal Depression",
+          "Username": "jfoulkrod"
+        },
+        "1122536845449072640": {
+          "DisplayName": "asmartaleck1",
+          "TeamName": "He hate me",
+          "Username": "asmartaleck1"
+        },
+        "1122570164190466048": {
+          "DisplayName": "ebmookie",
+          "TeamName": "Sanders Boutte on Sunday",
+          "Username": "ebmookie"
+        },
+        "1123415443601010688": {
+          "DisplayName": "Evenkeel75",
+          "TeamName": "First in and First Out?",
+          "Username": "Evenkeel75"
+        },
+        "1125536159003799552": {
+          "DisplayName": "NOTDoda",
+          "TeamName": "BearDown",
+          "Username": "NOTDoda"
+        }
+      }
+    },
+    {
+      "Week": 2,
+      "GeneratedAt": "2026-04-27T00:27:38.0292486+00:00",
+      "OwnerNames": {
+        "1112856951387414528": {
+          "DisplayName": "robfoulk",
+          "TeamName": "Unstoppable Farce",
+          "Username": "robfoulk"
+        },
+        "1121310424491864064": {
+          "DisplayName": "Dbfoulkrod",
+          "TeamName": "Amon Another level ",
+          "Username": "Dbfoulkrod"
+        },
+        "1121310753874604032": {
+          "DisplayName": "mafoulk",
+          "TeamName": "Disappointment",
+          "Username": "mafoulk"
+        },
+        "1121459919724728320": {
+          "DisplayName": "jfoulkrod",
+          "TeamName": "Seasonal Depression",
+          "Username": "jfoulkrod"
+        },
+        "1122536845449072640": {
+          "DisplayName": "asmartaleck1",
+          "TeamName": "He hate me",
+          "Username": "asmartaleck1"
+        },
+        "1122570164190466048": {
+          "DisplayName": "ebmookie",
+          "TeamName": "Sanders Boutte on Sunday",
+          "Username": "ebmookie"
+        },
+        "1123415443601010688": {
+          "DisplayName": "Evenkeel75",
+          "TeamName": "First in and First Out?",
+          "Username": "Evenkeel75"
+        },
+        "1125536159003799552": {
+          "DisplayName": "NOTDoda",
+          "TeamName": "BearDown",
+          "Username": "NOTDoda"
+        }
+      }
+    },
+    {
+      "Week": 3,
+      "GeneratedAt": "2026-04-27T00:28:37.4411037+00:00",
+      "OwnerNames": {
+        "1112856951387414528": {
+          "DisplayName": "robfoulk",
+          "TeamName": "Unstoppable Farce",
+          "Username": "robfoulk"
+        },
+        "1121310424491864064": {
+          "DisplayName": "Dbfoulkrod",
+          "TeamName": "Amon Another level ",
+          "Username": "Dbfoulkrod"
+        },
+        "1121310753874604032": {
+          "DisplayName": "mafoulk",
+          "TeamName": "Disappointment",
+          "Username": "mafoulk"
+        },
+        "1121459919724728320": {
+          "DisplayName": "jfoulkrod",
+          "TeamName": "Seasonal Depression",
+          "Username": "jfoulkrod"
+        },
+        "1122536845449072640": {
+          "DisplayName": "asmartaleck1",
+          "TeamName": "He hate me",
+          "Username": "asmartaleck1"
+        },
+        "1122570164190466048": {
+          "DisplayName": "ebmookie",
+          "TeamName": "Sanders Boutte on Sunday",
+          "Username": "ebmookie"
+        },
+        "1123415443601010688": {
+          "DisplayName": "Evenkeel75",
+          "TeamName": "First in and First Out?",
+          "Username": "Evenkeel75"
+        },
+        "1125536159003799552": {
+          "DisplayName": "NOTDoda",
+          "TeamName": "BearDown",
+          "Username": "NOTDoda"
+        }
+      }
+    },
+    {
+      "Week": 4,
+      "GeneratedAt": "2026-04-27T00:29:50.4453108+00:00",
+      "OwnerNames": {
+        "1112856951387414528": {
+          "DisplayName": "robfoulk",
+          "TeamName": "Unstoppable Farce",
+          "Username": "robfoulk"
+        },
+        "1121310424491864064": {
+          "DisplayName": "Dbfoulkrod",
+          "TeamName": "Amon Another level ",
+          "Username": "Dbfoulkrod"
+        },
+        "1121310753874604032": {
+          "DisplayName": "mafoulk",
+          "TeamName": "Disappointment",
+          "Username": "mafoulk"
+        },
+        "1121459919724728320": {
+          "DisplayName": "jfoulkrod",
+          "TeamName": "Seasonal Depression",
+          "Username": "jfoulkrod"
+        },
+        "1122536845449072640": {
+          "DisplayName": "asmartaleck1",
+          "TeamName": "He hate me",
+          "Username": "asmartaleck1"
+        },
+        "1122570164190466048": {
+          "DisplayName": "ebmookie",
+          "TeamName": "Sanders Boutte on Sunday",
+          "Username": "ebmookie"
+        },
+        "1123415443601010688": {
+          "DisplayName": "Evenkeel75",
+          "TeamName": "First in and First Out?",
+          "Username": "Evenkeel75"
+        },
+        "1125536159003799552": {
+          "DisplayName": "NOTDoda",
+          "TeamName": "BearDown",
+          "Username": "NOTDoda"
+        }
+      }
+    },
+    {
+      "Week": 5,
+      "GeneratedAt": "2026-04-27T00:31:08.5152255+00:00",
+      "OwnerNames": {
+        "1112856951387414528": {
+          "DisplayName": "robfoulk",
+          "TeamName": "Unstoppable Farce",
+          "Username": "robfoulk"
+        },
+        "1121310424491864064": {
+          "DisplayName": "Dbfoulkrod",
+          "TeamName": "Amon Another level ",
+          "Username": "Dbfoulkrod"
+        },
+        "1121310753874604032": {
+          "DisplayName": "mafoulk",
+          "TeamName": "Disappointment",
+          "Username": "mafoulk"
+        },
+        "1121459919724728320": {
+          "DisplayName": "jfoulkrod",
+          "TeamName": "Seasonal Depression",
+          "Username": "jfoulkrod"
+        },
+        "1122536845449072640": {
+          "DisplayName": "asmartaleck1",
+          "TeamName": "He hate me",
+          "Username": "asmartaleck1"
+        },
+        "1122570164190466048": {
+          "DisplayName": "ebmookie",
+          "TeamName": "Sanders Boutte on Sunday",
+          "Username": "ebmookie"
+        },
+        "1123415443601010688": {
+          "DisplayName": "Evenkeel75",
+          "TeamName": "First in and First Out?",
+          "Username": "Evenkeel75"
+        },
+        "1125536159003799552": {
+          "DisplayName": "NOTDoda",
+          "TeamName": "BearDown",
+          "Username": "NOTDoda"
+        }
+      }
+    },
+    {
+      "Week": 6,
+      "GeneratedAt": "2026-04-27T00:32:19.1768653+00:00",
+      "OwnerNames": {
+        "1112856951387414528": {
+          "DisplayName": "robfoulk",
+          "TeamName": "Unstoppable Farce",
+          "Username": "robfoulk"
+        },
+        "1121310424491864064": {
+          "DisplayName": "Dbfoulkrod",
+          "TeamName": "Amon Another level ",
+          "Username": "Dbfoulkrod"
+        },
+        "1121310753874604032": {
+          "DisplayName": "mafoulk",
+          "TeamName": "Disappointment",
+          "Username": "mafoulk"
+        },
+        "1121459919724728320": {
+          "DisplayName": "jfoulkrod",
+          "TeamName": "Seasonal Depression",
+          "Username": "jfoulkrod"
+        },
+        "1122536845449072640": {
+          "DisplayName": "asmartaleck1",
+          "TeamName": "He hate me",
+          "Username": "asmartaleck1"
+        },
+        "1122570164190466048": {
+          "DisplayName": "ebmookie",
+          "TeamName": "Sanders Boutte on Sunday",
+          "Username": "ebmookie"
+        },
+        "1123415443601010688": {
+          "DisplayName": "Evenkeel75",
+          "TeamName": "First in and First Out?",
+          "Username": "Evenkeel75"
+        },
+        "1125536159003799552": {
+          "DisplayName": "NOTDoda",
+          "TeamName": "BearDown",
+          "Username": "NOTDoda"
+        }
+      }
+    },
+    {
+      "Week": 7,
+      "GeneratedAt": "2026-04-27T00:33:28.7313592+00:00",
+      "OwnerNames": {
+        "1112856951387414528": {
+          "DisplayName": "robfoulk",
+          "TeamName": "Unstoppable Farce",
+          "Username": "robfoulk"
+        },
+        "1121310424491864064": {
+          "DisplayName": "Dbfoulkrod",
+          "TeamName": "Amon Another level ",
+          "Username": "Dbfoulkrod"
+        },
+        "1121310753874604032": {
+          "DisplayName": "mafoulk",
+          "TeamName": "Disappointment",
+          "Username": "mafoulk"
+        },
+        "1121459919724728320": {
+          "DisplayName": "jfoulkrod",
+          "TeamName": "Seasonal Depression",
+          "Username": "jfoulkrod"
+        },
+        "1122536845449072640": {
+          "DisplayName": "asmartaleck1",
+          "TeamName": "He hate me",
+          "Username": "asmartaleck1"
+        },
+        "1122570164190466048": {
+          "DisplayName": "ebmookie",
+          "TeamName": "Sanders Boutte on Sunday",
+          "Username": "ebmookie"
+        },
+        "1123415443601010688": {
+          "DisplayName": "Evenkeel75",
+          "TeamName": "First in and First Out?",
+          "Username": "Evenkeel75"
+        },
+        "1125536159003799552": {
+          "DisplayName": "NOTDoda",
+          "TeamName": "BearDown",
+          "Username": "NOTDoda"
+        }
+      }
+    },
+    {
+      "Week": 8,
+      "GeneratedAt": "2026-04-27T00:34:43.6612041+00:00",
+      "OwnerNames": {
+        "1112856951387414528": {
+          "DisplayName": "robfoulk",
+          "TeamName": "Unstoppable Farce",
+          "Username": "robfoulk"
+        },
+        "1121310424491864064": {
+          "DisplayName": "Dbfoulkrod",
+          "TeamName": "Amon Another level ",
+          "Username": "Dbfoulkrod"
+        },
+        "1121310753874604032": {
+          "DisplayName": "mafoulk",
+          "TeamName": "Disappointment",
+          "Username": "mafoulk"
+        },
+        "1121459919724728320": {
+          "DisplayName": "jfoulkrod",
+          "TeamName": "Seasonal Depression",
+          "Username": "jfoulkrod"
+        },
+        "1122536845449072640": {
+          "DisplayName": "asmartaleck1",
+          "TeamName": "He hate me",
+          "Username": "asmartaleck1"
+        },
+        "1122570164190466048": {
+          "DisplayName": "ebmookie",
+          "TeamName": "Sanders Boutte on Sunday",
+          "Username": "ebmookie"
+        },
+        "1123415443601010688": {
+          "DisplayName": "Evenkeel75",
+          "TeamName": "First in and First Out?",
+          "Username": "Evenkeel75"
+        },
+        "1125536159003799552": {
+          "DisplayName": "NOTDoda",
+          "TeamName": "BearDown",
+          "Username": "NOTDoda"
+        }
+      }
+    },
+    {
+      "Week": 9,
+      "GeneratedAt": "2026-04-27T00:36:01.348556+00:00",
+      "OwnerNames": {
+        "1112856951387414528": {
+          "DisplayName": "robfoulk",
+          "TeamName": "Unstoppable Farce",
+          "Username": "robfoulk"
+        },
+        "1121310424491864064": {
+          "DisplayName": "Dbfoulkrod",
+          "TeamName": "Amon Another level ",
+          "Username": "Dbfoulkrod"
+        },
+        "1121310753874604032": {
+          "DisplayName": "mafoulk",
+          "TeamName": "Disappointment",
+          "Username": "mafoulk"
+        },
+        "1121459919724728320": {
+          "DisplayName": "jfoulkrod",
+          "TeamName": "Seasonal Depression",
+          "Username": "jfoulkrod"
+        },
+        "1122536845449072640": {
+          "DisplayName": "asmartaleck1",
+          "TeamName": "He hate me",
+          "Username": "asmartaleck1"
+        },
+        "1122570164190466048": {
+          "DisplayName": "ebmookie",
+          "TeamName": "Sanders Boutte on Sunday",
+          "Username": "ebmookie"
+        },
+        "1123415443601010688": {
+          "DisplayName": "Evenkeel75",
+          "TeamName": "First in and First Out?",
+          "Username": "Evenkeel75"
+        },
+        "1125536159003799552": {
+          "DisplayName": "NOTDoda",
+          "TeamName": "BearDown",
+          "Username": "NOTDoda"
+        }
+      }
+    },
+    {
+      "Week": 10,
+      "GeneratedAt": "2026-04-27T00:37:28.5733517+00:00",
+      "OwnerNames": {
+        "1112856951387414528": {
+          "DisplayName": "robfoulk",
+          "TeamName": "Unstoppable Farce",
+          "Username": "robfoulk"
+        },
+        "1121310424491864064": {
+          "DisplayName": "Dbfoulkrod",
+          "TeamName": "Amon Another level ",
+          "Username": "Dbfoulkrod"
+        },
+        "1121310753874604032": {
+          "DisplayName": "mafoulk",
+          "TeamName": "Disappointment",
+          "Username": "mafoulk"
+        },
+        "1121459919724728320": {
+          "DisplayName": "jfoulkrod",
+          "TeamName": "Seasonal Depression",
+          "Username": "jfoulkrod"
+        },
+        "1122536845449072640": {
+          "DisplayName": "asmartaleck1",
+          "TeamName": "He hate me",
+          "Username": "asmartaleck1"
+        },
+        "1122570164190466048": {
+          "DisplayName": "ebmookie",
+          "TeamName": "Sanders Boutte on Sunday",
+          "Username": "ebmookie"
+        },
+        "1123415443601010688": {
+          "DisplayName": "Evenkeel75",
+          "TeamName": "First in and First Out?",
+          "Username": "Evenkeel75"
+        },
+        "1125536159003799552": {
+          "DisplayName": "NOTDoda",
+          "TeamName": "BearDown",
+          "Username": "NOTDoda"
+        }
+      }
+    },
+    {
+      "Week": 11,
+      "GeneratedAt": "2026-04-27T00:38:56.5231171+00:00",
+      "OwnerNames": {
+        "1112856951387414528": {
+          "DisplayName": "robfoulk",
+          "TeamName": "Unstoppable Farce",
+          "Username": "robfoulk"
+        },
+        "1121310424491864064": {
+          "DisplayName": "Dbfoulkrod",
+          "TeamName": "Amon Another level ",
+          "Username": "Dbfoulkrod"
+        },
+        "1121310753874604032": {
+          "DisplayName": "mafoulk",
+          "TeamName": "Disappointment",
+          "Username": "mafoulk"
+        },
+        "1121459919724728320": {
+          "DisplayName": "jfoulkrod",
+          "TeamName": "Seasonal Depression",
+          "Username": "jfoulkrod"
+        },
+        "1122536845449072640": {
+          "DisplayName": "asmartaleck1",
+          "TeamName": "He hate me",
+          "Username": "asmartaleck1"
+        },
+        "1122570164190466048": {
+          "DisplayName": "ebmookie",
+          "TeamName": "Sanders Boutte on Sunday",
+          "Username": "ebmookie"
+        },
+        "1123415443601010688": {
+          "DisplayName": "Evenkeel75",
+          "TeamName": "First in and First Out?",
+          "Username": "Evenkeel75"
+        },
+        "1125536159003799552": {
+          "DisplayName": "NOTDoda",
+          "TeamName": "BearDown",
+          "Username": "NOTDoda"
+        }
+      }
+    },
+    {
+      "Week": 12,
+      "GeneratedAt": "2026-04-27T00:40:20.3518656+00:00",
+      "OwnerNames": {
+        "1112856951387414528": {
+          "DisplayName": "robfoulk",
+          "TeamName": "Unstoppable Farce",
+          "Username": "robfoulk"
+        },
+        "1121310424491864064": {
+          "DisplayName": "Dbfoulkrod",
+          "TeamName": "Amon Another level ",
+          "Username": "Dbfoulkrod"
+        },
+        "1121310753874604032": {
+          "DisplayName": "mafoulk",
+          "TeamName": "Disappointment",
+          "Username": "mafoulk"
+        },
+        "1121459919724728320": {
+          "DisplayName": "jfoulkrod",
+          "TeamName": "Seasonal Depression",
+          "Username": "jfoulkrod"
+        },
+        "1122536845449072640": {
+          "DisplayName": "asmartaleck1",
+          "TeamName": "He hate me",
+          "Username": "asmartaleck1"
+        },
+        "1122570164190466048": {
+          "DisplayName": "ebmookie",
+          "TeamName": "Sanders Boutte on Sunday",
+          "Username": "ebmookie"
+        },
+        "1123415443601010688": {
+          "DisplayName": "Evenkeel75",
+          "TeamName": "First in and First Out?",
+          "Username": "Evenkeel75"
+        },
+        "1125536159003799552": {
+          "DisplayName": "NOTDoda",
+          "TeamName": "BearDown",
+          "Username": "NOTDoda"
+        }
+      }
+    },
+    {
+      "Week": 13,
+      "GeneratedAt": "2026-04-27T00:41:38.6704056+00:00",
+      "OwnerNames": {
+        "1112856951387414528": {
+          "DisplayName": "robfoulk",
+          "TeamName": "Unstoppable Farce",
+          "Username": "robfoulk"
+        },
+        "1121310424491864064": {
+          "DisplayName": "Dbfoulkrod",
+          "TeamName": "Amon Another level ",
+          "Username": "Dbfoulkrod"
+        },
+        "1121310753874604032": {
+          "DisplayName": "mafoulk",
+          "TeamName": "Disappointment",
+          "Username": "mafoulk"
+        },
+        "1121459919724728320": {
+          "DisplayName": "jfoulkrod",
+          "TeamName": "Seasonal Depression",
+          "Username": "jfoulkrod"
+        },
+        "1122536845449072640": {
+          "DisplayName": "asmartaleck1",
+          "TeamName": "He hate me",
+          "Username": "asmartaleck1"
+        },
+        "1122570164190466048": {
+          "DisplayName": "ebmookie",
+          "TeamName": "Sanders Boutte on Sunday",
+          "Username": "ebmookie"
+        },
+        "1123415443601010688": {
+          "DisplayName": "Evenkeel75",
+          "TeamName": "First in and First Out?",
+          "Username": "Evenkeel75"
+        },
+        "1125536159003799552": {
+          "DisplayName": "NOTDoda",
+          "TeamName": "BearDown",
+          "Username": "NOTDoda"
+        }
+      }
+    },
+    {
+      "Week": 14,
+      "GeneratedAt": "2026-04-27T00:42:54.3675173+00:00",
+      "OwnerNames": {
+        "1112856951387414528": {
+          "DisplayName": "robfoulk",
+          "TeamName": "Unstoppable Farce",
+          "Username": "robfoulk"
+        },
+        "1121310424491864064": {
+          "DisplayName": "Dbfoulkrod",
+          "TeamName": "Amon Another level ",
+          "Username": "Dbfoulkrod"
+        },
+        "1121310753874604032": {
+          "DisplayName": "mafoulk",
+          "TeamName": "Disappointment",
+          "Username": "mafoulk"
+        },
+        "1121459919724728320": {
+          "DisplayName": "jfoulkrod",
+          "TeamName": "Seasonal Depression",
+          "Username": "jfoulkrod"
+        },
+        "1122536845449072640": {
+          "DisplayName": "asmartaleck1",
+          "TeamName": "He hate me",
+          "Username": "asmartaleck1"
+        },
+        "1122570164190466048": {
+          "DisplayName": "ebmookie",
+          "TeamName": "Sanders Boutte on Sunday",
+          "Username": "ebmookie"
+        },
+        "1123415443601010688": {
+          "DisplayName": "Evenkeel75",
+          "TeamName": "First in and First Out?",
+          "Username": "Evenkeel75"
+        },
+        "1125536159003799552": {
+          "DisplayName": "NOTDoda",
+          "TeamName": "BearDown",
+          "Username": "NOTDoda"
+        }
+      }
+    },
+    {
+      "Week": 15,
+      "GeneratedAt": "2026-04-27T00:44:08.8656349+00:00",
+      "OwnerNames": {
+        "1112856951387414528": {
+          "DisplayName": "robfoulk",
+          "TeamName": "Unstoppable Farce",
+          "Username": "robfoulk"
+        },
+        "1121310424491864064": {
+          "DisplayName": "Dbfoulkrod",
+          "TeamName": "Amon Another level ",
+          "Username": "Dbfoulkrod"
+        },
+        "1121310753874604032": {
+          "DisplayName": "mafoulk",
+          "TeamName": "Disappointment",
+          "Username": "mafoulk"
+        },
+        "1121459919724728320": {
+          "DisplayName": "jfoulkrod",
+          "TeamName": "Seasonal Depression",
+          "Username": "jfoulkrod"
+        },
+        "1122536845449072640": {
+          "DisplayName": "asmartaleck1",
+          "TeamName": "He hate me",
+          "Username": "asmartaleck1"
+        },
+        "1122570164190466048": {
+          "DisplayName": "ebmookie",
+          "TeamName": "Sanders Boutte on Sunday",
+          "Username": "ebmookie"
+        },
+        "1123415443601010688": {
+          "DisplayName": "Evenkeel75",
+          "TeamName": "First in and First Out?",
+          "Username": "Evenkeel75"
+        },
+        "1125536159003799552": {
+          "DisplayName": "NOTDoda",
+          "TeamName": "BearDown",
+          "Username": "NOTDoda"
+        }
+      }
+    },
+    {
+      "Week": 16,
+      "GeneratedAt": "2026-04-27T00:45:25.6978155+00:00",
+      "OwnerNames": {
+        "1112856951387414528": {
+          "DisplayName": "robfoulk",
+          "TeamName": "Unstoppable Farce",
+          "Username": "robfoulk"
+        },
+        "1121310424491864064": {
+          "DisplayName": "Dbfoulkrod",
+          "TeamName": "Amon Another level ",
+          "Username": "Dbfoulkrod"
+        },
+        "1121310753874604032": {
+          "DisplayName": "mafoulk",
+          "TeamName": "Disappointment",
+          "Username": "mafoulk"
+        },
+        "1121459919724728320": {
+          "DisplayName": "jfoulkrod",
+          "TeamName": "Seasonal Depression",
+          "Username": "jfoulkrod"
+        },
+        "1122536845449072640": {
+          "DisplayName": "asmartaleck1",
+          "TeamName": "He hate me",
+          "Username": "asmartaleck1"
+        },
+        "1122570164190466048": {
+          "DisplayName": "ebmookie",
+          "TeamName": "Sanders Boutte on Sunday",
+          "Username": "ebmookie"
+        },
+        "1123415443601010688": {
+          "DisplayName": "Evenkeel75",
+          "TeamName": "First in and First Out?",
+          "Username": "Evenkeel75"
+        },
+        "1125536159003799552": {
+          "DisplayName": "NOTDoda",
+          "TeamName": "BearDown",
+          "Username": "NOTDoda"
+        }
+      }
+    },
+    {
+      "Week": 17,
+      "GeneratedAt": "2026-04-27T00:59:25.3788015+00:00",
+      "OwnerNames": {
+        "1112856951387414528": {
+          "DisplayName": "robfoulk",
+          "TeamName": "Unstoppable Farce",
+          "Username": "robfoulk"
+        },
+        "1121310424491864064": {
+          "DisplayName": "Dbfoulkrod",
+          "TeamName": "Amon Another level ",
+          "Username": "Dbfoulkrod"
+        },
+        "1121310753874604032": {
+          "DisplayName": "mafoulk",
+          "TeamName": "Disappointment",
+          "Username": "mafoulk"
+        },
+        "1121459919724728320": {
+          "DisplayName": "jfoulkrod",
+          "TeamName": "Seasonal Depression",
+          "Username": "jfoulkrod"
+        },
+        "1122536845449072640": {
+          "DisplayName": "asmartaleck1",
+          "TeamName": "He hate me",
+          "Username": "asmartaleck1"
+        },
+        "1122570164190466048": {
+          "DisplayName": "ebmookie",
+          "TeamName": "Sanders Boutte on Sunday",
+          "Username": "ebmookie"
+        },
+        "1123415443601010688": {
+          "DisplayName": "Evenkeel75",
+          "TeamName": "First in and First Out?",
+          "Username": "Evenkeel75"
+        },
+        "1125536159003799552": {
+          "DisplayName": "NOTDoda",
+          "TeamName": "BearDown",
+          "Username": "NOTDoda"
+        }
+      }
+    },
+    {
+      "Week": 18,
+      "GeneratedAt": "2026-04-26T19:55:26.4101659+00:00",
+      "OwnerNames": {
+        "1112856951387414528": {
+          "DisplayName": "robfoulk",
+          "TeamName": "Unstoppable Farce",
+          "Username": "robfoulk"
+        },
+        "1121310424491864064": {
+          "DisplayName": "Dbfoulkrod",
+          "TeamName": "Amon Another level ",
+          "Username": "Dbfoulkrod"
+        },
+        "1121310753874604032": {
+          "DisplayName": "mafoulk",
+          "TeamName": "Disappointment",
+          "Username": "mafoulk"
+        },
+        "1121459919724728320": {
+          "DisplayName": "jfoulkrod",
+          "TeamName": "Seasonal Depression",
+          "Username": "jfoulkrod"
+        },
+        "1122536845449072640": {
+          "DisplayName": "asmartaleck1",
+          "TeamName": "He hate me",
+          "Username": "asmartaleck1"
+        },
+        "1122570164190466048": {
+          "DisplayName": "ebmookie",
+          "TeamName": "Sanders Boutte on Sunday",
+          "Username": "ebmookie"
+        },
+        "1123415443601010688": {
+          "DisplayName": "Evenkeel75",
+          "TeamName": "First in and First Out?",
+          "Username": "Evenkeel75"
+        },
+        "1125536159003799552": {
+          "DisplayName": "NOTDoda",
+          "TeamName": "BearDown",
+          "Username": "NOTDoda"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/src/Sleeper.RosterReport/Sleeper.RosterReport.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary;ForceNoAlign"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "publish",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "publish",
+                "${workspaceFolder}/src/Sleeper.RosterReport/Sleeper.RosterReport.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary;ForceNoAlign"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "watch",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "watch",
+                "run",
+                "--project",
+                "${workspaceFolder}/src/Sleeper.RosterReport/Sleeper.RosterReport.csproj"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "report:help",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "run",
+                "--project",
+                "${workspaceFolder}/src/Sleeper.RosterReport/Sleeper.RosterReport.csproj",
+                "--",
+                "--help"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "report:recap help",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "run",
+                "--project",
+                "${workspaceFolder}/src/Sleeper.RosterReport/Sleeper.RosterReport.csproj",
+                "--",
+                "recap",
+                "--help"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "host",
+            "type": "process",
+            "command": "dotnet",
+            "args": [
+                "run",
+                "--project",
+                "${workspaceFolder}/src/Sleeper.Host/Sleeper.Host.csproj"
+            ],
+            "isBackground": true,
+            "problemMatcher": {
+                "owner": "sleeper-host",
+                "pattern": [
+                    {
+                        "regexp": ".",
+                        "file": 1,
+                        "location": 2,
+                        "message": 3
+                    }
+                ],
+                "background": {
+                    "activeOnStart": true,
+                    "beginsPattern": "^.*Now listening on.*$",
+                    "endsPattern": "^.*Sleeper Host listening on.*$"
+                }
+            },
+            "presentation": {
+                "reveal": "silent",
+                "panel": "dedicated"
+            }
+        },
+        {
+            "label": "host:start (background)",
+            "type": "shell",
+            "command": "pwsh",
+            "args": [
+                "-NoProfile",
+                "-ExecutionPolicy", "Bypass",
+                "-File", "${workspaceFolder}/scripts/start-host.ps1"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "host:stop",
+            "type": "shell",
+            "command": "pwsh",
+            "args": [
+                "-NoProfile",
+                "-ExecutionPolicy", "Bypass",
+                "-File", "${workspaceFolder}/scripts/stop-host.ps1"
+            ],
+            "problemMatcher": []
+        }
+    ]
+}

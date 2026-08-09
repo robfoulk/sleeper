@@ -1,0 +1,14 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Sleeper.Api/Sleeper.Api.csproj" />
+    <Project Path="src/Sleeper.Host/Sleeper.Host.csproj" />
+    <Project Path="src/Sleeper.McpServer/Sleeper.McpServer.csproj" />
+    <Project Path="src/Sleeper.RosterReport/Sleeper.RosterReport.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Sleeper.Api.IntegrationTests/Sleeper.Api.IntegrationTests.csproj" />
+    <Project Path="tests/Sleeper.Api.Tests/Sleeper.Api.Tests.csproj" />
+    <Project Path="tests/Sleeper.McpServer.Tests/Sleeper.McpServer.Tests.csproj" />
+    <Project Path="tests/Sleeper.RosterReport.Tests/Sleeper.RosterReport.Tests.csproj" />
+  </Folder>
+</Solution>

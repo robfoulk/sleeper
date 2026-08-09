@@ -1,0 +1,99 @@
+{
+  "Champion": {
+    "FinalPlace": 1,
+    "DraftPick": 8,
+    "UserId": "1121459919724728320",
+    "OwnerRealName": "Jake",
+    "TeamName": "Seasonal Depression",
+    "RegularSeasonWins": 9,
+    "RegularSeasonLosses": 8,
+    "RegularSeasonTies": 0,
+    "RegularSeasonPointsFor": 3045.40,
+    "Path": "Won championship"
+  },
+  "RunnerUp": {
+    "FinalPlace": 2,
+    "DraftPick": 7,
+    "UserId": "1121310753874604032",
+    "OwnerRealName": "Michael",
+    "TeamName": "Disappointment",
+    "RegularSeasonWins": 9,
+    "RegularSeasonLosses": 8,
+    "RegularSeasonTies": 0,
+    "RegularSeasonPointsFor": 2887.88,
+    "Path": "Lost in championship"
+  },
+  "ThirdPlace": {
+    "FinalPlace": 3,
+    "DraftPick": 6,
+    "UserId": "1123415443601010688",
+    "OwnerRealName": "Brian",
+    "TeamName": "First in and First Out?",
+    "RegularSeasonWins": 14,
+    "RegularSeasonLosses": 3,
+    "RegularSeasonTies": 0,
+    "RegularSeasonPointsFor": 3181.62,
+    "Path": "Won 3rd-place game"
+  },
+  "FourthPlace": {
+    "FinalPlace": 4,
+    "DraftPick": 5,
+    "UserId": "1122536845449072640",
+    "OwnerRealName": "Dave",
+    "TeamName": "He hate me",
+    "RegularSeasonWins": 9,
+    "RegularSeasonLosses": 8,
+    "RegularSeasonTies": 0,
+    "RegularSeasonPointsFor": 3192.30,
+    "Path": "Lost 3rd-place game"
+  },
+  "ConsolationFifth": {
+    "FinalPlace": 5,
+    "DraftPick": 1,
+    "UserId": "1122570164190466048",
+    "OwnerRealName": "Eric",
+    "TeamName": "Sanders Boutte on Sunday",
+    "RegularSeasonWins": 9,
+    "RegularSeasonLosses": 8,
+    "RegularSeasonTies": 0,
+    "RegularSeasonPointsFor": 2967.64,
+    "Path": "Won consolation final (1.01)"
+  },
+  "ConsolationSixth": {
+    "FinalPlace": 6,
+    "DraftPick": 2,
+    "UserId": "1121310424491864064",
+    "OwnerRealName": "Devin",
+    "TeamName": "Amon Another level ",
+    "RegularSeasonWins": 7,
+    "RegularSeasonLosses": 10,
+    "RegularSeasonTies": 0,
+    "RegularSeasonPointsFor": 2807.86,
+    "Path": "Lost consolation final"
+  },
+  "ConsolationSeventh": {
+    "FinalPlace": 7,
+    "DraftPick": 3,
+    "UserId": "1112856951387414528",
+    "OwnerRealName": "Rob",
+    "TeamName": "Unstoppable Farce",
+    "RegularSeasonWins": 7,
+    "RegularSeasonLosses": 10,
+    "RegularSeasonTies": 0,
+    "RegularSeasonPointsFor": 2830.78,
+    "Path": "Won 7th-place game"
+  },
+  "ConsolationLast": {
+    "FinalPlace": 8,
+    "DraftPick": 4,
+    "UserId": "1125536159003799552",
+    "OwnerRealName": "Dakota",
+    "TeamName": "BearDown",
+    "RegularSeasonWins": 4,
+    "RegularSeasonLosses": 13,
+    "RegularSeasonTies": 0,
+    "RegularSeasonPointsFor": 2502.32,
+    "Path": "Lost 7th-place game (finishes last; forfeits a keeper)"
+  },
+  "LastPlaceKeeperPenalty": "Forfeits one keeper next year (3 of 4)."
+}

@@ -1,0 +1,99 @@
+{
+  "Season": 2025,
+  "LeagueId": "1180276953741729792",
+  "GeneratedAt": "2026-04-27T00:59:25.3901462+00:00",
+  "Awards": [
+    {
+      "Name": "Single-Week Showstopper",
+      "Description": "Most points scored by any team in a single week of the season.",
+      "UserId": "1122536845449072640",
+      "OwnerRealName": "Dave",
+      "TeamName": "He hate me",
+      "Metric": "single-week points for",
+      "Value": 249.78,
+      "Week": 9,
+      "Citation": "Scored 249.78 in week 9."
+    },
+    {
+      "Name": "The Cold Front",
+      "Description": "Fewest points scored by any team in a single non-zero week.",
+      "UserId": "1125536159003799552",
+      "OwnerRealName": "Dakota",
+      "TeamName": "BearDown",
+      "Metric": "single-week points for",
+      "Value": 79.68,
+      "Week": 14,
+      "Citation": "Scored 79.68 in week 14."
+    },
+    {
+      "Name": "Biggest Blowout",
+      "Description": "Largest single-game margin of victory.",
+      "UserId": "1123415443601010688",
+      "TeamName": "First in and First Out?",
+      "Metric": "margin of victory",
+      "Value": 97.18,
+      "Week": 14,
+      "Citation": "First in and First Out? 176.86 def. BearDown 79.68 (week 14)."
+    },
+    {
+      "Name": "Razor\u0027s Edge",
+      "Description": "Narrowest single-game margin of victory.",
+      "UserId": "1125536159003799552",
+      "TeamName": "BearDown",
+      "Metric": "margin of victory",
+      "Value": 1.42,
+      "Week": 1,
+      "Citation": "BearDown 139.42 def. Disappointment 138.00 (week 1)."
+    },
+    {
+      "Name": "Upset of the Year",
+      "Description": "Biggest victory by a team whose power-rank entering the week was worse than its opponent\u0027s.",
+      "UserId": "1121310753874604032",
+      "TeamName": "Disappointment",
+      "Metric": "margin of victory (lower-power-ranked team)",
+      "Value": 85.5,
+      "Week": 7,
+      "Citation": "Disappointment (power #8) over Unstoppable Farce (power #5) by 85.50 (week 7)."
+    },
+    {
+      "Name": "Points Crown",
+      "Description": "Most regular-season points scored.",
+      "UserId": "1122536845449072640",
+      "OwnerRealName": "Dave",
+      "TeamName": "He hate me",
+      "Metric": "regular-season points for",
+      "Value": 2823.12,
+      "Citation": "Scored 2823.12 across the regular season."
+    },
+    {
+      "Name": "Iron Team",
+      "Description": "Longest regular-season winning streak.",
+      "UserId": "1123415443601010688",
+      "OwnerRealName": "Brian",
+      "TeamName": "First in and First Out?",
+      "Metric": "consecutive regular-season wins",
+      "Value": 7,
+      "Citation": "Won 7 regular-season games in a row."
+    },
+    {
+      "Name": "The Cooler",
+      "Description": "Longest regular-season losing streak.",
+      "UserId": "1125536159003799552",
+      "OwnerRealName": "Dakota",
+      "TeamName": "BearDown",
+      "Metric": "consecutive regular-season losses",
+      "Value": 5,
+      "Citation": "Lost 5 regular-season games in a row."
+    },
+    {
+      "Name": "Comeback Team",
+      "Description": "Biggest power-rank improvement from week 1 to week 15.",
+      "UserId": "1121310753874604032",
+      "OwnerRealName": "Michael",
+      "TeamName": "Disappointment",
+      "Metric": "power-rank delta (W1 \u2192 final regular-season week, lower is better)",
+      "Value": 3,
+      "Citation": "Climbed 3 power-rank spots between week 1 and week 15."
+    }
+  ]
+}

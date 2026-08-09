@@ -1,0 +1,20 @@
+Asset movement audit: 2025
+League: 1180276953741729792
+Week 1 assets: 240
+Exit classes: Dropped=49, Retained=138, Trade=12, WaiverOrFreeAgentMove=41
+Starts for original roster: 1749
+Starts for another roster: 185
+
+Traded Week 1 assets
+- W3: Bo Nix (QB, DEN) R5->R1; starts original/elsewhere 1/11; sender package received players [Lamar Jackson (QB)], picks [2026 R18, 2026 R22].
+- W3: Daniel Jones (QB, IND) R5->R4; starts original/elsewhere 0/10; sender package received players [Kyren Williams (RB)], picks [2026 R6].
+- W3: Jauan Jennings (WR, FA) R3->R1; starts original/elsewhere 0/6; sender package received players [Jaylen Warren (RB)], picks [].
+- W3: Jaylen Warren (RB, PIT) R1->R3; starts original/elsewhere 2/12; sender package received players [Jauan Jennings (WR)], picks [2026 R7].
+- W3: Kyren Williams (RB, LAR) R4->R5; starts original/elsewhere 1/14; sender package received players [Daniel Jones (QB)], picks [2026 R24].
+- W3: Lamar Jackson (QB, BAL) R1->R5; starts original/elsewhere 2/7; sender package received players [Bo Nix (QB)], picks [2026 R2, 2026 R6].
+- W6: Kyler Murray (QB, MIN) R7->R3; starts original/elsewhere 2/0; sender package received players [Patrick Mahomes (QB)], picks [2026 R24].
+- W6: Patrick Mahomes (QB, KC) R3->R7; starts original/elsewhere 4/9; sender package received players [Kyler Murray (QB)], picks [2026 R4].
+- W9: DK Metcalf (WR, PIT) R1->R3; starts original/elsewhere 6/7; sender package received players [Luke McCaffrey (WR)], picks [2026 R5].
+- W10: Derrick Henry (RB, BAL) R1->R7; starts original/elsewhere 8/7; sender package received players [Kareem Hunt (RB)], picks [2026 R5].
+- W10: Kareem Hunt (RB, FA) R7->R1; starts original/elsewhere 3/7; sender package received players [Derrick Henry (RB)], picks [2026 R28].
+- W11: De'Von Achane (RB, MIA) R1->R2; starts original/elsewhere 9/6; sender package received players [], picks [2026 R2].
