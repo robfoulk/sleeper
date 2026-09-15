@@ -3,7 +3,7 @@ import { getCollection, render } from 'astro:content';
 import Bulletin from '../../layouts/Bulletin.astro';
 import Prose from '../../components/Prose.astro';
 import Scoreboard from '../../components/Scoreboard.astro';
-import { data, seasonOf, articleSlug, shortTitle, KIND_LABEL, articlesOf } from '../../lib/league';
+import { data, seasonOf, articleSlug, shortTitle, KIND_LABEL, articlesOf, CURRENT_EDITION } from '../../lib/league';
 
 export async function getStaticPaths() {
   const entries = await getCollection('articles');
@@ -26,7 +26,10 @@ const kind = indexed?.kind ?? 'weekly-recap';
 const week = indexed?.week;
 
 const s = seasonOf(season);
-const weekData = week != null ? s?.weeks.find((w) => w.week === week) : undefined;
+const edition = CURRENT_EDITION?.season === season ? CURRENT_EDITION : null;
+const weekData = kind === 'weekly-recap' && week != null
+  ? (s?.weeks ?? edition?.weeks)?.find((result) => result.week === week)
+  : undefined;
 
 // Previous and next filing within the same season, so a reader can walk the season in order.
 const siblings = articlesOf(season);

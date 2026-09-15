@@ -33,7 +33,7 @@ internal sealed class CopilotAgentHost : IAsyncDisposable
             ".copilot");
         var client = new CopilotClient(new CopilotClientOptions
         {
-            Mode = CopilotClientMode.Empty,
+            Mode = CopilotClientMode.CopilotCli,
             BaseDirectory = copilotHome,
             UseLoggedInUser = true,
             WorkingDirectory = Recap.RecapPaths.WorkspaceRoot,
@@ -114,6 +114,15 @@ internal sealed class CopilotReportTextAgent(
                 ReasoningEffort = reasoningEffort,
                 AvailableTools = [],
                 EnableSessionStore = false,
+                EnableConfigDiscovery = false,
+                EnableOnDemandInstructionDiscovery = false,
+                EnableFileHooks = false,
+                EnableHostGitOperations = false,
+                EnableSkills = false,
+                SkipCustomInstructions = true,
+                Memory = new MemoryConfiguration { Enabled = false },
+                PluginDirectories = [],
+                McpServers = new Dictionary<string, McpServerConfig>(),
                 OnPermissionRequest = (_, _) => Task.FromResult(
                     PermissionDecision.Reject("This report session does not permit tools.")),
                 SystemMessage = new SystemMessageConfig

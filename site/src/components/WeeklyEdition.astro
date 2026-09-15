@@ -1,0 +1,170 @@
+---
+import Scoreboard from './Scoreboard.astro';
+import Standings from './Standings.astro';
+import { articleSlug, data, pts, record, shortTitle, type Edition } from '../lib/league';
+
+interface Props { edition: Edition; }
+const { edition } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const recap = data.articles.find((article) => article.path === edition.recap_path);
+const preview = data.articles.find((article) => article.path === edition.preview_path);
+const latest = edition.weeks.find((week) => week.week === edition.completed_week)!;
+const scored = latest.games.flatMap((game) => [game.home, game.away]).sort((first, second) => second.points - first.points);
+const topScore = Math.max(1, ...scored.map((side) => side.points));
+const teamOf = (id: number) => edition.teams.find((team) => team.franchise_id === id)!;
+const ownerOf = (id: number) => teamOf(id).owner_name;
+const dateLabel = (value: string) => new Intl.DateTimeFormat('en-US', {
+  month: 'short', day: 'numeric', timeZone: 'America/New_York',
+}).format(new Date(value));
+const captured = new Intl.DateTimeFormat('en-US', {
+  month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit', timeZone: 'America/New_York', timeZoneName: 'short',
+}).format(new Date(edition.captured_at));
+const trades = edition.transactions.filter((transaction) => transaction.type === 'trade')
+  .sort((first, second) => Date.parse(second.completed_at) - Date.parse(first.completed_at)).slice(0, 3);
+const renamed = edition.teams.filter((team) => team.previous_names.length);
+const upcoming = edition.upcoming.slice().sort((first, second) =>
+  teamOf(second.home_id).points_for + teamOf(second.away_id).points_for
+  - teamOf(first.home_id).points_for - teamOf(first.away_id).points_for);
+---
+
+<div class="sheet edition">
+  <p class="slug edition__issue"><span class="struck">Week {edition.completed_week} final</span> {edition.season} / Week {edition.next_week} ahead</p>
+  <div class="edition__lead">
+    <section>
+      <p class="slug">The next argument</p>
+      <h1>{preview ? <a href={`${base}/${articleSlug(preview.path)}/`}>{shortTitle(preview.title)}</a> : `Week ${edition.next_week} ahead`}</h1>
+      <p class="dek">{scored[0].owner_name} set the pace at <strong>{pts(scored[0].points)}</strong>.
+        {' '}The scores are final. The next lineup is a different story.</p>
+      <nav class="edition__links" aria-label="This week's articles">
+        {recap && <a href={`${base}/${articleSlug(recap.path)}/`}>Week {edition.completed_week} final recap</a>}
+        {preview && <a href={`${base}/${articleSlug(preview.path)}/`}>Week {edition.next_week} preview</a>}
+      </nav>
+      <p class="slug edition__cutoff"><time datetime={edition.captured_at}>{captured}</time> snapshot</p>
+    </section>
+    <section aria-label={`Week ${edition.completed_week} final scores`}>
+      <h2 class="ruled">The final card</h2>
+      <Scoreboard week={latest} season={edition.season} heading={false} />
+    </section>
+  </div>
+</div>
+
+<div class="sheet band edition__columns">
+  <section>
+    <h2 class="ruled">Where it stands</h2>
+    <Standings rows={edition.teams} season={edition.season} current caption={`${edition.season}, through Week ${edition.completed_week}`} />
+  </section>
+  <figure class="edition__chart">
+    <figcaption class="ruled">Week {edition.completed_week} scoring</figcaption>
+    <ol>
+      {scored.map((side) => (
+        <li>
+          <span>{side.owner_name}</span><strong>{pts(side.points)}</strong>
+          <meter min="0" max={topScore} value={side.points} aria-label={`${side.owner_name}: ${pts(side.points)} points`} />
+        </li>
+      ))}
+    </ol>
+  </figure>
+</div>
+
+<section class="sheet band">
+  <h2 class="ruled">Week {edition.next_week}: on the schedule</h2>
+  <div class="edition__fixtures">
+    {upcoming.map((matchup) => {
+      const home = teamOf(matchup.home_id);
+      const away = teamOf(matchup.away_id);
+      return <article>
+        <h3>{preview ? <a href={`${base}/${articleSlug(preview.path)}/`}>{home.owner_name} vs {away.owner_name}</a> : `${home.owner_name} vs ${away.owner_name}`}</h3>
+        <p><a href={`${base}/franchises/${home.franchise_id}/`}>{home.team_name}</a><span>{record(home.wins, home.losses, home.ties)}</span></p>
+        <p><a href={`${base}/franchises/${away.franchise_id}/`}>{away.team_name}</a><span>{record(away.wins, away.losses, away.ties)}</span></p>
+      </article>;
+    })}
+  </div>
+</section>
+
+<div class="sheet band edition__columns">
+  <section>
+    <h2 class="ruled">The trade desk</h2>
+    {trades.map((trade) => {
+      const recipients = Array.from(new Set([...trade.moves.map((move) => move.to), ...trade.picks.map((pick) => pick.to), ...trade.faab.map((budget) => budget.to)]));
+      return <article class="edition__trade">
+        <p class="slug"><time datetime={trade.completed_at}>{dateLabel(trade.completed_at)}</time> / Completed</p>
+        <dl>{recipients.map((id) => <>
+          <dt>{ownerOf(id)} received</dt>
+          <dd>{[
+            ...trade.moves.filter((move) => move.to === id).map((move) => move.player),
+            ...trade.picks.filter((pick) => pick.to === id).map((pick) => `${pick.season} round ${pick.round} (${ownerOf(pick.original_roster)}'s pick)`),
+            ...trade.faab.filter((budget) => budget.to === id).map((budget) => `${budget.amount} FAAB from ${ownerOf(budget.from)}`),
+          ].join('; ')}</dd>
+        </>)}</dl>
+      </article>;
+    })}
+    {renamed.length > 0 && <>
+      <h2 class="ruled">New nameplates</h2>
+      {renamed.map((team) => <p><strong>{team.owner_name}: {team.team_name}</strong><br /><span class="edition__quiet">Previously {team.previous_names.join(', ')}</span></p>)}
+      <p class="slug">Observed since the stored preseason names; rename dates unavailable.</p>
+    </>}
+  </section>
+  <section>
+    <h2 class="ruled">Availability watch</h2>
+    <p class="edition__quiet">Sleeper designations at {captured}. Out tags can carry over from Week {edition.completed_week}; they are not fresh Week {edition.next_week} rulings. Personal and coach's-decision absences are not injuries.</p>
+    {edition.teams.map((team) => {
+      const concerns = team.roster.filter((player) => player.status);
+      return <details class="edition__availability">
+        <summary>{team.owner_name}<span>{concerns.length ? `${concerns.length} designation${concerns.length === 1 ? '' : 's'}` : 'No designations'}</span></summary>
+        {concerns.length ? <ul>{concerns.map((player) => <li>
+          <strong>{player.name}</strong> ({player.position})<br />
+          <span>{player.status}{player.injury ? ` / ${player.injury}` : ''}{player.starter ? ' / provisional starter' : ''}</span>
+        </li>)}</ul> : <p>No platform designations in this snapshot; not independent medical clearance.</p>}
+      </details>;
+    })}
+    {recap && <p><a href={`${base}/${articleSlug(recap.path)}/#injuries-what-changed-what-was-already-there`}>Dated injury reporting in the recap</a></p>}
+  </section>
+</div>
+
+<style>
+  .edition { padding-top: 1.4rem; }
+  .band { padding-top: 2rem; padding-bottom: 2rem; border-top: 1px solid var(--rule); }
+  .edition__issue { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem; }
+  .edition__lead, .edition__columns { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 2.5rem; }
+  .edition__lead { padding: 1.4rem 0 2rem; }
+  .edition__lead h1 { font-size: 2.25rem; line-height: 1.12; margin: 0.7rem 0 1.2rem; overflow-wrap: anywhere; }
+  .edition__lead h1 a { text-decoration: none; }
+  .edition__lead h2 { margin-top: 0; }
+  .edition__links { display: flex; flex-wrap: wrap; gap: 0.8rem 1.5rem; font-weight: 700; }
+  .edition__cutoff { margin-top: 1.4rem; }
+  .edition__chart { margin: 0; }
+  .edition__chart figcaption { font-weight: 700; font-size: 1.1rem; }
+  .edition__chart ol { list-style: none; margin: 0; padding: 0; }
+  .edition__chart li { display: grid; grid-template-columns: 1fr auto; gap: 0.15rem 1rem; margin: 0.5rem 0; }
+  .edition__chart strong { font-variant-numeric: tabular-nums; }
+  meter { grid-column: 1 / -1; width: 100%; height: 0.65rem; border: none; background: var(--rule); }
+  meter::-webkit-meter-bar { background: var(--rule); border: none; border-radius: 0; }
+  meter::-webkit-meter-optimum-value { background: var(--ink-quiet); }
+  meter::-moz-meter-bar { background: var(--ink-quiet); }
+  .edition__chart li:first-child meter::-webkit-meter-optimum-value { background: var(--stamp); }
+  .edition__chart li:first-child meter::-moz-meter-bar { background: var(--stamp); }
+  .edition__fixtures { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 2.5rem; }
+  .edition__fixtures article { padding: 0.8rem 0 1.2rem; border-bottom: 1px solid var(--rule); }
+  .edition__fixtures h3 { margin: 0 0 0.8rem; font-size: 1.1rem; }
+  .edition__fixtures p { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; margin: 0.3rem 0; }
+  .edition__fixtures p a { min-width: 0; overflow-wrap: anywhere; }
+  .edition__fixtures p span { flex-shrink: 0; font-variant-numeric: tabular-nums; }
+  .edition__trade { border-bottom: 1px dotted var(--rule); padding-bottom: 0.8rem; margin-bottom: 1rem; }
+  .edition__trade dt { font-weight: 700; }
+  .edition__trade dd { margin: 0.2rem 0 0.8rem; color: var(--ink-quiet); overflow-wrap: anywhere; }
+  .edition__quiet { color: var(--ink-quiet); font-size: 0.9rem; }
+  .edition__availability { border-bottom: 1px solid var(--rule); padding: 0.8rem 0; }
+  .edition__availability summary { cursor: pointer; font-weight: 700; }
+  .edition__availability summary span { display: inline-block; margin-left: 0.8rem; font-size: 0.8rem; font-weight: 400; color: var(--ink-quiet); }
+  .edition__availability li { margin-bottom: 0.75rem; overflow-wrap: anywhere; }
+  .edition__availability li span { color: var(--ink-quiet); font-size: 0.85rem; }
+  .edition :is(h1, p), .edition__columns, .edition__fixtures { letter-spacing: 0; }
+  @media (max-width: 64rem) {
+    .edition__lead, .edition__columns { grid-template-columns: minmax(0, 1fr); gap: 1.8rem; }
+    .edition__lead h1 { font-size: 1.8rem; }
+  }
+  @media (max-width: 40rem) {
+    .edition__fixtures { grid-template-columns: minmax(0, 1fr); }
+    .edition__lead h1 { font-size: 1.6rem; }
+  }
+</style>

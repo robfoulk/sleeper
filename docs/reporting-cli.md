@@ -1,6 +1,6 @@
 # Reporting CLI
 
-`Sleeper.RosterReport` is the local reporting application for league keeper analysis, matchup scoreboards, weekly recaps, season recaps, and roster-history snapshots.
+`Sleeper.RosterReport` is the local reporting application for player and roster analysis, matchup scoreboards, weekly recaps, season recaps, and roster-history snapshots.
 
 Run commands from the repository root:
 
@@ -63,47 +63,6 @@ layers apply only to weekly recaps; season recaps stop at the season layer.
 
 ## Commands
 
-### `keepers`
-
-Analyze one team's keeper values and recommendations.
-
-```powershell
-dotnet run --project src/Sleeper.RosterReport/Sleeper.RosterReport.csproj -- keepers --username rob
-```
-
-Options:
-
-| Option | Required | Description |
-| --- | --- | --- |
-| `--username`, `-u` | Yes | Sleeper username to analyze. |
-| `--league-id`, `-l` | No | Sleeper league ID. Defaults to the current league. |
-
-Output: console report only.
-
-AI behavior: uses the keeper second-opinion Foundry agent when configured; otherwise the deterministic keeper analysis still runs.
-
-Legacy form:
-
-```powershell
-dotnet run --project src/Sleeper.RosterReport/Sleeper.RosterReport.csproj -- keepers rob
-```
-
-### `board`
-
-Show league-wide keeper candidates by team.
-
-```powershell
-dotnet run --project src/Sleeper.RosterReport/Sleeper.RosterReport.csproj -- board
-```
-
-Options:
-
-| Option | Required | Description |
-| --- | --- | --- |
-| `--league-id`, `-l` | No | Sleeper league ID. Defaults to the current league. |
-
-Output: console report only.
-
 ### `player`
 
 Run a player deep dive with multi-year trend and projection data.
@@ -129,7 +88,7 @@ dotnet run --project src/Sleeper.RosterReport/Sleeper.RosterReport.csproj -- pla
 
 ### `team`
 
-Run a full roster deep dive with keeper context and draft outlook.
+Run a full roster deep dive with draft outlook.
 
 ```powershell
 dotnet run --project src/Sleeper.RosterReport/Sleeper.RosterReport.csproj -- team --username rob
@@ -346,6 +305,42 @@ It also fails loudly rather than degrading: an award whose owner cannot be resol
 franchise with no current owner in the export, throws with the season and the award named.
 
 ## The weekly loop
+
+### Current Weekly Editions
+
+The in-season bulletin uses a dated weekly snapshot separately from completed-season
+aggregates. Capture facts after Sleeper has advanced beyond the requested week and the
+nflverse schedule has final scores for every NFL game in that week:
+
+```powershell
+./scripts/build-weekly-edition.ps1 -Season 2026 -Week 1
+```
+
+The script writes `recaps/2026/week-01-data.json` and refuses to overwrite an existing
+snapshot. It reads the season's existing `export.json` for first-name owner mappings,
+uses weekly matchup lineups for historical points, and captures current rosters,
+team names, provisional upcoming starters, full completed trade packages, and Sleeper
+availability designations. Transactions retain their actual completion dates; Week 1's
+feed can include offseason activity. Previous name snapshots are read, never rewritten.
+Platform tags do not establish injury onset. Add dated official reporting to the articles.
+
+File the final recap as `week-01.md` and the separate next-week preview as
+`week-02-preview.md` in the same season directory. Predictions are editorial entertainment;
+leave previously filed predictions and notes intact. Discuss their outcomes in new articles.
+Do not run the recap generator over an existing article unless replacement is explicitly intended.
+
+`site-data` exports the latest snapshot as `current_edition`, recognizes `weekly-preview`
+articles, and updates current franchise names without rewriting historical names or
+completed-season records. The homepage and current season page render that edition.
+Owner and franchise pages show the in-season record separately from historical tables.
+Publication timestamps come from the snapshot, not the time of the latest site rebuild.
+
+After editorial review, run `site-data`, `npm run build --prefix site`, and the reporting
+test project. Review the homepage and both articles on desktop and mobile in both themes.
+The scheduled publishing workflow rebuilds existing content; it does not fetch a new
+weekly snapshot or write the next edition automatically.
+
+### Existing Recap Workflow
 
 During the season the whole cycle is three commands and a commit.
 

@@ -46,6 +46,8 @@ public class PrivacyGuardTests
             foreach (var file in Directory.EnumerateFiles(dir, "*", SearchOption.AllDirectories))
             {
                 if (file.Contains($"{Path.DirectorySeparatorChar}node_modules{Path.DirectorySeparatorChar}")) continue;
+                if (relativeDir == "site" && file.StartsWith(
+                    Path.Combine(dir, ".astro") + Path.DirectorySeparatorChar, StringComparison.OrdinalIgnoreCase)) continue;
                 if (!ScannedExtensions.Any(ext => file.EndsWith(ext, StringComparison.OrdinalIgnoreCase))) continue;
                 data.Add(Path.GetRelativePath(root, file));
             }

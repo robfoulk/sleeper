@@ -11,6 +11,46 @@ namespace Sleeper.RosterReport.Tests;
 /// </summary>
 public class LeagueDataTests
 {
+    [Theory]
+    [InlineData("week-01", "weekly-recap", 1)]
+    [InlineData("week-02-preview", "weekly-preview", 2)]
+    [InlineData("preview", "season-preview", null)]
+    [InlineData("season", "season-review", null)]
+    public void ArticleKindsDistinguishPreviewFromResults(string name, string kind, int? week)
+    {
+        SiteDataBuilder.ClassifyArticle(name).Should().Be((kind, week));
+    }
+
+    [Fact]
+    public void WeeklyEditionUsesCompleteResultsAndSeparateUpcomingFixtures()
+    {
+        var edition = SiteDataBuilder.LoadWeeklyEdition(Path.Combine(RecapPaths.WorkspaceRoot, "recaps"));
+        edition.Should().NotBeNull();
+        var snapshot = edition!.Value;
+        var teams = snapshot.GetProperty("teams").EnumerateArray().ToList();
+        var weeks = snapshot.GetProperty("weeks").EnumerateArray().ToList();
+        weeks.Count.Should().Be(snapshot.GetProperty("completed_week").GetInt32());
+        foreach (var week in weeks)
+        {
+            var games = week.GetProperty("games").EnumerateArray().ToList();
+            var sides = games.SelectMany(game => new[] { game.GetProperty("home"), game.GetProperty("away") }).ToList();
+            sides.Select(side => side.GetProperty("franchise_id").GetInt32()).Should()
+                .BeEquivalentTo(teams.Select(team => team.GetProperty("franchise_id").GetInt32()));
+            foreach (var game in games)
+                game.GetProperty("margin").GetDecimal().Should().Be(Math.Abs(
+                    game.GetProperty("home").GetProperty("points").GetDecimal()
+                    - game.GetProperty("away").GetProperty("points").GetDecimal()));
+        }
+
+        teams.Sum(team => team.GetProperty("wins").GetInt32()).Should()
+            .Be(teams.Sum(team => team.GetProperty("losses").GetInt32()));
+        teams.Sum(team => team.GetProperty("points_for").GetDecimal()).Should()
+            .Be(teams.Sum(team => team.GetProperty("points_against").GetDecimal()));
+        snapshot.GetProperty("upcoming").EnumerateArray().All(game =>
+            !game.TryGetProperty("points", out _)).Should().BeTrue();
+        snapshot.TryGetProperty("champion", out _).Should().BeFalse();
+    }
+
     private static readonly string DataPath =
         Path.Combine(RecapPaths.WorkspaceRoot, "site", "src", "data", "league.json");
 

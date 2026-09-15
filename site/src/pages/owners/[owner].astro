@@ -1,6 +1,6 @@
 ---
 import Bulletin from '../../layouts/Bulletin.astro';
-import { data, record, pts, ownerSlug } from '../../lib/league';
+import { data, record, pts, ownerSlug, CURRENT_EDITION } from '../../lib/league';
 
 export function getStaticPaths() {
   return data.owners.map((o) => ({ params: { owner: ownerSlug(o.name) }, props: { o } }));
@@ -8,6 +8,7 @@ export function getStaticPaths() {
 
 const { o } = Astro.props;
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const current = CURRENT_EDITION?.teams.find((team) => team.owner_name === o.name);
 
 const h2h = data.records.head_to_head
   .filter((h) => h.owner_name === o.name)
@@ -39,11 +40,18 @@ const lows = data.records.single_week_lows.filter((h) => h.owner_name === o.name
           {!o.active && <> · <span class="stamp">no longer in the league</span></>}
         </>
       ) : (
-        <>New to the league. No games on record yet.</>
+        <>{current ? 'First season in the league.' : 'New to the league. No games on record yet.'}</>
       )}
       {titles.length > 0 && <> <span class="struck">{titles.length}× champion</span></>}
     </p>
   </div>
+
+  {current && CURRENT_EDITION && <div class="sheet band">
+    <h2 class="ruled">{CURRENT_EDITION.season}: through Week {CURRENT_EDITION.completed_week}</h2>
+    <p class="dek"><a href={`${base}/franchises/${current.franchise_id}/`}>{current.team_name}</a> / {record(current.wins, current.losses, current.ties)} / {pts(current.points_for)} PF / {pts(current.points_against)} PA</p>
+    <p><a href={`${base}/${CURRENT_EDITION.season}/`}>The current season</a></p>
+    <p class="slug">Historical tables below cover completed seasons.</p>
+  </div>}
 
   {o.seasons.length > 0 && (
     <div class="sheet band">

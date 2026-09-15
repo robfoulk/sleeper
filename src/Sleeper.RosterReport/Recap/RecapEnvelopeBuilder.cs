@@ -1049,6 +1049,7 @@ internal sealed class RecapEnvelopeBuilder
             .Where(game => game.Week == forWeek)
             .SelectMany(game => new[] { game.HomeTeam, game.AwayTeam })
             .Where(team => !string.IsNullOrWhiteSpace(team))
+            .Select(team => team == "LA" ? "LAR" : team)
             .ToHashSet(StringComparer.OrdinalIgnoreCase);
         var canDetermineByes = scheduledTeams.Count > 0;
 
@@ -1065,7 +1066,7 @@ internal sealed class RecapEnvelopeBuilder
             var injuryStatus = applyLiveAvailability ? player?.InjuryStatus : null;
             var isOnBye = canDetermineByes
                 && !string.IsNullOrWhiteSpace(team)
-                && !scheduledTeams.Contains(team);
+                && !scheduledTeams.Contains(team == "LA" ? "LAR" : team);
             var isUnavailable = isOnBye || IsUnavailableInjury(injuryStatus);
             var effectiveProjection = isUnavailable
                 ? 0m

@@ -58,7 +58,7 @@ const nav = [
   monospace is native to the artifact rather than a costume for "technical".
   ============================================================================
 -->
-<html lang="en" data-sheet="stencil">
+<html lang="en" data-sheet="printed">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -66,15 +66,14 @@ const nav = [
     {description && <meta name="description" content={description} />}
     <link rel="preload" as="font" type="font/woff2" href={href('/fonts/courier-prime-regular.woff2')} crossorigin />
     <link rel="preload" as="font" type="font/woff2" href={href('/fonts/courier-prime-bold.woff2')} crossorigin />
-    <meta name="theme-color" content="#1c1720" />
+    <meta name="theme-color" content="#e5e3db" />
     <script is:inline>
-      // Set before paint so the sheet never flashes the wrong stock.
       try {
-        var saved = localStorage.getItem('sheet');
+        const saved = localStorage.getItem('sheet');
         if (saved === 'printed' || saved === 'stencil') {
           document.documentElement.dataset.sheet = saved;
         }
-      } catch (e) {}
+      } catch {}
     </script>
   </head>
   <body>
@@ -84,8 +83,8 @@ const nav = [
       <div class="sheet">
         <div class="masthead__plate">
           <a class="masthead__title" href={href('/')}>The League</a>
-          <button id="sheet-toggle" type="button" class="sheet-toggle" aria-pressed="false">
-            <span class="sheet-toggle__label">Print</span>
+          <button id="sheet-toggle" type="button" class="sheet-toggle" aria-label="Switch to dark theme" title="Switch to dark theme">
+            <span class="sheet-toggle__label">Dark</span>
           </button>
         </div>
         <p class="masthead__issue slug">
@@ -125,22 +124,24 @@ const nav = [
     </footer>
 
     <script is:inline>
-      (function () {
-        var btn = document.getElementById('sheet-toggle');
-        if (!btn) return;
-        var root = document.documentElement;
-        var label = btn.querySelector('.sheet-toggle__label');
+      (() => {
+        const button = document.getElementById('sheet-toggle');
+        if (!button) return;
+        const root = document.documentElement;
+        const label = button.querySelector('.sheet-toggle__label');
         function sync() {
-          var printed = root.dataset.sheet === 'printed';
-          btn.setAttribute('aria-pressed', String(printed));
-          if (label) label.textContent = printed ? 'Stencil' : 'Print';
-          btn.setAttribute('aria-label', printed ? 'Switch to the stencil' : 'Switch to the printed sheet');
+          const dark = root.dataset.sheet === 'stencil';
+          const action = dark ? 'Switch to light theme' : 'Switch to dark theme';
+          if (label) label.textContent = dark ? 'Light' : 'Dark';
+          button.setAttribute('aria-label', action);
+          button.setAttribute('title', action);
+          document.querySelector('meta[name="theme-color"]')?.setAttribute('content', dark ? '#1c1720' : '#e5e3db');
         }
         sync();
-        btn.addEventListener('click', function () {
-          var next = root.dataset.sheet === 'printed' ? 'stencil' : 'printed';
+        button.addEventListener('click', () => {
+          const next = root.dataset.sheet === 'stencil' ? 'printed' : 'stencil';
           root.dataset.sheet = next;
-          try { localStorage.setItem('sheet', next); } catch (e) {}
+          try { localStorage.setItem('sheet', next); } catch {}
           sync();
         });
       })();
@@ -178,13 +179,14 @@ const nav = [
 
   .sheet-toggle {
     flex: none;
+    min-width: 5rem;
+    min-height: 2.75rem;
     background: transparent;
     border: 1px solid var(--rule-strong);
     color: var(--ink-quiet);
     font: inherit;
-    font-size: 0.7rem;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0;
     padding: 0.4rem 0.7rem;
     cursor: pointer;
   }

@@ -2,6 +2,7 @@
 import Bulletin from '../layouts/Bulletin.astro';
 import Standings from '../components/Standings.astro';
 import Scoreboard from '../components/Scoreboard.astro';
+import WeeklyEdition from '../components/WeeklyEdition.astro';
 import {
   data,
   seasonOf,
@@ -10,6 +11,7 @@ import {
   shortTitle,
   ALL_SEASONS,
   CURRENT_SEASON,
+  CURRENT_EDITION,
   PLAYED_SEASONS,
   KIND_LABEL,
   ownerSlug,
@@ -51,9 +53,11 @@ const titles = data.records.championships;
 ---
 
 <Bulletin
-  title="The League — fantasy football archive"
+  title="The League — weekly fantasy football bulletin"
   description="Standings, weekly recaps, records and season previews for The League, an eight-team fantasy football league."
 >
+  {CURRENT_EDITION && <WeeklyEdition edition={CURRENT_EDITION} />}
+  {!CURRENT_EDITION && <>
   <div class="sheet">
     <p class="issue slug">
       <span class="issue__mark">■</span> This issue ·
@@ -166,6 +170,8 @@ const titles = data.records.championships;
     </section>
   </div>
 
+  </>}
+
   <div class="sheet band">
     <h2 class="ruled">The file</h2>
     <ul class="years">
@@ -175,7 +181,7 @@ const titles = data.records.championships;
           <li>
             <a href={`${base}/${y}`}>{y}</a>
             <span class="slug">
-              {s ? `${s.weeks.length} weeks · champion ${s.champion?.owner_name ?? '—'}` : 'Upcoming'}
+              {CURRENT_EDITION?.season === y ? `Through Week ${CURRENT_EDITION.completed_week} · in season` : s ? `${s.weeks.length} weeks · champion ${s.champion?.owner_name ?? '—'}` : 'Upcoming'}
             </span>
           </li>
         );

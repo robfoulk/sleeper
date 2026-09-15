@@ -1,6 +1,6 @@
 ---
 import Bulletin from '../../layouts/Bulletin.astro';
-import { data, record, pts, ownerSlug, seasonOf } from '../../lib/league';
+import { data, record, pts, ownerSlug, seasonOf, CURRENT_EDITION } from '../../lib/league';
 
 export function getStaticPaths() {
   return data.franchises.map((f) => ({ params: { id: String(f.franchise_id) }, props: { f } }));
@@ -8,6 +8,7 @@ export function getStaticPaths() {
 
 const { f } = Astro.props;
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const current = CURRENT_EDITION?.teams.find((team) => team.franchise_id === f.franchise_id);
 
 const w = f.timeline.reduce((n, t) => n + t.wins, 0);
 const l = f.timeline.reduce((n, t) => n + t.losses, 0);
@@ -62,6 +63,14 @@ const opponents = [...vs.entries()].sort((a, b) => b[1].w - a[1].w || a[0].local
       {f.championships > 0 && <> <span class="struck">{f.championships}× champion</span></>}
     </p>
   </div>
+
+  {current && CURRENT_EDITION && <div class="sheet band">
+    <h2 class="ruled">{CURRENT_EDITION.season}: through Week {CURRENT_EDITION.completed_week}</h2>
+    <p class="dek">{record(current.wins, current.losses, current.ties)} / {pts(current.points_for)} PF / {pts(current.points_against)} PA</p>
+    {current.previous_names.length > 0 && <p>Previously {current.previous_names.join(', ')}. Earlier articles retain their original names.</p>}
+    <p><a href={`${base}/${CURRENT_EDITION.season}/`}>The current season</a></p>
+    <p class="slug">Historical tables below cover completed seasons.</p>
+  </div>}
 
   {f.timeline.length > 0 ? (
     <>

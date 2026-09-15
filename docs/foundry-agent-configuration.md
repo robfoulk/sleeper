@@ -74,7 +74,6 @@ Do not put shared agent names here unless you are intentionally overriding them 
     "SeasonModelDeployment": "",
     "AutoCreateMissingAgents": true,
     "Agents": {
-      "KeeperSecondOpinion": { "Name": "sleeper-keeper-second-opinion" },
       "TeamDraftOutlook": { "Name": "sleeper-team-draft-outlook" },
       "WeeklyGameAnalyst": { "Name": "sleeper-weekly-game-analyst" },
       "WeeklyLeagueAnalyst": { "Name": "sleeper-weekly-league-analyst" },
@@ -110,7 +109,6 @@ The app currently expects these managed Foundry agent names:
 
 | Role | Config key | Default managed agent name |
 | --- | --- | --- |
-| Keeper second opinion | `Foundry:Agents:KeeperSecondOpinion:Name` | `sleeper-keeper-second-opinion` |
 | Team draft outlook | `Foundry:Agents:TeamDraftOutlook:Name` | `sleeper-team-draft-outlook` |
 | Weekly game analyst | `Foundry:Agents:WeeklyGameAnalyst:Name` | `sleeper-weekly-game-analyst` |
 | Weekly league analyst | `Foundry:Agents:WeeklyLeagueAnalyst:Name` | `sleeper-weekly-league-analyst` |

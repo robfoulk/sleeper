@@ -2,14 +2,17 @@
 import { record, pts, ownerSlug, type Standing } from '../lib/league';
 
 interface Props {
-  rows: Standing[];
+  rows: (Pick<Standing, 'franchise_id' | 'owner_name' | 'team_name' | 'wins' | 'losses' | 'ties' | 'points_for' | 'points_against'> & Partial<Standing>)[];
   season: number;
   caption?: string;
+  current?: boolean;
 }
 
-const { rows, season, caption } = Astro.props;
+const { rows, season, caption, current = false } = Astro.props;
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
-const ordered = rows.slice().sort((a, b) => a.final_place - b.final_place);
+const ordered = rows.slice().sort((a, b) => current
+  ? (b.wins + b.ties / 2) - (a.wins + a.ties / 2) || b.points_for - a.points_for
+  : (a.final_place ?? 0) - (b.final_place ?? 0));
 ---
 
 <div class="ledger-scroll">
@@ -20,17 +23,16 @@ const ordered = rows.slice().sort((a, b) => a.final_place - b.final_place);
         <th scope="col" class="num">#</th>
         <th scope="col">Team</th>
         <th scope="col">Owner</th>
-        <th scope="col" class="num">Reg</th>
+        <th scope="col" class="num">{current ? 'W-L-T' : 'Reg'}</th>
         <th scope="col" class="num">PF</th>
         <th scope="col" class="num">PA</th>
-        <th scope="col" class="num">High</th>
-        <th scope="col" class="num">Low</th>
+        {!current && <><th scope="col" class="num">High</th><th scope="col" class="num">Low</th></>}
       </tr>
     </thead>
     <tbody>
-      {ordered.map((r) => (
+      {ordered.map((r, index) => (
         <tr>
-          <td class="num place">{r.final_place}</td>
+          <td class="num place">{current ? index + 1 : r.final_place}</td>
           <td class="wide team">
             <a href={`${base}/franchises/${r.franchise_id}`}>{r.team_name}</a>
           </td>
@@ -38,14 +40,16 @@ const ordered = rows.slice().sort((a, b) => a.final_place - b.final_place);
           <td class="num">{record(r.wins, r.losses, r.ties)}</td>
           <td class="num">{pts(r.points_for)}</td>
           <td class="num quiet">{pts(r.points_against)}</td>
-          <td class="num quiet">{pts(r.high_score)}<span class="wk"> w{r.high_score_week}</span></td>
-          <td class="num quiet">{pts(r.low_score)}<span class="wk"> w{r.low_score_week}</span></td>
+          {!current && <>
+            <td class="num quiet">{pts(r.high_score)}<span class="wk"> w{r.high_score_week}</span></td>
+            <td class="num quiet">{pts(r.low_score)}<span class="wk"> w{r.low_score_week}</span></td>
+          </>}
         </tr>
       ))}
     </tbody>
   </table>
 </div>
-<p class="foot slug">Final placing after {season} playoffs. Reg is the regular-season record.</p>
+<p class="foot slug">{current ? 'Through the latest completed week. Ordered by record, then points for.' : `Final placing after ${season} playoffs. Reg is the regular-season record.`}</p>
 
 <style>
   .place {

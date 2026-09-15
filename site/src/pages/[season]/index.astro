@@ -3,8 +3,10 @@ import Bulletin from '../../layouts/Bulletin.astro';
 import Standings from '../../components/Standings.astro';
 import Scoreboard from '../../components/Scoreboard.astro';
 import Charts from '../../components/Charts.astro';
+import WeeklyEdition from '../../components/WeeklyEdition.astro';
 import {
   ALL_SEASONS,
+  CURRENT_EDITION,
   seasonOf,
   articlesOf,
   articleSlug,
@@ -22,6 +24,7 @@ export function getStaticPaths() {
 const season = Number(Astro.params.season);
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const s = seasonOf(season);
+const edition = CURRENT_EDITION?.season === season ? CURRENT_EDITION : null;
 const articles = articlesOf(season);
 const weeklies = articles.filter((a) => a.kind === 'weekly-recap');
 const features = articles.filter((a) => a.kind !== 'weekly-recap');
@@ -33,6 +36,8 @@ const keepers = data.draft && Number(data.draft.season) === season ? data.draft.
   slug={`The file · ${season}`}
   description={`Standings, weekly results, awards and articles from the ${season} season of The League.`}
 >
+  {edition && <WeeklyEdition edition={edition} />}
+  {!edition &&
   <div class="sheet">
     <h1 class="ruled">{season}</h1>
     {s ? (
@@ -47,6 +52,7 @@ const keepers = data.draft && Number(data.draft.season) === season ? data.draft.
       </p>
     )}
   </div>
+  }
 
   {features.length > 0 && (
     <div class="sheet band">

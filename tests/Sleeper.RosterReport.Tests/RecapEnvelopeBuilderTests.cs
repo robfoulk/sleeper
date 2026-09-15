@@ -240,6 +240,39 @@ public class RecapEnvelopeBuilderTests
         live.Notes.Should().Contain(note => note.Contains("INJURED (Out)"));
     }
 
+    [Theory]
+    [InlineData("LA", "LAR")]
+    [InlineData("LAR", "LA")]
+    public void ProjectLineupDetailed_RecognizesRamsAcrossTeamAbbreviations(string scheduleTeam, string playerTeam)
+    {
+        var matchup = new Matchup(1, 1, null, null, ["receiver"], ["receiver"], null, null);
+        var players = new Dictionary<string, Player>
+        {
+            ["receiver"] = CreatePlayer("receiver", "Starting", "Receiver", "WR", playerTeam)
+        };
+        var history = new Dictionary<string, List<(int Week, decimal Points)>>
+        {
+            ["receiver"] = [(1, 18m)]
+        };
+        var schedule = new List<NflGame>
+        {
+            new() { Season = 2026, GameType = "REG", Week = 2, HomeTeam = scheduleTeam, AwayTeam = "NYG" }
+        };
+        var config = new LeagueRosterConfig(
+            Teams: 2,
+            StarterSlots: new Dictionary<string, int> { ["WR"] = 1 },
+            FlexSlots: 0,
+            BenchSlots: 0,
+            TotalRosterSize: 1,
+            MaxKeepers: 0);
+
+        var result = RecapEnvelopeBuilder.ProjectLineupDetailed(
+            matchup, players, history, new(), schedule, config, forWeek: 2, applyLiveAvailability: true);
+
+        result.Projection.Should().Be(18m);
+        result.Notes.Should().NotContain(note => note.Contains("BYE"));
+    }
+
     [Fact]
     public void ComputeOptimalLineupGain_DoesNotReuseOneStarterSlot()
     {

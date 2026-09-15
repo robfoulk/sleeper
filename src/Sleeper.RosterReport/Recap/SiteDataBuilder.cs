@@ -64,6 +64,16 @@ internal static class SiteDataBuilder
 
         var leagueName = seasons[^1].Aggregate.LeagueName;
         var currentOwners = LoadCurrentOwners(recapsRoot);
+        var currentEdition = LoadWeeklyEdition(recapsRoot);
+        if (currentEdition is { } edition)
+        {
+            foreach (var team in edition.GetProperty("teams").EnumerateArray())
+            {
+                currentOwners[team.GetProperty("franchise_id").GetInt32()] = new CurrentTeam(
+                    team.GetProperty("owner_name").GetString()!,
+                    team.GetProperty("team_name").GetString()!);
+            }
+        }
         var franchises = BuildFranchises(seasons, currentOwners);
         var owners = BuildOwners(seasons, currentOwners);
         var headToHead = BuildHeadToHead(seasons);
@@ -72,6 +82,7 @@ internal static class SiteDataBuilder
         {
             generated_at_utc = DateTime.UtcNow.ToString("o"),
             league_name = leagueName,
+            current_edition = currentEdition,
             seasons = seasons.Select(BuildSeason).ToList(),
             franchises,
             owners,
@@ -607,17 +618,7 @@ internal static class SiteDataBuilder
                 var seasonText = Path.GetFileName(Path.GetDirectoryName(file)!);
                 int.TryParse(seasonText, out var season);
 
-                var kind = name switch
-                {
-                    "season" => "season-review",
-                    "draft" => "draft-recap",
-                    "preview" => "season-preview",
-                    _ when name.StartsWith("week-", StringComparison.OrdinalIgnoreCase) => "weekly-recap",
-                    _ => "article"
-                };
-
-                int? week = null;
-                if (kind == "weekly-recap" && int.TryParse(name[5..], out var parsedWeek)) week = parsedWeek;
+                var (kind, week) = ClassifyArticle(name);
 
                 return (object)new
                 {
@@ -629,6 +630,42 @@ internal static class SiteDataBuilder
                 };
             })
             .ToList();
+
+    internal static (string Kind, int? Week) ClassifyArticle(string name)
+    {
+        var match = System.Text.RegularExpressions.Regex.Match(name, @"^week-(\d{2})(-preview)?$",
+            System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+        if (match.Success)
+            return (match.Groups[2].Success ? "weekly-preview" : "weekly-recap", int.Parse(match.Groups[1].Value));
+
+        return (name switch
+        {
+            "season" => "season-review",
+            "draft" => "draft-recap",
+            "preview" => "season-preview",
+            _ => "article"
+        }, null);
+    }
+
+    internal static JsonElement? LoadWeeklyEdition(string recapsRoot)
+    {
+        var path = Directory.EnumerateFiles(recapsRoot, "week-??-data.json", SearchOption.AllDirectories)
+            .OrderBy(file => file, StringComparer.Ordinal).LastOrDefault();
+        if (path is null) return null;
+
+        using var document = JsonDocument.Parse(File.ReadAllText(path));
+        var edition = document.RootElement;
+        var completedWeek = edition.GetProperty("completed_week").GetInt32();
+        var teams = edition.GetProperty("teams").EnumerateArray().ToList();
+        if (completedWeek < 1 || completedWeek > 17
+            || edition.GetProperty("next_week").GetInt32() != completedWeek + 1
+            || teams.Count == 0
+            || teams.Any(team => string.IsNullOrWhiteSpace(team.GetProperty("owner_name").GetString())
+                || string.IsNullOrWhiteSpace(team.GetProperty("team_name").GetString())))
+            throw new InvalidOperationException($"Invalid weekly edition: {path}");
+
+        return edition.Clone();
+    }
 
     private static string? ReadTitle(string path)
     {

@@ -101,9 +101,42 @@ export type Owner = {
 
 export type Article = { season: number; week?: number; kind: string; path: string; title: string };
 
+export type EditionPlayer = {
+  name: string;
+  position: string;
+  nfl_team: string | null;
+  starter: boolean;
+  status: string | null;
+  injury: string | null;
+};
+
+export type EditionTeam = Pick<Standing,
+  'franchise_id' | 'owner_name' | 'team_name' | 'wins' | 'losses' | 'ties' | 'points_for' | 'points_against'
+> & { previous_names: string[]; roster: EditionPlayer[] };
+
+export type Edition = {
+  season: number;
+  completed_week: number;
+  next_week: number;
+  captured_at: string;
+  recap_path: string;
+  preview_path: string;
+  teams: EditionTeam[];
+  weeks: Week[];
+  upcoming: { home_id: number; away_id: number }[];
+  transactions: {
+    type: string;
+    completed_at: string;
+    moves: { player: string; to: number; from: number | null }[];
+    picks: { season: string; round: number; original_roster: number; from: number; to: number }[];
+    faab: { from: number; to: number; amount: number }[];
+  }[];
+};
+
 export const data = league as unknown as {
   generated_at_utc: string;
   league_name: string;
+  current_edition?: Edition;
   seasons: Season[];
   franchises: Franchise[];
   owners: Owner[];
@@ -142,10 +175,13 @@ export const data = league as unknown as {
 /** The upcoming season has a draft but no results, so it is listed separately from played seasons. */
 export const PLAYED_SEASONS = data.seasons.map((s) => s.season).sort((a, b) => b - a);
 
+export const CURRENT_EDITION = data.current_edition ?? null;
+
 export const ALL_SEASONS = Array.from(
   new Set([
     ...PLAYED_SEASONS,
     ...data.articles.map((a) => a.season),
+    ...(CURRENT_EDITION ? [CURRENT_EDITION.season] : []),
     ...(data.draft ? [Number(data.draft.season)] : []),
   ]),
 )
@@ -160,7 +196,14 @@ export const articlesOf = (year: number) =>
   data.articles
     .filter((a) => a.season === year)
     .slice()
-    .sort((a, b) => (a.week ?? 99) - (b.week ?? 99));
+    .sort((a, b) => articleOrder(a) - articleOrder(b) || a.path.localeCompare(b.path));
+
+const articleOrder = (article: Article) => {
+  if (article.kind === 'draft-recap') return -2;
+  if (article.kind === 'season-preview') return -1;
+  if (article.week != null) return article.week * 2 - (article.kind === 'weekly-preview' ? 1 : 0);
+  return 999;
+};
 
 /** `recaps/2025/week-05.md` is the collection id `2025/week-05`, and the route matches. */
 export const articleSlug = (path: string) => path.replace(/^recaps\//, '').replace(/\.md$/, '');
@@ -192,6 +235,7 @@ export const ordinal = (n: number) => ORDINALS[n] ?? `${n}th`;
 
 export const KIND_LABEL: Record<string, string> = {
   'weekly-recap': 'Weekly recap',
+  'weekly-preview': 'Weekly preview',
   'season-review': 'Season in review',
   'draft-recap': 'Draft recap',
   'season-preview': 'Season preview',

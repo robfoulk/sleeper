@@ -12,7 +12,7 @@ separate private `sleeper-draftassist` repository and depends on this repository
 | `src/Sleeper.Api` | Sleeper HTTP access, caching, nflverse statistics, league scoring, reusable analysis, models, and the injury ledger |
 | `src/Sleeper.McpServer` | Attribute-discovered Markdown MCP tools over shared API services |
 | `src/Sleeper.Host` | Streamable HTTP MCP, REST wrappers, Swagger, and health endpoints |
-| `src/Sleeper.RosterReport` | Keeper/player/team reports, roster history, weekly recaps, season artifacts, and optional Foundry prose |
+| `src/Sleeper.RosterReport` | Player and team reports, roster history, weekly recaps, season artifacts, and optional Foundry prose |
 
 Tests mirror these projects under `tests/`. The root `Sleeper.slnx` is the public
 build boundary.
@@ -41,12 +41,12 @@ transactions, players, NFL state, drafts, picks, and traded picks.
 `SleeperClient` performs HTTP and JSON conversion. `CachedSleeperClient` decorates it
 with endpoint-specific memory caching and same-key request coalescing.
 
-`SleeperService` joins remote entities into league concepts such as named rosters,
-scoreboards, keeper values, and declared keepers.
+`SleeperService` joins remote entities into league concepts such as named rosters
+and scoreboards.
 
 `NflDataClient` downloads nflverse statistics and DynastyProcess player-ID mappings.
 `FantasyScorer` applies Sleeper scoring settings to raw statistics, while
-`FantasyService` and `AnalysisService` expose player, roster, ranking, and keeper
+`FantasyService` and `AnalysisService` expose player, roster, and ranking
 analysis.
 
 The injury subsystem stores historical observations separately from expiring,
