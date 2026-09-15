@@ -23,7 +23,9 @@ public sealed record InjuryObservationInput(
     DateTimeOffset? ExpiresAt = null,
     int? Season = null,
     int? Week = null,
-    string? SeasonType = null);
+    string? SeasonType = null,
+    DateTimeOffset? InjuryOccurredAt = null,
+    DateTimeOffset? SourcePublishedAt = null);
 
 public sealed record InjuryObservation(
     long Id,
@@ -43,12 +45,18 @@ public sealed record InjuryObservation(
     DateTimeOffset? ExpiresAt,
     int? Season,
     int? Week,
-    string? SeasonType);
+    string? SeasonType,
+    DateTimeOffset? InjuryOccurredAt = null,
+    DateTimeOffset? SourcePublishedAt = null);
 
 public sealed record InjuryBatchWriteResult(
     IReadOnlyList<InjuryObservation> Observations,
     int InsertedCount,
     int DuplicateCount);
+
+public sealed record InjuryChange(
+    InjuryObservation Observation,
+    InjuryObservation? PreviousObservation);
 
 public sealed record CurrentInjury(
     string SleeperId,

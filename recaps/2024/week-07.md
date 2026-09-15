@@ -1,4 +1,4 @@
-# Week 7 Recap — FoulknFootball (2024)
+# Week 7 Recap — The League (2024)
 
 _Generated 2026-04-27 01:23 UTC._
 
@@ -9,13 +9,13 @@ _Generated 2026-04-27 01:23 UTC._
 
 ## Intro
 
-Week 7 gave FoulknFootball a firmer outline. The highest-scoring game belonged to Devin, and GibbMeDaRock’s 249.76 against Hauwk Tua was not just the week’s loudest number but the clearest sign that last week’s rise to the top of the power rankings was earned. At the same time, the race at the top stayed crowded on the standings page, with BearDown, Also too old to run, and GibbMeDaRock all sitting at 5-2, while CeeDeez Nuts and Chase Brown Tanks remain close enough to keep every result meaningful.
+Week 7 gave The League a firmer outline. The highest-scoring game belonged to Devin, and GibbMeDaRock’s 249.76 against Hauwk Tua was not just the week’s loudest number but the clearest sign that last week’s rise to the top of the power rankings was earned. At the same time, the race at the top stayed crowded on the standings page, with BearDown, Also too old to run, and GibbMeDaRock all sitting at 5-2, while CeeDeez Nuts and Chase Brown Tanks remain close enough to keep every result meaningful.
 
 There is another truth settling in now. Some teams are proving they can survive a bad line or two and still post winning totals, and some teams are running out of time to decide whether a waiver move or a trade can still change the shape of the season. Devin’s five-game winning streak is the form story, but Michael’s seven-game slide is the larger fact of the league because it keeps pulling Code 3 further from the pack while the middle decides what it wants to be.
 
 ## League Themes
 
-The week’s best players sat right at the center of the biggest result. Lamar Jackson led all scorers with 34.44 for Devin, Jahmyr Gibbs followed with 28.0, and that pair drove GibbMeDaRock to the top score of the season so far in FoulknFootball. Saquon Barkley’s 24.7 helped Dakota survive a narrow game of his own, Joe Mixon’s 24.4 kept Eric’s strong run moving, and Derrick Henry’s 24.2 gave Jake enough to nearly steal the week’s closest contest. When the league’s No. 1 power-ranking team jumps five spots one week and then answers with 249.76 the next, that is no longer a temporary heater. It is profile.
+The week’s best players sat right at the center of the biggest result. Lamar Jackson led all scorers with 34.44 for Devin, Jahmyr Gibbs followed with 28.0, and that pair drove GibbMeDaRock to the top score of the season so far in The League. Saquon Barkley’s 24.7 helped Dakota survive a narrow game of his own, Joe Mixon’s 24.4 kept Eric’s strong run moving, and Derrick Henry’s 24.2 gave Jake enough to nearly steal the week’s closest contest. When the league’s No. 1 power-ranking team jumps five spots one week and then answers with 249.76 the next, that is no longer a temporary heater. It is profile.
 
 The waiver wire had one clear winner. Eric added Russell Wilson and got 24.86 points right away, the biggest immediate return of any pickup this week, and that kind of quarterback patch matters for a team that has now won three straight and scored 150 or more in four consecutive weeks. Michael also found the same 24.86-point output from Wilson before moving on, but the sharper note belongs to Eric because the points landed in a win. Elsewhere, Rob found modest help from Ray Davis, and Jake got a usable tight-end line from Hunter Henry, though neither move changed the week the way Eric’s did.
 
@@ -29,7 +29,7 @@ A few star lines bent the board in ways that were hard to ignore. Jayden Daniels
 
 **GibbMeDaRock bury Hauwk Tua behind a Lamar-led avalanche.**
 
-Week 7 in FoulknFootball opened as a clean test for two teams coming from different recent weeks, and by the middle of Sunday it belonged entirely to Devin. GibbMeDaRock beat Dave’s Hauwk Tua, 249.76 to 149.56, a 100.20-point margin that never asked for much interpretation. Devin had a few quiet spots on the sheet, but the important detail was simple: there was scoring pressure everywhere else.
+Week 7 in The League opened as a clean test for two teams coming from different recent weeks, and by the middle of Sunday it belonged entirely to Devin. GibbMeDaRock beat Dave’s Hauwk Tua, 249.76 to 149.56, a 100.20-point margin that never asked for much interpretation. Devin had a few quiet spots on the sheet, but the important detail was simple: there was scoring pressure everywhere else.
 
 The hero was Lamar Jackson. Baltimore’s quarterback gave Devin 34.44 points against Tampa Bay with 281 passing yards, five touchdown passes, and 52 rushing yards, and he had plenty of company. Jahmyr Gibbs added 28.0 for Detroit against Minnesota, Javonte Williams scored 23.1 with two rushing touchdowns, Denver’s defense brought 22.0, and Amon-Ra St. Brown, Aaron Jones, Najee Harris, and Justin Jefferson all kept the total moving. We picked GibbMeDaRock last week, and the call held on the winner but not the shape of it — projected 149.6 to 131.8, delivered 249.76 to 149.56.
 
@@ -43,7 +43,7 @@ The consequence is a clear one. Devin extends the winning streak from four games
 
 **Also too old to run edges CeeDeez Nuts on Rob’s steadier floor.**
 
-Week 7 in FoulknFootball gave us the kind of matchup that sits with you a little while after the late window, and Rob came out of it with a 167.94-165.82 win over Jake. The margin was 2.12 points. Small enough that every quiet spot mattered, and broad enough that neither side can point to just one missed turn.
+Week 7 in The League gave us the kind of matchup that sits with you a little while after the late window, and Rob came out of it with a 167.94-165.82 win over Jake. The margin was 2.12 points. Small enough that every quiet spot mattered, and broad enough that neither side can point to just one missed turn.
 
 The hero was Jalen Hurts. Philadelphia’s quarterback gave Rob 22.76 points against the Giants, with 114 passing yards, three total touchdowns, and two more scores on the ground, while Kyren Williams added 19.6 for the Rams against Las Vegas and Buffalo’s defense supplied 13.0. Rob also got useful work from Brian Robinson’s 13.1, Alexander Mattison’s 12.3, and Ja'Marr Chase’s 12.6, which helped cover for zeros from Cooper Kupp and JuJu Smith-Schuster. We picked Jake last week, and that call missed; the coin-flip setup was right, but the No. 1 form line for CeeDeez Nuts did not quite carry through.
 
@@ -57,7 +57,7 @@ The consequence is a real one as both owners look up at the top of the regular-s
 
 **Eric gets enough around Joe Mixon, and Michael’s good quarterback day is not enough.**
 
-Week 7 in FoulknFootball set Eric’s Chase Brown Tanks opposite Michael’s Code 3, with one team trying to keep a little forward movement going and the other still looking for a turn after a difficult opening stretch. Eric won it, 157.28 to 132.86, and the shape of the game was clear enough: Chase Brown Tanks absorbed several misses, but the middle of the lineup kept producing.
+Week 7 in The League set Eric’s Chase Brown Tanks opposite Michael’s Code 3, with one team trying to keep a little forward movement going and the other still looking for a turn after a difficult opening stretch. Eric won it, 157.28 to 132.86, and the shape of the game was clear enough: Chase Brown Tanks absorbed several misses, but the middle of the lineup kept producing.
 
 The hero was Joe Mixon. He gave Eric 24.4 points against Green Bay on 115 rushing yards and two touchdowns, and he had steady company. David Njoku added 13.6 on 10 catches for 76 yards and a score against Cincinnati, James Conner brought 15.2 against the Chargers with 101 rushing yards and 51 more through the air, and DK Metcalf chipped in 15.9 with a 99-yard, one-touchdown line. Chris Boswell’s 13.0 helped too, which mattered on a day when Jayden Daniels scored only 5.24 and Travis Kelce finished with 1.7.
 
@@ -71,7 +71,7 @@ The consequence is a familiar one for now. Eric’s win extends the Chase Brown 
 
 **Dakota leans on Saquon Barkley, and BearDown slips past Brian by 2.86.**
 
-Week 7 in FoulknFootball brought the kind of meeting that usually tells you something honest about the top half of the league. Dakota’s BearDown edged Brian’s Steel City, 145.72 to 142.86, and the margin stayed narrow all the way to the end. It was not a clean card for either side, but BearDown found just enough room around the misses, and that was the difference.
+Week 7 in The League brought the kind of meeting that usually tells you something honest about the top half of the league. Dakota’s BearDown edged Brian’s Steel City, 145.72 to 142.86, and the margin stayed narrow all the way to the end. It was not a clean card for either side, but BearDown found just enough room around the misses, and that was the difference.
 
 The hero was Saquon Barkley. Philadelphia’s running back gave Dakota 24.7 points against the Giants on 176 rushing yards and a touchdown, and BearDown needed every bit of it. Keon Coleman added 12.5 for Buffalo against Tennessee, Cade Otton brought 10.0 for Tampa Bay against Baltimore on eight catches for 100 yards, and the Eagles defense supplied 16.0. The sharp note here is simple: Dakota won despite getting only 2.4 from Alvin Kamara, 4.1 from Malik Nabers, and 3.0 from Davante Adams.
 
@@ -85,7 +85,7 @@ The consequence is a clear one. BearDown snaps the two-game losing streak noted 
 
 - Devin’s five-game winning streak now meets the team directly behind him in the power rankings, which gives Week 8 a clean test of whether GibbMeDaRock are simply hot or firmly the league’s best side.
 - Jake enters next week on the No. 4 seed line, so this is not only a response spot after the narrow loss to Rob but also a real chance to steady a playoff position that is not secure.
-- Michael’s seven-game skid remains the central pressure point in FoulknFootball, and another loss would make the bottom of the standings feel less like a slump and more like a season-long verdict.
+- Michael’s seven-game skid remains the central pressure point in The League, and another loss would make the bottom of the standings feel less like a slump and more like a season-long verdict.
 - Eric and Brian sit on opposite sides of the current top-four cut, and that game carries the clearest immediate swing for the bubble even before the standings tighten further.
 
 ---

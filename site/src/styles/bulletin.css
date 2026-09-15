@@ -1,0 +1,321 @@
+/*
+  THE LEAGUE — visual world.
+
+  The artifact is a spirit-duplicated club bulletin: the stapled, typewritten sheet a
+  commissioner ran off and mailed to members before any of this lived on the web.
+
+  Dark is primary because the use scene is a phone on a Tuesday night with the lights low,
+  and the dark rendition is not an inversion — it is the mimeograph stencil itself, the dark
+  waxed sheet the type is cut through. Light is the printed sheet that comes off it.
+
+  One face throughout, because a duplicator had one typewriter. The masthead is not a display
+  font; it is the same typebar struck at size. Two inks, because a duplicator had two: aniline
+  violet for everything, stamp red for results and corrections. No third color is introduced.
+*/
+
+@font-face {
+  font-family: 'Courier Prime';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/sleeper/fonts/courier-prime-regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Courier Prime';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/sleeper/fonts/courier-prime-bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Courier Prime';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/sleeper/fonts/courier-prime-italic.woff2') format('woff2');
+}
+
+:root {
+  color-scheme: dark;
+
+  /* The stencil: dark waxed paper, not black. */
+  --ground: #1c1720;
+  --ground-raised: #241e29;
+  --ground-sunk: #15111a;
+
+  /* Aniline violet, the duplicator ink, bright enough to read as freshly cut. */
+  --ink: #e9e2f4;
+  --ink-quiet: #b3a7c9;
+  --ink-faint: #8b7fa3;
+  --violet: #bda4f2;
+  --violet-deep: #8f6fe0;
+
+  /* The correction stamp. Results and losses, never decoration. */
+  --stamp: #f0766a;
+  --stamp-deep: #d14a39;
+
+  --rule: #3d3449;
+  --rule-strong: #5c4f72;
+
+  --measure: 66ch;
+  --gutter: clamp(1.15rem, 4vw, 3rem);
+
+  --face: 'Courier Prime', 'Courier New', ui-monospace, monospace;
+
+  /* The sheet is duplicated, so the grain sits over everything at low strength. */
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E");
+}
+
+[data-sheet='printed'] {
+  color-scheme: light;
+
+  /* Duplicator stock: grey-toned copy paper, not vellum, not cream. */
+  --ground: #e5e3db;
+  --ground-raised: #eeece5;
+  --ground-sunk: #d6d3c8;
+
+  --ink: #262032;
+  --ink-quiet: #4c4265;
+  --ink-faint: #6b6182;
+  --violet: #452f8d;
+  --violet-deep: #2f1d65;
+
+  --stamp: #a92f21;
+  --stamp-deep: #7f1f14;
+
+  --rule: #b7b2a5;
+  --rule-strong: #8a8477;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font-family: var(--face);
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  font-synthesis-weight: none;
+  overflow-x: hidden;
+}
+
+/* The duplication grain. */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: var(--grain);
+  opacity: 0.12;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  z-index: 90;
+}
+
+[data-sheet='printed'] body::after {
+  opacity: 0.28;
+  mix-blend-mode: multiply;
+}
+
+::selection {
+  background: var(--violet-deep);
+  color: #fff;
+}
+
+/* ---------- Type ---------- */
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 700;
+  line-height: 1.12;
+  text-wrap: balance;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: clamp(1.85rem, 6.6vw, 3.6rem);
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: clamp(1.35rem, 3.6vw, 1.95rem);
+  text-transform: uppercase;
+  letter-spacing: 0.005em;
+}
+
+h3 {
+  font-size: clamp(1.1rem, 2.8vw, 1.35rem);
+}
+
+p {
+  margin: 0 0 1.35em;
+  max-width: var(--measure);
+}
+
+a {
+  color: inherit;
+  text-decoration-color: var(--violet);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.22em;
+  transition: color 140ms ease-out, background-color 140ms ease-out;
+}
+
+a:hover {
+  color: var(--violet);
+}
+
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--violet);
+  outline-offset: 3px;
+  border-radius: 1px;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--rule);
+  margin: 2.5rem 0;
+}
+
+/* ---------- The sheet ---------- */
+
+.sheet {
+  width: min(72rem, 100%);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.sheet--narrow {
+  width: min(50rem, 100%);
+}
+
+.ruled {
+  border-bottom: 2px solid var(--rule-strong);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Typed slugs: the abbreviations that ran in the margins of these things. */
+.slug {
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+.stamp {
+  color: var(--stamp);
+}
+
+/* A rubber stamp, struck at the angle a hand strikes one. */
+.struck {
+  display: inline-block;
+  border: 2px solid var(--stamp);
+  color: var(--stamp);
+  padding: 0.18rem 0.55rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  transform: rotate(-2.5deg);
+}
+
+/* ---------- Tables: the reason this world was chosen ---------- */
+
+.ledger {
+  width: 100%;
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+  font-size: 0.92rem;
+}
+
+.ledger caption {
+  text-align: left;
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  padding-bottom: 0.6rem;
+}
+
+.ledger th,
+.ledger td {
+  padding: 0.48rem 0.6rem;
+  text-align: left;
+  border-bottom: 1px solid var(--rule);
+  white-space: nowrap;
+}
+
+.ledger thead th {
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-quiet);
+  border-bottom: 2px solid var(--rule-strong);
+}
+
+.ledger td.num,
+.ledger th.num {
+  text-align: right;
+}
+
+.ledger td.wide {
+  white-space: normal;
+}
+
+.ledger tbody tr:hover {
+  background: var(--ground-raised);
+}
+
+/* A table wider than the phone scrolls rather than clipping in silence. */
+.ledger-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+
+/* ---------- Utility ---------- */
+
+.stack > * + * {
+  margin-top: var(--stack-gap, 1.5rem);
+}
+
+.skip {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--violet);
+  color: var(--ground-sunk);
+  padding: 0.6rem 1rem;
+  z-index: 200;
+}
+
+.skip:focus {
+  left: 0.5rem;
+  top: 0.5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

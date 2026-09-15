@@ -8,7 +8,7 @@ public class LeagueRosterConfigTests
     [Fact]
     public void FromLeague_ParsesYourLeague()
     {
-        var league = new League("lg1", "FoulknFootball", "pre_draft", "nfl", "2026", null, 8, null, null,
+        var league = new League("lg1", "The League", "pre_draft", "nfl", "2026", null, 8, null, null,
             ["QB", "QB", "RB", "RB", "RB", "RB", "WR", "WR", "WR", "WR", "TE", "TE",
              "WRRB_FLEX", "WRRB_FLEX", "K", "K", "DEF", "DEF",
              "BN", "BN", "BN", "BN", "BN", "BN", "BN", "BN", "BN", "BN", "BN", "BN"],

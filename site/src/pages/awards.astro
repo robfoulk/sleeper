@@ -1,0 +1,101 @@
+---
+import Bulletin from '../layouts/Bulletin.astro';
+import { data, pts, ownerSlug, PLAYED_SEASONS, seasonOf } from '../lib/league';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const seasons = PLAYED_SEASONS.map((y) => seasonOf(y)!).filter((s) => s.awards.length > 0);
+---
+
+<Bulletin
+  title="Awards — The League"
+  slug="The file · Awards"
+  description="Every award handed out in The League, with the citation that earned it."
+>
+  <div class="sheet">
+    <h1 class="ruled">Awards</h1>
+    <p class="dek">
+      Handed out at the end of each season and computed from the record. The citation is the number
+      that earned it.
+    </p>
+  </div>
+
+  {seasons.map((s) => (
+    <div class="sheet band">
+      <h2 class="ruled">{s.season}</h2>
+      <ul class="awards">
+        {s.awards.map((a) => (
+          <li class="award">
+            <div class="award__head">
+              <h3>{a.name}</h3>
+              <p class="award__val">{pts(a.value)}{a.week ? <span class="slug"> week {a.week}</span> : null}</p>
+            </div>
+            <p class="award__who">
+              <a href={`${base}/owners/${ownerSlug(a.owner_name)}`}><strong>{a.owner_name}</strong></a>
+              {' — '}{a.team_name}
+            </p>
+            <p class="award__cite">{a.citation ?? a.description}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  ))}
+</Bulletin>
+
+<style>
+  h1 {
+    padding-top: 0.5rem;
+  }
+
+  .dek {
+    color: var(--ink-quiet);
+    max-width: 62ch;
+  }
+
+  .band {
+    padding-top: 2.6rem;
+  }
+
+  .awards {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Ruled entries, not cards: an award is a line item in a citation list. */
+  .award {
+    padding: 1.1rem 0;
+    border-bottom: 1px solid var(--rule);
+    max-width: 68ch;
+  }
+
+  .award__head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .award__head h3 {
+    font-size: 1.05rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .award__val {
+    margin: 0;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    color: var(--stamp);
+    white-space: nowrap;
+  }
+
+  .award__who {
+    margin: 0.35rem 0 0;
+  }
+
+  .award__cite {
+    margin: 0.35rem 0 0;
+    color: var(--ink-quiet);
+    font-size: 0.92rem;
+  }
+</style>

@@ -1,0 +1,260 @@
+---
+import '../styles/bulletin.css';
+
+interface Props {
+  title: string;
+  slug?: string;
+  description?: string;
+}
+
+const { title, slug, description } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const href = (p: string) => `${base}${p}`;
+const path = Astro.url.pathname.replace(/\/$/, '');
+const isHere = (p: string) => path === `${base}${p}` || (p !== '/' && path.startsWith(`${base}${p}`));
+
+const nav = [
+  { label: 'Front Page', to: '/' },
+  { label: '2026', to: '/2026' },
+  { label: '2025', to: '/2025' },
+  { label: '2024', to: '/2024' },
+  { label: 'Teams', to: '/franchises' },
+  { label: 'Record Book', to: '/records' },
+  { label: 'Awards', to: '/awards' },
+];
+---
+
+<!--
+  ============================================================================
+  DIRECTION CONTRACT — impeccable · seed key ca6d8d28 · form #7
+  ============================================================================
+
+  THESIS
+  A two-season league archive should not look like a sports app. It should look
+  like the thing a commissioner actually made before apps existed: a bulletin he
+  typed, ran off on a duplicator, and handed out. The record is the artifact.
+
+  OWN-WORLD
+  The mimeographed club newsletter. Dark is the wax stencil the type is cut
+  through, not an inverted page; light is the sheet that comes off the drum.
+  One typewriter face for everything, masthead included, because the office had
+  one machine. Two inks, because the duplicator held two: aniline violet as the
+  voice, correction red reserved for results and losses. Duplication grain over
+  the whole page. No third color, no display face, no gradient, ever.
+
+  STORY
+  Nine people, three seasons, one franchise that changed hands. The site opens
+  on what is current and lets you walk backward through every week that was
+  actually played, with the numbers rendered from data rather than from prose.
+
+  FIRST VIEWPORT
+  The masthead struck full-width with the issue line under it, then the lead
+  item of this issue — no hero card, no metric row, no marketing furniture.
+  A reader should know within one screen what league this is and what is new.
+
+  FORM
+  Ruled sheet, not card grid. Ledger tables are the primary visual object and
+  the reason the monospace world was chosen: tabular figures align for free and
+  monospace is native to the artifact rather than a costume for "technical".
+  ============================================================================
+-->
+<html lang="en" data-sheet="stencil">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    {description && <meta name="description" content={description} />}
+    <link rel="preload" as="font" type="font/woff2" href={href('/fonts/courier-prime-regular.woff2')} crossorigin />
+    <link rel="preload" as="font" type="font/woff2" href={href('/fonts/courier-prime-bold.woff2')} crossorigin />
+    <meta name="theme-color" content="#1c1720" />
+    <script is:inline>
+      // Set before paint so the sheet never flashes the wrong stock.
+      try {
+        var saved = localStorage.getItem('sheet');
+        if (saved === 'printed' || saved === 'stencil') {
+          document.documentElement.dataset.sheet = saved;
+        }
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <header class="masthead">
+      <div class="sheet">
+        <div class="masthead__plate">
+          <a class="masthead__title" href={href('/')}>The League</a>
+          <button id="sheet-toggle" type="button" class="sheet-toggle" aria-pressed="false">
+            <span class="sheet-toggle__label">Print</span>
+          </button>
+        </div>
+        <p class="masthead__issue slug">
+          Eight teams · Keeper league · Run off from the record
+        </p>
+      </div>
+      <nav class="rail" aria-label="Sections">
+        <div class="sheet">
+          <ul class="rail__list">
+            {nav.map((item) => (
+              <li>
+                <a href={href(item.to)} aria-current={isHere(item.to) ? 'page' : undefined}>{item.label}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      {slug && (
+        <div class="sheet">
+          <p class="slug page-slug">{slug}</p>
+        </div>
+      )}
+      <slot />
+    </main>
+
+    <footer class="colophon">
+      <div class="sheet">
+        <p>
+          Scores, standings and records on this site are rendered from league data, not from the
+          articles. Written recaps are drafted with assistance and checked against that data.
+        </p>
+        <p class="slug">Members are named by first name only. The written archive begins with the 2024 season.</p>
+      </div>
+    </footer>
+
+    <script is:inline>
+      (function () {
+        var btn = document.getElementById('sheet-toggle');
+        if (!btn) return;
+        var root = document.documentElement;
+        var label = btn.querySelector('.sheet-toggle__label');
+        function sync() {
+          var printed = root.dataset.sheet === 'printed';
+          btn.setAttribute('aria-pressed', String(printed));
+          if (label) label.textContent = printed ? 'Stencil' : 'Print';
+          btn.setAttribute('aria-label', printed ? 'Switch to the stencil' : 'Switch to the printed sheet');
+        }
+        sync();
+        btn.addEventListener('click', function () {
+          var next = root.dataset.sheet === 'printed' ? 'stencil' : 'printed';
+          root.dataset.sheet = next;
+          try { localStorage.setItem('sheet', next); } catch (e) {}
+          sync();
+        });
+      })();
+    </script>
+  </body>
+</html>
+
+<style>
+  .masthead {
+    border-bottom: 2px solid var(--rule-strong);
+    padding-top: clamp(1.25rem, 4vw, 2.5rem);
+  }
+
+  .masthead__plate {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .masthead__title {
+    font-size: clamp(2.1rem, 11vw, 6.5rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -0.045em;
+    line-height: 0.92;
+    text-decoration: none;
+    /* The typebar hit the stencil hard enough to spread. */
+    text-shadow: 0.012em 0.012em 0 var(--violet-deep);
+  }
+
+  .masthead__title:hover {
+    color: inherit;
+  }
+
+  .sheet-toggle {
+    flex: none;
+    background: transparent;
+    border: 1px solid var(--rule-strong);
+    color: var(--ink-quiet);
+    font: inherit;
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding: 0.4rem 0.7rem;
+    cursor: pointer;
+  }
+
+  .sheet-toggle:hover {
+    color: var(--violet);
+    border-color: var(--violet);
+  }
+
+  .masthead__issue {
+    margin: 0.7rem 0 0.9rem;
+  }
+
+  .rail {
+    border-top: 1px solid var(--rule);
+    background: var(--ground-sunk);
+  }
+
+  .rail__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1.35rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+    white-space: nowrap;
+  }
+
+  .rail__list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .rail__list a {
+    display: block;
+    padding: 0.7rem 0;
+    font-size: 0.76rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--ink-quiet);
+    border-bottom: 2px solid transparent;
+  }
+
+  .rail__list a:hover {
+    color: var(--violet);
+  }
+
+  .rail__list a[aria-current='page'] {
+    color: var(--ink);
+    border-bottom-color: var(--stamp);
+  }
+
+  .page-slug {
+    padding-top: 1.6rem;
+  }
+
+  main {
+    padding-bottom: 4rem;
+    min-height: 60vh;
+  }
+
+  .colophon {
+    border-top: 2px solid var(--rule-strong);
+    padding: 2rem 0 3rem;
+    color: var(--ink-faint);
+    font-size: 0.85rem;
+  }
+
+  .colophon p {
+    max-width: 60ch;
+  }
+</style>

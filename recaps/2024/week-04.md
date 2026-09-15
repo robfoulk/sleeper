@@ -1,4 +1,4 @@
-# Week 4 Recap — FoulknFootball (2024)
+# Week 4 Recap — The League (2024)
 
 _Generated 2026-04-27 01:19 UTC._
 
@@ -9,13 +9,13 @@ _Generated 2026-04-27 01:19 UTC._
 
 ## Intro
 
-Four weeks in, FoulknFootball is beginning to tell the truth about itself. The top of the table is no longer living on one big Sunday here or there; Dakota, Rob, and Jake are stacking real weekly volume, while the teams lower down are learning that one weak position can pull an otherwise solid score back toward the pack.
+Four weeks in, The League is beginning to tell the truth about itself. The top of the table is no longer living on one big Sunday here or there; Dakota, Rob, and Jake are stacking real weekly volume, while the teams lower down are learning that one weak position can pull an otherwise solid score back toward the pack.
 
 The week’s clearest read came in the highest-scoring game on the board. Devin beat Eric, 196.08 to 185.22, and that result fit the larger picture of the league: good teams are finding enough answers to survive a miss or two, while the teams chasing them are still asking too much from perfect efficiency. BearDown stayed perfect in the narrowest game of the week, Rob’s long run of 150-plus finally met a loss, and Michael’s slide reached four games. By the quarter pole, those are not isolated results. They are patterns.
 
 ## League Themes
 
-The biggest number of Week 4 belonged to Jake. CeeDeez Nuts posted 196.44, the top score in FoulknFootball this week, and Derrick Henry led the way with 32.9 points. Rob got another strong quarterback day from Justin Fields at 31.98 in a loss that still kept Also too old to run above 150 for a fourth straight week, Kenneth Walker gave Brian 29.6, and Jared Goff’s 26.18 helped lift Dave to his first win. One detail said plenty about the week: Brian scored 177.38 and still took the loss. That is the tax of facing one of the league’s current heavy scorers.
+The biggest number of Week 4 belonged to Jake. CeeDeez Nuts posted 196.44, the top score in The League this week, and Derrick Henry led the way with 32.9 points. Rob got another strong quarterback day from Justin Fields at 31.98 in a loss that still kept Also too old to run above 150 for a fourth straight week, Kenneth Walker gave Brian 29.6, and Jared Goff’s 26.18 helped lift Dave to his first win. One detail said plenty about the week: Brian scored 177.38 and still took the loss. That is the tax of facing one of the league’s current heavy scorers.
 
 Dakota remains the central line in the standings because BearDown has now opened 4-0 and cleared 150 points in all four games. That is the strongest profile in the league right now, though Rob’s team has matched the four straight weeks above 150 and Jake is moving into that tier after climbing one spot to No. 3 in the power rankings. On the other end, Michael’s 0-4 start has become the league’s clearest problem. Code 3 had the week’s low score at 107.74, and the gap between isolated star power and complete lineup output remains the story there.
 
@@ -31,7 +31,7 @@ A few stat lines bent the week in important ways. Justin Fields nearly doubled h
 
 **GibbMeDaRock outlasts Chase Brown Tanks as Devin wins the week’s heaviest scoreline.**
 
-Week 4 in FoulknFootball brought a game that never really let up. Devin’s GibbMeDaRock beat Eric’s Chase Brown Tanks, 196.08 to 185.22, and both sides cleared their projections by a wide margin. The board said close all day, and it stayed that way, but GibbMeDaRock had just a little more strength in the premium spots.
+Week 4 in The League brought a game that never really let up. Devin’s GibbMeDaRock beat Eric’s Chase Brown Tanks, 196.08 to 185.22, and both sides cleared their projections by a wide margin. The board said close all day, and it stayed that way, but GibbMeDaRock had just a little more strength in the premium spots.
 
 The hero was Lamar Jackson. Baltimore’s quarterback gave Devin 23.64 points against Buffalo, and he had plenty of company: Jahmyr Gibbs scored 19.8 for Detroit against Seattle, Jordan Addison added 19.9 for Minnesota against Green Bay, and Amon-Ra St. Brown chipped in 14.78 with a receiving touchdown and a passing score. We picked Chase Brown Tanks here last week, so that call missed cleanly; the “trending upward” note on Eric’s side was real enough, but what we missed was Devin’s ceiling showing up all across the lineup at once.
 
@@ -39,13 +39,13 @@ On the other side, Eric produced a number that wins most weeks even while carryi
 
 What stands out is how much damage GibbMeDaRock absorbed and still won. Kyle Pitts gave Devin 0.0, Najee Harris finished with 7.3, and Marvin Harrison Jr. came in below projection at 10.5, but the lineup kept replacing soft spots with useful totals from Justin Jefferson, Aaron Jones, George Pickens, and two kickers who each supplied 6.0. One sharp number says plenty: Devin got 58.98 combined from Lamar Jackson, Gibbs, and Addison, and that was enough to hold off Eric’s late push.
 
-The consequence is a meaningful one near the middle of the FoulknFootball table. Devin extends GibbMeDaRock’s winning streak to two games after last week’s first breakthrough, and just as important, he takes the head-to-head tiebreaker from Eric in a part of the standings where that can matter by December.
+The consequence is a meaningful one near the middle of the League table. Devin extends GibbMeDaRock’s winning streak to two games after last week’s first breakthrough, and just as important, he takes the head-to-head tiebreaker from Eric in a part of the standings where that can matter by December.
 
 ### CeeDeez Nuts (196.44) vs Steel City (177.38)
 
 **CeeDeez Nuts hold off Steel City behind Derrick Henry’s big afternoon.**
 
-Week 4 in FoulknFootball brought two teams from the middle of the early top four back onto the same line, and CeeDeez Nuts answered the moment. Jake beat Brian, 196.44 to 177.38, a strong number against a strong number, and the margin came from the places where Jake’s best players gave him a little more. After taking a loss to BearDown in Week 3, CeeDeez Nuts got back on track without needing a perfect card.
+Week 4 in The League brought two teams from the middle of the early top four back onto the same line, and CeeDeez Nuts answered the moment. Jake beat Brian, 196.44 to 177.38, a strong number against a strong number, and the margin came from the places where Jake’s best players gave him a little more. After taking a loss to BearDown in Week 3, CeeDeez Nuts got back on track without needing a perfect card.
 
 The hero was Derrick Henry. Baltimore’s veteran back carried Jake with 32.9 points against Buffalo, piling up 199 rushing yards on 24 carries and adding three catches for 10 yards with a rushing and receiving touchdown. He had real support, too: Sam Darnold threw for 275 yards and three scores for 20.5, Jayden Reed gave Green Bay 139 receiving yards and a touchdown on his way to 20.1, and CeeDee Lamb added 16.6 with 98 receiving yards and a score for Dallas.
 
@@ -59,7 +59,7 @@ The consequence is a clear one from last week’s table: Jake not only gets CeeD
 
 **Dakota holds off Rob as BearDown stays perfect.**
 
-Week 4 in FoulknFootball put the league’s two unbeaten teams on the same field, and the margin was as narrow as the records suggested. Dakota’s BearDown edged Rob’s Also too old to run, 172.20 to 166.80, a game with points all over it and very little waste. BearDown did not have its cleanest afternoon, but it had enough answers in the right places.
+Week 4 in The League put the league’s two unbeaten teams on the same field, and the margin was as narrow as the records suggested. Dakota’s BearDown edged Rob’s Also too old to run, 172.20 to 166.80, a game with points all over it and very little waste. BearDown did not have its cleanest afternoon, but it had enough answers in the right places.
 
 The hero was Alvin Kamara. The Saints back gave Dakota 17.9 points against Atlanta with 19 carries for 77 yards and a touchdown, and he had steady company from Tony Pollard, who added 16.8 for Tennessee against Miami, and Joe Burrow, who supplied 16.28 for Cincinnati against Carolina. Dakota also got useful work from Malik Nabers’ 12 catches for 115 yards and Brandon Aubrey’s 10 points, which mattered in a week when Saquon Barkley fell to 11.6 and J.K. Dobbins managed 6.2.
 
@@ -67,13 +67,13 @@ On the other side, Rob had the biggest number in the matchup. Justin Fields carr
 
 That was the difference. Dakota won without a true eruption, while Rob’s lineup asked Fields to cover too much ground by himself. One bench note is worth mentioning: Rob did leave 21.6 from Geno Smith on the sideline, but his coulda-shoulda total was only 13.98, so this was more about what BearDown held together than one start/sit decision.
 
-The consequence is clear at the top of FoulknFootball. Dakota moves to 4-0, BearDown extends its winning streak to four games, and Rob’s three-game run ends with Dakota taking the head-to-head tiebreaker between the league’s two teams that entered Week 4 unbeaten.
+The consequence is clear at the top of The League. Dakota moves to 4-0, BearDown extends its winning streak to four games, and Rob’s three-game run ends with Dakota taking the head-to-head tiebreaker between the league’s two teams that entered Week 4 unbeaten.
 
 ### Hauwk Tua (180.58) vs Code 3 (107.74)
 
 **Hauwk Tua finally finds daylight, and Dave leaves no doubt against Michael.**
 
-Week 4 in FoulknFootball brought two 0-3 teams into the same lane, and Hauwk Tua came out of it with the kind of number that changes the feel of a season for at least one Sunday. Dave beat Michael, 180.58 to 107.74, a 72.84-point margin built on volume, balance, and a quarterback room that gave Hauwk Tua control of the matchup early. Jared Goff was the hero with 26.18 points for Detroit against Seattle, and D'Andre Swift added 22.5 for Chicago while Chuba Hubbard delivered 18.1 for Carolina.
+Week 4 in The League brought two 0-3 teams into the same lane, and Hauwk Tua came out of it with the kind of number that changes the feel of a season for at least one Sunday. Dave beat Michael, 180.58 to 107.74, a 72.84-point margin built on volume, balance, and a quarterback room that gave Hauwk Tua control of the matchup early. Jared Goff was the hero with 26.18 points for Detroit against Seattle, and D'Andre Swift added 22.5 for Chicago while Chuba Hubbard delivered 18.1 for Carolina.
 
 We picked Code 3 last week, 126.7 to 117.4, and that call missed cleanly. The X-factor we cited — that something had to give on those matching three-game skids — did show up, but it was Hauwk Tua, not Code 3, that broke free, and the game arrived in a much different shape than forecast. Dave also got useful work from Brian Thomas Jr.'s 15.9 for Jacksonville, Jameson Williams' 14.0 for Detroit, and Younghoe Koo's 18.0, which is how a lineup gets to 180.58 even with quieter returns from Tyreek Hill, Amari Cooper, and Brock Bowers.
 

@@ -1,0 +1,153 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-01-01T00:00:00.000Z",
+  "title": "Design System: The League",
+  "extensions": {
+    "colorMeta": {
+      "stencil-ground": {
+        "role": "neutral",
+        "displayName": "Stencil Ground",
+        "canonical": "#1c1720",
+        "tonalRamp": ["#100d13", "#15111a", "#1c1720", "#241e29", "#332b3b", "#4c4258", "#8b7fa3", "#e9e2f4"]
+      },
+      "aniline-violet": {
+        "role": "primary",
+        "displayName": "Aniline Violet",
+        "canonical": "#bda4f2",
+        "tonalRamp": ["#20143d", "#2f1d65", "#452f8d", "#6a4dbe", "#8f6fe0", "#bda4f2", "#d8c9f8", "#efe8fd"]
+      },
+      "correction-stamp": {
+        "role": "secondary",
+        "displayName": "Correction Stamp",
+        "canonical": "#f0766a",
+        "tonalRamp": ["#3d0f09", "#5c1710", "#7f1f14", "#a92f21", "#d14a39", "#f0766a", "#f7a89f", "#fcd9d4"]
+      },
+      "sheet-ground": {
+        "role": "neutral",
+        "displayName": "Sheet Ground",
+        "canonical": "#e5e3db",
+        "tonalRamp": ["#262032", "#4c4265", "#6b6182", "#8a8477", "#b7b2a5", "#d6d3c8", "#e5e3db", "#eeece5"]
+      },
+      "rule-struck": {
+        "role": "neutral",
+        "displayName": "Struck Rule",
+        "canonical": "#5c4f72",
+        "tonalRamp": ["#241e29", "#3d3449", "#5c4f72", "#7a6a94", "#8a8477", "#b7b2a5", "#d6d3c8", "#eeece5"]
+      }
+    },
+    "typographyMeta": {
+      "masthead": { "displayName": "Masthead", "purpose": "The nameplate only. The same typebar struck at size, with a hard ink-spread offset." },
+      "display": { "displayName": "Display", "purpose": "Page and article titles." },
+      "headline": { "displayName": "Headline", "purpose": "Section heads, usually paired with a struck rule." },
+      "title": { "displayName": "Title", "purpose": "Sub-sections. Sentence case, which is what separates it from Headline." },
+      "body": { "displayName": "Body", "purpose": "Prose, capped at a 66ch measure." },
+      "ledger": { "displayName": "Ledger", "purpose": "Every table of scores, standings and records. Always tabular numerals." },
+      "label": { "displayName": "Label / Slug", "purpose": "Kickers, datelines, metadata, column notes." }
+    },
+    "shadows": [
+      {
+        "name": "typebar-strike",
+        "value": "text-shadow: 0.012em 0.012em 0 var(--violet-deep)",
+        "purpose": "Not elevation. Ink spread from the typebar hitting the stencil. Masthead only, hard offset, never blurred."
+      }
+    ],
+    "motion": [
+      {
+        "name": "stamp-press",
+        "value": "120ms linear",
+        "purpose": "The only transition in the system. State changes are a stamp press, not an animation."
+      }
+    ],
+    "breakpoints": [
+      { "name": "sheet-narrow", "value": "50rem" },
+      { "name": "sheet", "value": "72rem" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Sheet Toggle",
+      "kind": "button",
+      "refersTo": "sheet-toggle",
+      "description": "Switches between the stencil (dark) and the printed sheet (light). The canonical control shape for the whole system.",
+      "html": "<button class=\"ds-sheet-toggle\">PRINT</button>",
+      "css": ".ds-sheet-toggle { background: transparent; color: var(--ink-quiet, #b3a7c9); border: 1px solid var(--rule-strong, #5c4f72); border-radius: 0; padding: 0.45rem 0.8rem; font-family: 'Courier Prime', 'Courier New', ui-monospace, monospace; font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; cursor: pointer; transition: color 120ms linear, border-color 120ms linear; } .ds-sheet-toggle:hover { color: var(--ink, #e9e2f4); border-color: var(--ink, #e9e2f4); } .ds-sheet-toggle:focus-visible { outline: 2px solid var(--violet, #bda4f2); outline-offset: 2px; }"
+    },
+    {
+      "name": "Ledger",
+      "kind": "custom",
+      "refersTo": "ledger-row",
+      "description": "The signature component. Standings, scoreboards and record tables — hairline rules only, no zebra striping, numbers always tabular.",
+      "html": "<table class=\"ds-ledger\"><caption>Where it stands</caption><thead><tr><th scope=\"col\">Owner</th><th scope=\"col\" class=\"ds-num\">W</th><th scope=\"col\" class=\"ds-num\">L</th><th scope=\"col\" class=\"ds-num\">PF</th></tr></thead><tbody><tr><td>Brian</td><td class=\"ds-num\">13</td><td class=\"ds-num\">2</td><td class=\"ds-num\">2821.08</td></tr><tr><td>Dave</td><td class=\"ds-num\">9</td><td class=\"ds-num\">6</td><td class=\"ds-num\">2823.12</td></tr><tr><td>Jake</td><td class=\"ds-num\">7</td><td class=\"ds-num\">8</td><td class=\"ds-num\">2660.78</td></tr></tbody></table>",
+      "css": ".ds-ledger { width: 100%; border-collapse: collapse; font-family: 'Courier Prime', 'Courier New', ui-monospace, monospace; font-size: 0.92rem; font-variant-numeric: tabular-nums; color: var(--ink, #e9e2f4); } .ds-ledger caption { text-align: left; font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-faint, #8b7fa3); padding-bottom: 0.6rem; } .ds-ledger th { text-align: left; font-weight: 700; border-bottom: 2px solid var(--rule-strong, #5c4f72); padding: 0.5rem 0.6rem 0.5rem 0; } .ds-ledger td { border-bottom: 1px solid var(--rule, #3d3449); padding: 0.5rem 0.6rem 0.5rem 0; } .ds-ledger .ds-num { text-align: right; padding-right: 0; }"
+    },
+    {
+      "name": "Slug",
+      "kind": "chip",
+      "refersTo": "nav-link",
+      "description": "The dateline/kicker. Carries all metadata in the system: article kickers, column notes, owner names under a team.",
+      "html": "<p class=\"ds-slug\">Weekly recap &middot; 2025</p>",
+      "css": ".ds-slug { margin: 0; font-family: 'Courier Prime', 'Courier New', ui-monospace, monospace; font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-faint, #8b7fa3); }"
+    },
+    {
+      "name": "Navigation Rail",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "The bulletin's contents line. Horizontal on every viewport; it scrolls rather than collapsing into a menu.",
+      "html": "<nav class=\"ds-rail\"><ul class=\"ds-rail__list\"><li><a class=\"ds-rail__link ds-rail__link--current\" href=\"#\">Front page</a></li><li><a class=\"ds-rail__link\" href=\"#\">2026</a></li><li><a class=\"ds-rail__link\" href=\"#\">Teams</a></li><li><a class=\"ds-rail__link\" href=\"#\">Record book</a></li></ul></nav>",
+      "css": ".ds-rail { background: var(--ground-sunk, #15111a); border-block: 1px solid var(--rule, #3d3449); } .ds-rail__list { display: flex; gap: 1.6rem; list-style: none; margin: 0; padding: 0.7rem 1rem; overflow-x: auto; } .ds-rail__link { font-family: 'Courier Prime', 'Courier New', ui-monospace, monospace; font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-quiet, #b3a7c9); text-decoration: none; white-space: nowrap; transition: color 120ms linear; } .ds-rail__link:hover { color: var(--ink, #e9e2f4); } .ds-rail__link--current { color: var(--ink, #e9e2f4); } .ds-rail__link:focus-visible { outline: 2px solid var(--violet, #bda4f2); outline-offset: 3px; }"
+    },
+    {
+      "name": "Podium Entry",
+      "kind": "card",
+      "refersTo": "ledger-row",
+      "description": "A finishing place on the front page. The only routine use of correction red: first place is stamped, everything else is faint.",
+      "html": "<ol class=\"ds-podium\"><li><span class=\"ds-podium__place ds-podium__place--first\">1</span><span class=\"ds-podium__team\">Seasonal Depression<span class=\"ds-podium__owner\">Jake</span></span><span class=\"ds-podium__rec\">7&ndash;8</span></li><li><span class=\"ds-podium__place\">2</span><span class=\"ds-podium__team\">Disappointment<span class=\"ds-podium__owner\">Michael</span></span><span class=\"ds-podium__rec\">8&ndash;7</span></li></ol>",
+      "css": ".ds-podium { list-style: none; margin: 0; padding: 0; font-family: 'Courier Prime', 'Courier New', ui-monospace, monospace; color: var(--ink, #e9e2f4); } .ds-podium li { display: grid; grid-template-columns: 2rem 1fr auto; align-items: baseline; gap: 0.9rem; padding: 0.5rem 0; border-bottom: 1px dotted var(--rule, #3d3449); } .ds-podium__place { font-weight: 700; color: var(--ink-faint, #8b7fa3); } .ds-podium__place--first { color: var(--stamp, #f0766a); } .ds-podium__team { font-weight: 700; } .ds-podium__owner { display: block; font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 400; color: var(--ink-faint, #8b7fa3); } .ds-podium__rec { font-variant-numeric: tabular-nums; }"
+    },
+    {
+      "name": "Struck Heading",
+      "kind": "custom",
+      "refersTo": "headline",
+      "description": "A section head with the 2px struck rule beneath it. This, plus tonal banding, is how the page segments — there are no cards.",
+      "html": "<h2 class=\"ds-ruled\">On record, regular season</h2>",
+      "css": ".ds-ruled { font-family: 'Courier Prime', 'Courier New', ui-monospace, monospace; font-size: clamp(1.35rem, 3.6vw, 1.95rem); font-weight: 700; line-height: 1.12; letter-spacing: 0.005em; text-transform: uppercase; color: var(--ink, #e9e2f4); margin: 0 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--rule-strong, #5c4f72); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Mimeographed Club Bulletin",
+    "overview": "This is not a sports website wearing a retro texture. It is the artifact itself: the stapled, typewritten sheet a commissioner ran off on a spirit duplicator and mailed to eight members before any of this lived on the web. Every decision follows from asking what that office actually had, and refusing what it did not.\n\nThat office had one typewriter, so the site has one typeface — Courier Prime — including the masthead, which is not a display font but the same typebar struck at size. It had two inks, aniline violet and a correction-stamp red, so the site has two. It had no rounded corners, no shadows, and no gradients, because a duplicator lays flat ink on flat stock, so the site has none of those either. Monospace here is earned rather than costumed: it is the world's native output, and it delivers free tabular alignment to the standings and scoring ledgers that carry most of the page.\n\nThe dark rendition is primary because the real use scene is a phone on a Tuesday night with the lights low. Critically, dark is not an inversion of light — it is the wax stencil, the dark sheet the type is cut through. Light is the printed copy that comes off it. Both are real states of one physical process, which is why the palette does not simply flip.",
+    "keyCharacteristics": [
+      "One typeface, everywhere, masthead included",
+      "Two inks; no third color is ever introduced",
+      "Zero radius, zero shadow, zero gradient",
+      "Rules and struck lines carry all structure",
+      "Ink-on-paper grain over the whole surface at low strength",
+      "Numbers render from data and are always tabular"
+    ],
+    "rules": [
+      { "name": "The Two-Ink Rule", "body": "Violet and stamp red are the entire chromatic vocabulary. If a new state needs distinguishing, use a rule weight, a case change, or tonal ground — never a third hue.", "section": "colors" },
+      { "name": "The Stamp-Is-A-Result Rule", "body": "Correction red marks something that happened in a game: a title, a loss, a record. It never marks a button, a hover, or a section merely because that section is important.", "section": "colors" },
+      { "name": "The Plate Exemption", "body": "The photocopied chart plates keep their original eight series colors. Those colors are load-bearing data encoding, not decoration, and flattening them to two inks would destroy information. Only the chart chrome is neutralized into the world.", "section": "colors" },
+      { "name": "The One Face Rule", "body": "Courier Prime is the only family, and the masthead is not exempt. A display face here would be a costume the duplicator office could not have worn.", "section": "typography" },
+      { "name": "The Tabular Rule", "body": "Any figure a reader might compare down a column renders with font-variant-numeric: tabular-nums. Scores, records, and points are always comparable.", "section": "typography" },
+      { "name": "The Uppercase Ladder", "body": "Uppercase marks the masthead, h1, h2, and labels. h3 and body stay sentence case, so case itself signals depth.", "section": "typography" },
+      { "name": "The Flat Stock Rule", "body": "No box-shadow, no gradient, no blur, no glow, anywhere. If an element needs separation, band it or rule it.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do render every number from league.json. Prose explains; data decides.",
+      "Do use a rule weight or a tonal band when something needs separation.",
+      "Do keep correction red for results — titles, losses, extremes.",
+      "Do set comparable figures in tabular numerals.",
+      "Do state the archive's scope honestly. The league predates the data; the site says \"on record\", never \"all-time\", and never claims a founding year.",
+      "Do name members by first name only. This is enforced by PrivacyGuardTests, which fails the build on a surname or Sleeper username in recaps/ or site/."
+    ],
+    "donts": [
+      "Don't add a second typeface, including for the masthead.",
+      "Don't add a box-shadow, gradient, blur, or border-radius. The stock is flat.",
+      "Don't introduce a third color. Not for success, not for warning, not for a chart.",
+      "Don't warm the light sheet toward cream. It is cool grey #e5e3db on purpose.",
+      "Don't flatten the chart plates' series colors — that is data, not decoration.",
+      "Don't use uppercase below h2 except for labels and slugs; the case ladder is structural."
+    ]
+  }
+}

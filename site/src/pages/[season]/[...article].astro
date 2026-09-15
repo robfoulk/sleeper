@@ -1,0 +1,133 @@
+---
+import { getCollection, render } from 'astro:content';
+import Bulletin from '../../layouts/Bulletin.astro';
+import Prose from '../../components/Prose.astro';
+import Scoreboard from '../../components/Scoreboard.astro';
+import { data, seasonOf, articleSlug, shortTitle, KIND_LABEL, articlesOf } from '../../lib/league';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('articles');
+  return entries
+    .filter((e) => /^\d{4}\//.test(e.id))
+    .map((entry) => ({
+      params: { season: entry.id.split('/')[0], article: entry.id.split('/').slice(1).join('/') },
+      props: { entry },
+    }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const season = Number(Astro.params.season);
+const indexed = data.articles.find((a) => articleSlug(a.path) === entry.id);
+const title = indexed?.title ?? entry.id;
+const kind = indexed?.kind ?? 'weekly-recap';
+const week = indexed?.week;
+
+const s = seasonOf(season);
+const weekData = week != null ? s?.weeks.find((w) => w.week === week) : undefined;
+
+// Previous and next filing within the same season, so a reader can walk the season in order.
+const siblings = articlesOf(season);
+const at = siblings.findIndex((a) => articleSlug(a.path) === entry.id);
+const prev = at > 0 ? siblings[at - 1] : null;
+const next = at >= 0 && at < siblings.length - 1 ? siblings[at + 1] : null;
+---
+
+<Bulletin title={`${title} — The League`} description={`${KIND_LABEL[kind] ?? 'Filing'} from the ${season} season of The League.`}>
+  <div class="sheet sheet--narrow head">
+    <p class="slug">
+      <a href={`${base}/${season}`}>{season}</a> · {KIND_LABEL[kind] ?? 'Filing'}
+      {weekData?.is_playoff && <> · <span class="stamp">postseason</span></>}
+    </p>
+    <h1>{shortTitle(title)}</h1>
+  </div>
+
+  {weekData && (
+    <div class="sheet sheet--narrow scores">
+      <h2 class="ruled">The card</h2>
+      <Scoreboard week={weekData} season={season} heading={false} />
+      <p class="slug note">Scores are rendered from league data, not from the article text.</p>
+    </div>
+  )}
+
+  <div class="sheet sheet--narrow body">
+    <Prose>
+      <Content />
+    </Prose>
+  </div>
+
+  <nav class="sheet sheet--narrow pager" aria-label="Season navigation">
+    <div>
+      {prev && (
+        <a href={`${base}/${articleSlug(prev.path)}`}>
+          <span class="slug">Previous</span>
+          <span class="pager__t">{shortTitle(prev.title)}</span>
+        </a>
+      )}
+    </div>
+    <div class="pager__next">
+      {next && (
+        <a href={`${base}/${articleSlug(next.path)}`}>
+          <span class="slug">Next</span>
+          <span class="pager__t">{shortTitle(next.title)}</span>
+        </a>
+      )}
+    </div>
+  </nav>
+</Bulletin>
+
+<style>
+  .head {
+    padding-top: 1.8rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .head h1 {
+    margin-top: 0.6rem;
+    font-size: clamp(1.6rem, 5.6vw, 2.9rem);
+  }
+
+  .scores {
+    padding-top: 2rem;
+  }
+
+  .note {
+    margin-top: 0.6rem;
+  }
+
+  .body {
+    padding-top: 2.4rem;
+  }
+
+  /* The article's first line is set larger, the way a lede was typed on these sheets. */
+  .body :global(.prose > p:first-of-type) {
+    font-size: 1.12rem;
+    color: var(--ink);
+  }
+
+  .pager {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 3rem;
+    padding-top: 1.4rem;
+    border-top: 2px solid var(--rule-strong);
+  }
+
+  .pager a {
+    text-decoration: none;
+    display: block;
+  }
+
+  .pager__next {
+    text-align: right;
+  }
+
+  .pager__t {
+    display: block;
+    margin-top: 0.25rem;
+    line-height: 1.4;
+  }
+</style>

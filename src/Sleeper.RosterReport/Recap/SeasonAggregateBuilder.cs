@@ -147,7 +147,6 @@ internal sealed class SeasonAggregateBuilder
                 UserId: owner.UserId,
                 OwnerRealName: owner.RealName ?? owner.DisplayName ?? owner.TeamName,
                 FinalTeamName: owner.TeamName,
-                Generation: owner.Generation,
                 Weekly: weekly,
                 RegularSeasonWins: cw,
                 RegularSeasonLosses: cl,

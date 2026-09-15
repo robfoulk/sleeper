@@ -7,6 +7,7 @@ public interface IInjuryStore
         IReadOnlyList<InjuryObservationInput> inputs,
         CancellationToken ct = default);
     Task<CurrentInjury?> GetCurrentAsync(string sleeperId, CancellationToken ct = default);
+    Task<IReadOnlyList<InjuryChange>> GetChangesAsync(DateTimeOffset start, DateTimeOffset end, CancellationToken ct = default);
     Task<IReadOnlyList<InjuryObservation>> GetTimelineAsync(string sleeperId, int limit = 50, CancellationToken ct = default);
     Task<IReadOnlyList<InjuryObservation>> GetHistoricalTimelineAsync(string sleeperId, int limit = 50, CancellationToken ct = default);
     Task<InjuryHistorySummary> GetHistorySummaryAsync(string sleeperId, CancellationToken ct = default);

@@ -1,8 +1,8 @@
-# 2025 FoulknFootball — Season in Review
+# 2025 The League — Season in Review
 
 _Generated 2026-04-27 00:59 UTC. League ID `1180276953741729792`._
 
-## 🏆 Jake's Seasonal Depression — 2025 FoulknFootball Champion
+## 🏆 Jake's Seasonal Depression — 2025 The League Champion
 
 _Defeated Michael's Disappointment in the championship. Eric's Sanders Boutte on Sunday won the consolation bowl and the 1.01 next year. Dakota's BearDown finishes last and forfeits a keeper next season (3 of 4 instead of 4)._
 
@@ -36,7 +36,7 @@ There were quieter climbs as well. Eric’s Sanders Boutte on Sunday moved from 
 
 Seasonal Depression did not enter the postseason with the regular-season aura of First in and First Out?, nor with the points-crown profile of He hate me. Jake entered at 9-8 overall by final record and took the direct path the bracket asked for: win the championship semifinal, then win the championship. That is what happened. In Week 16, Seasonal Depression beat First in and First Out? 197.02 to 176.98, which was the kind of result that changes how a season is remembered. A team can spend months looking solid. It takes one semifinal to look inevitable.
 
-Then came Week 17, and the title game turned into a composed finish. Seasonal Depression beat Disappointment 187.60 to 139.18. The championship round did not ask Jake to scrape by. It asked for control, and that is what the final looked like. One brief family note was unavoidable here: a father’s team name sat in the league history, but the son took the trophy.
+Then came Week 17, and the title game turned into a composed finish. Seasonal Depression beat Disappointment 187.60 to 139.18. The championship round did not ask Jake to scrape by. It asked for control, and that is what the final looked like.
 
 Michael’s Disappointment deserves the full runner-up line. The team recovered from an opening-week loss, authored the Upset of the Year in Week 7 with that 247.10 burst against Unstoppable Farce, climbed three power-rank spots from Week 1 to Week 15, and then reached the final by beating He hate me in Week 16. The last game got away, but the arc held.
 
@@ -107,9 +107,9 @@ _Next year's draft order: champion picks last (1.08); consolation-bowl winner pi
 - **Week 11** — **Dave gets the better of Michael as He hate me stays hot.**
 - **Week 12** — **Jaxon Smith-Njigba lifts Dave past Dakota in a game that outran the forecast.**
 - **Week 13** — **Dave’s depth carries He hate me past Devin in Week 13.**
-- **Week 14** — **Old Guard vs Young Guns: Dave holds off Jake in a Week 14 high-stakes battle.**
+- **Week 14** — **Seed Fight: Dave holds off Jake in a Week 14 high-stakes battle.**
 - **Week 15** — **Jake’s Seasonal Depression answers the pressure and closes the regular season with a decisive victory.**
-- **Week 16** — **Father vs Son: Michael sends Disappointment to the FoulknFootball title game.**
+- **Week 16** — **Championship Semifinal: Michael sends Disappointment to the League title game.**
 - **Week 17** — **Jake crowns Seasonal Depression champion with a clear final over Michael.**
 
 ---

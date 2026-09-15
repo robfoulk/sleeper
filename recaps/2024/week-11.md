@@ -1,4 +1,4 @@
-# Week 11 Recap — FoulknFootball (2024)
+# Week 11 Recap — The League (2024)
 
 _Generated 2026-04-27 01:28 UTC._
 
@@ -9,13 +9,13 @@ _Generated 2026-04-27 01:28 UTC._
 
 ## Intro
 
-The calendar says there are five weeks left in the regular season, and FoulknFootball has reached the part of the year where the roster has to carry the argument. The trade window is closed, the standings are tight at the top, and Week 11 gave that picture a little more definition without really offering anyone much comfort. The highest-scoring game on the board came from Jake’s 222.66-146.38 win over Brian, and it landed with weight because CeeDeez Nuts stayed in first while extending the league’s longest active winning streak among contenders.
+The calendar says there are five weeks left in the regular season, and The League has reached the part of the year where the roster has to carry the argument. The trade window is closed, the standings are tight at the top, and Week 11 gave that picture a little more definition without really offering anyone much comfort. The highest-scoring game on the board came from Jake’s 222.66-146.38 win over Brian, and it landed with weight because CeeDeez Nuts stayed in first while extending the league’s longest active winning streak among contenders.
 
 There was a similar firmness to the rest of the week. Rob kept pace at 8-3 with another 200-point day, Devin held serve in the narrowest game of the slate and protected the current No. 4 line, and Michael’s season-long slide reached 11 straight losses. Last week the board tightened; this week it stayed tight, which is its own kind of pressure once the season stops giving you easy explanations.
 
 ## League Themes
 
-Jake owned the biggest number of the week, and he got there with one of the more unusual stars of the season. Taysom Hill delivered 33.52 from the tight end spot for CeeDeez Nuts, a sharp boost in a lineup that also produced the league’s high score at 222.66. Around the league, Jared Goff’s 34.58 led all scorers for Dave in a win, Joe Mixon gave Eric 33.3 in a loss, and Dakota got premium work from Saquon Barkley at 31.8 and Joe Burrow at 29.04. That is the texture of November in FoulknFootball: some teams are surviving on depth, while others get a Sunday from one player that keeps the whole week upright.
+Jake owned the biggest number of the week, and he got there with one of the more unusual stars of the season. Taysom Hill delivered 33.52 from the tight end spot for CeeDeez Nuts, a sharp boost in a lineup that also produced the league’s high score at 222.66. Around the league, Jared Goff’s 34.58 led all scorers for Dave in a win, Joe Mixon gave Eric 33.3 in a loss, and Dakota got premium work from Saquon Barkley at 31.8 and Joe Burrow at 29.04. That is the texture of November in The League: some teams are surviving on depth, while others get a Sunday from one player that keeps the whole week upright.
 
 The larger theme still begins with streaks. Jake has now won four straight and remains first in both the standings and the power rankings, while Michael’s losing streak has stretched to 11 and continues to cast a shadow over the bottom of the table. There is also a steadier kind of reliability showing up in the middle of the race. Chase Brown Tanks lost, but Eric has still scored 150 or more in eight straight weeks. Rob and Devin have each cleared 150 in five straight. In a league this compressed, that kind of repeatability matters more than one spike week, and it is usually what separates a secure seed from a weekly argument over No. 4.
 
@@ -29,7 +29,7 @@ A few stat lines deserved their own mention because they bent matchups in obviou
 
 **Rob and Also too old to run hold off Dakota’s BearDown in a game that cleared 400.**
 
-Week 11 in FoulknFootball brought one of those Sundays where a very good score still was not enough. Rob’s Also too old to run beat Dakota’s BearDown 211.78 to 197.50, a 14.28-point margin, and the number tells you the shape of it. Both lineups got there. Rob simply had a little more reach.
+Week 11 in The League brought one of those Sundays where a very good score still was not enough. Rob’s Also too old to run beat Dakota’s BearDown 211.78 to 197.50, a 14.28-point margin, and the number tells you the shape of it. Both lineups got there. Rob simply had a little more reach.
 
 The hero was Cooper Kupp, who gave Also too old to run 22.6 points on six catches for 106 yards and two touchdowns against New England. Ja'Marr Chase added 19.5 for Cincinnati, Jalen Hurts and Geno Smith combined for 34.48 at quarterback, and Rob got useful lift from Jauan Jennings, Will Dissly, James Cook, D'Andre Swift, and Brian Robinson. We were on the right team last week, but this was right team, wrong shape; the forecast said 158.6-149.2, and instead these two pushed the game into a much heavier scoring range.
 
@@ -43,7 +43,7 @@ The consequence is a clear one from last week’s ledger. Rob was part of the fo
 
 **Jake and CeeDeez Nuts leave no doubt against Brian and Steel City.**
 
-Week 11 in FoulknFootball opened with a projected close game and ended somewhere else entirely. Jake’s CeeDeez Nuts rolled to a 222.66-146.38 win over Brian’s Steel City, a 76.28-point margin, and the number that set the tone came from the most unusual place in the lineup. Taysom Hill was the hero, posting 33.52 points against Cleveland with 138 rushing yards, three rushing touchdowns, eight catches, and 50 receiving yards.
+Week 11 in The League opened with a projected close game and ended somewhere else entirely. Jake’s CeeDeez Nuts rolled to a 222.66-146.38 win over Brian’s Steel City, a 76.28-point margin, and the number that set the tone came from the most unusual place in the lineup. Taysom Hill was the hero, posting 33.52 points against Cleveland with 138 rushing yards, three rushing touchdowns, eight catches, and 50 receiving yards.
 
 Jake had more than one answer, which is usually how a week gets to 222.66. Matthew Stafford gave CeeDeez Nuts 27.8 with 295 passing yards and four touchdowns for the Rams against New England, Sam Darnold added 23.64, David Montgomery scored 21.5 with two rushing touchdowns, Puka Nacua brought 18.3, and De'Von Achane added 16.5. And yet the sharpest observation here is that CeeDeez Nuts reached the week’s biggest number even with quiet lines from Garrett Wilson at 1.8, Cedric Tillman at 4.7, and Bijan Robinson at 6.3.
 
@@ -51,13 +51,13 @@ On the other side, Brian got a professional effort from Breece Hall, who led Ste
 
 That was the game. CeeDeez Nuts had the two biggest swings in the matchup with Hill and Stafford, and once those points were paired with steady contributions across the rest of the card, Brian was left chasing a total that never really came back. It was a clean reminder of the unpredictable nature of fantasy football: Jake got bust-level returns from several stars and still posted 222.66.
 
-The consequence is clear in the FoulknFootball race. Jake extends CeeDeez Nuts’ winning streak from three games to four, just as last week’s forecast said might happen, while Brian’s Steel City drop a second straight.
+The consequence is clear in the League race. Jake extends CeeDeez Nuts’ winning streak from three games to four, just as last week’s forecast said might happen, while Brian’s Steel City drop a second straight.
 
 ### GibbMeDaRock (181.64) vs Chase Brown Tanks (170.42)
 
 **GibbMeDaRock ends the streak, and Devin holds off Eric 181.64-170.42.**
 
-Week 11 in FoulknFootball brought two teams already living in the upper part of the table, and the game played to that standard. Devin’s GibbMeDaRock beat Eric’s Chase Brown Tanks 181.64 to 170.42, a strong number on both sides and a result that stayed honest all the way through. Devin had the best player in the matchup, and that was enough.
+Week 11 in The League brought two teams already living in the upper part of the table, and the game played to that standard. Devin’s GibbMeDaRock beat Eric’s Chase Brown Tanks 181.64 to 170.42, a strong number on both sides and a result that stayed honest all the way through. Devin had the best player in the matchup, and that was enough.
 
 That player was Amon-Ra St. Brown. Detroit’s wide receiver gave Devin 27.7 points against Jacksonville on 11 catches, 161 yards, and two touchdowns, while Josh Jacobs added 19.4 for Green Bay against Chicago and Jahmyr Gibbs scored 18.3 in the same Lions game. Cooper Rush also supplied 16.36 in a spot that was projected for much less. We had the pick right last week when we rode GibbMeDaRock, but it was right team, wrong shape; the forecast called for 161.4-151.8, and this landed well above that on both sides.
 
@@ -65,13 +65,13 @@ On the other side, Eric got a lineup that would win most weeks. Joe Mixon was th
 
 Devin had his own misses. Lamar Jackson came in at 14.88 against Pittsburgh, Aaron Jones finished with 4.3, and Kyle Pitts gave him 0.9. But GibbMeDaRock had enough answers elsewhere, and that is often the cleanest way to explain the unpredictable nature of fantasy football: one team can survive a quiet afternoon from Lamar because St. Brown, Jacobs, Gibbs, and even Matt Gay’s 12.0 keep the board moving.
 
-The consequence is a clear one. Eric’s six-game winning streak, the longest active run in FoulknFootball entering the week, is over, and Devin’s win pulls GibbMeDaRock level with Chase Brown Tanks in the standings at 7-4.
+The consequence is a clear one. Eric’s six-game winning streak, the longest active run in The League entering the week, is over, and Devin’s win pulls GibbMeDaRock level with Chase Brown Tanks in the standings at 7-4.
 
 ### Hauwk Tua (188.36) vs Code 3 (124.46)
 
 **Dave and Hauwk Tua end the slide with the week’s biggest surprise over Michael and Code 3.**
 
-Week 11 in FoulknFootball brought together two teams carrying the league’s longest active skids, and Dave’s Hauwk Tua answered with its cleanest offensive Sunday in some time. The final was 188.36 to 124.46 over Michael’s Code 3, a 63.90-point margin that changed shape quickly once Dave’s quarterbacks got comfortable and never really swung back. In a league that had just projected Code 3 to get into the win column, this was a useful reminder of the unpredictable nature of fantasy football.
+Week 11 in The League brought together two teams carrying the league’s longest active skids, and Dave’s Hauwk Tua answered with its cleanest offensive Sunday in some time. The final was 188.36 to 124.46 over Michael’s Code 3, a 63.90-point margin that changed shape quickly once Dave’s quarterbacks got comfortable and never really swung back. In a league that had just projected Code 3 to get into the win column, this was a useful reminder of the unpredictable nature of fantasy football.
 
 The hero was Jared Goff. Detroit’s quarterback carved up Jacksonville for 34.58 points on 412 passing yards and four touchdowns, and Dave paired that with 24.38 from Justin Herbert in the Chargers’ game against Cincinnati. Jonnu Smith added 22.1 with six catches, 101 yards, and two scores against Las Vegas, Christian Watson brought 15.0 on 150 receiving yards for Green Bay against Chicago, and Tyreek Hill chipped in 12.1 with a touchdown. One sharp note tells the story: Hauwk Tua reached 188.36 even with four starters under four points, including T.J. Hockenson at 1.3 and Romeo Doubs at 1.7.
 
@@ -79,7 +79,7 @@ On the other side, Michael got honest work from Josh Allen, who posted 23.98 for
 
 There were points left on both benches. Dave had 28.78 from Bo Nix and 18.3 from Brock Bowers in reserve, while Michael left 28.08 from Anthony Richardson and 20.8 from Tee Higgins unused. Meanwhile, the difference was still out in the open: Hauwk Tua had the two best quarterbacks in the matchup and the one true spike game from Goff, and Code 3 never found a comparable number to steady the afternoon.
 
-The consequence is a simple one in the FoulknFootball season ledger. Dave’s five-game losing streak is over, and Michael’s losing streak extends from 10 to 11.
+The consequence is a simple one in the League season ledger. Dave’s five-game losing streak is over, and Michael’s losing streak extends from 10 to 11.
 
 ## Storylines
 

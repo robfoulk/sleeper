@@ -1,0 +1,143 @@
+---
+import Bulletin from '../../layouts/Bulletin.astro';
+import { data, record, pts, ownerSlug } from '../../lib/league';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const franchises = data.franchises.slice().sort((a, b) => a.franchise_id - b.franchise_id);
+---
+
+<Bulletin
+  title="Teams — The League"
+  slug="The file · Teams"
+  description="The eight franchise lineages of The League, with team-name history and every season played."
+>
+  <div class="sheet">
+    <h1 class="ruled">Teams</h1>
+    <p class="dek">
+      Eight roster slots. A slot keeps its history when it changes
+      hands; the record it earned stays with the person who earned it.
+    </p>
+  </div>
+
+  <div class="sheet band">
+    <ul class="list">
+      {franchises.map((f) => {
+        const handed = f.owner_history.length > 1;
+        const played = f.timeline.length;
+        const w = f.timeline.reduce((n, t) => n + t.wins, 0);
+        const l = f.timeline.reduce((n, t) => n + t.losses, 0);
+        const ti = f.timeline.reduce((n, t) => n + t.ties, 0);
+        return (
+          <li class="row">
+            <div class="row__main">
+              <h2 class="row__name">
+                <a href={`${base}/franchises/${f.franchise_id}`}>{f.current_team_name}</a>
+              </h2>
+              <p class="slug">
+                Slot {f.franchise_id} · {f.current_owner_name}
+                {handed && <> · formerly {f.owner_history.filter((o) => o !== f.current_owner_name).join(', ')}</>}
+              </p>
+            </div>
+            <p class="row__stat">
+              {played ? <>{record(w, l, ti)} <span class="slug">across {played} {played === 1 ? 'season' : 'seasons'}</span></> : <span class="slug">First season</span>}
+              {f.championships > 0 && <span class="struck">{f.championships}× champion</span>}
+            </p>
+          </li>
+        );
+      })}
+    </ul>
+  </div>
+
+  <div class="sheet band">
+    <h2 class="ruled">Owners</h2>
+    <div class="ledger-scroll">
+      <table class="ledger">
+        <caption>Career regular-season record, per person</caption>
+        <thead>
+          <tr>
+            <th scope="col">Owner</th>
+            <th scope="col">Status</th>
+            <th scope="col" class="num">Seasons</th>
+            <th scope="col" class="num">Record</th>
+            <th scope="col" class="num">PF</th>
+            <th scope="col" class="num">Best</th>
+            <th scope="col" class="num">Titles</th>
+          </tr>
+        </thead>
+        <tbody>
+          {data.owners
+            .slice()
+            .sort((a, b) => b.career.wins - a.career.wins || a.name.localeCompare(b.name))
+            .map((o) => (
+              <tr>
+                <th scope="row"><a href={`${base}/owners/${ownerSlug(o.name)}`}>{o.name}</a></th>
+                <td class={o.active ? '' : 'former'}>{o.active ? 'Active' : 'Former'}</td>
+                <td class="num">{o.career.seasons_played}</td>
+                <td class="num">{record(o.career.wins, o.career.losses, o.career.ties)}</td>
+                <td class="num">{pts(o.career.points_for)}</td>
+                <td class="num">{o.career.seasons_played ? o.career.best_finish : '—'}</td>
+                <td class="num">{o.career.championships || '—'}</td>
+              </tr>
+            ))}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</Bulletin>
+
+<style>
+  h1 {
+    padding-top: 0.5rem;
+  }
+
+  .dek {
+    color: var(--ink-quiet);
+    max-width: 62ch;
+  }
+
+  .band {
+    padding-top: 2.4rem;
+  }
+
+  .list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.6rem 1.5rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .row__name {
+    font-size: clamp(1.15rem, 3.4vw, 1.6rem);
+    text-transform: none;
+    letter-spacing: -0.015em;
+  }
+
+  .row__name a {
+    text-decoration: none;
+  }
+
+  .row__main .slug {
+    margin-top: 0.25rem;
+  }
+
+  .row__stat {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .former {
+    color: var(--ink-faint);
+  }
+</style>

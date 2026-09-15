@@ -1,4 +1,4 @@
-# Week 15 Recap — FoulknFootball (2024)
+# Week 15 Recap — The League (2024)
 
 _Generated 2026-04-27 01:34 UTC._
 
@@ -13,13 +13,13 @@ _Generated 2026-04-27 01:34 UTC._
 
 ## Intro
 
-The regular season closed the way these races often do in FoulknFootball: with the standings tightening in some places, hardening in others, and a few results carrying more administrative weight than drama. Rob made the clearest statement of the week, as Also too old to run posted the league’s highest score at 233.54 in a decisive victory over Dave. It locked down first place, pushed Rob’s winning streak to six, and gave the rest of the bracket one more reminder that the hottest team has also become the steadiest one.
+The regular season closed the way these races often do in The League: with the standings tightening in some places, hardening in others, and a few results carrying more administrative weight than drama. Rob made the clearest statement of the week, as Also too old to run posted the league’s highest score at 233.54 in a decisive victory over Dave. It locked down first place, pushed Rob’s winning streak to six, and gave the rest of the bracket one more reminder that the hottest team has also become the steadiest one.
 
-The highest-scoring game on the board came in the other bracket-weight result, where Devin’s GibbMeDaRock beat Jake’s CeeDeez Nuts 224.82-175.34. That score mattered for seeding, but it also fit the larger shape of the week. FoulknFootball reached the finish line of the regular season with very little left unresolved at the top, and with just enough left unsettled underneath to make every final margin feel like it belonged in the record.
+The highest-scoring game on the board came in the other bracket-weight result, where Devin’s GibbMeDaRock beat Jake’s CeeDeez Nuts 224.82-175.34. That score mattered for seeding, but it also fit the larger shape of the week. The League reached the finish line of the regular season with very little left unresolved at the top, and with just enough left unsettled underneath to make every final margin feel like it belonged in the record.
 
 ## League Themes
 
-Start with Rob, because a six-game streak is no longer a side note in December. Also too old to run has now won six straight, scored 150 or more in nine straight weeks, and closed the regular season with the week’s top score at 233.54. The shape of the team is familiar by now: enough star power to carry a ceiling week, enough stability to keep that ceiling from feeling accidental. In FoulknFootball this season, Rob has moved from contender to reference point.
+Start with Rob, because a six-game streak is no longer a side note in December. Also too old to run has now won six straight, scored 150 or more in nine straight weeks, and closed the regular season with the week’s top score at 233.54. The shape of the team is familiar by now: enough star power to carry a ceiling week, enough stability to keep that ceiling from feeling accidental. In The League this season, Rob has moved from contender to reference point.
 
 The strongest push behind him came from Devin, who rose one spot to No. 2 in the power rankings and backed it up on the field. GibbMeDaRock put up 224.82 against Jake in the week’s other high-stakes battle, with Lamar Jackson’s 36.1 leading one of the best quarterback totals on the slate. That climb in the rankings was earned, and the timing matters. While Jake still finished the regular season second in the standings, Devin’s recent scoring profile looks more like a team arriving than one merely holding serve.
 
@@ -33,11 +33,11 @@ One more season note belongs here. Brian’s losing streak reached six with the 
 
 ## Game by Game
 
-### Also too old to run (233.54) vs Hauwk Tua (167.36) — _Brother Bowl_
+### Also too old to run (233.54) vs Hauwk Tua (167.36) — _Regular-season finale_
 
-**Brother Bowl: Rob closes the regular season on top with a decisive victory.**
+**Regular-Season Finale: Rob closes the regular season on top with a decisive victory.**
 
-In the final regular-season week in FoulknFootball, the Brother Bowl carried real bracket weight, and Rob’s Also too old to run handled it with authority. The final was 233.54 to 167.36 over Dave’s Hauwk Tua, a wide margin built despite a few quiet spots that never had time to matter. Rob set the scene with strength at quarterback and enough finishing work everywhere else, and that is usually how a first-place team looks in Week 15.
+In the final regular-season week in The League, the game carried real bracket weight, and Rob’s Also too old to run handled it with authority. The final was 233.54 to 167.36 over Dave’s Hauwk Tua, a wide margin built despite a few quiet spots that never had time to matter. Rob set the scene with strength at quarterback and enough finishing work everywhere else, and that is usually how a first-place team looks in Week 15.
 
 The hero was Jalen Hurts. Philadelphia’s quarterback gave Rob 28.1 points against Pittsburgh with 290 passing yards, two touchdown passes, and a rushing score, while James Cook added 25.3 for Buffalo against Detroit and Brian Thomas Jr. chipped in 22.5 for Jacksonville against the Jets. Mike Evans was right there too with 27.9, and Rob even absorbed lean returns from Tua Tagovailoa at 3.84, Cooper Kupp at 0.0, and Ja’Marr Chase at 9.4 because the rest of the board kept moving. A pair of defenses helped finish the job, with Denver at 22.0 and Cincinnati at 21.0.
 
@@ -45,13 +45,13 @@ On the other side, Dave had the biggest individual number in the game. Jared Gof
 
 One sharp note tells the story. Rob won by 66.18 even with his biggest bust at quarterback, because his lineup had more answers than Dave’s did once Goff’s big afternoon stopped being enough by itself.
 
-The consequence is clear. Rob extends Also too old to run’s winning streak from five games to six and closes the FoulknFootball regular season in first place, while Dave’s losing streak reaches four.
+The consequence is clear. Rob extends Also too old to run’s winning streak from five games to six and closes the League regular season in first place, while Dave’s losing streak reaches four.
 
 ### GibbMeDaRock (224.82) vs CeeDeez Nuts (175.34)
 
 **GibbMeDaRock takes the bracket-weight game from CeeDeez Nuts.**
 
-In the final week of the FoulknFootball regular season, with the bracket locking behind it, Devin’s GibbMeDaRock handled a high-stakes battle with uncommon control. The final was 224.82 to 175.34 over Jake’s CeeDeez Nuts, and the shape of it came into focus early: Devin had premium production at quarterback and enough support everywhere else to make a good opponent chase all afternoon. Jake still put up a respectable number. He simply ran into the fuller board.
+In the final week of the League regular season, with the bracket locking behind it, Devin’s GibbMeDaRock handled a high-stakes battle with uncommon control. The final was 224.82 to 175.34 over Jake’s CeeDeez Nuts, and the shape of it came into focus early: Devin had premium production at quarterback and enough support everywhere else to make a good opponent chase all afternoon. Jake still put up a respectable number. He simply ran into the fuller board.
 
 Lamar Jackson was the hero. Baltimore’s quarterback gave Devin 36.1 points against the Giants with 290 passing yards, five touchdown passes, and 65 rushing yards, while Baker Mayfield added 28.02 for Tampa Bay against the Chargers. Amon-Ra St. Brown did the rest of the visible damage for GibbMeDaRock, catching 14 balls for 193 yards and a touchdown against Buffalo on the way to 23.3 points, and Jahmyr Gibbs added 23.4 with a rushing score and a receiving score in the same game. Devin even had room to absorb quiet returns from Najee Harris, Javonte Williams, Marvin Harrison, and Jordan Addison. That is usually the mark of a decisive victory.
 
@@ -61,11 +61,11 @@ On the other side, Jake had a few professionals keep CeeDeez Nuts competitive on
 
 The consequence is clear. GibbMeDaRock closes the regular season on a second straight win and, after entering Week 15 at 9-5 and just behind Jake in the standings, puts direct pressure on CeeDeez Nuts at exactly the moment the playoff bracket locks.
 
-### Chase Brown Tanks (208.56) vs Steel City (164.62) — _Cousin Bowl_
+### Chase Brown Tanks (208.56) vs Steel City (164.62) — _Seed fight_
 
-**Cousin Bowl: Eric and Chase Brown Tanks lock it down in Week 15.**
+**Seed Fight: Eric and Chase Brown Tanks lock it down in Week 15.**
 
-In the final week of the regular season, with the bracket still asking a few last questions, Eric’s Chase Brown Tanks gave the cleanest answer of the night. A 208.56-164.62 win over Brian’s Steel City was a decisive victory, and it came in a game where both sides scored well enough to matter before one roster simply kept finding another number. The cousin hook set the scene. The standings did the rest.
+In the final week of the regular season, with the bracket still asking a few last questions, Eric’s Chase Brown Tanks gave the cleanest answer of the night. A 208.56-164.62 win over Brian’s Steel City was a decisive victory, and it came in a game where both sides scored well enough to matter before one roster simply kept finding another number. The standings did the rest.
 
 The call to ride Chase Brown Tanks held up, though the score came in a much bigger shape than forecast — projected 163.8-134.2, delivered 208.56-164.62. Eric cleared 200 despite several quiet spots, which tells you what kind of coverage the rest of the lineup provided. James Conner of the Cardinals led the way with 25.8 points and two rushing touchdowns against New England, Chase Brown of the Bengals added 23.3 with 122 yards from scrimmage and two total scores against Tennessee, and the Washington pairing of Jayden Daniels and Terry McLaurin combined for 42.94 against New Orleans.
 
@@ -73,13 +73,13 @@ On the other side, Brian had enough production to win a lot of weeks. The Falcon
 
 What stood out about Eric’s night was the balance. Joe Mixon managed only 5.6, Tyrone Tracy was held to 3.5, and both Travis Kelce and Zach Ertz stayed quiet, but Chase Brown Tanks still had room to separate because A.J. Brown scored 17.0, Terry McLaurin found the end zone twice, Chase McLaughlin added 16.0, and Dallas’ defense supplied 17.0. One big star can carry a week. Four or five steady hands usually finish it.
 
-The consequence is plain enough in FoulknFootball. Eric extends Chase Brown Tanks’ winning streak to three games and closes the regular season after a 12th straight week above 150, while Brian’s skid reaches six as Steel City misses the playoff cut.
+The consequence is plain enough in The League. Eric extends Chase Brown Tanks’ winning streak to three games and closes the regular season after a 12th straight week above 150, while Brian’s skid reaches six as Steel City misses the playoff cut.
 
-### BearDown (177.32) vs Code 3 (167.84) — _Brother Bowl (Gen 2)_
+### BearDown (177.32) vs Code 3 (167.84) — _Bracket clincher_
 
-**Brother Bowl (Gen 2): Dakota and BearDown take the bracket-clincher from Michael.**
+**Bracket Clincher: Dakota and BearDown take the bracket-clincher from Michael.**
 
-In the final week of the regular season, the Brother Bowl arrived with the kind of late-December pressure FoulknFootball tends to save for the end. Dakota’s BearDown beat Michael’s Code 3, 177.32 to 167.84, in a high-stakes battle that said as much about survival as it did about ceiling. Both teams had enough offense to matter. BearDown simply found one more clean answer.
+In the final week of the regular season, the game arrived with the kind of late-December pressure The League tends to save for the end. Dakota’s BearDown beat Michael’s Code 3, 177.32 to 167.84, in a high-stakes battle that said as much about survival as it did about ceiling. Both teams had enough offense to matter. BearDown simply found one more clean answer.
 
 The hero was Davante Adams. The Rams wide receiver carried BearDown with 33.8 points against Jacksonville, turning 12 targets into nine catches, 198 yards, and two touchdowns. Malik Nabers added 14.2 on 10 catches for the Giants, Keenan Allen matched that 14.2 with a score, and Alvin Kamara chipped in 13.0 for New Orleans. Dakota also got 26 combined points from kickers Brandon Aubrey and Brandon McManus, which is a tidy way to cover for quieter afternoons elsewhere.
 

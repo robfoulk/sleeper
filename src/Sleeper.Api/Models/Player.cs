@@ -34,7 +34,9 @@ public record Player(
     [property: JsonPropertyName("rotoworld_id")] int? RotoworldId,
     [property: JsonPropertyName("sportradar_id"), JsonConverter(typeof(FlexibleStringConverter))] string? SportradarId,
     [property: JsonPropertyName("practice_participation")] string? PracticeParticipation,
-    [property: JsonPropertyName("injury_start_date")] string? InjuryStartDate
+    [property: JsonPropertyName("injury_start_date")] string? InjuryStartDate,
+    [property: JsonPropertyName("injury_body_part")] string? InjuryBodyPart = null,
+    [property: JsonPropertyName("injury_notes")] string? InjuryNotes = null
 )
 {
     public string FullName => $"{FirstName} {LastName}";

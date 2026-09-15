@@ -1,5 +1,6 @@
 using System.ComponentModel;
 using System.Text;
+using System.Text.Json;
 using ModelContextProtocol.Server;
 using Sleeper.Api.Injuries;
 
@@ -8,6 +9,30 @@ namespace Sleeper.McpServer.Tools;
 [McpServerToolType]
 public static class InjuryTools
 {
+    [McpServerTool, Description("Build a read-only league weekly injury report from ledger evidence and that week's matchup rosters. Separates confirmed onset, existing updates, recoveries, non-injury absences, and uncertain timing. Does not refresh data or research the web.")]
+    public static async Task<string> GetWeeklyInjuryReport(
+        WeeklyInjuryReportService reports,
+        [Description("NFL season matching the league ID")] int season,
+        [Description("NFL week 1-18")] int week,
+        [Description("Verified reporting window start, inclusive, with time zone")] DateTimeOffset start,
+        [Description("Verified reporting window end, exclusive, with time zone; maximum 31 days")] DateTimeOffset end,
+        [Description("Sleeper league ID for the requested season")] string league_id = ToolSupport.DefaultLeagueId,
+        [Description("Output format: markdown or json")] string format = "markdown",
+        CancellationToken ct = default)
+    {
+        if (ToolSupport.Required(league_id, "League ID") is { } validation)
+            return validation;
+        if (ToolSupport.Between(week, 1, 18, "Week") is { } weekValidation)
+            return weekValidation;
+        if (format is not ("markdown" or "json"))
+            return "Error: Format must be markdown or json.";
+        return await ToolSupport.TryAsync(async () =>
+        {
+            var report = await reports.BuildAsync(league_id, season, week, new(start, end), ct);
+            return format == "json" ? report.ToJson() : report.ToMarkdown();
+        });
+    }
+
     [McpServerTool, Description("Explain which injury sources to use for the current preseason and their freshness/authority policy.")]
     public static string GetCurrentSeasonInjurySourcePlan(IInjuryImporter importer)
     {
@@ -58,6 +83,44 @@ public static class InjuryTools
             var result = await importer.ImportSleeperAsync(dryRun: !commit, ct);
             return $"Sleeper snapshot: source_rows={result.SourceRows}, candidate_rows={result.MappedRows}, " +
                    $"imported_rows={result.ImportedRows}, dry_run={!commit}, observed_at={result.ObservationAt:O}.";
+        });
+    }
+
+    [McpServerTool, Description("Get material injury/availability changes in an explicit date window for weekly recaps. Includes previous source-specific observations and source evidence. Newly recorded does not establish when an injury occurred.")]
+    public static async Task<string> GetInjuryChanges(
+        IInjuryStore injuries,
+        [Description("Inclusive effective-time window start with time zone")] DateTimeOffset start,
+        [Description("Exclusive effective-time window end with time zone; at most 31 days after start")] DateTimeOffset end,
+        [Description("Maximum changes to return, newest first (1-500)")] int limit = 100,
+        CancellationToken ct = default)
+    {
+        if (end <= start || end - start > TimeSpan.FromDays(31))
+            return "Error: End must be later than start and no more than 31 days after start.";
+        if (ToolSupport.Between(limit, 1, 500, "Limit") is { } validation)
+            return validation;
+
+        return await ToolSupport.TryAsync(async () =>
+        {
+            var changes = await injuries.GetChangesAsync(start, end, ct);
+            var cohort = (await injuries.GetCohortAsync(ct)).ToDictionary(player => player.SleeperId);
+            return JsonSerializer.Serialize(new
+            {
+                Start = start,
+                EndExclusive = end,
+                Caveat = "Source-specific changes, not confirmed injury onset or final game designations. " +
+                         "A missing or stale previous observation cannot establish new this week. " +
+                         "Verify dated reports before describing a new injury; distinguish recoveries and non-injury absences. " +
+                         "Coverage is limited to recorded observations, not every NFL player.",
+                TotalChanges = changes.Count,
+                Truncated = changes.Count > limit,
+                Changes = changes.OrderByDescending(change => change.Observation.EffectiveAt ?? change.Observation.ObservedAt)
+                    .Take(limit).Select(change => new
+                    {
+                        PlayerName = cohort.GetValueOrDefault(change.Observation.SleeperId)?.Name,
+                        change.Observation,
+                        change.PreviousObservation
+                    })
+            }, new JsonSerializerOptions { WriteIndented = true });
         });
     }
 
@@ -140,6 +203,8 @@ public static class InjuryTools
         [Description("Confidence: official, reporter, or inferred")] string confidence = "reporter",
         [Description("When the source says this status became effective")] DateTimeOffset? effective_at = null,
         [Description("Hours before this current observation becomes stale")] int expires_in_hours = 168,
+        [Description("Optional injury onset timestamp explicitly confirmed by the cited report; never infer from import time")] DateTimeOffset? injury_occurred_at = null,
+        [Description("Publication timestamp of the cited source; required when supplying injury onset")] DateTimeOffset? source_published_at = null,
         CancellationToken ct = default)
     {
         if (ToolSupport.Required(sleeper_player_id, "Sleeper player ID") is { } idValidation)
@@ -167,7 +232,8 @@ public static class InjuryTools
             var observation = await injuries.RecordAsync(new InjuryObservationInput(
                 sleeper_player_id, source, source_url, status, practice_status,
                 primary_injury, null, notes, normalizedConfidence, observedAt, effective_at ?? observedAt,
-                InjuryObservationScope.Current, authority, observedAt.AddHours(expires_in_hours)), ct);
+                InjuryObservationScope.Current, authority, observedAt.AddHours(expires_in_hours),
+                InjuryOccurredAt: injury_occurred_at, SourcePublishedAt: source_published_at), ct);
             return $"Recorded {observation.Status} for {observation.SleeperId} at {observation.ObservedAt:O}.";
         });
     }

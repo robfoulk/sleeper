@@ -60,6 +60,7 @@ public static class SleeperServiceCollectionExtensions
         services.TryAddSingleton<ISleeperService, SleeperService>();
         services.Configure<InjuryStoreOptions>(options => configureInjuryStore?.Invoke(options));
         services.TryAddSingleton<IInjuryStore, SqliteInjuryStore>();
+        services.TryAddSingleton<WeeklyInjuryReportService>();
         services.Configure<InjuryImportOptions>(options => configureInjuryImport?.Invoke(options));
         services.AddHttpClient<NflverseInjuryImporter>();
         services.TryAddSingleton<IInjuryImporter>(sp =>
@@ -90,6 +91,7 @@ public static class SleeperServiceCollectionExtensions
         {
             opt.StatsBaseUrl = options.StatsBaseUrl;
             opt.PlayerIdsUrl = options.PlayerIdsUrl;
+            opt.ScheduleUrl = options.ScheduleUrl;
             opt.CurrentSeasonCacheTtl = options.CurrentSeasonCacheTtl;
             opt.HistoricalCacheTtl = options.HistoricalCacheTtl;
             opt.PlayerIdsCacheTtl = options.PlayerIdsCacheTtl;

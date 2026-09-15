@@ -1,7 +1,7 @@
 {
   "Season": 2024,
   "LeagueId": "1112858215559057408",
-  "LeagueName": "FoulknFootball",
+  "LeagueName": "The League",
   "GeneratedAt": "2026-04-27T01:38:07.6145562+00:00",
   "Schedule": {
     "RegularSeasonLastWeek": 15,
@@ -12,83 +12,75 @@
   "Owners": [
     {
       "UserId": "1112856951387414528",
-      "Username": "robfoulk",
-      "DisplayName": "robfoulk",
+      "Username": "Rob",
+      "DisplayName": "Rob",
       "TeamName": "Also too old to run",
       "RosterId": 1,
-      "Generation": 1,
       "RealName": "Rob",
-      "LoreNotes": "Brother. Last-season team name \u0022Unstoppable Farce\u0022 \u2014 tongue-in-cheek elder voice. Father of Jake. Brother to Dave and Brian. Cousin to Eric.\n"
+      "LoreNotes": ""
     },
     {
       "UserId": "1121310424491864064",
-      "Username": "Dbfoulkrod",
-      "DisplayName": "Dbfoulkrod",
+      "Username": "Devin",
+      "DisplayName": "Devin",
       "TeamName": "GibbMeDaRock",
       "RosterId": 2,
-      "Generation": 2,
       "RealName": "Devin",
-      "LoreNotes": "Brian\u0027s son. Last-season team name \u0022Amon Another level\u0022 (Amon-Ra St. Brown reference). Confident young owner.\n"
+      "LoreNotes": ""
     },
     {
       "UserId": "1121310753874604032",
-      "Username": "mafoulk",
-      "DisplayName": "mafoulk",
+      "Username": "Michael",
+      "DisplayName": "Michael",
       "TeamName": "Code 3",
       "RosterId": 3,
-      "Generation": 2,
       "RealName": "Michael",
-      "LoreNotes": "Dave\u0027s son. Last-season team name \u0022Disappointment\u0022 \u2014 self-deprecating, plus latent father/son tension with Dave. Brother to Dakota.\n"
+      "LoreNotes": ""
     },
     {
       "UserId": "1121459919724728320",
-      "Username": "jfoulkrod",
-      "DisplayName": "jfoulkrod",
+      "Username": "Jake",
+      "DisplayName": "Jake",
       "TeamName": "CeeDeez Nuts",
       "RosterId": 4,
-      "Generation": 2,
       "RealName": "Jake",
-      "LoreNotes": "Rob\u0027s son. Last-season team name \u0022Seasonal Depression\u0022 \u2014 self-deprecating; lean into it on losses, but show some respect on wins.\n"
+      "LoreNotes": ""
     },
     {
       "UserId": "1122536845449072640",
-      "Username": "asmartaleck1",
-      "DisplayName": "asmartaleck1",
+      "Username": "Dave",
+      "DisplayName": "Dave",
       "TeamName": "Hauwk Tua",
       "RosterId": 5,
-      "Generation": 1,
       "RealName": "Dave",
-      "LoreNotes": "Brother. Last-season team name \u0022He hate me\u0022 \u2014 grievance / underdog persona. Father of Michael and Dakota. Brother to Rob and Brian. Cousin to Eric.\n"
+      "LoreNotes": ""
     },
     {
       "UserId": "1122570164190466048",
-      "Username": "ebmookie",
-      "DisplayName": "ebmookie",
+      "Username": "Eric",
+      "DisplayName": "Eric",
       "TeamName": "Chase Brown Tanks",
       "RosterId": 6,
-      "Generation": 1,
       "RealName": "Eric",
-      "LoreNotes": "Cousin to Rob, Dave, and Brian. Last-season team name \u0022Sanders Boutte on Sunday\u0022 \u2014 player-stack pun; builds around specific NFL talent.\n"
+      "LoreNotes": ""
     },
     {
       "UserId": "1123415443601010688",
-      "Username": "Evenkeel75",
-      "DisplayName": "Evenkeel75",
+      "Username": "Brian",
+      "DisplayName": "Brian",
       "TeamName": "Steel City",
       "RosterId": 7,
-      "Generation": 1,
       "RealName": "Brian",
-      "LoreNotes": "Brother. Last-season team name \u0022First in and First Out?\u0022 \u2014 trade-aggressive, decisive-or-impulsive owner persona. Father of Devin. Brother to Rob and Dave. Cousin to Eric.\n"
+      "LoreNotes": ""
     },
     {
       "UserId": "1125536159003799552",
-      "Username": "NOTDoda",
-      "DisplayName": "NOTDoda",
+      "Username": "Dakota",
+      "DisplayName": "Dakota",
       "TeamName": "BearDown",
       "RosterId": 8,
-      "Generation": 2,
       "RealName": "Dakota",
-      "LoreNotes": "Dave\u0027s son. Last-season team name \u0022BearDown\u0022 \u2014 Bears fan; lean pessimistic-with-pride. Brother to Michael.\n"
+      "LoreNotes": ""
     }
   ],
   "Teams": [
@@ -97,7 +89,6 @@
       "UserId": "1112856951387414528",
       "OwnerRealName": "Rob",
       "FinalTeamName": "Also too old to run",
-      "Generation": 1,
       "Weekly": [
         {
           "Week": 1,
@@ -379,7 +370,6 @@
       "UserId": "1121310424491864064",
       "OwnerRealName": "Devin",
       "FinalTeamName": "GibbMeDaRock",
-      "Generation": 2,
       "Weekly": [
         {
           "Week": 1,
@@ -661,7 +651,6 @@
       "UserId": "1121310753874604032",
       "OwnerRealName": "Michael",
       "FinalTeamName": "Code 3",
-      "Generation": 2,
       "Weekly": [
         {
           "Week": 1,
@@ -943,7 +932,6 @@
       "UserId": "1121459919724728320",
       "OwnerRealName": "Jake",
       "FinalTeamName": "CeeDeez Nuts",
-      "Generation": 2,
       "Weekly": [
         {
           "Week": 1,
@@ -1225,7 +1213,6 @@
       "UserId": "1122536845449072640",
       "OwnerRealName": "Dave",
       "FinalTeamName": "Hauwk Tua",
-      "Generation": 1,
       "Weekly": [
         {
           "Week": 1,
@@ -1507,7 +1494,6 @@
       "UserId": "1122570164190466048",
       "OwnerRealName": "Eric",
       "FinalTeamName": "Chase Brown Tanks",
-      "Generation": 1,
       "Weekly": [
         {
           "Week": 1,
@@ -1789,7 +1775,6 @@
       "UserId": "1123415443601010688",
       "OwnerRealName": "Brian",
       "FinalTeamName": "Steel City",
-      "Generation": 1,
       "Weekly": [
         {
           "Week": 1,
@@ -2071,7 +2056,6 @@
       "UserId": "1125536159003799552",
       "OwnerRealName": "Dakota",
       "FinalTeamName": "BearDown",
-      "Generation": 2,
       "Weekly": [
         {
           "Week": 1,

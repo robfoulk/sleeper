@@ -1,0 +1,193 @@
+---
+import Bulletin from '../../layouts/Bulletin.astro';
+import { data, record, pts, ownerSlug } from '../../lib/league';
+
+export function getStaticPaths() {
+  return data.owners.map((o) => ({ params: { owner: ownerSlug(o.name) }, props: { o } }));
+}
+
+const { o } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+const h2h = data.records.head_to_head
+  .filter((h) => h.owner_name === o.name)
+  .sort((a, b) => b.wins - a.wins || a.opponent_name.localeCompare(b.opponent_name));
+
+const titles = data.records.championships.filter((c) => c.owner_name === o.name);
+const runnerUps = data.records.championships.filter((c) => c.runner_up === o.name);
+const slots = o.franchises
+  .map((id) => data.franchises.find((f) => f.franchise_id === id))
+  .filter(Boolean) as typeof data.franchises;
+
+const highs = data.records.single_week_highs.filter((h) => h.owner_name === o.name);
+const lows = data.records.single_week_lows.filter((h) => h.owner_name === o.name);
+---
+
+<Bulletin
+  title={`${o.name} — The League`}
+  slug={o.active ? 'Owner' : 'Former owner'}
+  description={`Career record and season history for ${o.name} in The League.`}
+>
+  <div class="sheet">
+    <h1 class="ruled">{o.name}</h1>
+    <p class="dek">
+      {o.career.seasons_played > 0 ? (
+        <>
+          {o.first_season}{o.last_season !== o.first_season ? `–${o.last_season}` : ''} ·
+          {' '}{record(o.career.wins, o.career.losses, o.career.ties)} in the regular season ·
+          {' '}best finish {o.career.best_finish}
+          {!o.active && <> · <span class="stamp">no longer in the league</span></>}
+        </>
+      ) : (
+        <>New to the league. No games on record yet.</>
+      )}
+      {titles.length > 0 && <> <span class="struck">{titles.length}× champion</span></>}
+    </p>
+  </div>
+
+  {o.seasons.length > 0 && (
+    <div class="sheet band">
+      <h2 class="ruled">Seasons</h2>
+      <div class="ledger-scroll">
+        <table class="ledger">
+          <thead>
+            <tr>
+              <th scope="col" class="num">Year</th>
+              <th scope="col">Team</th>
+              <th scope="col" class="num">Reg</th>
+              <th scope="col" class="num">PF</th>
+              <th scope="col" class="num">Place</th>
+            </tr>
+          </thead>
+          <tbody>
+            {o.seasons
+              .slice()
+              .sort((a, b) => b.season - a.season)
+              .map((s) => (
+                <tr>
+                  <th scope="row" class="num"><a href={`${base}/${s.season}`}>{s.season}</a></th>
+                  <td class="wide">{s.team_name}</td>
+                  <td class="num">{record(s.wins, s.losses, s.ties)}</td>
+                  <td class="num">{pts(s.points_for)}</td>
+                  <td class="num">{s.final_place}</td>
+                </tr>
+              ))}
+          </tbody>
+          <tfoot>
+            <tr>
+              <th scope="row" class="num">All</th>
+              <td class="wide">{o.career.seasons_played} seasons</td>
+              <td class="num">{record(o.career.wins, o.career.losses, o.career.ties)}</td>
+              <td class="num">{pts(o.career.points_for)}</td>
+              <td class="num">—</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+  )}
+
+  <div class="sheet band">
+    <h2 class="ruled">On the record</h2>
+    <dl class="marks">
+      <div>
+        <dt class="slug">Slots held</dt>
+        <dd>
+          {slots.length
+            ? slots.map((f, i) => (
+                <>
+                  {i > 0 && ', '}
+                  <a href={`${base}/franchises/${f.franchise_id}`}>{f.current_team_name}</a>
+                </>
+              ))
+            : '—'}
+        </dd>
+      </div>
+      <div>
+        <dt class="slug">Titles</dt>
+        <dd>{titles.length ? titles.map((t) => t.season).join(', ') : '—'}</dd>
+      </div>
+      <div>
+        <dt class="slug">Runner-up</dt>
+        <dd>{runnerUps.length ? runnerUps.map((t) => t.season).join(', ') : '—'}</dd>
+      </div>
+      <div>
+        <dt class="slug">In the top weeks on record</dt>
+        <dd>{highs.length ? highs.map((h) => `${pts(h.points)} (${h.season} w${h.week})`).join(', ') : '—'}</dd>
+      </div>
+      <div>
+        <dt class="slug">In the worst weeks on record</dt>
+        <dd class="quiet">{lows.length ? lows.map((h) => `${pts(h.points)} (${h.season} w${h.week})`).join(', ') : '—'}</dd>
+      </div>
+    </dl>
+  </div>
+
+  {h2h.length > 0 && (
+    <div class="sheet band">
+      <h2 class="ruled">Head to head</h2>
+      <div class="ledger-scroll">
+        <table class="ledger">
+          <caption>Every game played, postseason and consolation included</caption>
+          <thead>
+            <tr>
+              <th scope="col">Opponent</th>
+              <th scope="col" class="num">W</th>
+              <th scope="col" class="num">L</th>
+              <th scope="col" class="num">T</th>
+              <th scope="col" class="num">PF</th>
+              <th scope="col" class="num">PA</th>
+            </tr>
+          </thead>
+          <tbody>
+            {h2h.map((h) => (
+              <tr>
+                <th scope="row"><a href={`${base}/owners/${ownerSlug(h.opponent_name)}`}>{h.opponent_name}</a></th>
+                <td class="num">{h.wins}</td>
+                <td class="num">{h.losses}</td>
+                <td class="num">{h.ties}</td>
+                <td class="num">{pts(h.points_for)}</td>
+                <td class="num">{pts(h.points_against)}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  )}
+</Bulletin>
+
+<style>
+  h1 {
+    padding-top: 0.5rem;
+  }
+
+  .dek {
+    color: var(--ink-quiet);
+    max-width: 64ch;
+  }
+
+  .band {
+    padding-top: 2.4rem;
+  }
+
+  .marks {
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+    gap: 1.2rem 2.5rem;
+  }
+
+  .marks div {
+    border-top: 1px solid var(--rule);
+    padding-top: 0.6rem;
+  }
+
+  .marks dd {
+    margin: 0.3rem 0 0;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .quiet {
+    color: var(--ink-quiet);
+  }
+</style>

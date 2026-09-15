@@ -1,4 +1,4 @@
-# Week 14 Recap — FoulknFootball (2025)
+# Week 14 Recap — The League (2025)
 
 _Generated 2026-04-27 00:42 UTC._
 
@@ -13,9 +13,9 @@ _Generated 2026-04-27 00:42 UTC._
 
 ## Intro
 
-One week remains in the FoulknFootball regular season, and the bracket line feels tighter than the records alone suggest. Brian remains the steady point at the top after another authoritative win, Dave stayed right with him, and the teams around the No. 4 spot spent Week 14 learning the same lesson: win and the path stays clear, lose and the arithmetic starts asking for help.
+One week remains in the League regular season, and the bracket line feels tighter than the records alone suggest. Brian remains the steady point at the top after another authoritative win, Dave stayed right with him, and the teams around the No. 4 spot spent Week 14 learning the same lesson: win and the path stays clear, lose and the arithmetic starts asking for help.
 
-The highest-scoring game of the week carried that mood all the way through. Dave’s 197.70-191.86 win over Jake was a high-stakes battle in every sense, close enough to matter on each late-window update and large enough to leave a mark on the league picture. Jake did more than enough to win in most weeks, but that is the sharper point now. In FoulknFootball, “enough” has become a dangerous word in December.
+The highest-scoring game of the week carried that mood all the way through. Dave’s 197.70-191.86 win over Jake was a high-stakes battle in every sense, close enough to matter on each late-window update and large enough to leave a mark on the league picture. Jake did more than enough to win in most weeks, but that is the sharper point now. In The League, “enough” has become a dangerous word in December.
 
 ## League Themes
 
@@ -31,11 +31,11 @@ A few stat lines bent the week in obvious ways. Jalen Hurts gave just 0.4 agains
 
 ## Game by Game
 
-### He hate me (197.70) vs Seasonal Depression (191.86) — _Old Guard vs Young Guns_
+### He hate me (197.70) vs Seasonal Depression (191.86) — _Seed fight_
 
-**Old Guard vs Young Guns: Dave holds off Jake in a Week 14 high-stakes battle.**
+**Seed Fight: Dave holds off Jake in a Week 14 high-stakes battle.**
 
-With a playoff seed on the line in FoulknFootball, the generational framing fit the afternoon, but the score did the real talking. Dave’s He hate me edged Jake’s Seasonal Depression, 197.70 to 191.86, a margin of 5.84 in one of the league’s heaviest totals of the week. It was not a clean card for either side. It was a deep one.
+With a playoff seed on the line in The League, the score did the real talking. Dave’s He hate me edged Jake’s Seasonal Depression, 197.70 to 191.86, a margin of 5.84 in one of the league’s heaviest totals of the week. It was not a clean card for either side. It was a deep one.
 
 Dave’s hero was Josh Allen, and Buffalo’s quarterback gave him the kind of number that steadies an entire lineup: 37.84 points, with 251 passing yards, three passing touchdowns, and 78 more on the ground with a rushing score. Jaxon Smith-Njigba added 21.1 for Seattle against Atlanta, Harold Fannin brought 17.4 for Cleveland against Tennessee, and Dave also got useful work from Kyren Williams and RJ Harvey, who combined for 31.7. We had the call on He hate me last week, and that much held up; the projection was 154.3-126.7, so this was right team, wrong shape.
 
@@ -49,7 +49,7 @@ The consequence is immediate and specific. Dave extends He hate me’s 150-point
 
 **Michael’s Disappointment has enough range to turn back Rob’s Unstoppable Farce.**
 
-Week 14 in FoulknFootball had real weight around the middle of the table, and Michael answered it with a 171.72-148.38 win over Rob. Disappointment did not build this on one clean, spotless card. It came from surviving a few rough returns and still finding more than enough scoring at the top, which is often how these December matchups are won.
+Week 14 in The League had real weight around the middle of the table, and Michael answered it with a 171.72-148.38 win over Rob. Disappointment did not build this on one clean, spotless card. It came from surviving a few rough returns and still finding more than enough scoring at the top, which is often how these December matchups are won.
 
 The hero was Jahmyr Gibbs. Detroit’s back gave Michael 30.0 points against Dallas with three rushing touchdowns, and Brandon Aubrey added 22.0 from the kicking spot for the Cowboys against the Lions. Tee Higgins supplied 21.2 for Cincinnati against Buffalo, DK Metcalf brought 14.8 for Pittsburgh against Baltimore, and the Philadelphia defense chipped in 15.0. Our call to ride Disappointment held up, but it was right team, wrong shape — the forecast saw 148.6-121.9, and the game arrived with both teams well above that.
 
@@ -59,9 +59,9 @@ Michael had his own misses. Tyrod Taylor finished at -1.76, Bhayshul Tuten at -1
 
 The consequence is a clear one from last week’s ledger: Michael ends Rob’s four-game winning streak, and after entering Week 13 one place behind Unstoppable Farce in the standings, Disappointment now has the result it needed in that crowded playoff race.
 
-### Amon Another level  (157.44) vs Sanders Boutte on Sunday (139.84) — _Cousin vs Nephew_
+### Amon Another level  (157.44) vs Sanders Boutte on Sunday (139.84) — _Seed fight_
 
-**Cousin vs Nephew: Devin keeps Amon Another level alive.**
+**Seed Fight: Devin keeps Amon Another level alive.**
 
 In a high-stakes battle with playoff seeding in view, Devin’s Amon Another level beat Eric’s Sanders Boutte on Sunday, 157.44 to 139.84, and did it with enough range to survive a few quiet spots. That is the first thing to note here. Devin won comfortably enough despite just 2.48 from Kirk Cousins of Las Vegas, 3.0 from Chris Olave of New Orleans, and 1.1 from Justin Jefferson of Minnesota. The hero was Joe Burrow, who gave Cincinnati 23.36 points against Buffalo on 284 passing yards and four touchdowns.
 
@@ -71,13 +71,13 @@ On the other side, Eric had the best single skill-position number in the game. B
 
 One sharp detail says most of what needs saying. Devin left Tony Pollard’s 28.1 on the bench and still won by 17.60, which tells you Amon Another level had enough substance in the lineup even without a perfect start-sit week.
 
-The consequence is a meaningful one in FoulknFootball’s regular-season race. Devin snaps Amon Another level’s three-game losing streak from Week 13, and after last week’s forecast leaned Eric’s way, this result keeps the bubble picture moving with one week left before the playoffs begin in Week 16.
+The consequence is a meaningful one in The League’s regular-season race. Devin snaps Amon Another level’s three-game losing streak from Week 13, and after last week’s forecast leaned Eric’s way, this result keeps the bubble picture moving with one week left before the playoffs begin in Week 16.
 
 ### First in and First Out? (176.86) vs BearDown (79.68)
 
 **Brian’s depth delivers a decisive victory over Dakota.**
 
-Week 14 in FoulknFootball had a familiar look at the top of the board, and Brian’s First in and First Out? kept it that way. The 176.86-79.68 result over Dakota’s BearDown was not built on one overwhelming star turn so much as steady control across the lineup, and that usually tells you more about a roster than one isolated spike. Travis Etienne led the scoring with 20.2 points for New Orleans against Indianapolis, while Jake Elliott added 15.0, Jake Bates supplied 14.0, and Bucky Irving brought 14.1 for Tampa Bay against New Orleans.
+Week 14 in The League had a familiar look at the top of the board, and Brian’s First in and First Out? kept it that way. The 176.86-79.68 result over Dakota’s BearDown was not built on one overwhelming star turn so much as steady control across the lineup, and that usually tells you more about a roster than one isolated spike. Travis Etienne led the scoring with 20.2 points for New Orleans against Indianapolis, while Jake Elliott added 15.0, Jake Bates supplied 14.0, and Bucky Irving brought 14.1 for Tampa Bay against New Orleans.
 
 What stands out is how much room Brian had. Patrick Mahomes, the week’s biggest bust on this side, managed just 5.3 for Kansas City against Houston, Bijan Robinson finished with 7.4 for Atlanta against Seattle, and Romeo Doubs gave him 0.0. And yet, First in and First Out? still pushed well past projection, because Etienne found the end zone twice, Zay Flowers gave Baltimore 12.6 against Pittsburgh on 124 receiving yards, Jaylen Waddle scored 13.1, and the lineup kept moving from spot to spot.
 
@@ -85,7 +85,7 @@ On the other side, Dakota never found enough healthy ground to stay in range. Da
 
 There were points left on Dakota’s bench, with Jacoby Brissett at 19.04 and Omarion Hampton at 12.7, but this was not a narrow start-sit story. Brian simply had more playable totals in more places, and that is the sharp observation that fits a 97.18-point margin. In a week where even Mahomes did not have to carry the load, First in and First Out? looked very much like the team that has spent the season living above the line.
 
-The concrete consequence is an important one. Brian extends First in and First Out?’s run to 14 straight weeks above 150, a season-long standard that keeps the pressure on the rest of FoulknFootball with only one week left in the regular season.
+The concrete consequence is an important one. Brian extends First in and First Out?’s run to 14 straight weeks above 150, a season-long standard that keeps the pressure on the rest of The League with only one week left in the regular season.
 
 ## Storylines
 

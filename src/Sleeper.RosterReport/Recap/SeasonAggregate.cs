@@ -36,7 +36,6 @@ public sealed record SeasonTeamSeries(
     string UserId,
     string OwnerRealName,                           // resolved from lore (display name fallback)
     string FinalTeamName,                           // team name as of the final week
-    int Generation,                                 // 1 or 2 (from lore)
     List<WeeklyEntry> Weekly,                       // one per played week
     int RegularSeasonWins,
     int RegularSeasonLosses,

@@ -1,4 +1,4 @@
-# Week 10 Recap — FoulknFootball (2024)
+# Week 10 Recap — The League (2024)
 
 _Generated 2026-04-27 01:27 UTC._
 
@@ -10,13 +10,13 @@ _Generated 2026-04-27 01:27 UTC._
 
 ## Intro
 
-The board tightened again in Week 10, and now FoulknFootball reaches the point where the transaction window closes and every decision carries a little more weight. Rob put up the week’s best score in a 205.66-148.88 win over Brian, the highest-scoring game on the slate, and it landed in a standings picture that has very little spare room left at the top. Jake stays at No. 1, but four teams are 7-3, Devin is one game back at 6-4, and the middle of the bracket still has real movement in it.
+The board tightened again in Week 10, and now The League reaches the point where the transaction window closes and every decision carries a little more weight. Rob put up the week’s best score in a 205.66-148.88 win over Brian, the highest-scoring game on the slate, and it landed in a standings picture that has very little spare room left at the top. Jake stays at No. 1, but four teams are 7-3, Devin is one game back at 6-4, and the middle of the bracket still has real movement in it.
 
 That is what made this week feel different. Last week, Dakota’s answer at the top and Eric’s rolling streak set the pace; this week, Eric pushed that run to six straight, Rob climbed two spots in the power rankings, and Devin survived by 0.08 in the narrowest margin of the season. After this, the trade talks stop and the roster becomes the argument, which is a neat way of saying the explanations get shorter from here.
 
 ## League Themes
 
-The strongest line belonged to Rob, and it started where elite fantasy weeks often do. Ja'Marr Chase gave Also too old to run 44.4, Jalen Hurts added 29.68, and the result was the league’s highest score at 205.66. Joe Burrow’s 33.72 kept BearDown afloat in a loss, Lamar Jackson’s 32.9 carried GibbMeDaRock through a one-possession sweat, and Kyler Murray’s 28.74 did good work for Steel City even in defeat. The top of FoulknFootball is crowded, but the sharper point is that the best teams are still getting quarterback production sturdy enough to survive a miss elsewhere.
+The strongest line belonged to Rob, and it started where elite fantasy weeks often do. Ja'Marr Chase gave Also too old to run 44.4, Jalen Hurts added 29.68, and the result was the league’s highest score at 205.66. Joe Burrow’s 33.72 kept BearDown afloat in a loss, Lamar Jackson’s 32.9 carried GibbMeDaRock through a one-possession sweat, and Kyler Murray’s 28.74 did good work for Steel City even in defeat. The top of The League is crowded, but the sharper point is that the best teams are still getting quarterback production sturdy enough to survive a miss elsewhere.
 
 The dominant season fact, though, remains Eric’s run. Chase Brown Tanks have now won six straight and scored 150 or more in seven straight weeks, and that kind of consistency changes how the whole table feels because it turns the current No. 4 seed into the team nobody really wants to draw. Jake still sits first in the standings and CeeDeez Nuts remain first in the power rankings, yet Rob was the biggest mover there this week, up two spots to No. 2 after four straight games above 150. Devin moved the other way, down two places despite a win, which tells you how thin the margin has become between surviving a week and actually improving your position.
 
@@ -32,7 +32,7 @@ A few stat lines did enough damage to define matchups. Ja'Marr Chase blowing pas
 
 **Rob and Also too old to run answer with the week’s biggest number against Brian and Steel City.**
 
-Week 10 in FoulknFootball brought a high-stakes battle on paper, and Rob’s Also too old to run turned it into a one-sided result by night’s end. The final was 205.66 to 148.88 over Brian’s Steel City, a 56.78-point margin, and the shape of it was clear early enough: Rob had room to absorb several quiet starters because his best players were operating at a different level.
+Week 10 in The League brought a high-stakes battle on paper, and Rob’s Also too old to run turned it into a one-sided result by night’s end. The final was 205.66 to 148.88 over Brian’s Steel City, a 56.78-point margin, and the shape of it was clear early enough: Rob had room to absorb several quiet starters because his best players were operating at a different level.
 
 The hero was Ja'Marr Chase. Cincinnati’s wide receiver delivered 44.4 points against Baltimore on 11 catches, 264 yards, and three touchdowns, and that was the number that changed the game. Jalen Hurts added 29.68 for Philadelphia against Dallas with four total touchdowns, Buffalo’s defense supplied 21.0, James Cook scored 14.5, and Tyler Bass added 12.0. One sharp note says plenty here: Also too old to run reached 205.66 even with Dalton Kincaid at 2.4, Brian Thomas at 1.2, and D’Andre Swift at 6.5.
 
@@ -40,13 +40,13 @@ On the other side, Brian got professional work from Kyler Murray, who posted 28.
 
 That was the difference. Steel City had useful scores in spots, but Also too old to run had the two biggest lineup anchors in the game, and once Chase and Hurts got there together, Brian was chasing a number that kept moving.
 
-The consequence is a tangible one in the FoulknFootball Week 10 picture. Rob answers last week’s loss to Chase Brown Tanks with a 200-point rebound, while Brian’s Week 9 win does not turn into a streak for Steel City.
+The consequence is a tangible one in the League Week 10 picture. Rob answers last week’s loss to Chase Brown Tanks with a 200-point rebound, while Brian’s Week 9 win does not turn into a streak for Steel City.
 
 ### GibbMeDaRock (152.44) vs Code 3 (152.36)
 
 **Devin and GibbMeDaRock edge Michael by a breath, 152.44-152.36.**
 
-Week 10 in FoulknFootball gave us a high-stakes battle that never needed a big margin to feel important. Devin’s GibbMeDaRock slipped past Michael’s Code 3 by 0.08, 152.44 to 152.36, and the shape of it was unusual: both teams cleared 152, both left points behind, and one clean play here or there would have changed the line at the top.
+Week 10 in The League gave us a high-stakes battle that never needed a big margin to feel important. Devin’s GibbMeDaRock slipped past Michael’s Code 3 by 0.08, 152.44 to 152.36, and the shape of it was unusual: both teams cleared 152, both left points behind, and one clean play here or there would have changed the line at the top.
 
 The hero was Lamar Jackson. Baltimore’s quarterback gave Devin 32.9 points against Cincinnati with 290 passing yards and four touchdown passes, and that covered for lighter returns from Baker Mayfield at 8.94 and Justin Jefferson at 4.8. Sam LaPorta added 12.6 for Detroit, Amon-Ra St. Brown scored 12.0, and Najee Harris chipped in 11.3. We had the right team last week when we rode GibbMeDaRock over Code 3, but the call was right team, wrong shape; this was projected as a clearer Devin win, and instead it came down to the last decimal.
 
@@ -60,7 +60,7 @@ The consequence is plain from the season ledger. Michael’s losing streak, whic
 
 **Eric and Chase Brown Tanks keep rolling past Dave and Hauwk Tua.**
 
-Week 10 in FoulknFootball brought a matchup between a team already carrying the league’s clearest active streak and one trying to stop a slide. By the end, Eric’s Chase Brown Tanks had handled that work cleanly, beating Dave’s Hauwk Tua 172.96 to 117.10. The margin was 55.86, and the shape of it was steady all afternoon because Eric got usable production from nearly every section of the lineup even without a big quarterback number.
+Week 10 in The League brought a matchup between a team already carrying the league’s clearest active streak and one trying to stop a slide. By the end, Eric’s Chase Brown Tanks had handled that work cleanly, beating Dave’s Hauwk Tua 172.96 to 117.10. The margin was 55.86, and the shape of it was steady all afternoon because Eric got usable production from nearly every section of the lineup even without a big quarterback number.
 
 The hero was James Conner. Arizona’s running back gave Eric 17.3 points against the Jets, catching five passes for 80 yards and adding a rushing touchdown, while Joe Mixon scored 15.0 against Detroit, Tyrone Tracy ran for 103 yards and a touchdown for the Giants against Carolina, and Chase Brown added 13.4 against Baltimore. Travis Kelce also did his part for Kansas City with eight catches, 64 yards, and a touchdown against Denver. One sharp detail explained the day: Chase Brown Tanks got there with depth, not with one overwhelming score.
 
@@ -68,13 +68,13 @@ On the other side, Dave had a real professional effort from Chuba Hubbard, who l
 
 Eric left some quarterback points on the bench, with Derek Carr at 20.46 and Russell Wilson at 18.1, but it did not matter much because the starting lineup had enough answers elsewhere. Dave had a similar missed chance with Justin Herbert’s 19.76 on the bench, and New England’s defense sat there with 16.0. Meanwhile, the game had already tilted because Eric’s backs and pass-catchers kept stacking competent, winning numbers while Dave needed too many rescue performances.
 
-The consequence is a significant one in the Week 10 ledger. Eric extends the Chase Brown Tanks winning streak from five to six, and with 172.96 on the board, that also makes it seven straight games above 150 in FoulknFootball.
+The consequence is a significant one in the Week 10 ledger. Eric extends the Chase Brown Tanks winning streak from five to six, and with 172.96 on the board, that also makes it seven straight games above 150 in The League.
 
 ### CeeDeez Nuts (149.96) vs BearDown (129.26)
 
 **Jake and CeeDeez Nuts hold off Dakota in a high-stakes battle.**
 
-Week 10 in FoulknFootball put two of the league’s steadier teams on the same field, and Jake’s CeeDeez Nuts came away with a 149.96-129.26 win over Dakota’s BearDown. The margin was 20.70, but this was not a week where either lineup hit its full projection. It was a game shaped more by which stars found enough answers than by any one perfect performance.
+Week 10 in The League put two of the league’s steadier teams on the same field, and Jake’s CeeDeez Nuts came away with a 149.96-129.26 win over Dakota’s BearDown. The margin was 20.70, but this was not a week where either lineup hit its full projection. It was a game shaped more by which stars found enough answers than by any one perfect performance.
 
 The hero was Bijan Robinson. Atlanta’s running back gave Jake 26.4 points against New Orleans with 116 rushing yards and two touchdowns, and Minnesota’s defense added 13.0 while Ka'imi Fairbairn matched that with 13.0. George Kittle chipped in 11.7 for San Francisco, David Montgomery scored 11.6, and Puka Nacua brought 9.8 on 14 targets for the Rams. We had the pick right last week with CeeDeez Nuts, but the shape was off; the forecast called for 170.3-154.6, and this one came in lower and more uneven than that.
 
@@ -82,7 +82,7 @@ On the other side, Dakota got the biggest number in the matchup from Joe Burrow.
 
 That was the sharp point here. Jake survived quiet afternoons from CeeDee Lamb, Garrett Wilson, and De'Von Achane because Robinson gave CeeDeez Nuts the one clean difference-making line in the game, while Dakota’s best work was concentrated almost entirely in Burrow. BearDown also left 45.24 coulda-shoulda points on the bench, with Brock Purdy’s 23.82 and the Eagles defense’s 23.0 standing out in a week that asked for just a little more breadth.
 
-The consequence is a real one near the top of the table. Dakota came in on a three-game winning streak, and this loss ends it, while Jake extends CeeDeez Nuts’ run to three straight wins in FoulknFootball.
+The consequence is a real one near the top of the table. Dakota came in on a three-game winning streak, and this loss ends it, while Jake extends CeeDeez Nuts’ run to three straight wins in The League.
 
 ## Storylines
 

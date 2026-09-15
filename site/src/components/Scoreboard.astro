@@ -1,0 +1,145 @@
+---
+import { pts, type Week } from '../lib/league';
+
+interface Props {
+  week: Week;
+  season: number;
+  heading?: boolean;
+}
+
+const { week, season, heading = true } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+// Winner first, because a box score is read for the result before the fixture.
+const games = week.games.map((g) => {
+  const winner = g.home.points >= g.away.points ? g.home : g.away;
+  const loser = winner === g.home ? g.away : g.home;
+  return { winner, loser, margin: Math.abs(g.home.points - g.away.points) };
+});
+---
+
+<section class="box">
+  {heading && (
+    <h3 class="box__head">
+      <a href={`${base}/${season}/week-${String(week.week).padStart(2, '0')}`}>Week {week.week}</a>
+      {week.is_playoff && <span class="struck">Postseason</span>}
+    </h3>
+  )}
+  <ol class="box__list">
+    {games.map((g) => (
+      <li class="line">
+        <span class="line__side line__side--won">
+          <span class="line__team">{g.winner.team_name}</span>
+          <span class="line__owner">{g.winner.owner_name}</span>
+        </span>
+        <span class="line__score">{pts(g.winner.points)}</span>
+        <span class="line__v" aria-hidden="true">/</span>
+        <span class="line__side line__side--lost">
+          <span class="line__team">{g.loser.team_name}</span>
+          <span class="line__owner">{g.loser.owner_name}</span>
+        </span>
+        <span class="line__score line__score--lost">{pts(g.loser.points)}</span>
+        <span class="line__margin">won by {g.margin.toFixed(2)}</span>
+      </li>
+    ))}
+  </ol>
+</section>
+
+<style>
+  .box__head {
+    display: flex;
+    align-items: baseline;
+    gap: 0.8rem;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 0.4rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .box__head a {
+    text-decoration: none;
+  }
+
+  .box__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .line {
+    display: grid;
+    grid-template-columns: 1fr auto 1rem 1fr auto;
+    grid-template-areas: 'won wonpts v lost lostpts' 'margin margin margin margin margin';
+    align-items: baseline;
+    gap: 0 0.6rem;
+    padding: 0.55rem 0;
+    border-bottom: 1px dotted var(--rule);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .line__side {
+    min-width: 0;
+  }
+
+  .line__side--won {
+    grid-area: won;
+  }
+
+  .line__side--lost {
+    grid-area: lost;
+    color: var(--ink-quiet);
+  }
+
+  .line__team {
+    display: block;
+    font-weight: 700;
+    overflow-wrap: anywhere;
+  }
+
+  .line__side--lost .line__team {
+    font-weight: 400;
+  }
+
+  .line__owner {
+    display: block;
+    font-size: 0.74rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+
+  .line__score {
+    grid-area: wonpts;
+    font-weight: 700;
+  }
+
+  .line__score--lost {
+    grid-area: lostpts;
+    font-weight: 400;
+    color: var(--ink-quiet);
+  }
+
+  .line__v {
+    grid-area: v;
+    text-align: center;
+    color: var(--ink-faint);
+  }
+
+  .line__margin {
+    grid-area: margin;
+    font-size: 0.74rem;
+    letter-spacing: 0.12em;
+    color: var(--stamp);
+    padding-top: 0.15rem;
+  }
+
+  @media (max-width: 46rem) {
+    .line {
+      grid-template-columns: 1fr auto;
+      grid-template-areas: 'won wonpts' 'lost lostpts' 'margin margin';
+      gap: 0.25rem 0.6rem;
+    }
+    .line__v {
+      display: none;
+    }
+  }
+</style>

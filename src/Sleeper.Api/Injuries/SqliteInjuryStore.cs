@@ -80,6 +80,66 @@ public sealed class SqliteInjuryStore : IInjuryStore
         return await reader.ReadAsync(ct).ConfigureAwait(false) ? ReadCurrent(reader) : null;
     }
 
+    public async Task<IReadOnlyList<InjuryChange>> GetChangesAsync(
+        DateTimeOffset start,
+        DateTimeOffset end,
+        CancellationToken ct = default)
+    {
+        if (end <= start)
+            throw new ArgumentException("End must be later than start.", nameof(end));
+
+        await EnsureSchemaAsync(ct).ConfigureAwait(false);
+        await using var connection = await OpenAsync(ct).ConfigureAwait(false);
+        await using var command = connection.CreateCommand();
+        command.CommandText = """
+            WITH baseline AS (
+                SELECT id, ROW_NUMBER() OVER (
+                    PARTITION BY sleeper_id, source
+                    ORDER BY COALESCE(effective_at, observed_at) DESC, observed_at DESC, id DESC
+                ) AS position
+                FROM injury_observations
+                WHERE observation_scope = 'current'
+                  AND COALESCE(effective_at, observed_at) < $start
+            )
+            SELECT id, sleeper_id, observed_at, effective_at, source, source_url, status,
+                   practice_status, primary_injury, secondary_injury, notes, confidence,
+                   observation_scope, authority, expires_at, season, week, season_type,
+                   injury_occurred_at, source_published_at
+            FROM injury_observations
+            WHERE observation_scope = 'current'
+              AND ((COALESCE(effective_at, observed_at) >= $start
+                    AND COALESCE(effective_at, observed_at) < $end)
+                   OR id IN (SELECT id FROM baseline WHERE position = 1))
+            ORDER BY COALESCE(effective_at, observed_at), observed_at, id;
+            """;
+        command.Parameters.AddWithValue("$start", start.ToUniversalTime().ToString("O", CultureInfo.InvariantCulture));
+        command.Parameters.AddWithValue("$end", end.ToUniversalTime().ToString("O", CultureInfo.InvariantCulture));
+        await using var reader = await command.ExecuteReaderAsync(ct).ConfigureAwait(false);
+        var previousBySource = new Dictionary<(string SleeperId, string Source), InjuryObservation>();
+        var changes = new List<InjuryChange>();
+        while (await reader.ReadAsync(ct).ConfigureAwait(false))
+        {
+            var observation = ReadObservation(reader);
+            var key = (observation.SleeperId, observation.Source);
+            previousBySource.TryGetValue(key, out var previous);
+            previousBySource[key] = observation;
+            if ((observation.EffectiveAt ?? observation.ObservedAt) < start)
+                continue;
+
+            var changed = previous is null
+                ? observation.Status is not ("healthy" or "active")
+                : !string.Equals(previous.Status, observation.Status, StringComparison.OrdinalIgnoreCase)
+                  || !string.Equals(previous.PracticeStatus, observation.PracticeStatus, StringComparison.OrdinalIgnoreCase)
+                  || !string.Equals(previous.PrimaryInjury, observation.PrimaryInjury, StringComparison.OrdinalIgnoreCase)
+                  || !string.Equals(previous.SecondaryInjury, observation.SecondaryInjury, StringComparison.OrdinalIgnoreCase)
+                  || previous.InjuryOccurredAt != observation.InjuryOccurredAt
+                  || previous.SourcePublishedAt != observation.SourcePublishedAt;
+            if (changed)
+                changes.Add(new InjuryChange(observation, previous));
+        }
+        return changes;
+    }
+
     public async Task<IReadOnlyList<InjuryObservation>> GetTimelineAsync(
         string sleeperId,
         int limit = 50,
@@ -92,7 +152,8 @@ public sealed class SqliteInjuryStore : IInjuryStore
         command.CommandText = $"""
             SELECT id, sleeper_id, observed_at, effective_at, source, source_url, status,
                    practice_status, primary_injury, secondary_injury, notes, confidence,
-                   observation_scope, authority, expires_at, season, week, season_type
+                   observation_scope, authority, expires_at, season, week, season_type,
+                   injury_occurred_at, source_published_at
             FROM injury_observations
             WHERE sleeper_id = $sleeper_id
             ORDER BY CASE observation_scope WHEN 'current' THEN 1 ELSE 0 END DESC,
@@ -120,7 +181,8 @@ public sealed class SqliteInjuryStore : IInjuryStore
         command.CommandText = $"""
             SELECT id, sleeper_id, observed_at, effective_at, source, source_url, status,
                    practice_status, primary_injury, secondary_injury, notes, confidence,
-                   observation_scope, authority, expires_at, season, week, season_type
+                   observation_scope, authority, expires_at, season, week, season_type,
+                   injury_occurred_at, source_published_at
             FROM injury_observations
             WHERE sleeper_id = $sleeper_id
               AND observation_scope = 'historical'
@@ -364,6 +426,8 @@ public sealed class SqliteInjuryStore : IInjuryStore
             await EnsureColumnAsync(connection, "injury_observations", "season", "INTEGER", ct).ConfigureAwait(false);
             await EnsureColumnAsync(connection, "injury_observations", "week", "INTEGER", ct).ConfigureAwait(false);
             await EnsureColumnAsync(connection, "injury_observations", "season_type", "TEXT", ct).ConfigureAwait(false);
+            await EnsureColumnAsync(connection, "injury_observations", "injury_occurred_at", "TEXT", ct).ConfigureAwait(false);
+            await EnsureColumnAsync(connection, "injury_observations", "source_published_at", "TEXT", ct).ConfigureAwait(false);
             _schemaReady = true;
         }
         finally
@@ -430,6 +494,8 @@ public sealed class SqliteInjuryStore : IInjuryStore
         command.Parameters.AddWithValue("$season", (object?)input.Season ?? DBNull.Value);
         command.Parameters.AddWithValue("$week", (object?)input.Week ?? DBNull.Value);
         command.Parameters.AddWithValue("$season_type", (object?)input.SeasonType ?? DBNull.Value);
+        command.Parameters.AddWithValue("$injury_occurred_at", FormatNullableDate(input.InjuryOccurredAt));
+        command.Parameters.AddWithValue("$source_published_at", FormatNullableDate(input.SourcePublishedAt));
     }
 
     private static async Task<(InjuryObservation Observation, bool Inserted)> RecordCoreAsync(
@@ -445,7 +511,9 @@ public sealed class SqliteInjuryStore : IInjuryStore
             Status = input.Status.Trim().ToLowerInvariant(),
             ObservedAt = observedAt,
             EffectiveAt = input.EffectiveAt?.ToUniversalTime(),
-            ExpiresAt = input.ExpiresAt?.ToUniversalTime()
+            ExpiresAt = input.ExpiresAt?.ToUniversalTime(),
+            InjuryOccurredAt = input.InjuryOccurredAt?.ToUniversalTime(),
+            SourcePublishedAt = input.SourcePublishedAt?.ToUniversalTime()
         };
         var hash = BuildHash(normalizedInput, observedAt);
         await using var command = connection.CreateCommand();
@@ -454,11 +522,13 @@ public sealed class SqliteInjuryStore : IInjuryStore
             INSERT INTO injury_observations
                 (sleeper_id, observed_at, effective_at, source, source_url, status,
                  practice_status, primary_injury, secondary_injury, notes, confidence, content_hash,
-                 observation_scope, authority, expires_at, season, week, season_type)
+                 observation_scope, authority, expires_at, season, week, season_type,
+                 injury_occurred_at, source_published_at)
             VALUES
                 ($sleeper_id, $observed_at, $effective_at, $source, $source_url, $status,
                  $practice_status, $primary_injury, $secondary_injury, $notes, $confidence, $content_hash,
-                 $observation_scope, $authority, $expires_at, $season, $week, $season_type)
+                 $observation_scope, $authority, $expires_at, $season, $week, $season_type,
+                 $injury_occurred_at, $source_published_at)
             ON CONFLICT(content_hash) DO NOTHING
             RETURNING id;
             """;
@@ -486,7 +556,9 @@ public sealed class SqliteInjuryStore : IInjuryStore
                 normalizedInput.ExpiresAt,
                 normalizedInput.Season,
                 normalizedInput.Week,
-                normalizedInput.SeasonType);
+                normalizedInput.SeasonType,
+                normalizedInput.InjuryOccurredAt,
+                normalizedInput.SourcePublishedAt);
 
         if (observation.Scope == InjuryObservationScope.Current)
             await RefreshCurrentSourceAsync(connection, transaction, observation, ct).ConfigureAwait(false);
@@ -504,7 +576,8 @@ public sealed class SqliteInjuryStore : IInjuryStore
         command.CommandText = """
             SELECT id, sleeper_id, observed_at, effective_at, source, source_url, status,
                    practice_status, primary_injury, secondary_injury, notes, confidence,
-                   observation_scope, authority, expires_at, season, week, season_type
+                   observation_scope, authority, expires_at, season, week, season_type,
+                   injury_occurred_at, source_published_at
             FROM injury_observations WHERE content_hash = $content_hash;
             """;
         command.Parameters.AddWithValue("$content_hash", hash);
@@ -582,7 +655,9 @@ public sealed class SqliteInjuryStore : IInjuryStore
             ReadNullableDate(reader, 14),
             reader.IsDBNull(15) ? null : reader.GetInt32(15),
             reader.IsDBNull(16) ? null : reader.GetInt32(16),
-            ReadNullableString(reader, 17));
+            ReadNullableString(reader, 17),
+            ReadNullableDate(reader, 18),
+            ReadNullableDate(reader, 19));
 
     private static CurrentInjury ReadCurrent(SqliteDataReader reader) =>
         new(
@@ -623,6 +698,9 @@ public sealed class SqliteInjuryStore : IInjuryStore
             input.EffectiveAt?.ToUniversalTime().ToString("O", CultureInfo.InvariantCulture),
             input.ExpiresAt?.ToUniversalTime().ToString("O", CultureInfo.InvariantCulture),
             input.Season, input.Week, input.SeasonType);
+        if (input.InjuryOccurredAt.HasValue || input.SourcePublishedAt.HasValue)
+            value = string.Join('|', value, input.InjuryOccurredAt?.ToUniversalTime().ToString("O", CultureInfo.InvariantCulture),
+                input.SourcePublishedAt?.ToUniversalTime().ToString("O", CultureInfo.InvariantCulture));
         return Convert.ToHexString(SHA256.HashData(Encoding.UTF8.GetBytes(value)));
     }
 
@@ -632,6 +710,13 @@ public sealed class SqliteInjuryStore : IInjuryStore
         ArgumentException.ThrowIfNullOrWhiteSpace(input.Source);
         ArgumentException.ThrowIfNullOrWhiteSpace(input.Status);
         ArgumentException.ThrowIfNullOrWhiteSpace(input.Confidence);
+        if (input.InjuryOccurredAt.HasValue &&
+            (!input.SourcePublishedAt.HasValue || input.InjuryOccurredAt > input.SourcePublishedAt ||
+             !Uri.TryCreate(input.SourceUrl, UriKind.Absolute, out var sourceUri) ||
+             sourceUri.Scheme is not ("https" or "http") ||
+             string.IsNullOrWhiteSpace(input.PrimaryInjury) ||
+             input.Confidence.ToLowerInvariant() is not ("official" or "reporter")))
+            throw new ArgumentException("Injury onset requires a dated official/reporter HTTP source, an injury description, and onset no later than publication.", nameof(input));
         if (input.Authority is < 0 or > 100)
             throw new ArgumentOutOfRangeException(nameof(input), "Injury source authority must be between 0 and 100.");
     }

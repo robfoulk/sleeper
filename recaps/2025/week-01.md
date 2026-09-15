@@ -1,10 +1,10 @@
-# Week 1 Recap — FoulknFootball (2025)
+# Week 1 Recap — The League (2025)
 
 _Generated 2026-04-27 00:26 UTC._
 
 ## Intro
 
-Week 1 in FoulknFootball always carries a certain optimism. The standings are clean, every roster still looks like it might be the right one, and even the early surprises feel more like notes in the margin than hard conclusions.
+Week 1 in The League always carries a certain optimism. The standings are clean, every roster still looks like it might be the right one, and even the early surprises feel more like notes in the margin than hard conclusions.
 
 The loudest result came in the highest-scoring game of the opening slate, where Rob’s Unstoppable Farce put up 198.54 and still had to work through Brian’s 176.94. That is a strong first statement, but the better league-wide takeaway is simpler: the top of the board arrived ready, and the middle did not leave much room for comfort either.
 
@@ -24,7 +24,7 @@ This early in the season, the power rankings mostly confirm what the scores alre
 
 **Rob’s Unstoppable Farce opens with a steady Week 1 win over Brian.**
 
-Week 1 in FoulknFootball usually asks a simple question: which roster can carry its rough edges and still post a number. Unstoppable Farce had that kind of night, beating First in and First Out? 198.54 to 176.94 in a matchup that was healthy on both sides and settled by Rob’s strength at the top of the lineup.
+Week 1 in The League usually asks a simple question: which roster can carry its rough edges and still post a number. Unstoppable Farce had that kind of night, beating First in and First Out? 198.54 to 176.94 in a matchup that was healthy on both sides and settled by Rob’s strength at the top of the lineup.
 
 The hero was Lamar Jackson. Rob got 29.36 points from the Baltimore quarterback, built on 209 passing yards, two passing touchdowns, 70 rushing yards, and another score on the ground. Derrick Henry, also in Ravens colors, gave the lineup its other strong hand with 169 rushing yards and two touchdowns for 28.2 points, and Jalen Hurts added 24.28 with two rushing scores of his own. That was enough to cover for the quieter spots, including zeros or near-zeros from Xavier Worthy and Mark Andrews.
 
@@ -32,13 +32,13 @@ On the other side, Brian put up the kind of total that wins plenty of openers. J
 
 One sharp difference defined the game. Rob got elite quarterback play and a rushing anchor, but he also found useful points from across the roster — De'Von Achane scored 13.5, Jacory Croskey-Merritt added 14.2, Aaron Jones chipped in 12.7, Jaylen Warren had 11.9, and Green Bay’s defense gave him 10.0. Brian had real star turns, meanwhile, but the bottom of the starting group asked too much of Herbert and Flowers to make up all at once.
 
-The immediate consequence is simple: Unstoppable Farce starts the regular season 1-0 in FoulknFootball, and Rob leaves Week 1 with an early head start in the standings after posting 198.54.
+The immediate consequence is simple: Unstoppable Farce starts the regular season 1-0 in The League, and Rob leaves Week 1 with an early head start in the standings after posting 198.54.
 
 ### Seasonal Depression (197.70) vs Amon Another level  (143.74)
 
-**Jake opens FoulknFootball with a steady runaway over Devin.**
+**Jake opens The League with a steady runaway over Devin.**
 
-Week 1 in FoulknFootball tends to ask a simple question. Which roster can take the uncertainty of September and turn it into points. Jake had the cleaner answer, and Seasonal Depression pulled away from Devin’s Amon Another level  for a 197.70-143.74 win.
+Week 1 in The League tends to ask a simple question. Which roster can take the uncertainty of September and turn it into points. Jake had the cleaner answer, and Seasonal Depression pulled away from Devin’s Amon Another level  for a 197.70-143.74 win.
 
 Set against that margin, the shape of Jake’s lineup was hard to miss. J.J. McCarthy of the Vikings led the way with 22.22 points, throwing for 143 yards and two touchdowns while adding 25 rushing yards and a score, and Javonte Williams added 18.4 with two rushing touchdowns for Dallas. Garrett Wilson gave Jake 15.5 on seven catches for 95 yards and a touchdown for the Jets, Michael Pittman chipped in 14.0 with a score, and the Denver defense supplied 16.0. It was not one overwhelming spike so much as strength across the card.
 
@@ -46,13 +46,13 @@ On the other side, Devin got his best work from Justin Fields. The Kansas City q
 
 That was the sharpest difference in the matchup. Devin’s lineup had the single biggest scorer, but Jake owned more of the solid middle, and in this format that usually decides the week before Monday ever needs to rescue it. Even with modest returns from Colston Loveland, Evan Engram, and Jameson Williams, Seasonal Depression kept adding playable numbers in too many places for Devin to close the gap.
 
-The immediate consequence is a clear one in the Week 1 table: Jake starts 1-0 in FoulknFootball, and Devin opens 0-1 with 53.96 points already separating the two in total points.
+The immediate consequence is a clear one in the Week 1 table: Jake starts 1-0 in The League, and Devin opens 0-1 with 53.96 points already separating the two in total points.
 
 ### He hate me (180.00) vs Sanders Boutte on Sunday (158.94)
 
 **Dave leans on Josh Allen, and He hate me opens with a Week 1 win.**
 
-Week 1 in FoulknFootball usually asks a simple question. Which roster can carry its uncertainty and still find enough answers by Sunday night. Dave had the cleanest one of the matchup, and He hate me used that edge to beat Eric’s Sanders Boutte on Sunday, 180.00 to 158.94.
+Week 1 in The League usually asks a simple question. Which roster can carry its uncertainty and still find enough answers by Sunday night. Dave had the cleanest one of the matchup, and He hate me used that edge to beat Eric’s Sanders Boutte on Sunday, 180.00 to 158.94.
 
 The hero was Josh Allen. Buffalo’s quarterback gave Dave 38.76 points on 394 passing yards, two touchdown passes, and two more scores on the ground. That was the center of the night, and the rest of the lineup gave it shape. James Cook added 16.20 for Buffalo, Chuba Hubbard gave him 14.90 for Carolina, Alvin Kamara scored once for New Orleans on his way to 11.70, and the San Francisco defense chipped in 11.00.
 
@@ -60,13 +60,13 @@ On the other side, Eric got a respectable opener from Jayden Daniels, who posted
 
 One sharp difference sat at quarterback depth. Eric started C.J. Stroud’s 8.72 while Michael Penix’s 24.02 remained on the bench, but even that swing only tells part of it because Dave’s lineup survived a few modest returns from Bo Nix, Matthew Golden, and Davante Adams without ever losing control of the total.
 
-The immediate consequence is simple and concrete. He hate me leaves opening week at 1-0 in FoulknFootball, while Sanders Boutte on Sunday starts 0-1, and the path there ran through Allen’s 38.76-point opener.
+The immediate consequence is simple and concrete. He hate me leaves opening week at 1-0 in The League, while Sanders Boutte on Sunday starts 0-1, and the path there ran through Allen’s 38.76-point opener.
 
 ### BearDown (139.42) vs Disappointment (138.00)
 
 **Dakota steals a Week 1 thriller from Michael by 1.42.**
 
-In the opening week of FoulknFootball, BearDown found just enough. Dakota edged Michael’s Disappointment 139.42 to 138.00, a narrow game carried all the way to the final decimal places. It did not take a perfect lineup to get there, but it took steady answers in the right spots.
+In the opening week of The League, BearDown found just enough. Dakota edged Michael’s Disappointment 139.42 to 138.00, a narrow game carried all the way to the final decimal places. It did not take a perfect lineup to get there, but it took steady answers in the right spots.
 
 The hero was Caleb Williams. The Chicago quarterback gave Dakota 24.2 points with 210 passing yards, 58 rushing yards, and two total touchdowns, and that mobility mattered in a matchup this tight. BearDown also got useful work from Deebo Samuel’s 15.6, Chris Boswell’s 14.0, Marvin Harrison’s 13.1, and Travis Kelce’s 10.7.
 
@@ -74,13 +74,13 @@ On the other side, Michael had the top scorer in the game. Patrick Mahomes put u
 
 That was the sharp difference. Dakota survived low outputs from Ja'Marr Chase, George Pickens, Xavier Legette, Josh Downs, and Tyrone Tracy because the floor held elsewhere, while Michael had strong quarterback play but too many skill spots stalled at once, including A.J. Brown’s 0.8, Ollie Gordon’s 0.3, Kenneth Walker’s 2.4, and Isiah Pacheco’s 2.8. In a 1.42-point game, one ordinary Sunday from any one of those names would have changed the board.
 
-The consequence is immediate and simple: Dakota opens the 2025 season 1-0 in FoulknFootball, while Michael starts 0-1 after the closest result on the Week 1 slate.
+The consequence is immediate and simple: Dakota opens the 2025 season 1-0 in The League, while Michael starts 0-1 after the closest result on the Week 1 slate.
 
 ## Storylines
 
 - Week 2 gives BearDown an immediate test of whether a 1.42-point escape can hold up against one of the two teams that opened near 200.
 - Amon Another level  and Disappointment meet with an early chance to avoid an 0-2 start, which always feels heavier in an eight-team league.
-- Rob and Eric do get the one brief family-rivalry note this week, but the cleaner football angle is whether Unstoppable Farce can validate the No. 1 power ranking against a team that scored enough in Week 1 to be more dangerous than its record.
+- The cleaner football angle for Rob and Eric this week is whether Unstoppable Farce can validate the No. 1 power ranking against a team that scored enough in Week 1 to be more dangerous than its record.
 - He hate me versus First in and First Out? may be the most telling quality check on the board, because Dave is protecting a top-three start while Brian tries to prove an 0-1 team can still belong in that tier.
 
 ---

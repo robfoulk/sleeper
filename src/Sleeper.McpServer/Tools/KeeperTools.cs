@@ -1,6 +1,7 @@
 using System.ComponentModel;
 using System.Text;
 using ModelContextProtocol.Server;
+using Sleeper.Api.Exceptions;
 using Sleeper.Api.NflData.Services;
 using Sleeper.Api.Services;
 

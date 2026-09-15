@@ -1,4 +1,4 @@
-# Week 10 Recap — FoulknFootball (2025)
+# Week 10 Recap — The League (2025)
 
 _Generated 2026-04-27 00:37 UTC._
 
@@ -8,7 +8,7 @@ _Generated 2026-04-27 00:37 UTC._
 
 ## Intro
 
-There was a different feel around Week 10 in FoulknFootball. The calendar has reached the point where every waiver claim, every start/sit call, and any final trade carries more weight, because once this week closed the rosters stopped being theoretical and became the ones each team has to trust the rest of the way.
+There was a different feel around Week 10 in The League. The calendar has reached the point where every waiver claim, every start/sit call, and any final trade carries more weight, because once this week closed the rosters stopped being theoretical and became the ones each team has to trust the rest of the way.
 
 That made the highest-scoring game of the week land with a little more force. Rob’s Unstoppable Farce put up 199.52 and still needed nearly all of it to get by Dave’s He hate me at 193.38, the narrowest margin on the board and the kind of high-stakes battle that says a lot about the middle of the standings. At the top, Brian stayed in first and pushed his 150-plus streak to 10 straight weeks. Just beneath that, the table tightened again. Five teams now sit at either 6-4 or 5-5, while Dakota’s BearDown carries the league’s clearest pressure point with a five-game slide.
 
@@ -18,7 +18,7 @@ The week began, as it often does, with Brian setting the standard even in a crow
 
 The biggest mover belonged to Rob. Unstoppable Farce climbed two spots in the power rankings to No. 5, and the rise was earned rather than granted after the league-high 199.52 in a win over Dave. De'Von Achane’s 34.5 was the cleanest burst in that lineup, and Tez Johnson turned into a useful waiver hit with 16.2 right away. Rob also made the week’s only trade, sending Derrick Henry to Brian for Kareem Hunt and a future pick; Henry gave First in and First Out? 8.4 in his first return, so the larger verdict will wait, but the timing told you enough. This was the final turn before the door closed.
 
-Michael supplied one of the week’s stronger all-around answers in beating Jake. Jahmyr Gibbs went for 35.2, the second-best total in FoulknFootball this week, and that helped Disappointment steady itself in a very crowded 5-5 tier alongside Dave, Eric, and Devin. Devin stayed in that pack with a third straight win, and Amon Another level kept getting useful quarterback production from Jaxson Dart, who posted 26.28. That streak fits the standings. So does the pressure on the teams just outside the top four, because there is very little space now between a playoff push and a different kind of December.
+Michael supplied one of the week’s stronger all-around answers in beating Jake. Jahmyr Gibbs went for 35.2, the second-best total in The League this week, and that helped Disappointment steady itself in a very crowded 5-5 tier alongside Dave, Eric, and Devin. Devin stayed in that pack with a third straight win, and Amon Another level kept getting useful quarterback production from Jaxson Dart, who posted 26.28. That streak fits the standings. So does the pressure on the teams just outside the top four, because there is very little space now between a playoff push and a different kind of December.
 
 On waivers, the best immediate splash belonged to Dakota. Jacoby Brissett gave BearDown 19.42 points, the top scoring return among this week’s adds, though the rest of the lineup never followed him and the losing streak reached five. Eric also got a playable number from Marcus Mariota at 18.72 in defeat, while some of the other adds were quieter and did not move the result. That is usually the shape of this part of the season. A pickup can help, but it rarely rescues a whole afternoon by itself.
 
@@ -30,7 +30,7 @@ The stat lines were full of hard swings. Jonathan Taylor more than doubled a 23.
 
 **Rob gets just enough from the depth, and Unstoppable Farce slips past Dave.**
 
-Week 10 in FoulknFootball gave us the kind of high-stakes battle the standings can create in November, and Rob’s Unstoppable Farce answered with 199.52 in a 199.52-193.38 win over Dave’s He hate me. The margin was only 6.14, and the shape of it was unusual. Rob survived quiet quarterback numbers from Bo Nix of Denver and Jalen Hurts of Philadelphia, then won because the rest of the lineup kept finding useful, steady scoring.
+Week 10 in The League gave us the kind of high-stakes battle the standings can create in November, and Rob’s Unstoppable Farce answered with 199.52 in a 199.52-193.38 win over Dave’s He hate me. The margin was only 6.14, and the shape of it was unusual. Rob survived quiet quarterback numbers from Bo Nix of Denver and Jalen Hurts of Philadelphia, then won because the rest of the lineup kept finding useful, steady scoring.
 
 The hero was De'Von Achane. Miami’s back carried the center of Rob’s day with 34.5 points against Buffalo, turning 22 carries into 174 yards and two touchdowns while adding six catches for 51 yards. Kimani Vidal added 16.8 for the Chargers against Pittsburgh, Ladd McConkey brought 16.7 in the same game, Woody Marks scored 14.1 for Houston against Jacksonville, and the Seattle defense supplied 23.0. We picked Dave coming in, so this one is ours to own directly: the call rode He hate me’s recent surge, but what we missed was how much usable scoring Unstoppable Farce would stack around Achane even with the quarterbacks well below projection.
 
@@ -44,7 +44,7 @@ The consequence is a clear one for Rob. Unstoppable Farce had come in on a three
 
 **Brian gets the better of Eric, and Jonathan Taylor carries First in and First Out?**
 
-Week 10 in FoulknFootball brought a high-stakes battle near the top of the regular-season table, and Brian’s First in and First Out? answered with the bigger Sunday, beating Eric’s Sanders Boutte on Sunday 193.24 to 152.90. The hero was Jonathan Taylor. Indianapolis’ back turned 32 carries into 244 rushing yards, added 42 receiving yards, scored three times against Atlanta, and gave Brian 46.6 points in the kind of performance that settles a matchup even when a few other spots stay quiet.
+Week 10 in The League brought a high-stakes battle near the top of the regular-season table, and Brian’s First in and First Out? answered with the bigger Sunday, beating Eric’s Sanders Boutte on Sunday 193.24 to 152.90. The hero was Jonathan Taylor. Indianapolis’ back turned 32 carries into 244 rushing yards, added 42 receiving yards, scored three times against Atlanta, and gave Brian 46.6 points in the kind of performance that settles a matchup even when a few other spots stay quiet.
 
 Our Week 9 forecast picked Brian in this game, and the pick held up, but the shape of it did not. The projection called for something tight at 151.7 to 149.8; instead, First in and First Out? cleared 190 because Taylor went far beyond the nine-straight-above-150 storyline we leaned on, and because Brian kept finding support around him. Nico Collins gave Houston 15.6 against Jacksonville on 136 receiving yards, Rome Odunze added 14.6 for Chicago against the Giants, Jaylen Waddle scored 14.4, and Travis Etienne chipped in 13.7.
 
@@ -58,7 +58,7 @@ The result matters in a clear way. First in and First Out? extends its streak to
 
 **Michael gets the better of Jake as Disappointment turns back Seasonal Depression.**
 
-Week 10 in FoulknFootball brought a high-stakes battle between two teams that had been living above 150, and this time it was Michael’s Disappointment with the stronger full-card answer. Michael beat Jake, 180.32 to 154.32, flipping the expectation from last week’s forecast and doing it with enough room to survive several quiet spots at wide receiver. The hero was Jahmyr Gibbs, and Detroit’s running back gave Disappointment 35.2 points against Washington on 142 rushing yards, three catches for 30 more, and three total touchdowns.
+Week 10 in The League brought a high-stakes battle between two teams that had been living above 150, and this time it was Michael’s Disappointment with the stronger full-card answer. Michael beat Jake, 180.32 to 154.32, flipping the expectation from last week’s forecast and doing it with enough room to survive several quiet spots at wide receiver. The hero was Jahmyr Gibbs, and Detroit’s running back gave Disappointment 35.2 points against Washington on 142 rushing yards, three catches for 30 more, and three total touchdowns.
 
 The shape of the game is interesting because Michael did not need perfection. Baker Mayfield added 22.92 for Tampa Bay against New England, Drake Maye gave him 18.1 on the other side of that game, George Kittle scored 14.4 for San Francisco against the Rams, and Alec Pierce matched that 14.4 for Indianapolis against Atlanta. And yet, Disappointment also carried 0.0 from DJ Moore, 1.3 from A.J. Brown, 1.4 from Calvin Austin, and 1.0 from Bhayshul Tuten. One sharp detail says plenty: Michael won by 26 even with four starters at 1.4 points or fewer.
 
@@ -72,7 +72,7 @@ The consequence is a notable one in the weekly ledger. Jake’s streak of nine s
 
 **Devin gets the cleaner afternoon as Amon Another level handles Dakota.**
 
-Week 10 in FoulknFootball had the look of a game that could turn on quarterback play, and that is where Devin found his edge. Amon Another level beat Dakota’s BearDown 144.64 to 108.00, a comfortable margin built around Jaxson Dart’s 26.28 points for the Giants against Chicago. Dart supplied 242 passing yards and 66 rushing yards, and his two rushing touchdowns gave Devin the best number on either side.
+Week 10 in The League had the look of a game that could turn on quarterback play, and that is where Devin found his edge. Amon Another level beat Dakota’s BearDown 144.64 to 108.00, a comfortable margin built around Jaxson Dart’s 26.28 points for the Giants against Chicago. Dart supplied 242 passing yards and 66 rushing yards, and his two rushing touchdowns gave Devin the best number on either side.
 
 Devin did not need a perfect card. Bryce Young gave him only 1.56 for Carolina against New Orleans, and Justin Jefferson’s 12 targets turned into just 3.7 for Minnesota against Baltimore. And yet, Amon Another level kept finding useful scores in the middle of the lineup. Chris Olave caught five balls for 104 yards and a touchdown for the Saints on his way to 16.4, DeVonta Smith added 12.9 for Philadelphia against Green Bay, and Amon-Ra St. Brown gave Detroit 11.8 against Washington.
 
@@ -80,12 +80,12 @@ On the other side, Dakota got another strong effort from Caleb Williams. The Chi
 
 One sharp detail says most of it. Devin survived his biggest bust and still cleared projection at 144.64, while Dakota fell short of projection and left 19.42 points from Jacoby Brissett on the bench. In a high-stakes battle for position in the middle of the table, that was enough separation all by itself.
 
-The consequence is a familiar one from the last two weeks, now made firmer. Amon Another level extends its winning streak to three in FoulknFootball, and BearDown’s losing streak reaches five.
+The consequence is a familiar one from the last two weeks, now made firmer. Amon Another level extends its winning streak to three in The League, and BearDown’s losing streak reaches five.
 
 ## Storylines
 
 - Brian gets Week 11 with first place intact, but a loss combined with another strong week from the 6-4 and 5-5 pack would bring the top of the race back within reach.
-- The No. 4 seed is the live line in FoulknFootball right now, with Eric inside it at 5-5 and Devin, Michael, and Dave all carrying enough scoring to make one week feel expensive.
+- The No. 4 seed is the live line in The League right now, with Eric inside it at 5-5 and Devin, Michael, and Dave all carrying enough scoring to make one week feel expensive.
 - Dakota’s five-game losing streak is now the league’s longest active slide, and another quiet week would keep BearDown pointed toward the wrong end of the standings.
 - Rob’s surge to No. 5 in the power rankings is real, but Week 11 is the test of whether Unstoppable Farce is making a late run or simply collecting dangerous totals too late.
 

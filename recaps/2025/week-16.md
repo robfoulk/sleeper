@@ -1,4 +1,4 @@
-# Week 16 Recap — FoulknFootball (2025)
+# Week 16 Recap — The League (2025)
 _playoffs_winners — Semifinal_
 
 _Generated 2026-04-27 00:45 UTC._
@@ -13,7 +13,7 @@ _Generated 2026-04-27 00:45 UTC._
 
 ## Intro
 
-The bracket is down to its last clean lines in FoulknFootball. The No. 3 seed, Disappointment, knocked out No. 2 He hate me in the highest-scoring game of the week, 213.60 to 193.84, and No. 4 Seasonal Depression followed by taking out No. 1 First in and First Out? 197.02 to 176.98. That is the whole shape of Week 16. The top seed is gone, the hottest score belonged to Michael, and next week’s title game is set between the two lower seeds that played their way into it.
+The bracket is down to its last clean lines in The League. The No. 3 seed, Disappointment, knocked out No. 2 He hate me in the highest-scoring game of the week, 213.60 to 193.84, and No. 4 Seasonal Depression followed by taking out No. 1 First in and First Out? 197.02 to 176.98. That is the whole shape of Week 16. The top seed is gone, the hottest score belonged to Michael, and next week’s title game is set between the two lower seeds that played their way into it.
 
 That left the undercard with its own hard edges. Devin kept Amon Another level alive on the consolation side with a 190.80 to 152.96 win over Unstoppable Farce, and Eric sent Sanders Boutte on Sunday past BearDown, 159.48 to 118.16. Brian’s run at the top ended after last week’s six-game surge carried him into the bracket, while Dakota’s slide reached five straight losses and remains the coldest season arc anywhere in the league. At this point in the year, the scores do not need much decoration. They tell you who still has next week in front of them.
 
@@ -27,15 +27,15 @@ The most useful waiver work belonged to Rob, even in a losing effort. Parker Was
 
 There were enough sharp statistical turns to leave a mark on the bracket. Josh Allen cratered at 6.9 on a 21.8-point projection for Dave, Lamar Jackson gave only 4.7 on a 12.4 projection for Brian, and Amon-Ra St. Brown came in at 5.4 on 14.6 for Devin. On the other side, Chris Olave beat his number by 18.0, Jaylen Warren by 17.0, and Puka Nacua by 18.4. Then there was Ashton Jeanty, who turned a 7.7-point expectation into 30.8 and gave Jake the kind of swing that changes not just a game, but the next week’s conversation.
 
-Two longer arcs still frame the league. First in and First Out? remains the season’s model of consistency with 150 or more in all 16 weeks, even with the semifinal loss attached, and that is a standard worth naming plainly. BearDown sits at the opposite end right now, on a five-game losing streak and carrying a last-three scoring average nearly thirty percent below its season rate. One team’s floor has defined the top of FoulknFootball all year. Another team’s slide is now defining the bottom.
+Two longer arcs still frame the league. First in and First Out? remains the season’s model of consistency with 150 or more in all 16 weeks, even with the semifinal loss attached, and that is a standard worth naming plainly. BearDown sits at the opposite end right now, on a five-game losing streak and carrying a last-three scoring average nearly thirty percent below its season rate. One team’s floor has defined the top of The League all year. Another team’s slide is now defining the bottom.
 
 ## Game by Game
 
 ### Disappointment (213.60) vs He hate me (193.84) — _Semifinal_
 
-**Father vs Son: Michael sends Disappointment to the FoulknFootball title game.**
+**Championship Semifinal: Michael sends Disappointment to the League title game.**
 
-In a winners-bracket semifinal that carried the Father vs Son label into a cold December week, Disappointment did enough everywhere and won where it mattered most. Michael beat Dave, 213.60 to 193.84, and the margin felt earned rather than accidental. This was a high-stakes battle in FoulknFootball, with a championship berth waiting on the other side, and Disappointment stayed sturdier across the full card.
+In a winners-bracket semifinal on a cold December week, Disappointment did enough everywhere and won where it mattered most. Michael beat Dave, 213.60 to 193.84, and the margin felt earned rather than accidental. This was a high-stakes battle in The League, with a championship berth waiting on the other side, and Disappointment stayed sturdier across the full card.
 
 The hero was Jaylen Warren. Pittsburgh’s back gave Michael 27.1 points against Detroit on 143 rushing yards and two touchdowns, and he had real company from Kenneth Walker’s 22.4, Alec Pierce’s 20.6 for Indianapolis against San Francisco, George Kittle’s 17.5 for the 49ers, and Drake Maye’s 23.7 for New England against Baltimore. One sharp detail says most of it: Disappointment reached 213.60 even with Jahmyr Gibbs finishing at 12.8 against a 22.2 projection.
 
@@ -43,13 +43,13 @@ On the other side, He hate me still posted a number that wins plenty of weeks. J
 
 There was also a meaningful start-sit gap, and here it is fair to mention because the number is large. Dave left 66.46 points on the bench, with Matthew Stafford’s 30.88 and Jared Goff’s 26.46 standing out most clearly, while Michael’s bench cost was just 6.2. That is not the whole game, but in a semifinal decided by 19.76, it is enough of the game.
 
-The consequence is simple and significant. Michael advances Disappointment to the FoulknFootball championship in Week 17, while Dave and He hate me drop to the 3rd-place game, and Michael also extends Disappointment’s run to eight straight weeks above 150.
+The consequence is simple and significant. Michael advances Disappointment to the League championship in Week 17, while Dave and He hate me drop to the 3rd-place game, and Michael also extends Disappointment’s run to eight straight weeks above 150.
 
 ### Seasonal Depression (197.02) vs First in and First Out? (176.98) — _Semifinal_
 
-**Old Guard vs Young Guns: Jake ends Brian’s run and moves on.**
+**Championship Semifinal: Jake ends Brian’s run and moves on.**
 
-In a winners-bracket semifinal that carried the weight it should in FoulknFootball, Jake’s Seasonal Depression turned back Brian’s First in and First Out? 197.02 to 176.98. The generational framing fit the setting, but the score told the cleaner story. Jake had the bigger spikes, and in a week like this that is usually enough.
+In a winners-bracket semifinal that carried the weight it should in The League, Jake’s Seasonal Depression turned back Brian’s First in and First Out? 197.02 to 176.98. The score told the cleaner story. Jake had the bigger spikes, and in a week like this that is usually enough.
 
 The hero was Puka Nacua. The Rams wideout gave Jake 34.5 points against Seattle, catching 12 passes for 225 yards and two touchdowns, while Brock Purdy added 30.9 for San Francisco with 295 passing yards and five touchdown throws against Indianapolis. Ashton Jeanty was the other key piece, piling up 30.8 for Las Vegas on 128 rushing yards, 60 receiving yards, and two total touchdowns. Even Ka'imi Fairbairn’s 15 points mattered, because this was a lineup that kept finding another answer.
 
@@ -57,13 +57,13 @@ On the other side, Brian posted a number that would win plenty of weeks. Justin 
 
 And yet, this semifinal turned on where the misses landed. Brian absorbed 3.78 from Jordan Love and 0.2 from T.J. Hockenson, while Nico Collins finished with 5.9 and Bucky Irving with 7.1. Jake had his own quiet spots — Josh Jacobs at 2.8, Theo Johnson at 0.0, and Jayden Higgins at 1.7 — but Nacua, Purdy, and Jeanty gave Seasonal Depression the kind of top end that covers for a lot.
 
-The consequence is a clear one. Jake advances to the FoulknFootball championship in Week 17, while Brian’s six-game winning streak and his run of 150-plus points every week end together one game short of the final.
+The consequence is a clear one. Jake advances to the League championship in Week 17, while Brian’s six-game winning streak and his run of 150-plus points every week end together one game short of the final.
 
 ### Amon Another level  (190.80) vs Unstoppable Farce (152.96) — _Consolation semifinal_
 
-**Old Guard vs Young Guns: Devin carries Amon Another level past Rob.**
+**Consolation Semifinal: Devin carries Amon Another level past Rob.**
 
-In a FoulknFootball consolation semifinal with more attached to it than the bracket label suggests, Devin’s Amon Another level handled Rob’s Unstoppable Farce, 190.80 to 152.96. The “Old Guard vs Young Guns” frame fit at the top, but the game itself was decided by depth and by a few well-timed peaks. Devin had enough of both, and that gave him a decisive victory.
+In a consolation semifinal with more attached to it than the bracket label suggests, Devin’s Amon Another level handled Rob’s Unstoppable Farce, 190.80 to 152.96. The game itself was decided by depth and by a few well-timed peaks. Devin had enough of both, and that gave him a decisive victory.
 
 The hero was Chris Olave. New Orleans’ wideout caught 10 passes for 148 yards and two touchdowns against the Jets and finished with 26.8 points, while Saquon Barkley added 21.2 for Philadelphia against Washington and De'Von Achane brought 15.0 for Miami against Cincinnati. The call last week to ride Amon Another level held up on the winner, though it was right team, wrong shape — projected at 141.3 to 132.8, delivered here at 190.80 to 152.96.
 
@@ -71,13 +71,13 @@ What stands out is that Devin got to 190.80 without a clean card. Jaxson Dart ga
 
 On the other side, Rob got a professional effort from Trevor Lawrence, who gave Jacksonville 279 passing yards, three touchdown passes, a rushing score, and 31.16 fantasy points against Denver. Jalen Hurts added 19.4 for Philadelphia, Rhamondre Stevenson scored 15.8 for New England against Baltimore, and Jauan Jennings contributed 13.1. And yet, Unstoppable Farce carried too many quiet spots to stay in range. Woody Marks finished at 0.0, Kareem Hunt at 0.2, Kimani Vidal at 1.1, Christian Watson at 1.7, and Brian Thomas at 1.8.
 
-The consequence is a meaningful one in this corner of the bracket. Devin advances to the FoulknFootball consolation final, keeping alive the path to the 1.01, while Rob drops to the 7th-place game and now plays with the keeper-forfeit penalty in view.
+The consequence is a meaningful one in this corner of the bracket. Devin advances to the League consolation final, keeping alive the path to the 1.01, while Rob drops to the 7th-place game and now plays with the keeper-forfeit penalty in view.
 
 ### Sanders Boutte on Sunday (159.48) vs BearDown (118.16) — _Consolation semifinal_
 
-**Cousin vs Nephew: Eric sends Sanders Boutte on Sunday on with a decisive victory.**
+**Consolation Semifinal: Eric sends Sanders Boutte on Sunday on with a decisive victory.**
 
-In the consolation semifinal corner of FoulknFootball, the family hook was there, but the bracket stakes carried the weight. Eric’s Sanders Boutte on Sunday beat Dakota’s BearDown, 159.48 to 118.16, and the margin was steady from the shape of the lineups. This was a high-stakes battle because the winner moves on to the consolation final and keeps alive the path to the 1.01, while the loser falls into the 7th-place game and a less comfortable conversation.
+In the consolation semifinal corner of The League, the bracket stakes carried the weight. Eric’s Sanders Boutte on Sunday beat Dakota’s BearDown, 159.48 to 118.16, and the margin was steady from the shape of the lineups. This was a high-stakes battle because the winner moves on to the consolation final and keeps alive the path to the 1.01, while the loser falls into the 7th-place game and a less comfortable conversation.
 
 The hero was Chase Brown. Cincinnati’s back turned in 28.9 points against Miami, scoring three total touchdowns and giving Eric the strongest single line in the matchup. Christian McCaffrey added 26.6 for San Francisco against Indianapolis, Courtland Sutton brought 14.6 for Denver against Jacksonville, and Zach Charbonnet chipped in 13.4 for Seattle against the Rams. The call to ride Sanders Boutte on Sunday held up, and fairly cleanly too — projected at 146.7 to 112.9, delivered at 159.48 to 118.16.
 
@@ -85,7 +85,7 @@ On the other side, Dakota got respectable quarterback work. Caleb Williams gave 
 
 Eric was hardly perfect, which is part of why the final number stands out. Marcus Mariota managed 3.7 for Washington against Philadelphia, Trey McBride gave him 2.7, and CeeDee Lamb finished with 5.1, but Sanders Boutte on Sunday had enough coverage to absorb it. One sharp detail says most of it: Eric got 55.5 from Brown and McCaffrey alone, and Dakota never found that kind of answering punch outside the quarterback spots.
 
-The consequence is a clear one. Eric advances Sanders Boutte on Sunday to the FoulknFootball consolation final, still alive for the 1.01, while Dakota drops into the 7th-place game and the keeper-forfeit risk that comes with finishing last on this side of the bracket.
+The consequence is a clear one. Eric advances Sanders Boutte on Sunday to the League consolation final, still alive for the 1.01, while Dakota drops into the 7th-place game and the keeper-forfeit risk that comes with finishing last on this side of the bracket.
 
 ## Storylines
 
@@ -142,7 +142,7 @@ The consequence is a clear one. Eric advances Sanders Boutte on Sunday to the Fo
 | Unstoppable Farce vs BearDown | Unstoppable Farce | 136.8 – 104.1 | Lock | BearDown’s 5-game losing streak |
 | Amon Another level  vs Sanders Boutte on Sunday | Amon Another level  | 148.6 – 144.9 | Coin Flip | Upset call: 150+ streak pressure |
 | Disappointment vs Seasonal Depression | Seasonal Depression | 165.2 – 151.4 | Lean | Seasonal Depression up 17.0% lately |
-| He hate me vs First in and First Out? | He hate me | 171.3 – 162.7 | Lean | Brother Bowl, but 195.76 last-three average |
+| He hate me vs First in and First Out? | He hate me | 171.3 – 162.7 | Lean | 195.76 last-three average |
 
 ## Predictions
 

@@ -371,7 +371,7 @@ public class FantasyScorerTests
     }
 
     // =====================================================================
-    // Validation tests against real Sleeper FPTS (2025 season, FoulknFootball league)
+    // Validation tests against real Sleeper FPTS (2025 season, league)
     // =====================================================================
 
     [Theory]

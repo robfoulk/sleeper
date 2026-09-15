@@ -6,6 +6,42 @@ namespace Sleeper.RosterReport.Tests;
 public class ReportCliTests
 {
     [Fact]
+    public void Parse_InjuriesAndRecapShareExplicitWindow()
+    {
+        const string start = "2026-09-09T00:00:00-04:00";
+        const string end = "2026-09-16T00:00:00-04:00";
+        var result = ReportCli.Parse(["injuries", "--week", "1", "--season", "2026", "--start", start, "--end", end, "--format", "json"]);
+        var options = result.Should().BeOfType<ReportCliInvocationResult>().Subject.Invocation.Options
+            .Should().BeOfType<InjuriesCommandOptions>().Subject;
+        options.Format.Should().Be("json");
+        options.Window.Start.Offset.Should().Be(TimeSpan.FromHours(-4));
+        var recap = ReportCli.Parse(["recap", "--week", "1", "--injury-start", start, "--injury-end", end]);
+        recap.Should().BeOfType<ReportCliInvocationResult>().Subject.Invocation.Options
+            .Should().BeOfType<WeeklyRecapCommandOptions>().Subject.InjuryWindow.Should().Be(options.Window);
+    }
+
+    [Theory]
+    [InlineData("2026-09-09", "2026-09-16")]
+    [InlineData("2026-09-09T00:00:00", "2026-09-16T00:00:00Z")]
+    [InlineData("2026-09-09T00:00:00Z", "2026-09-09T00:00:00Z")]
+    [InlineData("2026-09-09T00:00:00Z", "2026-11-09T00:00:00Z")]
+    public void Parse_RejectsInvalidInjuryWindows(string start, string end)
+    {
+        ReportCli.Parse(["injuries", "--week", "1", "--season", "2026", "--start", start, "--end", end])
+            .Should().BeOfType<ReportCliErrorResult>();
+    }
+
+    [Fact]
+    public void Parse_InjuriesRequiresScopeAndRecapRequiresPairedWindow()
+    {
+        ReportCli.Parse(["injuries", "--week", "1"]).Should().BeOfType<ReportCliErrorResult>();
+        ReportCli.Parse(["recap", "--week", "1", "--injury-start", "2026-09-09T00:00:00Z"])
+            .Should().BeOfType<ReportCliErrorResult>();
+        ReportCli.Parse(["injuries", "--help"]).Should().BeOfType<ReportCliHelpResult>()
+            .Subject.HelpText.Should().Contain("--start").And.Contain("Read-only");
+    }
+
+    [Fact]
     public void Parse_ReturnsRootHelpWithSuccess_ForHelpFlag()
     {
         var result = ReportCli.Parse(["--help"]);
@@ -129,5 +165,67 @@ public class ReportCliTests
         var options = invocation.Options.Should().BeOfType<AssetHistoryCommandOptions>().Subject;
         options.Season.Should().Be(2024);
         options.LeagueId.Should().Be("league-2024");
+    }
+
+    [Fact]
+    public void Parse_UsesSafeDefaults_ForCopilotReplay()
+    {
+        var result = ReportCli.Parse(["copilot-replay"]);
+
+        var invocation = result.Should().BeOfType<ReportCliInvocationResult>().Subject.Invocation;
+        invocation.Command.Should().Be(ReportCommand.CopilotReplay);
+        var options = invocation.Options.Should().BeOfType<CopilotReplayCommandOptions>().Subject;
+        options.Season.Should().Be(2025);
+        options.StartWeek.Should().Be(1);
+        options.EndWeek.Should().Be(3);
+        options.LeagueId.Should().Be("1180276953741729792");
+        options.RunId.Should().BeNull();
+    }
+
+    [Fact]
+    public void Parse_ParsesCopilotReplayOptions()
+    {
+        var result = ReportCli.Parse([
+            "copilot-replay",
+            "--season", "2024",
+            "--start-week", "2",
+            "--end-week", "4",
+            "--league-id", "historical-league",
+            "--run-id", "pilot-a"
+        ]);
+
+        var invocation = result.Should().BeOfType<ReportCliInvocationResult>().Subject.Invocation;
+        var options = invocation.Options.Should().BeOfType<CopilotReplayCommandOptions>().Subject;
+        options.Should().Be(new CopilotReplayCommandOptions("historical-league", 2024, 2, 4, "pilot-a"));
+    }
+
+    [Fact]
+    public void Parse_ReadsExportOptions()
+    {
+        var result = ReportCli.Parse(["export", "--season", "2026", "--league-id", "abc123"]);
+
+        var invocation = result.Should().BeOfType<ReportCliInvocationResult>().Subject.Invocation;
+        invocation.Command.Should().Be(ReportCommand.Export);
+        invocation.Options.Should().Be(new ExportCommandOptions(2026, "abc123"));
+    }
+
+    [Fact]
+    public void Parse_ReadsExportPositionalForm()
+    {
+        var result = ReportCli.Parse(["export", "2026"]);
+
+        var invocation = result.Should().BeOfType<ReportCliInvocationResult>().Subject.Invocation;
+        var options = invocation.Options.Should().BeOfType<ExportCommandOptions>().Subject;
+        options.Season.Should().Be(2026);
+        options.LeagueId.Should().Be(ReportCli.DefaultLeagueId);
+    }
+
+    [Fact]
+    public void Parse_FailsExport_WithoutSeason()
+    {
+        var result = ReportCli.Parse(["export"]);
+
+        result.Should().BeOfType<ReportCliErrorResult>()
+            .Which.Message.Should().Contain("season");
     }
 }

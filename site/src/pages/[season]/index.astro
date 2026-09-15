@@ -1,0 +1,224 @@
+---
+import Bulletin from '../../layouts/Bulletin.astro';
+import Standings from '../../components/Standings.astro';
+import Scoreboard from '../../components/Scoreboard.astro';
+import Charts from '../../components/Charts.astro';
+import {
+  ALL_SEASONS,
+  seasonOf,
+  articlesOf,
+  articleSlug,
+  shortTitle,
+  KIND_LABEL,
+  ownerSlug,
+  pts,
+  data,
+} from '../../lib/league';
+
+export function getStaticPaths() {
+  return ALL_SEASONS.map((season) => ({ params: { season: String(season) } }));
+}
+
+const season = Number(Astro.params.season);
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const s = seasonOf(season);
+const articles = articlesOf(season);
+const weeklies = articles.filter((a) => a.kind === 'weekly-recap');
+const features = articles.filter((a) => a.kind !== 'weekly-recap');
+const keepers = data.draft && Number(data.draft.season) === season ? data.draft.keeper_summary : [];
+---
+
+<Bulletin
+  title={`${season} — The League`}
+  slug={`The file · ${season}`}
+  description={`Standings, weekly results, awards and articles from the ${season} season of The League.`}
+>
+  <div class="sheet">
+    <h1 class="ruled">{season}</h1>
+    {s ? (
+      <p class="dek">
+        {s.standings.length} teams · {s.schedule.regular_season_last_week}-week regular season ·
+        {' '}playoffs from week {s.schedule.playoff_start_week}
+        {s.champion && <> · champion <strong>{s.champion.owner_name}</strong>, {s.champion.team_name}</>}
+      </p>
+    ) : (
+      <p class="dek">
+        Not yet played. The draft is on the board and the articles below are what has been filed so far.
+      </p>
+    )}
+  </div>
+
+  {features.length > 0 && (
+    <div class="sheet band">
+      <h2 class="ruled">Features</h2>
+      <ul class="features">
+        {features.map((a) => (
+          <li>
+            <p class="slug">{KIND_LABEL[a.kind] ?? 'Filing'}</p>
+            <a href={`${base}/${articleSlug(a.path)}`}>{shortTitle(a.title)}</a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  )}
+
+  {keepers.length > 0 && (
+    <div class="sheet band">
+      <h2 class="ruled">Keepers held into {season}</h2>
+      <div class="ledger-scroll">
+        <table class="ledger">
+          <caption>Up to four per team, each charged the round it cost</caption>
+          <thead>
+            <tr><th scope="col">Owner</th><th scope="col" class="num">Kept</th><th scope="col">Rounds spent</th></tr>
+          </thead>
+          <tbody>
+            {keepers.map((k) => (
+              <tr>
+                <td><a href={`${base}/owners/${ownerSlug(k.owner_name)}`}>{k.owner_name}</a></td>
+                <td class="num">{k.keeper_count}</td>
+                <td class="wide">{k.rounds_spent.length ? k.rounds_spent.join(', ') : '—'}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      {data.draft?.verification?.map((v) => <p class="slug note">{v}</p>)}
+    </div>
+  )}
+
+  {s && (
+    <>
+      <div class="sheet band">
+        <h2 class="ruled">Final standings</h2>
+        <Standings rows={s.standings} season={season} caption={`${season} final standings`} />
+      </div>
+
+      <div class="sheet band">
+        <h2 class="ruled">Every week</h2>
+        <div class="weeks">
+          {s.weeks.map((w) => {
+            const article = weeklies.find((a) => a.week === w.week);
+            return (
+              <section class="weekblock">
+                <div class="weekblock__head">
+                  <h3>Week {w.week}</h3>
+                  {w.is_playoff && <span class="struck">Postseason</span>}
+                  {article && <a class="weekblock__link" href={`${base}/${articleSlug(article.path)}`}>Recap →</a>}
+                </div>
+                <Scoreboard week={w} season={season} heading={false} />
+              </section>
+            );
+          })}
+        </div>
+      </div>
+
+      {s.awards.length > 0 && (
+        <div class="sheet band">
+          <h2 class="ruled">{season} awards</h2>
+          <div class="ledger-scroll">
+            <table class="ledger">
+              <thead>
+                <tr>
+                  <th scope="col">Award</th>
+                  <th scope="col">Owner</th>
+                  <th scope="col">Team</th>
+                  <th scope="col" class="num">Value</th>
+                  <th scope="col">Citation</th>
+                </tr>
+              </thead>
+              <tbody>
+                {s.awards.map((a) => (
+                  <tr>
+                    <th scope="row" class="wide">{a.name}</th>
+                    <td>{a.owner_name}</td>
+                    <td class="wide">{a.team_name}</td>
+                    <td class="num">{pts(a.value)}{a.week ? ` (w${a.week})` : ''}</td>
+                    <td class="wide cite">{a.citation ?? a.description}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      )}
+
+      <Charts season={season} />
+    </>
+  )}
+</Bulletin>
+
+<style>
+  h1 {
+    padding-top: 0.5rem;
+  }
+
+  .dek {
+    color: var(--ink-quiet);
+    max-width: 62ch;
+  }
+
+  .band {
+    padding-top: 2.6rem;
+  }
+
+  .note {
+    margin: 0.6rem 0 0;
+  }
+
+  .features {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .features li {
+    padding: 0.85rem 0;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .features a {
+    font-size: 1.15rem;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .features .slug {
+    margin-bottom: 0.15rem;
+  }
+
+  .weeks {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
+    gap: 1.6rem 3rem;
+  }
+
+  .weekblock__head {
+    display: flex;
+    align-items: baseline;
+    gap: 0.8rem;
+    border-bottom: 2px solid var(--rule-strong);
+    padding-bottom: 0.35rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .weekblock__head h3 {
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .weekblock__link {
+    margin-left: auto;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--violet);
+  }
+
+  .cite {
+    color: var(--ink-quiet);
+    font-size: 0.85em;
+    min-width: 22ch;
+  }
+</style>

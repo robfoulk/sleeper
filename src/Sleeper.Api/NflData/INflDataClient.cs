@@ -33,4 +33,9 @@ public interface INflDataClient
     /// Get weekly stats keyed by Sleeper player ID for easy joining with Sleeper rosters.
     /// </summary>
     Task<Dictionary<string, List<WeeklyPlayerStats>>> GetWeeklyStatsBySleeperIdAsync(int season, CancellationToken ct = default);
+
+    /// <summary>
+    /// Get the NFL schedule for a season. Used to identify team bye weeks.
+    /// </summary>
+    Task<List<NflGame>> GetScheduleAsync(int season, CancellationToken ct = default);
 }

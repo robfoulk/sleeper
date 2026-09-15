@@ -1,8 +1,8 @@
-# 2024 FoulknFootball — Season in Review
+# 2024 The League — Season in Review
 
 _Generated 2026-04-27 01:38 UTC. League ID `1112858215559057408`._
 
-## 🏆 Jake's CeeDeez Nuts — 2024 FoulknFootball Champion
+## 🏆 Jake's CeeDeez Nuts — 2024 The League Champion
 
 _Defeated Eric's Chase Brown Tanks in the championship. Dakota's BearDown won the consolation bowl and the 1.01 next year. Michael's Code 3 finishes last and forfeits a keeper next season (3 of 4 instead of 4)._
 
@@ -108,10 +108,10 @@ _Next year's draft order: champion picks last (1.08); consolation-bowl winner pi
 - **Week 11** — **Rob and Also too old to run hold off Dakota’s BearDown in a game that cleared 400.**
 - **Week 12** — **Jake and CeeDeez Nuts outlast Eric’s 188-point Sunday.**
 - **Week 13** — **Rob and Also too old to run answer Devin’s big number with a bigger one.**
-- **Week 14** — **Father vs Son: Also too old to run slips past CeeDeez Nuts for first place.**
-- **Week 15** — **Brother Bowl: Rob closes the regular season on top with a decisive victory.**
-- **Week 16** — **Brother Bowl: Hauwk Tua survives Steel City and moves on.**
-- **Week 17** — **Cousin vs Nephew: Jake brings the trophy home for CeeDeez Nuts.**
+- **Week 14** — **First Place on the Line: Also too old to run slips past CeeDeez Nuts for first place.**
+- **Week 15** — **Regular-Season Finale: Rob closes the regular season on top with a decisive victory.**
+- **Week 16** — **Consolation Semifinal: Hauwk Tua survives Steel City and moves on.**
+- **Week 17** — **Title Game: Jake brings the trophy home for CeeDeez Nuts.**
 
 ---
 

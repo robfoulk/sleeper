@@ -123,6 +123,19 @@ public class NflDataClient : INflDataClient
         }, ct).ConfigureAwait(false);
     }
 
+    public async Task<List<NflGame>> GetScheduleAsync(int season, CancellationToken ct = default)
+    {
+        var allGames = await GetOrCreateAsync(
+            "nfl-schedule",
+            _options.CurrentSeasonCacheTtl,
+            () => DownloadCsvAsync<NflGame>(_options.ScheduleUrl, ct),
+            ct).ConfigureAwait(false);
+
+        return allGames
+            .Where(game => game.Season == season && game.GameType == "REG")
+            .ToList();
+    }
+
     // Helpers
 
     private async Task<List<T>> DownloadCsvAsync<T>(string url, CancellationToken ct)

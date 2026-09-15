@@ -1,0 +1,375 @@
+---
+import Bulletin from '../layouts/Bulletin.astro';
+import Standings from '../components/Standings.astro';
+import Scoreboard from '../components/Scoreboard.astro';
+import {
+  data,
+  seasonOf,
+  articlesOf,
+  articleSlug,
+  shortTitle,
+  ALL_SEASONS,
+  CURRENT_SEASON,
+  PLAYED_SEASONS,
+  KIND_LABEL,
+  ownerSlug,
+  record,
+  pts,
+} from '../lib/league';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+const lastPlayedYear = PLAYED_SEASONS[0];
+const lastPlayed = seasonOf(lastPlayedYear)!;
+const upcoming = CURRENT_SEASON > lastPlayedYear ? CURRENT_SEASON : null;
+
+// The lead is whatever the league most recently produced: the upcoming season's preview if one
+// exists, otherwise the newest article on file.
+const upcomingArticles = upcoming ? articlesOf(upcoming) : [];
+const lead =
+  upcomingArticles.find((a) => a.kind === 'season-preview') ??
+  upcomingArticles.find((a) => a.kind === 'draft-recap') ??
+  articlesOf(lastPlayedYear).find((a) => a.kind === 'season-review') ??
+  articlesOf(lastPlayedYear).slice(-1)[0];
+
+const secondary = [...upcomingArticles, ...articlesOf(lastPlayedYear).slice().reverse()]
+  .filter((a) => a.path !== lead?.path)
+  .slice(0, 5);
+
+const finalWeek = lastPlayed.weeks[lastPlayed.weeks.length - 1];
+const champ = lastPlayed.champion;
+
+// The first viewport carries the result as well as the headline, so the lead column is not
+// three lines of type over an empty half page.
+const podium = lastPlayed.standings
+  .slice()
+  .sort((a, b) => a.final_place - b.final_place)
+  .slice(0, 3);
+
+const keepers = data.draft?.keeper_summary ?? [];
+const titles = data.records.championships;
+---
+
+<Bulletin
+  title="The League — fantasy football archive"
+  description="Standings, weekly recaps, records and season previews for The League, an eight-team fantasy football league."
+>
+  <div class="sheet">
+    <p class="issue slug">
+      <span class="issue__mark">■</span> This issue ·
+      {upcoming ? `${upcoming} season ahead` : `${lastPlayedYear} in the book`} ·
+      {data.articles.length} filings on record
+    </p>
+  </div>
+
+  <div class="sheet lead-wrap">
+    {lead && (
+      <article class="lead">
+        <p class="slug">{KIND_LABEL[lead.kind] ?? 'Filing'} · {lead.season}</p>
+        <h1 class="lead__title">
+          <a href={`${base}/${articleSlug(lead.path)}`}>{shortTitle(lead.title)}</a>
+        </h1>
+        <p class="lead__sub">
+          {upcoming
+            ? `Eight teams, one of them under new ownership, and a champion trying to make it three.`
+            : `The full account of the season, written from the record.`}
+        </p>
+        <p><a class="more" href={`${base}/${articleSlug(lead.path)}`}>Read the filing →</a></p>
+
+        <div class="podium">
+          <p class="slug">How {lastPlayedYear} finished <span class="podium__note">final place · regular-season record</span></p>
+          <ol class="podium__list">
+            {podium.map((p) => (
+              <li>
+                <span class="podium__place">{p.final_place}</span>
+                <span class="podium__team">
+                  <a href={`${base}/franchises/${p.franchise_id}`}>{p.team_name}</a>
+                  <span class="podium__owner">{p.owner_name}</span>
+                </span>
+                <span class="podium__rec">{record(p.wins, p.losses, p.ties)}</span>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </article>
+    )}
+
+    <aside class="alsoin">
+      <h2 class="alsoin__head ruled">Also in this issue</h2>
+      <ul class="alsoin__list">
+        {secondary.map((a) => (
+          <li>
+            <a href={`${base}/${articleSlug(a.path)}`}>{shortTitle(a.title)}</a>
+            <span class="slug">{KIND_LABEL[a.kind] ?? 'Filing'} · {a.season}</span>
+          </li>
+        ))}
+      </ul>
+      <p><a class="more" href={`${base}/${lastPlayedYear}`}>The full {lastPlayedYear} file →</a></p>
+    </aside>
+  </div>
+
+  <div class="sheet band">
+    <h2 class="ruled">Where it stands — {lastPlayedYear} final</h2>
+    {champ && (
+      <p class="champline">
+        <span class="struck">Champion</span>
+        <strong>{champ.team_name}</strong> — {champ.owner_name}
+      </p>
+    )}
+    <Standings rows={lastPlayed.standings} season={lastPlayedYear} caption={`${lastPlayedYear} final standings`} />
+  </div>
+
+  <div class="sheet band twoup">
+    <section>
+      <h2 class="ruled">The last card played</h2>
+      <p class="slug tight">{lastPlayedYear} · Week {finalWeek.week}{finalWeek.is_playoff ? ' · postseason' : ''}</p>
+      <Scoreboard week={finalWeek} season={lastPlayedYear} heading={false} />
+    </section>
+
+    <section>
+      <h2 class="ruled">Title holders</h2>
+      <ul class="plain">
+        {titles
+          .slice()
+          .sort((a, b) => b.season - a.season)
+          .map((t) => (
+            <li>
+              <strong>{t.season}</strong> — <a href={`${base}/owners/${ownerSlug(t.owner_name)}`}>{t.owner_name}</a>,
+              {' '}{t.team_name}
+              {t.runner_up && <span class="slug"> over {t.runner_up}</span>}
+            </li>
+          ))}
+      </ul>
+
+      {keepers.length > 0 && (
+        <>
+          <h2 class="ruled spaced">{data.draft?.season} keepers held</h2>
+          <div class="ledger-scroll">
+            <table class="ledger">
+              <caption>Up to four per team, each charged the round it cost</caption>
+              <thead>
+                <tr><th scope="col">Owner</th><th scope="col" class="num">Kept</th><th scope="col">Rounds spent</th></tr>
+              </thead>
+              <tbody>
+                {keepers.map((k) => (
+                  <tr>
+                    <td><a href={`${base}/owners/${ownerSlug(k.owner_name)}`}>{k.owner_name}</a></td>
+                    <td class="num">{k.keeper_count}</td>
+                    <td class="wide">{k.rounds_spent.length ? k.rounds_spent.join(', ') : '—'}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </>
+      )}
+    </section>
+  </div>
+
+  <div class="sheet band">
+    <h2 class="ruled">The file</h2>
+    <ul class="years">
+      {ALL_SEASONS.map((y) => {
+        const s = seasonOf(y);
+        return (
+          <li>
+            <a href={`${base}/${y}`}>{y}</a>
+            <span class="slug">
+              {s ? `${s.weeks.length} weeks · champion ${s.champion?.owner_name ?? '—'}` : 'Upcoming'}
+            </span>
+          </li>
+        );
+      })}
+      <li><a href={`${base}/records`}>Record book</a><span class="slug">On record, head to head</span></li>
+      <li><a href={`${base}/franchises`}>Teams</a><span class="slug">Eight lineages</span></li>
+    </ul>
+  </div>
+</Bulletin>
+
+<style>
+  .issue {
+    padding-top: 1.5rem;
+  }
+  .issue__mark {
+    color: var(--stamp);
+  }
+
+  .lead-wrap {
+    display: grid;
+    grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
+    gap: clamp(1.75rem, 4vw, 3.5rem);
+    padding-top: 1.4rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 2px solid var(--rule-strong);
+  }
+
+  .lead__title {
+    margin: 0.5rem 0 0.9rem;
+    font-size: clamp(1.7rem, 5.2vw, 3.1rem);
+  }
+
+  .lead__title a {
+    text-decoration: none;
+  }
+
+  .lead__sub {
+    color: var(--ink-quiet);
+    font-size: 1.05rem;
+  }
+
+  .more {
+    font-size: 0.8rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-bottom: 1px solid var(--stamp);
+    padding-bottom: 0.15rem;
+  }
+
+  .podium {
+    margin-top: 2.4rem;
+    border-top: 2px solid var(--rule-strong);
+    padding-top: 0.9rem;
+    max-width: 34rem;
+  }
+
+  .podium__list {
+    list-style: none;
+    margin: 0.6rem 0 0;
+    padding: 0;
+  }
+
+  .podium__list li {
+    display: grid;
+    grid-template-columns: 2rem 1fr auto;
+    align-items: baseline;
+    gap: 0.9rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px dotted var(--rule);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .podium__note {
+    color: var(--ink-faint);
+  }
+
+  .podium__place {
+    font-weight: 700;
+    color: var(--ink-faint);
+  }
+
+  .podium__list li:first-child .podium__place {
+    color: var(--stamp);
+  }
+
+  .podium__team a {
+    text-decoration: none;
+    font-weight: 700;
+  }
+
+  .podium__owner {
+    display: block;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+
+  .alsoin__head {
+    font-size: 0.85rem;
+    letter-spacing: 0.18em;
+  }
+
+  .alsoin__list {
+    list-style: none;
+    margin: 0 0 1.5rem;
+    padding: 0;
+  }
+
+  .alsoin__list li {
+    padding: 0.6rem 0;
+    border-bottom: 1px dotted var(--rule);
+  }
+
+  .alsoin__list a {
+    display: block;
+    text-decoration: none;
+    line-height: 1.4;
+  }
+
+  .alsoin__list .slug {
+    display: block;
+    margin-top: 0.2rem;
+  }
+
+  .band {
+    padding-top: 2.6rem;
+  }
+
+  .champline {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.2rem;
+  }
+
+  .twoup {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: clamp(1.75rem, 4vw, 3.5rem);
+  }
+
+  .tight {
+    margin: -0.7rem 0 0.9rem;
+  }
+
+  .spaced {
+    margin-top: 2.4rem;
+  }
+
+  .plain {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .plain li {
+    padding: 0.45rem 0;
+    border-bottom: 1px dotted var(--rule);
+  }
+
+  .years {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    columns: 2;
+    column-gap: 3rem;
+  }
+
+  .years li {
+    break-inside: avoid;
+    padding: 0.7rem 0;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .years a {
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.15rem;
+  }
+
+  .years .slug {
+    display: block;
+  }
+
+  @media (max-width: 52rem) {
+    .lead-wrap,
+    .twoup {
+      grid-template-columns: minmax(0, 1fr);
+    }
+    .years {
+      columns: 1;
+    }
+  }
+</style>

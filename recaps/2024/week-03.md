@@ -1,12 +1,12 @@
-# Week 3 Recap — FoulknFootball (2024)
+# Week 3 Recap — The League (2024)
 
 _Generated 2026-04-27 01:18 UTC._
 
 ## Intro
 
-Three weeks into the regular season, FoulknFootball is starting to sort itself into clearer lanes. The teams at the top are not just winning; they are winning with a shape you can recognize, while the teams at the bottom are finding that one or two weak spots now have a way of touching the whole lineup.
+Three weeks into the regular season, The League is starting to sort itself into clearer lanes. The teams at the top are not just winning; they are winning with a shape you can recognize, while the teams at the bottom are finding that one or two weak spots now have a way of touching the whole lineup.
 
-The biggest result on the board was also the cleanest statement. BearDown’s 208.24 against CeeDeez Nuts was the highest score of Week 3, and it kept Dakota alongside Rob as one of the last unbeaten teams after Week 2 had already begun to separate the board. Rob made his own case in a 201.32 win over Steel City, so the top of FoulknFootball now has two 3-0 teams with real scoring weight behind them, and the middle is already crowded enough that depth will start to matter more as byes get closer.
+The biggest result on the board was also the cleanest statement. BearDown’s 208.24 against CeeDeez Nuts was the highest score of Week 3, and it kept Dakota alongside Rob as one of the last unbeaten teams after Week 2 had already begun to separate the board. Rob made his own case in a 201.32 win over Steel City, so the top of The League now has two 3-0 teams with real scoring weight behind them, and the middle is already crowded enough that depth will start to matter more as byes get closer.
 
 ## League Themes
 
@@ -24,7 +24,7 @@ The power board had real movement beneath the top line. Rob climbed one spot to 
 
 **BearDown stays unbeaten as Dakota’s depth carries past Jake.**
 
-Week 3 in FoulknFootball brought two 2-0 teams into the same window, and BearDown left it with the clearer claim on the top line. Dakota beat Jake, 208.24 to 167.00, a 41.24-point margin that looked large on the board and earned when you walked through the lineup. BearDown cleared 200 for the second straight week, and did it without needing one player to carry the whole afternoon.
+Week 3 in The League brought two 2-0 teams into the same window, and BearDown left it with the clearer claim on the top line. Dakota beat Jake, 208.24 to 167.00, a 41.24-point margin that looked large on the board and earned when you walked through the lineup. BearDown cleared 200 for the second straight week, and did it without needing one player to carry the whole afternoon.
 
 The hero was Saquon Barkley. The Eagles running back gave Dakota 29.6 points against New Orleans on 147 rushing yards and two touchdowns, while Joe Burrow added 25.36 for Cincinnati with 324 yards and three touchdown passes and Brock Purdy matched him at 25.78 for San Francisco with three touchdown throws of his own. Malik Nabers kept the pace with 20.2 for the Giants against Cleveland, and Dallas Goedert's 17.0 on 10 catches for 170 yards gave BearDown another clean edge in the middle of the lineup.
 
@@ -38,7 +38,7 @@ The consequence is simple and important. Dakota moves to 3-0 and extends BearDow
 
 **Rob’s depth sends Also too old to run past Brian and into sole possession of first.**
 
-Week 3 in FoulknFootball brought the kind of meeting that helps sort the top of the table without needing much decoration. Rob’s Also too old to run beat Brian’s Steel City, 201.32 to 150.76, and the margin told a clear story by the end. This was a matchup between unbeaten teams, and Rob answered it with a lineup that kept producing even when one of his quarterbacks, Derek Carr, gave him only 7.98.
+Week 3 in The League brought the kind of meeting that helps sort the top of the table without needing much decoration. Rob’s Also too old to run beat Brian’s Steel City, 201.32 to 150.76, and the margin told a clear story by the end. This was a matchup between unbeaten teams, and Rob answered it with a lineup that kept producing even when one of his quarterbacks, Derek Carr, gave him only 7.98.
 
 The hero was Kyren Williams. The Rams back gave Rob 29.6 points against San Francisco on 24 carries for 89 yards and two rushing touchdowns, while adding two catches for 27 yards and another score through the air. Ja'Marr Chase added 23.8 for Cincinnati against Washington, Zach Charbonnet supplied 22.7 for Seattle against Miami, and Rashee Rice’s 12 catches for 110 yards and a touchdown were good for 17.1. A week after Rob stayed near the top with 179.20, this was the fuller version of that same roster.
 
@@ -46,13 +46,13 @@ On the other side, Brian had useful work, just not enough of it in the premium s
 
 Brian did leave 15.7 points from Cole Kmet on the bench, but this was not a case of one missed lever changing the result. Rob had his own bench points available with Justin Fields at 18.4, and both teams were close enough to optimal that the game still comes back to the starters who actually separated it. That is often how good teams navigate the competitive landscape in September; the shape of the roster matters, but the quality at the top matters more.
 
-The consequence is immediate and concrete. Rob extends his winning streak to three games, Brian’s ends at two, and Also too old to run claims the head-to-head tiebreaker in a race that opened the week with both clubs sitting 2-0 near the top of FoulknFootball.
+The consequence is immediate and concrete. Rob extends his winning streak to three games, Brian’s ends at two, and Also too old to run claims the head-to-head tiebreaker in a race that opened the week with both clubs sitting 2-0 near the top of The League.
 
 ### GibbMeDaRock (158.90) vs Code 3 (152.92)
 
 **GibbMeDaRock edges Code 3 as Devin finally gets over the line.**
 
-Week 3 in FoulknFootball brought two 0-2 teams with enough scoring on the books to think better days were close, and this one played to that expectation. Devin’s GibbMeDaRock slipped past Michael’s Code 3, 158.90 to 152.92, a narrow result carried by steadier strength across the top of the lineup. Lamar Jackson set the tone with 25.98 points for Baltimore against Dallas, Aaron Jones added 20.8 for Minnesota against Houston, and Jahmyr Gibbs gave Devin 16.3 in Detroit’s meeting with Arizona.
+Week 3 in The League brought two 0-2 teams with enough scoring on the books to think better days were close, and this one played to that expectation. Devin’s GibbMeDaRock slipped past Michael’s Code 3, 158.90 to 152.92, a narrow result carried by steadier strength across the top of the lineup. Lamar Jackson set the tone with 25.98 points for Baltimore against Dallas, Aaron Jones added 20.8 for Minnesota against Houston, and Jahmyr Gibbs gave Devin 16.3 in Detroit’s meeting with Arizona.
 
 On the other side, Michael had the biggest scorer in the game. Josh Allen’s 30.92 points for Buffalo against Jacksonville kept Code 3 in range all week, and Jonathan Taylor supplied another 25.5 for Indianapolis against Chicago. We picked GibbMeDaRock to win this one last week, and the call held up, but it was the right team in the wrong shape — projected at 124.8 to 119.3, it arrived as a 158.90 to 152.92 track meet.
 
@@ -60,13 +60,13 @@ The sharp difference sat in the supporting cast. Devin got useful, professional 
 
 There were misses on Devin’s side too. Jordan Addison gave him 0.0, and Javonte Williams managed 2.1, but GibbMeDaRock had enough ballast to navigate the competitive landscape of a close fantasy week. One small note said plenty: Lamar and Trevor Lawrence combined for 35.40 at quarterback for Devin, and that was enough to survive Michael getting the single best QB line of the matchup from Allen.
 
-The consequence is immediate and specific. Devin ends a two-game slide and moves GibbMeDaRock into the win column at 1-2, while Michael falls to 0-3 and cedes the head-to-head tiebreaker in a part of the FoulknFootball table where that may matter later.
+The consequence is immediate and specific. Devin ends a two-game slide and moves GibbMeDaRock into the win column at 1-2, while Michael falls to 0-3 and cedes the head-to-head tiebreaker in a part of the League table where that may matter later.
 
 ### Chase Brown Tanks (145.56) vs Hauwk Tua (127.86)
 
 **Eric gets the first word as Chase Brown Tanks turns back Dave.**
 
-Week 3 in FoulknFootball brought two teams still searching for a first win, and Eric’s Chase Brown Tanks found enough answers to get there. The final was 145.56 to 127.86 over Dave’s Hauwk Tua, a solid margin built less on a perfect lineup than on the simple fact that Eric kept scoring even while carrying a few empty spots.
+Week 3 in The League brought two teams still searching for a first win, and Eric’s Chase Brown Tanks found enough answers to get there. The final was 145.56 to 127.86 over Dave’s Hauwk Tua, a solid margin built less on a perfect lineup than on the simple fact that Eric kept scoring even while carrying a few empty spots.
 
 The center of it was Jayden Daniels. Washington’s quarterback gave Eric 28.06 points against Cincinnati with 254 passing yards, two touchdown passes, and a rushing score, and he had help from a receiver group that steadied the afternoon. Diontae Johnson posted 18.2, DK Metcalf added 16.4, Terry McLaurin finished with 16.0, and Drake London brought 12.7. We picked Chase Brown Tanks here last week at 142.7-131.4, and the call held up — close on the winning side, even if Eric’s path there came through wideout depth more than the general offensive correction we had in mind.
 

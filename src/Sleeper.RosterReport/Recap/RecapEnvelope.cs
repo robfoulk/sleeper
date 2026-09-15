@@ -1,4 +1,5 @@
 using System.Text.Json.Serialization;
+using Sleeper.Api.Injuries;
 
 namespace Sleeper.RosterReport.Recap;
 
@@ -27,10 +28,11 @@ public sealed record RecapEnvelope(
     WeeklyTheme? WeeklyTheme = null,
     PreviouslyOnLeague? PreviouslyOnLeague = null,
     List<string>? BannedPhrases = null,
-    SeasonOutcome? SeasonOutcome = null
+    SeasonOutcome? SeasonOutcome = null,
+    WeeklyInjuryReport? InjuryReport = null
 );
 
-public sealed record RecapEnvelopeBuildOptions(bool PersistSnapshots = true);
+public sealed record RecapEnvelopeBuildOptions(bool PersistSnapshots = true, InjuryReportWindow? InjuryWindow = null);
 
 /// <summary>
 /// Final season standings + next year's draft order, populated only on the championship week
@@ -132,13 +134,18 @@ public sealed record RecapMeta(
     DateTimeOffset GeneratedAt
 );
 
+/// <summary>
+/// A league owner. <see cref="Username"/> and <see cref="DisplayName"/> are Sleeper
+/// platform handles used only as in-memory join keys and scrub targets — most of them
+/// embed an owner's surname, so they are never serialized into published artifacts.
+/// Published surfaces must render <see cref="RealName"/>.
+/// </summary>
 public sealed record OwnerRef(
     string UserId,
-    string Username,
-    string DisplayName,
+    [property: JsonIgnore] string Username,
+    [property: JsonIgnore] string DisplayName,
     string TeamName,
     int RosterId,
-    int Generation,           // 1 or 2 (from lore); 0 if unknown
     string? RealName,
     string? LoreNotes
 );
@@ -178,9 +185,9 @@ public sealed record GameRecap(
     bool Blowout,
     decimal? LineupOptimalityHomePct,
     decimal? LineupOptimalityAwayPct,
-    string? StoryHookType,        // resolved from lore: father_son, brother, etc.
+    string? StoryHookType,        // resolved from lore; results-based hooks only
     string? StoryHookLabel,       // human-friendly label
-    int StoryImportance,          // 1-5; family relationship framing is only allowed when >= 4
+    int StoryImportance,          // 1-5; how much narrative weight this game deserves
     string? StoryImportanceReason,// short explanation of why this game scored what it did
     HeadToHeadHistory? H2H
 );
@@ -306,7 +313,11 @@ public sealed record NextWeekMatchup(
     decimal? PowerRankingGap,
     string? StoryHookType,
     string? StoryHookLabel,
-    SeedImplication? SeedImplication
+    SeedImplication? SeedImplication,
+    string? Pick = null,
+    string? Confidence = null,
+    string? KeyXFactor = null,
+    List<string>? PlayerNotes = null
 );
 
 public sealed record SeedImplication(

@@ -1,4 +1,4 @@
-# Week 8 Recap — FoulknFootball (2024)
+# Week 8 Recap — The League (2024)
 
 _Generated 2026-04-27 01:24 UTC._
 
@@ -9,13 +9,13 @@ _Generated 2026-04-27 01:24 UTC._
 
 ## Intro
 
-At the midpoint of the regular season, FoulknFootball feels less like a collection of weekly results and more like a table with shape. Jake supplied the biggest number of Week 8 with CeeDeez Nuts at 238.66, and that win over Devin did more than hand GibbMeDaRock a loss. It moved Jake to the top of the power rankings, kept the top five tightly packed, and gave the standings the kind of pressure that makes every remaining week matter a little more.
+At the midpoint of the regular season, The League feels less like a collection of weekly results and more like a table with shape. Jake supplied the biggest number of Week 8 with CeeDeez Nuts at 238.66, and that win over Devin did more than hand GibbMeDaRock a loss. It moved Jake to the top of the power rankings, kept the top five tightly packed, and gave the standings the kind of pressure that makes every remaining week matter a little more.
 
 There is a second truth that stands beside the race at the top. Eric’s four-game run with Chase Brown Tanks is now one of the clearest form lines in the league, while Michael’s eight straight losses with Code 3 remain the heaviest fact on the page. The season still has room for movement, but the ebb and flow starts to narrow around this point, and teams near the cut line can no longer treat the math as background noise.
 
 ## League Themes
 
-The best individual performances sat where they usually do, near the teams that controlled the week. Rob got 35.14 from Jalen Hurts and 25.3 from James Cook in the narrowest game on the board, enough to carry Also too old to run past Hauwk Tua, 213.50 to 198.56. Jake’s league-high score drew from CeeDee Lamb’s 26.6, a timely spike in the highest-scoring game of the week, and Dakota kept BearDown moving behind 26.0 from Brock Purdy. Bo Nix’s 29.76 gave Dave a strong answer in defeat, which tells you something about Week 8 in FoulknFootball: useful quarterback play was available, but the fuller cards still won out.
+The best individual performances sat where they usually do, near the teams that controlled the week. Rob got 35.14 from Jalen Hurts and 25.3 from James Cook in the narrowest game on the board, enough to carry Also too old to run past Hauwk Tua, 213.50 to 198.56. Jake’s league-high score drew from CeeDee Lamb’s 26.6, a timely spike in the highest-scoring game of the week, and Dakota kept BearDown moving behind 26.0 from Brock Purdy. Bo Nix’s 29.76 gave Dave a strong answer in defeat, which tells you something about Week 8 in The League: useful quarterback play was available, but the fuller cards still won out.
 
 The waiver wire produced one obvious hit. Jake added Cedric Tillman and got 21.9 points right away, the strongest immediate return of any pickup this week, and that kind of help matters for a team that has now climbed to No. 1 in the power rankings after sitting third in the standings. Michael found a good line from Josh Downs at 18.2, and Rob got 16.2 from Isaac Guerendo, but Tillman was the cleanest example of a move paying off in the current week. Dave also deserves a mention for adding Jameis Winston and getting 23.56, even in a loss, because one sharp waiver decision can still change the texture of a lineup.
 
@@ -29,7 +29,7 @@ The odd lines were sharp enough to swing matchups. CeeDee Lamb’s 26.6 against 
 
 **CeeDeez Nuts end GibbMeDaRock’s run with a bigger top line.**
 
-Week 8 in FoulknFootball brought one of the cleaner tests on the schedule. Devin came in off the five-game winning streak that defined last week’s column, and Jake answered with the highest score in this matchup, 238.66 to 205.86. The margin was 32.80, and in a game where both teams cleared 200, the difference was Jake’s ability to keep finding another strong number after each bit of ebb and flow.
+Week 8 in The League brought one of the cleaner tests on the schedule. Devin came in off the five-game winning streak that defined last week’s column, and Jake answered with the highest score in this matchup, 238.66 to 205.86. The margin was 32.80, and in a game where both teams cleared 200, the difference was Jake’s ability to keep finding another strong number after each bit of ebb and flow.
 
 The hero was CeeDee Lamb. Dallas’ wide receiver gave Jake 26.6 points against San Francisco on 13 catches, 146 yards, and two touchdowns, and he had meaningful company all across the card. De’Von Achane added 20.7 for Miami against Arizona, Cedric Tillman posted 21.9 for Cleveland against Baltimore, George Kittle brought 18.8 for San Francisco, and Bijan Robinson chipped in 16.6 for Atlanta. Jake even absorbed quiet returns from Caleb Williams at 9.94 and Nick Chubb at 5.2, which tells you how broad the scoring base was.
 
@@ -43,7 +43,7 @@ The concrete consequence is a real one. Jake not only hands Devin his first loss
 
 **Also too old to run hold off Hauwk Tua behind Hurts and a deeper card.**
 
-Week 8 in FoulknFootball gave us a matchup with very little wasted motion. Rob’s Also too old to run beat Dave’s Hauwk Tua, 213.50 to 198.56, and both sides cleared their projections with room to spare. There was ebb and flow to it, but the larger truth was simple: this was a strong week from both teams, and Rob had one more answer.
+Week 8 in The League gave us a matchup with very little wasted motion. Rob’s Also too old to run beat Dave’s Hauwk Tua, 213.50 to 198.56, and both sides cleared their projections with room to spare. There was ebb and flow to it, but the larger truth was simple: this was a strong week from both teams, and Rob had one more answer.
 
 The hero was Jalen Hurts. Philadelphia’s quarterback gave Rob 35.14 points against Cincinnati, rushing for three touchdowns and adding another through the air, while James Cook piled up 25.3 for Buffalo against Seattle and rookie Ladd McConkey added 23.1 for the Chargers on six catches, 111 yards, and two scores. Kyren Williams brought 17.6, and even with light returns from Rashod Bateman and Dalvin Cook, Also too old to run kept posting usable numbers. Our Week 7 call to ride Rob held on the winner, but it was right team, wrong shape — projected 141.8 to 133.2, delivered 213.50 to 198.56.
 
@@ -57,7 +57,7 @@ The consequence is a clear one in the regular-season race: Rob moves to 6-2 afte
 
 **Eric keeps Chase Brown Tanks rolling past Brian and Steel City.**
 
-Week 8 in FoulknFootball put two teams near the middle of a crowded regular-season table on the same line, and this one turned early toward Eric. Chase Brown Tanks beat Brian’s Steel City, 187.46 to 128.12, a 59.34-point margin that matched the projection only in winner, not in shape. Eric had the better top end, and he had enough steady work underneath it to take the ebb and flow out of the night.
+Week 8 in The League put two teams near the middle of a crowded regular-season table on the same line, and this one turned early toward Eric. Chase Brown Tanks beat Brian’s Steel City, 187.46 to 128.12, a 59.34-point margin that matched the projection only in winner, not in shape. Eric had the better top end, and he had enough steady work underneath it to take the ebb and flow out of the night.
 
 The hero was Jayden Daniels. Washington’s quarterback gave Eric 22.24 points against Chicago, throwing for 326 yards and adding 52 more on the ground, and Travis Kelce did the rest of the heavy lifting with 15.0 on 10 catches for 90 yards and a touchdown against Las Vegas. Joe Mixon added 19.4 with 102 rushing yards and a score against Indianapolis, Chris Boswell supplied 14.0, and David Njoku, Terry McLaurin, James Conner, and Jakobi Meyers all kept Chase Brown Tanks moving. The sharp note is this: Eric reached 187.46 even with Drake London at 3.4, Jordan Mason at 1.8, and A.J. Brown at 8.4.
 
@@ -71,7 +71,7 @@ The consequence is a clear one. Eric extends the Chase Brown Tanks winning strea
 
 **Dakota gets the steadier answers, and BearDown turn back Michael.**
 
-Week 8 in FoulknFootball had a familiar setup on paper, but the game found a little more ebb and flow than the forecast suggested. Dakota’s BearDown beat Michael’s Code 3, 163.36 to 142.44, a margin built less on one overwhelming card than on a lineup that kept finding usable points even when several expected names stayed quiet.
+Week 8 in The League had a familiar setup on paper, but the game found a little more ebb and flow than the forecast suggested. Dakota’s BearDown beat Michael’s Code 3, 163.36 to 142.44, a margin built less on one overwhelming card than on a lineup that kept finding usable points even when several expected names stayed quiet.
 
 The hero was Brock Purdy. San Francisco’s quarterback gave Dakota 26.0 against Dallas with 260 passing yards, 56 rushing yards, and two total touchdowns, while Cade Otton added 20.1 for Tampa Bay against Atlanta on nine catches for 81 yards and two scores. J.K. Dobbins brought 12.8 and Houston’s defense supplied 11.0, which helped steady a BearDown lineup that also took modest returns from Joe Burrow at 12.86, Saquon Barkley at 11.1, and Alvin Kamara at 12.2. We picked BearDown last week, and the call on the winner held up, but it was right team, wrong shape — projected 149.6 to 116.8, delivered 163.36 to 142.44.
 
@@ -79,7 +79,7 @@ On the other side, Michael had enough production to stay in the frame for most o
 
 That was the telling detail. Dakota won with several underprojections of his own — Malik Nabers, Davante Adams, DJ Moore, Michael Pittman, and Jake Ferguson all finished well below expectation — but BearDown found the better ceiling at quarterback and tight end, and that is often enough when the other side is carrying a zero from a starting wideout.
 
-The consequence is a clear one from last week’s ledger: Michael’s losing streak moves from seven to eight, while Dakota’s BearDown follow last week’s narrow win with another result that keeps the pressure on the top of the FoulknFootball table.
+The consequence is a clear one from last week’s ledger: Michael’s losing streak moves from seven to eight, while Dakota’s BearDown follow last week’s narrow win with another result that keeps the pressure on the top of the League table.
 
 ## Storylines
 

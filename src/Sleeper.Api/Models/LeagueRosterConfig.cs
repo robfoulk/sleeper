@@ -10,7 +10,8 @@ public record LeagueRosterConfig(
     int FlexSlots,
     int BenchSlots,
     int TotalRosterSize,
-    int MaxKeepers
+    int MaxKeepers,
+    List<IReadOnlySet<string>>? FlexSlotEligibilities = null
 )
 {
     public static IReadOnlySet<string> DefaultFlexEligiblePositions { get; } =
@@ -25,9 +26,9 @@ public record LeagueRosterConfig(
     {
         var positions = league.RosterPositions ?? [];
         var starters = new Dictionary<string, int>();
-        var flex = 0;
-        var bench = 0;
-        var flexEligiblePositions = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+        var flexEligibilities = new List<IReadOnlySet<string>>();
+        int flex = 0;
+        int bench = 0;
 
         foreach (var slot in positions)
         {
@@ -46,12 +47,16 @@ public record LeagueRosterConfig(
                     bench++;
                     break;
                 default:
-                    // FLEX variants: FLEX, WRRB_FLEX, SUPER_FLEX, REC_FLEX, etc.
                     if (upper.Contains("FLEX") || upper.Contains("SUPER"))
                     {
                         flex++;
-                        foreach (var eligiblePosition in FlexEligiblePositionsForSlot(upper))
-                            flexEligiblePositions.Add(eligiblePosition);
+                        flexEligibilities.Add(upper switch
+                        {
+                            "SUPER_FLEX" => new HashSet<string>(["QB", "RB", "WR", "TE"]),
+                            "WRRB_FLEX" => new HashSet<string>(["WR", "RB"]),
+                            "REC_FLEX" => new HashSet<string>(["WR", "TE"]),
+                            _ => new HashSet<string>(["RB", "WR", "TE"])
+                        });
                     }
                     break;
             }
@@ -71,11 +76,12 @@ public record LeagueRosterConfig(
             FlexSlots: flex,
             BenchSlots: bench,
             TotalRosterSize: positions.Count,
-            MaxKeepers: maxKeepers
+            MaxKeepers: maxKeepers,
+            FlexSlotEligibilities: flexEligibilities
         )
         {
-            FlexEligiblePositions = flexEligiblePositions.Count > 0
-                ? flexEligiblePositions
+            FlexEligiblePositions = flexEligibilities.Count > 0
+                ? flexEligibilities.SelectMany(positions => positions).ToHashSet(StringComparer.OrdinalIgnoreCase)
                 : DefaultFlexEligiblePositions
         };
     }

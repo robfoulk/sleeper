@@ -1,0 +1,156 @@
+---
+import fs from 'node:fs';
+import path from 'node:path';
+import { seasonOf, pts, record } from '../lib/league';
+
+interface Props {
+  season: number;
+}
+
+const { season } = Astro.props;
+const dir = path.resolve(process.cwd(), '..', 'recaps', String(season), 'charts');
+
+const PLATES: { file: string; title: string }[] = [
+  { file: 'cumulative-record.svg', title: 'Cumulative wins minus losses' },
+  { file: 'cumulative-points-differential.svg', title: 'Cumulative points differential' },
+  { file: 'power-rank-trajectory.svg', title: 'Power rank trajectory' },
+  { file: 'weekly-score-rank.svg', title: 'Weekly score rank' },
+];
+
+// The charts are pasted-in photocopied plates, so the paper stays paper on both sheets. Only the
+// chrome is neutralised — the eight series colours are load-bearing data and are left alone.
+const CHROME: [RegExp, string][] = [
+  [/#ffffff/gi, '#e5e3db'],
+  [/#f5f5f5/gi, '#dedbd1'],
+  [/#eee(?![0-9a-f])/gi, '#cfccc1'],
+  [/#222(?![0-9a-f])/gi, '#262032'],
+  [/#333(?![0-9a-f])/gi, '#3a3348'],
+  [/#555(?![0-9a-f])/gi, '#5b5273'],
+];
+
+const plates = PLATES.map(({ file, title }) => {
+  const full = path.join(dir, file);
+  if (!fs.existsSync(full)) return null;
+  let svg = fs.readFileSync(full, 'utf8');
+  svg = svg.replace(/<\?xml[^>]*\?>\s*/, '');
+  for (const [from, to] of CHROME) svg = svg.replace(from, to);
+  // The plate is described in the text beneath it, so the graphic itself is decorative here.
+  svg = svg.replace(/<svg\s/, '<svg role="img" aria-hidden="true" focusable="false" ');
+  return { title, svg };
+}).filter(Boolean) as { title: string; svg: string }[];
+
+const s = seasonOf(season);
+// The text equivalent is real content, not alt text: the same ranking the plates draw.
+const byDiff = s
+  ? s.standings
+      .slice()
+      .sort((a, b) => b.points_for - b.points_against - (a.points_for - a.points_against))
+  : [];
+---
+
+{plates.length > 0 && s && (
+  <div class="sheet band">
+    <h2 class="ruled">Plates</h2>
+    <p class="dek">
+      Four figures from the {season} season, reproduced as filed. Every team is a separate line;
+      the table underneath carries the same standing in words for anyone who cannot use the colour.
+    </p>
+
+    <div class="plates">
+      {plates.map((p) => (
+        <figure class="plate">
+          <div class="plate__paper" set:html={p.svg} />
+          <figcaption class="slug">{p.title} — {season}</figcaption>
+        </figure>
+      ))}
+    </div>
+
+    <details class="equiv">
+      <summary>Read the plates as a table</summary>
+      <div class="ledger-scroll">
+        <table class="ledger">
+          <caption>{season} teams ordered by points differential</caption>
+          <thead>
+            <tr>
+              <th scope="col">Owner</th>
+              <th scope="col" class="num">Reg</th>
+              <th scope="col" class="num">PF</th>
+              <th scope="col" class="num">PA</th>
+              <th scope="col" class="num">Diff</th>
+              <th scope="col" class="num">Place</th>
+            </tr>
+          </thead>
+          <tbody>
+            {byDiff.map((r) => (
+              <tr>
+                <th scope="row">{r.owner_name}</th>
+                <td class="num">{record(r.wins, r.losses, r.ties)}</td>
+                <td class="num">{pts(r.points_for)}</td>
+                <td class="num">{pts(r.points_against)}</td>
+                <td class="num">{(r.points_for - r.points_against >= 0 ? '+' : '') + (r.points_for - r.points_against).toFixed(2)}</td>
+                <td class="num">{r.final_place}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </details>
+  </div>
+)}
+
+<style>
+  .band {
+    padding-top: 2.6rem;
+  }
+
+  .dek {
+    color: var(--ink-quiet);
+    max-width: 62ch;
+  }
+
+  .plates {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 26rem), 1fr));
+    gap: 1.8rem;
+    margin-top: 1.4rem;
+  }
+
+  .plate {
+    margin: 0;
+  }
+
+  /* A photocopy stapled to the sheet: paper edge, no rounding, no shadow theatre. */
+  .plate__paper {
+    background: #e5e3db;
+    border: 1px solid var(--rule-strong);
+    padding: 0.5rem;
+  }
+
+  .plate__paper :global(svg) {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .plate figcaption {
+    padding-top: 0.5rem;
+  }
+
+  .equiv {
+    margin-top: 2rem;
+    border-top: 1px solid var(--rule);
+    padding-top: 1rem;
+  }
+
+  .equiv summary {
+    cursor: pointer;
+    font-size: 0.76rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--violet);
+  }
+
+  .equiv > .ledger-scroll {
+    margin-top: 1rem;
+  }
+</style>

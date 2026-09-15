@@ -488,3 +488,11 @@ $RECYCLE.BIN/
 *.swp
 
 .run/
+
+# Local Copilot recap replay artifacts
+recap-runs/
+
+# Astro site build output
+site/dist/
+site/.astro/
+site/shots/

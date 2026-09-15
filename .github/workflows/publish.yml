@@ -1,0 +1,87 @@
+name: Publish the bulletin
+
+# The site is rebuilt from data, never from prose. Every push that touches a recap,
+# the data layer, or the site itself regenerates league.json from the season sidecars,
+# rebuilds Astro, and re-runs the privacy guard against the built output before anything
+# is allowed to reach Pages.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'recaps/**'
+      - 'docs/lore/**'
+      - 'site/**'
+      - 'src/**'
+      - 'tests/**'
+      - '.github/workflows/publish.yml'
+  # In-season only: Tuesday mornings, after Monday night has settled.
+  # September through December, plus January for the last of the postseason.
+  schedule:
+    - cron: '0 13 * 9-12,1 2'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# A deploy in flight is never worth cancelling; a queued one is always stale.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-dotnet@v6
+        with:
+          dotnet-version: '10.0.x'
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: site/package-lock.json
+
+      # Regenerate the data layer from the season sidecars. This reaches Sleeper's public
+      # read API for per-week scores; if it is unreachable the build fails rather than
+      # deploying a stale record book.
+      - name: Rebuild the league data layer
+        run: dotnet run --project src/Sleeper.RosterReport/Sleeper.RosterReport.csproj -- site-data
+
+      - name: Install site dependencies
+        run: npm ci
+        working-directory: site
+
+      - name: Build the site
+        run: npm run build
+        working-directory: site
+
+      # Runs after the build so the guard sees site/dist as well as the markdown sources.
+      # This is the gate: no surname, no Sleeper usernames, no old league name, anywhere.
+      - name: Privacy guard
+        run: dotnet test tests/Sleeper.RosterReport.Tests/Sleeper.RosterReport.Tests.csproj
+
+      # Pages must be enabled once in the repo settings (Settings → Pages → Source:
+      # GitHub Actions). Automatic enablement is deliberately not used: it requires a
+      # PAT rather than the default GITHUB_TOKEN, and this workflow should not need one.
+      - uses: actions/configure-pages@v6
+
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: site/dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5
+

@@ -11,6 +11,33 @@ namespace Sleeper.Api.Tests;
 public sealed class InjuryImporterTests
 {
     [Fact]
+    public async Task SleeperImport_PreservesDescriptionWithoutInferringOnset()
+    {
+        var player = System.Text.Json.JsonSerializer.Deserialize<Sleeper.Api.Models.Player>("""
+            {"player_id":"p1","injury_status":"Out","injury_body_part":"Knee","injury_notes":"Follow-up pending","injury_start_date":"2026-09-13"}
+            """)!;
+        var sleeper = Substitute.For<ISleeperClient>();
+        sleeper.GetAllPlayersAsync("nfl", Arg.Any<CancellationToken>()).Returns(new Dictionary<string, Sleeper.Api.Models.Player> { ["p1"] = player });
+        var store = Substitute.For<IInjuryStore>();
+        store.GetCohortAsync(Arg.Any<CancellationToken>()).Returns([
+            new InjuryCohortPlayer("p1", 1, "Test Player", "TE", "LV", null, "test", DateTimeOffset.UtcNow)
+        ]);
+        IReadOnlyList<InjuryObservationInput>? captured = null;
+        store.RecordBatchAsync(Arg.Do<IReadOnlyList<InjuryObservationInput>>(inputs => captured = inputs), Arg.Any<CancellationToken>())
+            .Returns(new InjuryBatchWriteResult([], 1, 0));
+        using var http = new HttpClient();
+        var importer = new NflverseInjuryImporter(http, sleeper, Substitute.For<INflDataClient>(), store, Options.Create(new InjuryImportOptions()));
+
+        await importer.ImportSleeperAsync();
+
+        captured.Should().ContainSingle();
+        captured![0].PrimaryInjury.Should().Be("Knee");
+        captured[0].Notes.Should().Contain("Follow-up pending");
+        captured[0].InjuryOccurredAt.Should().BeNull();
+        captured[0].SourcePublishedAt.Should().BeNull();
+    }
+
+    [Fact]
     public async Task NflverseImport_ToleratesDuplicateAndSentinelMappings_AndWritesHistoryOnly()
     {
         const string csv = """

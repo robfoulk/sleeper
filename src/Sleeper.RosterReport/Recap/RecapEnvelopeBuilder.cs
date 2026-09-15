@@ -1,5 +1,6 @@
 using System.Text.Json;
 using Sleeper.Api;
+using Sleeper.Api.Injuries;
 using Sleeper.Api.Models;
 using Sleeper.Api.NflData;
 using Sleeper.Api.NflData.Models;
@@ -19,6 +20,7 @@ internal sealed class RecapEnvelopeBuilder
     private readonly ISleeperService _sleeperService;
     private readonly INflDataClient _nfl;
     private readonly LeagueLore _lore;
+    private readonly WeeklyInjuryReportService? _injuryReports;
 
     /// <summary>Threshold for the boom flag (multiplier of projection).</summary>
     private const decimal BoomMultiplier = 2.0m;
@@ -45,12 +47,14 @@ internal sealed class RecapEnvelopeBuilder
         ISleeperClient sleeper,
         ISleeperService sleeperService,
         INflDataClient nfl,
-        LeagueLore lore)
+        LeagueLore lore,
+        WeeklyInjuryReportService? injuryReports = null)
     {
         _sleeper = sleeper;
         _sleeperService = sleeperService;
         _nfl = nfl;
         _lore = lore;
+        _injuryReports = injuryReports;
     }
 
     public async Task<RecapEnvelope> BuildAsync(
@@ -71,10 +75,11 @@ internal sealed class RecapEnvelopeBuilder
         var winnersBracketTask = _sleeper.GetWinnersBracketAsync(leagueId, ct);
         var losersBracketTask = _sleeper.GetLosersBracketAsync(leagueId, ct);
         var allPlayersTask = _sleeper.GetAllPlayersAsync("nfl", ct);
+        var nflStateTask = _sleeper.GetNflStateAsync(ct);
 
         await Task.WhenAll(
             leagueTask, rostersTask, usersTask, matchupsTask, transactionsTask,
-            winnersBracketTask, losersBracketTask, allPlayersTask).ConfigureAwait(false);
+            winnersBracketTask, losersBracketTask, allPlayersTask, nflStateTask).ConfigureAwait(false);
 
         var league = leagueTask.Result ?? throw new InvalidOperationException($"League {leagueId} not found.");
         var rosters = rostersTask.Result;
@@ -84,12 +89,33 @@ internal sealed class RecapEnvelopeBuilder
         var winnersBracket = winnersBracketTask.Result;
         var losersBracket = losersBracketTask.Result;
         var players = allPlayersTask.Result;
+        var nflState = nflStateTask.Result;
 
         // 2. Determine season + season-type/playoff round.
-        var season = overrideSeason ??
-                     (int.TryParse(league.Season, out var parsed) ? parsed : DateTime.UtcNow.Year);
+        var leagueSeason = int.TryParse(league.Season, out var parsed) ? parsed : (int?)null;
+
+        // --season labels the output but does NOT change which league is fetched. Letting a
+        // mismatch through silently mislabels another season's data and overwrites that
+        // season's recap on disk, so refuse rather than write a wrong file.
+        if (overrideSeason is not null && leagueSeason is not null && overrideSeason != leagueSeason)
+        {
+            throw new InvalidOperationException(
+                $"League {leagueId} is season {leagueSeason}, but --season {overrideSeason} was requested. " +
+                $"Pass the league ID for {overrideSeason} instead: --league <id>. " +
+                "Using the wrong league would write mislabeled data over that season's recap.");
+        }
+
+        var season = overrideSeason ?? leagueSeason ?? DateTime.UtcNow.Year;
 
         var (seasonType, playoffRound, isFinalWeek) = ClassifyWeek(league, week, winnersBracket, losersBracket);
+
+        WeeklyInjuryReport? injuryReport = null;
+        if (options.InjuryWindow is { } window)
+        {
+            if (_injuryReports is null)
+                throw new InvalidOperationException("The requested injury report service is not configured.");
+            injuryReport = await _injuryReports.BuildAsync(leagueId, season, week, window, ct).ConfigureAwait(false);
+        }
 
         // 3. Pull season-long weekly stats and filter to this week.
         Dictionary<string, List<WeeklyPlayerStats>> weeklyBySleeper;
@@ -101,6 +127,17 @@ internal sealed class RecapEnvelopeBuilder
         {
             Console.WriteLine($"  (warning: nflverse weekly stats unavailable for {season}: {ex.Message})");
             weeklyBySleeper = new();
+        }
+
+        List<NflGame> nflSchedule;
+        try
+        {
+            nflSchedule = await _nfl.GetScheduleAsync(season, ct).ConfigureAwait(false);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"  (warning: NFL schedule unavailable for {season}; bye adjustments disabled: {ex.Message})");
+            nflSchedule = [];
         }
 
         // 4. Resolve owner refs (lore-merged).
@@ -117,6 +154,7 @@ internal sealed class RecapEnvelopeBuilder
             }
             catch { allWeekMatchups[w] = []; }
         }
+        var playerPointHistory = BuildPlayerPointHistory(allWeekMatchups);
         var standings = BuildStandingsAsOfWeek(rosters, owners, allWeekMatchups, week);
         var perWeekPfByRoster = ComputePerWeekPfByRoster(rosters, allWeekMatchups, week);
         var streakByRoster = ComputeStreakByRoster(rosters, allWeekMatchups, week);
@@ -135,7 +173,7 @@ internal sealed class RecapEnvelopeBuilder
         int playoffTeams = 4;
         if (league.Settings is not null && league.Settings.TryGetValue("playoff_teams", out var ptVal) && ptVal.ValueKind == JsonValueKind.Number)
             playoffTeams = ptVal.GetInt32();
-        var games = BuildGames(matchups, ownerByRosterId, players, weeklyBySleeper, week, leagueConfig, seasonType, playoffRound, standings, playoffTeams);
+        var games = BuildGames(matchups, ownerByRosterId, players, weeklyBySleeper, playerPointHistory, week, leagueConfig, seasonType, playoffRound, standings, playoffTeams);
         // 6b. Per-game playoff labels: in playoff weeks each matchup has a specific role
         // (Championship, 3rd-place game, Consolation final, 7th-place game, Semifinal). Override
         // the envelope-level PlayoffRound on each game so the per-game prompt knows the truth.
@@ -157,10 +195,24 @@ internal sealed class RecapEnvelopeBuilder
                 // Schedule may not be available yet; that's fine.
             }
         }
-        var lookAhead = BuildLookAhead(week, nextWeekMatchups, ownerByRosterId, players, weeklyBySleeper, standings, isFinalWeek);
+        var applyLiveAvailability = int.TryParse(nflState?.Season, out var nflSeason)
+            && nflSeason == season
+            && week + 1 >= nflState!.Week;
+        var lookAhead = BuildLookAhead(
+            week,
+            nextWeekMatchups,
+            ownerByRosterId,
+            players,
+            playerPointHistory,
+            weeklyBySleeper,
+            nflSchedule,
+            leagueConfig,
+            standings,
+            isFinalWeek,
+            applyLiveAvailability);
 
         // 9. Agent fetch hints (the things the analyst should web-search).
-        var hints = BuildAgentFetchHints(games, lookAhead, players);
+        var hints = BuildAgentFetchHints(season, week, injuryReport);
 
         // 10. Prior recaps + team-name watch.
         var (priorRecaps, nameChanges) = LoadPriorRecapsAndNameWatch(season, week, owners);
@@ -168,7 +220,11 @@ internal sealed class RecapEnvelopeBuilder
         // 11. Build the meta + envelope.
         var meta = new RecapMeta(
             LeagueId: leagueId,
-            LeagueName: league.Name ?? "Unnamed League",
+            // Lore is the only trusted source for the published league name. The Sleeper
+            // API name is deliberately NOT a fallback — it carries identifying information,
+            // and falling back to it would silently reintroduce that whenever lore is
+            // missing or fails to parse.
+            LeagueName: FirstNonBlank(_lore.League.Name, "The League"),
             Season: season,
             Week: week,
             SeasonType: seasonType,
@@ -204,7 +260,8 @@ internal sealed class RecapEnvelopeBuilder
             WeeklyTheme: weeklyTheme,
             PreviouslyOnLeague: previously,
             BannedPhrases: bannedPhrases,
-            SeasonOutcome: seasonOutcome);
+            SeasonOutcome: seasonOutcome,
+            InjuryReport: injuryReport);
 
         // 12. Snapshot team names for next week's run.
         if (options.PersistSnapshots)
@@ -241,7 +298,6 @@ internal sealed class RecapEnvelopeBuilder
                 DisplayName: displayName,
                 TeamName: teamName,
                 RosterId: r.RosterId,
-                Generation: lore?.Generation ?? 0,
                 RealName: lore?.Name,
                 LoreNotes: lore?.Notes));
         }
@@ -359,6 +415,7 @@ internal sealed class RecapEnvelopeBuilder
         Dictionary<int, OwnerRef> ownerByRosterId,
         Dictionary<string, Player> players,
         Dictionary<string, List<WeeklyPlayerStats>> weeklyBySleeper,
+        Dictionary<string, List<(int Week, decimal Points)>> playerPointHistory,
         int week,
         LeagueRosterConfig config,
         string seasonType,
@@ -375,8 +432,8 @@ internal sealed class RecapEnvelopeBuilder
             var t1 = teams[0];
             var t2 = teams[1];
 
-            var sideA = BuildGameSide(t1, ownerByRosterId, players, weeklyBySleeper, week, config);
-            var sideB = BuildGameSide(t2, ownerByRosterId, players, weeklyBySleeper, week, config);
+            var sideA = BuildGameSide(t1, ownerByRosterId, players, weeklyBySleeper, playerPointHistory, week, config);
+            var sideB = BuildGameSide(t2, ownerByRosterId, players, weeklyBySleeper, playerPointHistory, week, config);
 
             var (home, away) = sideA.FinalScore >= sideB.FinalScore ? (sideA, sideB) : (sideB, sideA);
             var margin = Math.Round(Math.Abs(sideA.FinalScore - sideB.FinalScore), 2);
@@ -482,6 +539,7 @@ internal sealed class RecapEnvelopeBuilder
         Dictionary<int, OwnerRef> ownerByRosterId,
         Dictionary<string, Player> players,
         Dictionary<string, List<WeeklyPlayerStats>> weeklyBySleeper,
+        Dictionary<string, List<(int Week, decimal Points)>> playerPointHistory,
         int week,
         LeagueRosterConfig config)
     {
@@ -495,7 +553,7 @@ internal sealed class RecapEnvelopeBuilder
             foreach (var pid in m.Players)
             {
                 if (string.IsNullOrEmpty(pid) || pid == "0") continue;
-                var line = BuildPlayerLine(pid, m, players, weeklyBySleeper, week);
+                var line = BuildPlayerLine(pid, m, players, weeklyBySleeper, playerPointHistory, week);
                 if (starterIds.Contains(pid)) starters.Add(line);
                 else bench.Add(line);
             }
@@ -507,17 +565,7 @@ internal sealed class RecapEnvelopeBuilder
             .OrderBy(p => p.Points - (p.ProjectedPoints ?? 0))
             .FirstOrDefault();
 
-        // Coulda-shoulda: bench points exceeding the worst starter at the same fantasy position.
-        decimal couldaShoulda = 0m;
-        var startersByPos = starters.GroupBy(p => p.Position ?? "").ToDictionary(g => g.Key, g => g.OrderBy(x => x.Points).ToList());
-        foreach (var b in bench)
-        {
-            var pos = b.Position ?? "";
-            if (!startersByPos.TryGetValue(pos, out var sList) || sList.Count == 0) continue;
-            var worstStarter = sList[0];
-            if (b.Points > worstStarter.Points)
-                couldaShoulda += b.Points - worstStarter.Points;
-        }
+        var couldaShoulda = ComputeOptimalLineupGain(starters, bench, config);
 
         return new GameSide(
             RosterId: m.RosterId,
@@ -539,6 +587,7 @@ internal sealed class RecapEnvelopeBuilder
         Matchup m,
         Dictionary<string, Player> players,
         Dictionary<string, List<WeeklyPlayerStats>> weeklyBySleeper,
+        Dictionary<string, List<(int Week, decimal Points)>> playerPointHistory,
         int week)
     {
         players.TryGetValue(playerId, out var p);
@@ -551,7 +600,7 @@ internal sealed class RecapEnvelopeBuilder
             points = pts;
 
         // Project from rolling 4-week PPG using nflverse weekly stats from prior weeks.
-        decimal? projection = ComputeProjection(playerId, week, weeklyBySleeper);
+        decimal? projection = ComputeProjection(playerId, week, playerPointHistory);
 
         // This-week stat line.
         WeeklyPlayerStats? wk = null;
@@ -592,17 +641,102 @@ internal sealed class RecapEnvelopeBuilder
     /// Rolling 4-week PPG projection from prior weeks of this season.
     /// Returns null when fewer than 1 prior week of data is available.
     /// </summary>
-    private static decimal? ComputeProjection(string playerId, int week, Dictionary<string, List<WeeklyPlayerStats>> weekly)
+    private static decimal? ComputeProjection(
+        string playerId,
+        int week,
+        Dictionary<string, List<(int Week, decimal Points)>> playerPointHistory)
     {
         if (week <= 1) return null;
-        if (!weekly.TryGetValue(playerId, out var weeks) || weeks is null) return null;
+        if (!playerPointHistory.TryGetValue(playerId, out var weeks)) return null;
         var prior = weeks
-            .Where(w => w.Week < week && w.SeasonType == "REG" && w.FantasyPoints.HasValue)
-            .OrderByDescending(w => w.Week)
+            .Where(entry => entry.Week < week)
+            .OrderByDescending(entry => entry.Week)
             .Take(4)
             .ToList();
         if (prior.Count == 0) return null;
-        return Math.Round(prior.Average(w => w.FantasyPoints!.Value), 2);
+        return Math.Round(prior.Average(entry => entry.Points), 2);
+    }
+
+    private static Dictionary<string, List<(int Week, decimal Points)>> BuildPlayerPointHistory(
+        Dictionary<int, List<Matchup>> matchupsByWeek)
+    {
+        var result = new Dictionary<string, List<(int Week, decimal Points)>>();
+        foreach (var (week, matchups) in matchupsByWeek)
+        {
+            foreach (var matchup in matchups)
+            {
+                foreach (var (playerId, points) in matchup.PlayersPoints ?? [])
+                {
+                    if (!result.TryGetValue(playerId, out var history))
+                    {
+                        history = [];
+                        result[playerId] = history;
+                    }
+                    history.Add((week, points));
+                }
+            }
+        }
+        return result;
+    }
+
+    private static List<T> SelectBestLegalLineup<T>(
+        IEnumerable<T> players,
+        LeagueRosterConfig config,
+        Func<T, string> idSelector,
+        Func<T, string?> positionSelector,
+        Func<T, decimal> pointsSelector)
+        where T : class
+    {
+        var pool = players.OrderByDescending(pointsSelector).ToList();
+        var selected = new List<T>();
+        var used = new HashSet<string>();
+
+        foreach (var (position, count) in config.StarterSlots)
+        {
+            for (var slot = 0; slot < count; slot++)
+            {
+                var pick = pool.FirstOrDefault(player =>
+                    !used.Contains(idSelector(player))
+                    && string.Equals(positionSelector(player), position, StringComparison.OrdinalIgnoreCase));
+                if (pick is null) continue;
+                selected.Add(pick);
+                used.Add(idSelector(pick));
+            }
+        }
+
+        var flexEligibilities = config.FlexSlotEligibilities is { Count: > 0 }
+            ? config.FlexSlotEligibilities
+            : Enumerable.Range(0, config.FlexSlots)
+                .Select(_ => (IReadOnlySet<string>)new HashSet<string>(["RB", "WR", "TE"]))
+                .ToList();
+        foreach (var eligiblePositions in flexEligibilities)
+        {
+            var pick = pool.FirstOrDefault(player =>
+                !used.Contains(idSelector(player))
+                && positionSelector(player) is { } position
+                && eligiblePositions.Contains(position.ToUpperInvariant()));
+            if (pick is null) continue;
+            selected.Add(pick);
+            used.Add(idSelector(pick));
+        }
+
+        return selected;
+    }
+
+    internal static decimal ComputeOptimalLineupGain(
+        IReadOnlyCollection<PlayerLine> starters,
+        IReadOnlyCollection<PlayerLine> bench,
+        LeagueRosterConfig config)
+    {
+        var actualStarterPoints = starters.Sum(player => player.Points);
+        var optimalStarterPoints = SelectBestLegalLineup(
+                starters.Concat(bench),
+                config,
+                player => player.PlayerId,
+                player => player.Position,
+                player => player.Points)
+            .Sum(player => player.Points);
+        return Math.Round(Math.Max(0m, optimalStarterPoints - actualStarterPoints), 2);
     }
 
     private static decimal? ComputeOptimality(GameSide side, Matchup _, Dictionary<string, Player> players, LeagueRosterConfig config)
@@ -611,32 +745,13 @@ internal sealed class RecapEnvelopeBuilder
         // Slots: direct starters per position + flex.
         var pool = side.Starters.Concat(side.Bench).ToList();
         if (pool.Count == 0) return null;
-
-        var slots = new List<string>();
-        foreach (var (pos, count) in config.StarterSlots)
-        {
-            for (int i = 0; i < count; i++) slots.Add(pos);
-        }
-        for (int i = 0; i < config.FlexSlots; i++) slots.Add("FLEX");
-
-        var byPos = pool.OrderByDescending(p => p.Points).ToList();
-        var used = new HashSet<string>();
-        decimal optimal = 0;
-
-        // Direct positional slots first
-        foreach (var slot in slots.Where(s => s != "FLEX"))
-        {
-            var pick = byPos.FirstOrDefault(p =>
-                !used.Contains(p.PlayerId) && string.Equals(p.Position, slot, StringComparison.OrdinalIgnoreCase));
-            if (pick is not null) { optimal += pick.Points; used.Add(pick.PlayerId); }
-        }
-        // Flex slots use the parsed league eligibility, e.g. WRRB_FLEX is RB/WR only.
-        foreach (var slot in slots.Where(s => s == "FLEX"))
-        {
-            var pick = byPos.FirstOrDefault(p =>
-                !used.Contains(p.PlayerId) && p.Position is not null && config.IsFlexEligible(p.Position));
-            if (pick is not null) { optimal += pick.Points; used.Add(pick.PlayerId); }
-        }
+        var optimal = SelectBestLegalLineup(
+                pool,
+                config,
+                player => player.PlayerId,
+                player => player.Position,
+                player => player.Points)
+            .Sum(player => player.Points);
 
         if (optimal <= 0) return null;
         return Math.Round(side.FinalScore / optimal * 100m, 1);
@@ -831,9 +946,13 @@ internal sealed class RecapEnvelopeBuilder
         List<Matchup> nextWeek,
         Dictionary<int, OwnerRef> ownerByRosterId,
         Dictionary<string, Player> players,
-        Dictionary<string, List<WeeklyPlayerStats>> weekly,
+        Dictionary<string, List<(int Week, decimal Points)>> playerPointHistory,
+        Dictionary<string, List<WeeklyPlayerStats>> weeklyBySleeper,
+        List<NflGame> nflSchedule,
+        LeagueRosterConfig config,
         List<StandingsRow> standings,
-        bool isFinalWeek)
+        bool isFinalWeek,
+        bool applyLiveAvailability)
     {
         if (isFinalWeek || nextWeek.Count == 0)
         {
@@ -850,8 +969,31 @@ internal sealed class RecapEnvelopeBuilder
             var o1 = ownerByRosterId.GetValueOrDefault(t1.RosterId);
             var o2 = ownerByRosterId.GetValueOrDefault(t2.RosterId);
 
-            decimal? proj1 = ProjectLineup(t1, weekly, week + 1);
-            decimal? proj2 = ProjectLineup(t2, weekly, week + 1);
+            var (proj1, notes1) = ProjectLineupDetailed(
+                t1, players, playerPointHistory, weeklyBySleeper, nflSchedule, config, week + 1, applyLiveAvailability);
+            var (proj2, notes2) = ProjectLineupDetailed(
+                t2, players, playerPointHistory, weeklyBySleeper, nflSchedule, config, week + 1, applyLiveAvailability);
+
+            var hProj = proj1 ?? 100m;
+            var aProj = proj2 ?? 100m;
+
+            var homeOwner = o1?.RealName ?? o1?.DisplayName ?? o1?.TeamName ?? $"Roster {t1.RosterId}";
+            var awayOwner = o2?.RealName ?? o2?.DisplayName ?? o2?.TeamName ?? $"Roster {t2.RosterId}";
+
+            var homeTeam = o1?.TeamName ?? $"Roster {t1.RosterId}";
+            var awayTeam = o2?.TeamName ?? $"Roster {t2.RosterId}";
+
+            var pickTeam = hProj >= aProj ? homeTeam : awayTeam;
+            var margin = Math.Round(Math.Abs(hProj - aProj), 1);
+            string confidence = margin >= 20.0m ? "Lock" : (margin >= 6.0m ? "Lean" : "Coin Flip");
+
+            var allNotes = notes1.Select(n => $"{homeOwner}'s {n}")
+                .Concat(notes2.Select(n => $"{awayOwner}'s {n}"))
+                .ToList();
+
+            string keyXFactor = allNotes.FirstOrDefault(n => n.Contains("INJURED") || n.Contains("BYE") || n.Contains("bench sub"))
+                ?? $"Spread: {margin:F1} pts ({confidence})";
+            if (keyXFactor.Length > 60) keyXFactor = keyXFactor[..57] + "...";
 
             var rank1 = standings.FirstOrDefault(s => s.UserId == o1?.UserId)?.Rank;
             var rank2 = standings.FirstOrDefault(s => s.UserId == o2?.UserId)?.Rank;
@@ -864,16 +1006,20 @@ internal sealed class RecapEnvelopeBuilder
                 MatchupId: grp.Key,
                 HomeUserId: o1?.UserId ?? "",
                 HomeOwnerDisplay: o1?.DisplayName ?? $"Roster {t1.RosterId}",
-                HomeTeamName: o1?.TeamName ?? "",
+                HomeTeamName: homeTeam,
                 AwayUserId: o2?.UserId ?? "",
                 AwayOwnerDisplay: o2?.DisplayName ?? $"Roster {t2.RosterId}",
-                AwayTeamName: o2?.TeamName ?? "",
+                AwayTeamName: awayTeam,
                 HomeProjection: proj1,
                 AwayProjection: proj2,
                 PowerRankingGap: rankGap,
                 StoryHookType: hook?.Type,
                 StoryHookLabel: hook?.Label,
-                SeedImplication: null));
+                SeedImplication: null,
+                Pick: pickTeam,
+                Confidence: confidence,
+                KeyXFactor: keyXFactor,
+                PlayerNotes: allNotes));
         }
 
         // Pivot players: this-week boom or bust starters with an extreme delta vs projection.
@@ -883,50 +1029,125 @@ internal sealed class RecapEnvelopeBuilder
         return new LookAhead(week + 1, matchups, pivots, openQuestions);
     }
 
-    private static decimal? ProjectLineup(Matchup m, Dictionary<string, List<WeeklyPlayerStats>> weekly, int forWeek)
+    internal static (decimal? Projection, List<string> Notes) ProjectLineupDetailed(
+        Matchup m,
+        Dictionary<string, Player> players,
+        Dictionary<string, List<(int Week, decimal Points)>> playerPointHistory,
+        Dictionary<string, List<WeeklyPlayerStats>> weeklyBySleeper,
+        List<NflGame> nflSchedule,
+        LeagueRosterConfig config,
+        int forWeek,
+        bool applyLiveAvailability)
     {
-        if (m.Starters is null || m.Starters.Count == 0) return null;
-        decimal sum = 0; int counted = 0;
-        foreach (var pid in m.Starters)
+        var rosterIds = (m.Players ?? m.Starters ?? [])
+            .Where(playerId => !string.IsNullOrEmpty(playerId) && playerId != "0")
+            .Distinct()
+            .ToList();
+        if (rosterIds.Count == 0) return (null, []);
+
+        var scheduledTeams = nflSchedule
+            .Where(game => game.Week == forWeek)
+            .SelectMany(game => new[] { game.HomeTeam, game.AwayTeam })
+            .Where(team => !string.IsNullOrWhiteSpace(team))
+            .ToHashSet(StringComparer.OrdinalIgnoreCase);
+        var canDetermineByes = scheduledTeams.Count > 0;
+
+        var candidates = rosterIds.Select(playerId =>
         {
-            if (string.IsNullOrEmpty(pid) || pid == "0") continue;
-            var p = ComputeProjection(pid, forWeek, weekly);
-            if (p.HasValue) { sum += p.Value; counted++; }
+            players.TryGetValue(playerId, out var player);
+            var baseProjection = ComputeProjection(playerId, forWeek, playerPointHistory);
+            var historicalTeam = weeklyBySleeper.GetValueOrDefault(playerId)?
+                .Where(stats => stats.Week <= forWeek && !string.IsNullOrWhiteSpace(stats.Team))
+                .OrderByDescending(stats => stats.Week)
+                .Select(stats => stats.Team)
+                .FirstOrDefault();
+            var team = applyLiveAvailability ? player?.Team : historicalTeam;
+            var injuryStatus = applyLiveAvailability ? player?.InjuryStatus : null;
+            var isOnBye = canDetermineByes
+                && !string.IsNullOrWhiteSpace(team)
+                && !scheduledTeams.Contains(team);
+            var isUnavailable = isOnBye || IsUnavailableInjury(injuryStatus);
+            var effectiveProjection = isUnavailable
+                ? 0m
+                : string.Equals(injuryStatus, "Questionable", StringComparison.OrdinalIgnoreCase)
+                    ? Math.Round((baseProjection ?? 0m) * 0.85m, 2)
+                    : baseProjection ?? 0m;
+
+            return new ProjectedRosterPlayer(
+                playerId,
+                player?.FullName ?? playerId,
+                player?.Position,
+                baseProjection,
+                effectiveProjection,
+                isOnBye,
+                injuryStatus);
+        }).ToList();
+
+        if (candidates.All(player => !player.BaseProjection.HasValue))
+            return (null, []);
+
+        var selected = SelectBestLegalLineup(
+            candidates.Where(player => !player.IsUnavailable),
+            config,
+            player => player.PlayerId,
+            player => player.Position,
+            player => player.EffectiveProjection);
+        var starterIds = (m.Starters ?? []).ToHashSet();
+        var notes = new List<string>();
+
+        foreach (var starter in candidates.Where(player => starterIds.Contains(player.PlayerId)))
+        {
+            if (starter.IsOnBye)
+                notes.Add($"{starter.FullName} ({starter.Position}) is on BYE.");
+            else if (IsUnavailableInjury(starter.InjuryStatus))
+                notes.Add($"{starter.FullName} ({starter.Position}) is INJURED ({starter.InjuryStatus}).");
+            else if (string.Equals(starter.InjuryStatus, "Questionable", StringComparison.OrdinalIgnoreCase))
+                notes.Add($"{starter.FullName} ({starter.Position}) is Questionable — projection discounted to {starter.EffectiveProjection:F1} pts.");
         }
-        return counted == 0 ? null : Math.Round(sum, 2);
+
+        foreach (var substitute in selected.Where(player => !starterIds.Contains(player.PlayerId)))
+            notes.Add($"bench sub {substitute.FullName} ({substitute.Position}) enters the best legal lineup at {substitute.EffectiveProjection:F1} projected pts.");
+
+        foreach (var marquee in selected.Where(player => player.EffectiveProjection >= 18m))
+            notes.Add($"{marquee.FullName} ({marquee.Position}): marquee projection {marquee.EffectiveProjection:F1} PPG.");
+
+        return (Math.Round(selected.Sum(player => player.EffectiveProjection), 2), notes.Distinct().ToList());
     }
+
+    private sealed record ProjectedRosterPlayer(
+        string PlayerId,
+        string FullName,
+        string? Position,
+        decimal? BaseProjection,
+        decimal EffectiveProjection,
+        bool IsOnBye,
+        string? InjuryStatus)
+    {
+        public bool IsUnavailable => IsOnBye || IsUnavailableInjury(InjuryStatus);
+    }
+
+    private static bool IsUnavailableInjury(string? injuryStatus)
+        => injuryStatus is not null
+           && (injuryStatus.Equals("Out", StringComparison.OrdinalIgnoreCase)
+               || injuryStatus.Equals("IR", StringComparison.OrdinalIgnoreCase)
+               || injuryStatus.Equals("Doubtful", StringComparison.OrdinalIgnoreCase)
+               || injuryStatus.Equals("PUP", StringComparison.OrdinalIgnoreCase)
+               || injuryStatus.Equals("Sus", StringComparison.OrdinalIgnoreCase));
 
     // ---------------- Agent fetch hints ----------------
 
-    private static List<string> BuildAgentFetchHints(List<GameRecap> games, LookAhead lookAhead, Dictionary<string, Player> players)
+    private static List<string> BuildAgentFetchHints(int season, int week, WeeklyInjuryReport? injuryReport)
     {
-        var hints = new List<string>();
-
-        // Injury status flags from Sleeper player metadata for next-week starters.
-        foreach (var matchup in lookAhead.Matchups)
+        var hints = new List<string>
         {
-            // We don't have per-side rosters in the look-ahead at this layer, so just emit a generic hint.
-        }
-
-        // Anyone with an injury_status of Questionable / Doubtful / Out who started this week.
-        foreach (var g in games)
-        {
-            foreach (var side in new[] { g.Home, g.Away })
-            {
-                foreach (var p in side.Starters)
-                {
-                    if (!players.TryGetValue(p.PlayerId, out var pl)) continue;
-                    if (!string.IsNullOrEmpty(pl.InjuryStatus) && pl.InjuryStatus is not "Healthy" and not "Active")
-                        hints.Add($"Injury status check: {p.FullName} ({pl.InjuryStatus}) — confirm next-week availability.");
-                }
-            }
-        }
-
-        hints.Add("Search for any breaking NFL injury news from the past 48 hours that affects next-week starters.");
-        hints.Add("Search for depth-chart shifts or suspensions announced this week.");
-        hints.Add("Search for Sunday weather forecasts for outdoor games involving any next-week starters.");
-
-        return hints.Distinct().Take(20).ToList();
+            $"Verify dated injury reports for NFL {season} week {week}; do not substitute today's injury flags for this recap week.",
+            "Only call an injury new this week when source evidence explicitly confirms onset. Keep uncertain timing and existing injuries separate.",
+            $"Search for depth-chart shifts or suspensions announced during NFL {season} week {week}.",
+            $"Verify weather reports relevant to NFL {season} week {week + 1}, not today's forecast."
+        };
+        if (injuryReport is not null)
+            hints.Add($"Use InjuryReport for the explicit window {injuryReport.Window.Start:O} to {injuryReport.Window.End:O} (exclusive). Preserve its coverage warnings and source disagreements; it is not a final next-week availability list.");
+        return hints;
     }
 
     // ---------------- Prior recaps + name watch ----------------
@@ -1024,11 +1245,15 @@ internal sealed class RecapEnvelopeBuilder
             GeneratedAt = DateTimeOffset.UtcNow,
             OwnerNames = owners.ToDictionary(
                 o => o.UserId,
-                o => new TeamNameEntry { DisplayName = o.DisplayName, TeamName = o.TeamName, Username = o.Username })
+                o => new TeamNameEntry { TeamName = o.TeamName, OwnerName = o.RealName ?? $"Roster {o.RosterId}" })
         });
         history.Snapshots.Sort((a, b) => a.Week.CompareTo(b.Week));
         Directory.CreateDirectory(Path.GetDirectoryName(path)!);
-        File.WriteAllText(path, JsonSerializer.Serialize(history, new JsonSerializerOptions { WriteIndented = true }));
+        File.WriteAllText(path, JsonSerializer.Serialize(history, new JsonSerializerOptions
+        {
+            WriteIndented = true,
+            DefaultIgnoreCondition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
+        }));
     }
 
     // ---------------- Helpers ----------------
@@ -1747,6 +1972,14 @@ internal sealed class RecapEnvelopeBuilder
         return (seasonType, label, isFinal);
     }
 
+    /// <summary>Returns the first non-blank candidate, or the final fallback.</summary>
+    private static string FirstNonBlank(params string?[] candidates)
+    {
+        foreach (var candidate in candidates)
+            if (!string.IsNullOrWhiteSpace(candidate)) return candidate.Trim();
+        return "";
+    }
+
     private static string SummariseScoring(League league)
     {
         if (league.ScoringSettings is null) return "(custom scoring)";
@@ -1939,14 +2172,43 @@ internal sealed class RecapEnvelopeBuilder
 
     private sealed class TeamNameEntry
     {
-        public string DisplayName { get; set; } = "";
+        private string _ownerName = "";
+
         public string TeamName { get; set; } = "";
-        public string Username { get; set; } = "";
+
+        public string OwnerName
+        {
+            get => _ownerName;
+            set { if (!string.IsNullOrWhiteSpace(value)) _ownerName = value; }
+        }
+
+        // Legacy schema migration: older snapshots stored the owner under "DisplayName".
+        // Read it so historical entries keep their name, but never write it back out.
+        public string? DisplayName
+        {
+            get => null;
+            set
+            {
+                if (string.IsNullOrWhiteSpace(OwnerName) && !string.IsNullOrWhiteSpace(value))
+                {
+                    OwnerName = value;
+                }
+            }
+        }
+
+        // Legacy "Username" is a platform handle and must never round-trip. Read and discard.
+        public string? Username
+        {
+            get => null;
+            set { }
+        }
     }
 }
 
 internal static class RecapPaths
 {
+    private static readonly AsyncLocal<string?> RecapDirectoryOverride = new();
+
     /// <summary>Repo-rooted path resolution: walk up from the running exe until we hit the workspace root.</summary>
     public static string WorkspaceRoot
     {
@@ -1966,8 +2228,17 @@ internal static class RecapPaths
         }
     }
 
-    public static string LorePath => Path.Combine(WorkspaceRoot, "docs", "league-lore.md");
-    public static string RecapDir(int season) => Path.Combine(WorkspaceRoot, "recaps", season.ToString());
+    public static string LegacyLorePath => Path.Combine(WorkspaceRoot, "docs", "league-lore.md");
+    public static string LoreDirectory => Path.Combine(WorkspaceRoot, "docs", "lore");
+    public static IDisposable UseRecapDirectory(string directory)
+    {
+        var prior = RecapDirectoryOverride.Value;
+        RecapDirectoryOverride.Value = Path.GetFullPath(directory);
+        return new RecapDirectoryScope(prior);
+    }
+
+    public static string RecapDir(int season)
+        => RecapDirectoryOverride.Value ?? Path.Combine(WorkspaceRoot, "recaps", season.ToString());
     public static string RecapFile(int season, int week) => Path.Combine(RecapDir(season), $"week-{week:D2}.md");
     public static string TeamNameHistory(int season) => Path.Combine(RecapDir(season), "team-name-history.json");
     public static string PowerHistory(int season) => Path.Combine(RecapDir(season), "power-history.json");
@@ -1987,4 +2258,16 @@ internal static class RecapPaths
     public static string SeasonManifestJson(int season) => Path.Combine(RecapDir(season), "manifest.json");
     public static string SeasonChartsDir(int season) => Path.Combine(RecapDir(season), "charts");
     public static string SeasonChartFile(int season, string chartName) => Path.Combine(SeasonChartsDir(season), chartName + ".svg");
+
+    private sealed class RecapDirectoryScope(string? prior) : IDisposable
+    {
+        private bool _disposed;
+
+        public void Dispose()
+        {
+            if (_disposed) return;
+            RecapDirectoryOverride.Value = prior;
+            _disposed = true;
+        }
+    }
 }

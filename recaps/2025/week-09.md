@@ -1,4 +1,4 @@
-# Week 9 Recap — FoulknFootball (2025)
+# Week 9 Recap — The League (2025)
 
 _Generated 2026-04-27 00:36 UTC._
 
@@ -8,13 +8,13 @@ _Generated 2026-04-27 00:36 UTC._
 
 ## Intro
 
-With two weeks left before the trade deadline, Week 9 in FoulknFootball felt like the point where patience starts to cost something. The teams at the top are not only trying to hold ground now; they are deciding whether one more move can separate them from the pack, while the teams in the lower half have to choose whether the playoff chase is still the right chase. That mood sat over the whole slate, and the biggest game of the week made the point plainly enough. Dave’s 249.78 in a win over Brian was the highest score on the board and the highest single-team total of the season so far in FoulknFootball.
+With two weeks left before the trade deadline, Week 9 in The League felt like the point where patience starts to cost something. The teams at the top are not only trying to hold ground now; they are deciding whether one more move can separate them from the pack, while the teams in the lower half have to choose whether the playoff chase is still the right chase. That mood sat over the whole slate, and the biggest game of the week made the point plainly enough. Dave’s 249.78 in a win over Brian was the highest score on the board and the highest single-team total of the season so far in The League.
 
 It also changed the shape of the table without changing the central truth. Brian still sits first at 7-2 despite the loss, Jake remains in firm second, and the middle continues to compress around the final playoff place. Last week’s recap asked whether Rob’s scoring profile could keep arguing with his record; this week, it could not. Unstoppable Farce fell again, posted the week’s low score at 139.92, and now the decisions ahead feel different than they did even seven days ago.
 
 ## League Themes
 
-The dominant thread still begins with Brian, even in defeat. First in and First Out? had its seven-game winning streak stopped last week, and now the more durable marker keeps growing: nine straight weeks above 150. Jake matched that standard with Seasonal Depression’s ninth straight game over 150 as well, which gives FoulknFootball two teams whose weekly floor has become part of the standings. That kind of consistency matters in November, because it keeps pressure on everyone else to decide whether they are chasing a seed, chasing a spot, or thinking further ahead.
+The dominant thread still begins with Brian, even in defeat. First in and First Out? had its seven-game winning streak stopped last week, and now the more durable marker keeps growing: nine straight weeks above 150. Jake matched that standard with Seasonal Depression’s ninth straight game over 150 as well, which gives The League two teams whose weekly floor has become part of the standings. That kind of consistency matters in November, because it keeps pressure on everyone else to decide whether they are chasing a seed, chasing a spot, or thinking further ahead.
 
 Dave supplied the week’s clearest statement. He hate me climbed two spots in the power rankings to No. 3, tied for the second-best power score in the league, and then backed that rise with 249.78 against the first-place team. Brock Bowers at 31.3 and Drake London at 29.8 gave Dave elite returns, and that top-end production was enough to turn a good week into the league’s best one. One sharp detail says it well: when a team beats first place by more than 80 points, the climb in the rankings no longer feels theoretical.
 
@@ -30,7 +30,7 @@ There were enough stat-line swings to fit the week’s larger mood. Caleb Willia
 
 **Dave and He hate me turn the table on Brian.**
 
-Week 9 in FoulknFootball opened with the league leader on one side and a team trying to steady itself on the other. By Sunday’s end, it was Dave’s He hate me with the bigger, cleaner afternoon, beating Brian’s First in and First Out? 249.78 to 166.20. The hero was Brock Bowers, and the Raiders tight end gave Dave 31.3 points against Jacksonville on 12 catches, 127 yards, and three touchdowns.
+Week 9 in The League opened with the league leader on one side and a team trying to steady itself on the other. By Sunday’s end, it was Dave’s He hate me with the bigger, cleaner afternoon, beating Brian’s First in and First Out? 249.78 to 166.20. The hero was Brock Bowers, and the Raiders tight end gave Dave 31.3 points against Jacksonville on 12 catches, 127 yards, and three touchdowns.
 
 The call last week was for Brian to keep rolling, projected at 176.2 to 166.1, and that missed the shape of this one entirely. Dave not only won, he cleared his projection by more than 80 points, and He hate me showcased their aspirations with strength at the top of the lineup and enough support behind it. Josh Allen scored 28.82 for Buffalo against Kansas City, Lamar Jackson added 25.56 for Baltimore against Miami, and Drake London delivered 29.8 for Atlanta against New England with three touchdown catches.
 
@@ -44,7 +44,7 @@ The consequence is a clear one near the top of the table. Brian’s seven-game w
 
 **Jake gets the better of Dakota as Seasonal Depression stays on pace.**
 
-Week 9 in FoulknFootball asked for a real number, and both teams gave one. Jake’s Seasonal Depression beat Dakota’s BearDown, 193.68 to 166.80, in a matchup that easily cleared expectation on both sides. The margin was not built on perfection. It was built on Jake having more answers across the full card, and one quarterback line in particular set the tone.
+Week 9 in The League asked for a real number, and both teams gave one. Jake’s Seasonal Depression beat Dakota’s BearDown, 193.68 to 166.80, in a matchup that easily cleared expectation on both sides. The margin was not built on perfection. It was built on Jake having more answers across the full card, and one quarterback line in particular set the tone.
 
 The hero was Sam Darnold. Seattle’s quarterback gave Seasonal Depression 27.2 points against Washington, throwing for 330 yards and four touchdowns, and that gave Jake a steady center even with quieter returns from Emanuel Wilson at 1.7, Javonte Williams at 6.3, and Khalil Shakir at 4.3. Puka Nacua added 15.8 for the Rams against New Orleans, Josh Jacobs scored 16.0 for Green Bay against Carolina, and Ka'imi Fairbairn’s 15.0 helped round out a lineup that showcased their aspirations without needing every spot to land big.
 
@@ -58,7 +58,7 @@ The consequence is clear in the Week 9 picture. Seasonal Depression extends its 
 
 **Devin gets enough late from the right places, and Amon Another level slips past Michael.**
 
-Week 9 in FoulknFootball asked for real scoring, and both teams gave it. Devin’s Amon Another level beat Michael’s Disappointment, 171.22 to 162.04, in a game where the board stayed active from the quarterback spots all the way through the defenses. The hero was Jaxson Dart. The Giants quarterback gave Devin 27.24 points against San Francisco, throwing for 191 yards and two touchdowns while adding 56 rushing yards and another score on the ground.
+Week 9 in The League asked for real scoring, and both teams gave it. Devin’s Amon Another level beat Michael’s Disappointment, 171.22 to 162.04, in a game where the board stayed active from the quarterback spots all the way through the defenses. The hero was Jaxson Dart. The Giants quarterback gave Devin 27.24 points against San Francisco, throwing for 191 yards and two touchdowns while adding 56 rushing yards and another score on the ground.
 
 We picked Disappointment coming in, and that call missed cleanly. The two-game streak we cited for Michael did not carry through, while Devin’s lineup found better lift in the swing spots; Kyle Monangai’s 19.8 for Chicago against Cincinnati was one of the clearest examples, and the Baltimore and Arizona defenses added 17.0 and 16.0 to steady the full card.
 
@@ -66,13 +66,13 @@ On the other side, Michael had more than enough offense to win most weeks. Joe F
 
 And yet, this game turned on how well each team absorbed its misses. Devin survived Bryce Young’s 2.98 for Carolina and still got useful work from David Montgomery, Justin Jefferson, Amon-Ra St. Brown, Stefon Diggs, Evan McPherson, and Brandon McManus, while Michael was asked to carry too many quiet spots at once. Jahmyr Gibbs finished with 2.8 for Detroit, DK Metcalf had 0.6, George Kittle scored 2.9, Tyler Warren added 2.6, and the two defenses combined for just 3.0.
 
-The consequence is a simple one in the middle of the FoulknFootball race. Michael’s two-game winning streak ends here, and Devin’s Amon Another level records a second straight win after last week’s result, the kind of answer that showcased their aspirations in the playoff chase.
+The consequence is a simple one in the middle of the League race. Michael’s two-game winning streak ends here, and Devin’s Amon Another level records a second straight win after last week’s result, the kind of answer that showcased their aspirations in the playoff chase.
 
 ### Sanders Boutte on Sunday (163.08) vs Unstoppable Farce (139.92)
 
 **Eric gets the stronger ground game, and Sanders Boutte on Sunday turns back Rob.**
 
-Week 9 in FoulknFootball set up as a useful measuring stick for two teams that had been scoring well of late, and Eric’s Sanders Boutte on Sunday had the steadier answer. Eric beat Rob, 163.08 to 139.92, in a matchup where both sides finished below projection, but one side had the clearer lift from its best players. The hero was Christian McCaffrey. San Francisco’s back delivered 29.3 points against the Giants, with 106 rushing yards, 67 receiving yards, and two total touchdowns.
+Week 9 in The League set up as a useful measuring stick for two teams that had been scoring well of late, and Eric’s Sanders Boutte on Sunday had the steadier answer. Eric beat Rob, 163.08 to 139.92, in a matchup where both sides finished below projection, but one side had the clearer lift from its best players. The hero was Christian McCaffrey. San Francisco’s back delivered 29.3 points against the Giants, with 106 rushing yards, 67 receiving yards, and two total touchdowns.
 
 That number mattered because Eric got another strong push from Rico Dowdle, who gave Pittsburgh 26.1 points against Green Bay on 130 rushing yards and two touchdowns. Trey McBride added 11.5 for Arizona against Dallas, Chase Brown chipped in 11.2 for Cincinnati against Chicago, and Sanders Boutte on Sunday did enough around a few quiet spots to keep control. And yet, the sharper observation is this: Eric survived 4.36 from C.J. Stroud, 0.0 from Kayshon Boutte, and 2.0 from Tucker Kraft because his running backs carried the weight cleanly.
 
@@ -84,7 +84,7 @@ The consequence is a familiar one for Eric. Sanders Boutte on Sunday extends its
 
 ## Storylines
 
-- Brian’s hold on first is still intact, but a loss to Eric would tighten the top of FoulknFootball and give Sanders Boutte on Sunday a fourth straight win against the league leader.
+- Brian’s hold on first is still intact, but a loss to Eric would tighten the top of The League and give Sanders Boutte on Sunday a fourth straight win against the league leader.
 - Dakota’s four-game slide is now the clearest pressure point in the standings, because another loss would make the climb toward the top four much steeper.
 - Dave has the week’s biggest upward push behind him, and Week 10 will test whether the No. 3 power-ranking jump was a true shift or one huge Sunday.
 - Rob is running out of ordinary weeks; a fifth straight loss would keep Unstoppable Farce pointed more toward roster decisions than playoff math.

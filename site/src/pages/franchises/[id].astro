@@ -1,0 +1,209 @@
+---
+import Bulletin from '../../layouts/Bulletin.astro';
+import { data, record, pts, ownerSlug, seasonOf } from '../../lib/league';
+
+export function getStaticPaths() {
+  return data.franchises.map((f) => ({ params: { id: String(f.franchise_id) }, props: { f } }));
+}
+
+const { f } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+const w = f.timeline.reduce((n, t) => n + t.wins, 0);
+const l = f.timeline.reduce((n, t) => n + t.losses, 0);
+const ti = f.timeline.reduce((n, t) => n + t.ties, 0);
+const pf = f.timeline.reduce((n, t) => n + t.points_for, 0);
+const pa = f.timeline.reduce((n, t) => n + t.points_against, 0);
+
+const handoffs = f.owner_history.length > 1;
+
+// Every game this slot played, drawn from the season data rather than from the timeline totals.
+const games = data.seasons.flatMap((s) =>
+  s.weeks.flatMap((wk) =>
+    wk.games
+      .filter((g) => g.home.franchise_id === f.franchise_id || g.away.franchise_id === f.franchise_id)
+      .map((g) => {
+        const us = g.home.franchise_id === f.franchise_id ? g.home : g.away;
+        const them = us === g.home ? g.away : g.home;
+        return { season: s.season, week: wk.week, playoff: wk.is_playoff, us, them };
+      }),
+  ),
+);
+
+const best = games.slice().sort((a, b) => b.us.points - a.us.points)[0];
+const worst = games.slice().sort((a, b) => a.us.points - b.us.points)[0];
+
+const vs = new Map<string, { w: number; l: number; pf: number; pa: number }>();
+for (const g of games) {
+  const key = g.them.owner_name;
+  const e = vs.get(key) ?? { w: 0, l: 0, pf: 0, pa: 0 };
+  if (g.us.points > g.them.points) e.w++;
+  else if (g.us.points < g.them.points) e.l++;
+  e.pf += g.us.points;
+  e.pa += g.them.points;
+  vs.set(key, e);
+}
+const opponents = [...vs.entries()].sort((a, b) => b[1].w - a[1].w || a[0].localeCompare(b[0]));
+---
+
+<Bulletin
+  title={`${f.current_team_name} — The League`}
+  slug={`Team · Slot ${f.franchise_id}`}
+  description={`Season-by-season history of ${f.current_team_name}, currently owned by ${f.current_owner_name}.`}
+>
+  <div class="sheet">
+    <h1 class="ruled">{f.current_team_name}</h1>
+    <p class="dek">
+      Slot {f.franchise_id}, held by <a href={`${base}/owners/${ownerSlug(f.current_owner_name)}`}>{f.current_owner_name}</a>.
+      {handoffs && (
+        <> This slot has changed hands: {f.owner_history.join(' → ')}. The record below belongs to the
+        people who earned it, not to the slot.</>
+      )}
+      {f.championships > 0 && <> <span class="struck">{f.championships}× champion</span></>}
+    </p>
+  </div>
+
+  {f.timeline.length > 0 ? (
+    <>
+      <div class="sheet band">
+        <h2 class="ruled">Season by season</h2>
+        <div class="ledger-scroll">
+          <table class="ledger">
+            <thead>
+              <tr>
+                <th scope="col" class="num">Year</th>
+                <th scope="col">Name that year</th>
+                <th scope="col">Owner</th>
+                <th scope="col" class="num">Reg</th>
+                <th scope="col" class="num">PF</th>
+                <th scope="col" class="num">PA</th>
+                <th scope="col" class="num">Place</th>
+              </tr>
+            </thead>
+            <tbody>
+              {f.timeline
+                .slice()
+                .sort((a, b) => b.season - a.season)
+                .map((t) => (
+                  <tr>
+                    <th scope="row" class="num"><a href={`${base}/${t.season}`}>{t.season}</a></th>
+                    <td class="wide">{t.team_name}</td>
+                    <td><a href={`${base}/owners/${ownerSlug(t.owner_name)}`}>{t.owner_name}</a></td>
+                    <td class="num">{record(t.wins, t.losses, t.ties)}</td>
+                    <td class="num">{pts(t.points_for)}</td>
+                    <td class="num">{pts(t.points_against)}</td>
+                    <td class="num">{t.final_place}</td>
+                  </tr>
+                ))}
+            </tbody>
+            <tfoot>
+              <tr>
+                <th scope="row" class="num">All</th>
+                <td colspan="2" class="wide">{f.timeline.length} seasons</td>
+                <td class="num">{record(w, l, ti)}</td>
+                <td class="num">{pts(pf)}</td>
+                <td class="num">{pts(pa)}</td>
+                <td class="num">—</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+
+      <div class="sheet band">
+        <h2 class="ruled">Highs and lows</h2>
+        <dl class="marks">
+          {best && (
+            <div>
+              <dt class="slug">Best week</dt>
+              <dd>
+                <strong>{pts(best.us.points)}</strong> — {best.season} week {best.week},
+                against {best.them.owner_name} ({pts(best.them.points)})
+              </dd>
+            </div>
+          )}
+          {worst && (
+            <div>
+              <dt class="slug">Worst week</dt>
+              <dd>
+                <strong class="stamp">{pts(worst.us.points)}</strong> — {worst.season} week {worst.week},
+                against {worst.them.owner_name} ({pts(worst.them.points)})
+              </dd>
+            </div>
+          )}
+          <div>
+            <dt class="slug">Games played</dt>
+            <dd><strong>{games.length}</strong> including postseason</dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="sheet band">
+        <h2 class="ruled">Against the room</h2>
+        <div class="ledger-scroll">
+          <table class="ledger">
+            <caption>Every game this slot has played, postseason included</caption>
+            <thead>
+              <tr>
+                <th scope="col">Opponent</th>
+                <th scope="col" class="num">W</th>
+                <th scope="col" class="num">L</th>
+                <th scope="col" class="num">PF</th>
+                <th scope="col" class="num">PA</th>
+              </tr>
+            </thead>
+            <tbody>
+              {opponents.map(([name, e]) => (
+                <tr>
+                  <th scope="row"><a href={`${base}/owners/${ownerSlug(name)}`}>{name}</a></th>
+                  <td class="num">{e.w}</td>
+                  <td class="num">{e.l}</td>
+                  <td class="num">{pts(e.pf)}</td>
+                  <td class="num">{pts(e.pa)}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </>
+  ) : (
+    <div class="sheet band">
+      <p class="dek">No seasons on record for this slot yet.</p>
+    </div>
+  )}
+</Bulletin>
+
+<style>
+  h1 {
+    padding-top: 0.5rem;
+    text-transform: none;
+    letter-spacing: -0.02em;
+  }
+
+  .dek {
+    color: var(--ink-quiet);
+    max-width: 64ch;
+  }
+
+  .band {
+    padding-top: 2.4rem;
+  }
+
+  .marks {
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
+    gap: 1.2rem 2.5rem;
+  }
+
+  .marks div {
+    border-top: 1px solid var(--rule);
+    padding-top: 0.6rem;
+  }
+
+  .marks dd {
+    margin: 0.3rem 0 0;
+    font-variant-numeric: tabular-nums;
+  }
+</style>

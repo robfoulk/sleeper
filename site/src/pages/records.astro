@@ -1,0 +1,246 @@
+---
+import Bulletin from '../layouts/Bulletin.astro';
+import { data, record, pts, ownerSlug } from '../lib/league';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const r = data.records;
+
+const names = data.owners
+  .filter((o) => o.career.seasons_played > 0)
+  .map((o) => o.name)
+  .sort();
+
+const cell = (owner: string, opponent: string) =>
+  r.head_to_head.find((h) => h.owner_name === owner && h.opponent_name === opponent);
+
+const allTime = r.all_time
+  .slice()
+  .sort((a, b) => b.wins - a.wins || b.points_for - a.points_for);
+---
+
+<Bulletin
+  title="Record book — The League"
+  slug="The file · Record book"
+  description="Standings, champions, single-week records and the head-to-head matrix for The League."
+>
+  <div class="sheet">
+    <h1 class="ruled">Record book</h1>
+    <ul class="notes">
+      {r.notes.map((n) => <li>{n}</li>)}
+    </ul>
+  </div>
+
+  <div class="sheet band">
+    <h2 class="ruled">On record, regular season</h2>
+    <div class="ledger-scroll">
+      <table class="ledger">
+        <thead>
+          <tr>
+            <th scope="col">Owner</th>
+            <th scope="col" class="num">W</th>
+            <th scope="col" class="num">L</th>
+            <th scope="col" class="num">Pct</th>
+            <th scope="col" class="num">PF</th>
+            <th scope="col" class="num">PA</th>
+            <th scope="col" class="num">Diff</th>
+            <th scope="col" class="num">Titles</th>
+          </tr>
+        </thead>
+        <tbody>
+          {allTime.map((a) => {
+            const g = a.wins + a.losses + a.ties;
+            return (
+              <tr>
+                <th scope="row"><a href={`${base}/owners/${ownerSlug(a.owner_name)}`}>{a.owner_name}</a></th>
+                <td class="num">{a.wins}</td>
+                <td class="num">{a.losses}</td>
+                <td class="num">{g ? (a.wins / g).toFixed(3).replace(/^0/, '') : '—'}</td>
+                <td class="num">{pts(a.points_for)}</td>
+                <td class="num quiet">{pts(a.points_against)}</td>
+                <td class="num">{(a.points_for - a.points_against >= 0 ? '+' : '') + (a.points_for - a.points_against).toFixed(2)}</td>
+                <td class="num">{a.championships || '—'}</td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="sheet band">
+    <h2 class="ruled">Champions</h2>
+    <ol class="champs">
+      {r.championships
+        .slice()
+        .sort((a, b) => b.season - a.season)
+        .map((c) => (
+          <li>
+            <span class="champs__year">{c.season}</span>
+            <span>
+              <a href={`${base}/owners/${ownerSlug(c.owner_name)}`}><strong>{c.owner_name}</strong></a>
+              {' — '}{c.team_name}
+              {c.runner_up && <span class="slug"> defeated {c.runner_up}</span>}
+            </span>
+          </li>
+        ))}
+    </ol>
+  </div>
+
+  <div class="sheet band twoup">
+    <section>
+      <h2 class="ruled">Best single weeks</h2>
+      <div class="ledger-scroll">
+        <table class="ledger">
+          <thead>
+            <tr><th scope="col" class="num">#</th><th scope="col" class="num">Points</th><th scope="col">Owner</th><th scope="col">When</th></tr>
+          </thead>
+          <tbody>
+            {r.single_week_highs.map((h, i) => (
+              <tr>
+                <td class="num rank">{i + 1}</td>
+                <td class="num strong">{pts(h.points)}</td>
+                <td><a href={`${base}/owners/${ownerSlug(h.owner_name)}`}>{h.owner_name}</a></td>
+                <td class="quiet">{h.season} w{h.week}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="ruled">Worst single weeks</h2>
+      <div class="ledger-scroll">
+        <table class="ledger">
+          <thead>
+            <tr><th scope="col" class="num">#</th><th scope="col" class="num">Points</th><th scope="col">Owner</th><th scope="col">When</th></tr>
+          </thead>
+          <tbody>
+            {r.single_week_lows.map((h, i) => (
+              <tr>
+                <td class="num rank">{i + 1}</td>
+                <td class="num stamp strong">{pts(h.points)}</td>
+                <td><a href={`${base}/owners/${ownerSlug(h.owner_name)}`}>{h.owner_name}</a></td>
+                <td class="quiet">{h.season} w{h.week}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+
+  <div class="sheet band">
+    <h2 class="ruled">Head to head</h2>
+    <p class="dek">Read across: the row owner's record against the column owner.</p>
+    <div class="ledger-scroll">
+      <table class="ledger matrix">
+        <caption>Every game played, postseason and consolation included</caption>
+        <thead>
+          <tr>
+            <th scope="col">vs</th>
+            {names.map((n) => <th scope="col" class="num">{n.slice(0, 4)}</th>)}
+          </tr>
+        </thead>
+        <tbody>
+          {names.map((owner) => (
+            <tr>
+              <th scope="row"><a href={`${base}/owners/${ownerSlug(owner)}`}>{owner}</a></th>
+              {names.map((opponent) => {
+                if (owner === opponent) return <td class="num self">—</td>;
+                const c = cell(owner, opponent);
+                if (!c) return <td class="num quiet">·</td>;
+                const cls = c.wins > c.losses ? 'up' : c.wins < c.losses ? 'down' : '';
+                return <td class={`num ${cls}`}>{record(c.wins, c.losses, c.ties)}</td>;
+              })}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</Bulletin>
+
+<style>
+  h1 {
+    padding-top: 0.5rem;
+  }
+
+  .notes {
+    color: var(--ink-quiet);
+    max-width: 66ch;
+    padding-left: 1.2rem;
+    margin: 0;
+  }
+
+  .notes li::marker {
+    color: var(--violet);
+  }
+
+  .band {
+    padding-top: 2.6rem;
+  }
+
+  .dek {
+    color: var(--ink-quiet);
+  }
+
+  .twoup {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr));
+    gap: 2.4rem 3rem;
+  }
+
+  .champs {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .champs li {
+    display: flex;
+    align-items: baseline;
+    gap: 1.2rem;
+    padding: 0.7rem 0;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .champs__year {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--stamp);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .rank {
+    color: var(--ink-faint);
+    width: 2rem;
+  }
+
+  .strong {
+    font-weight: 700;
+  }
+
+  .quiet {
+    color: var(--ink-quiet);
+  }
+
+  .matrix th[scope='row'] {
+    position: sticky;
+    left: 0;
+    background: var(--ground);
+  }
+
+  .matrix .self {
+    color: var(--ink-faint);
+  }
+
+  .matrix .up {
+    color: var(--ink);
+    font-weight: 700;
+  }
+
+  .matrix .down {
+    color: var(--ink-quiet);
+  }
+</style>

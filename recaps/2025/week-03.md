@@ -1,10 +1,10 @@
-# Week 3 Recap — FoulknFootball (2025)
+# Week 3 Recap — The League (2025)
 
 _Generated 2026-04-27 00:28 UTC._
 
 ## Intro
 
-Three weeks in, FoulknFootball is starting to tell the truth about itself. Brian sits on top of the standings and the power rankings after another strong week, Dave posted the week’s best number at 207.50, and the middle of the table remains crowded enough that one result still changes the whole picture. That is the useful part of this point in the season. The good teams are showing repeatable ways to score, and the teams below them are beginning to reveal where the stress points live.
+Three weeks in, The League is starting to tell the truth about itself. Brian sits on top of the standings and the power rankings after another strong week, Dave posted the week’s best number at 207.50, and the middle of the table remains crowded enough that one result still changes the whole picture. That is the useful part of this point in the season. The good teams are showing repeatable ways to score, and the teams below them are beginning to reveal where the stress points live.
 
 The highest-scoring game of the week carried that message cleanly. Dave beat Rob 207.50 to 185.96, and He hate me did it with both spike weeks and support around them, while Unstoppable Farce got plenty at the top but still absorbed a second straight loss. Brian’s rise from second to first now looks less like an early shuffle and more like a profile, while Eric’s fall from fourth to eighth in the standings and power table is the kind of drop that gets harder to explain away once the calendar starts moving toward the bye weeks.
 
@@ -24,7 +24,7 @@ A few stat lines landed with enough force to shape the whole week. David Montgom
 
 **He hate me has the steadier answers in a 207.50–185.96 win over Unstoppable Farce.**
 
-Week 3 in FoulknFootball brought two teams that needed a cleaner read after uneven second weeks, and the scoreboard gave one. Dave’s He hate me beat Rob’s Unstoppable Farce 207.50 to 185.96, a healthy number on both sides and a result that was less about one eruption than a roster that kept adding useful totals. Dave got 23.02 from Josh Allen for Buffalo, 17.80 from James Cook in the same Bills-Miami game, 17.20 from Kyren Williams of the Rams, and 15.60 from Seattle wideout Jaxon Smith-Njigba.
+Week 3 in The League brought two teams that needed a cleaner read after uneven second weeks, and the scoreboard gave one. Dave’s He hate me beat Rob’s Unstoppable Farce 207.50 to 185.96, a healthy number on both sides and a result that was less about one eruption than a roster that kept adding useful totals. Dave got 23.02 from Josh Allen for Buffalo, 17.80 from James Cook in the same Bills-Miami game, 17.20 from Kyren Williams of the Rams, and 15.60 from Seattle wideout Jaxon Smith-Njigba.
 
 The hero was Minnesota’s defense. Thirty-five points from a D/ST will settle a lot of arguments, and it gave He hate me the kind of lift that let quieter days elsewhere pass without much damage. Jared Goff finished at 12.68 against Baltimore, Alvin Kamara scored 5.60 for New Orleans, and Sam LaPorta gave Dave just 3.30 — and yet the call to ride He hate me held up only in the broadest sense. The pick was right, but this was right team, wrong shape: projected at 171.8–145.1, it arrived as a much bigger game at 207.50–185.96.
 
@@ -38,7 +38,7 @@ The consequence is immediate and specific. Dave stops a one-game skid after last
 
 **Devin gets off the mat as Amon Another level  tops Dakota.**
 
-Week 3 in FoulknFootball gave Devin the kind of result that can settle a room. Amon Another level , the league’s only 0-2 team coming in, put up 183.24 and beat Dakota’s BearDown 162.36, a margin built less on one overwhelming wave than on a lineup that kept answering. The projection leaned Devin’s way, but the real work came in outscoring a strong BearDown total that would have threatened most of the league.
+Week 3 in The League gave Devin the kind of result that can settle a room. Amon Another level , the league’s only 0-2 team coming in, put up 183.24 and beat Dakota’s BearDown 162.36, a margin built less on one overwhelming wave than on a lineup that kept answering. The projection leaned Devin’s way, but the real work came in outscoring a strong BearDown total that would have threatened most of the league.
 
 The hero was David Montgomery. Houston’s back gave Devin 28.4 points on 151 rushing yards and 2 touchdowns against Baltimore, and Hunter Henry added a major lift for New England with 8 catches, 90 yards, and 2 scores for 21.0. Tampa Bay’s defense chipped in 15.0, J.K. Dobbins of Denver added 14.3, and Amon-Ra St. Brown gave Detroit 13.7. The sharp note here is that Devin got to 183.24 even with Russell Wilson at 5.1 and Saquon Barkley at 5.5.
 
@@ -52,7 +52,7 @@ The consequence is immediate and specific. Devin’s losing streak ends at two, 
 
 **Disappointment edges Seasonal Depression as Michael flips the Week 3 script.**
 
-Week 3 in FoulknFootball brought a result that was close all the way through and useful for both the standings and the early read on these teams. Michael’s Disappointment came in as the underdog against Jake’s Seasonal Depression, then answered with a 163.38 to 157.64 win. It was not a spotless lineup on either side, but it was a game with enough scoring to matter.
+Week 3 in The League brought a result that was close all the way through and useful for both the standings and the early read on these teams. Michael’s Disappointment came in as the underdog against Jake’s Seasonal Depression, then answered with a 163.38 to 157.64 win. It was not a spotless lineup on either side, but it was a game with enough scoring to matter.
 
 The hero was Jahmyr Gibbs. Michael got 21.9 from the Detroit back against Baltimore, and Kenneth Walker added 17.0 with two rushing touchdowns for Kansas City against New Orleans. A.J. Brown, back in the middle of the Philadelphia offense, gave Disappointment 16.9 on six catches for 109 yards and a score, while Baker Mayfield’s 17.72 provided needed steadiness even as Patrick Mahomes finished at 13.16, well below his projection.
 
@@ -66,7 +66,7 @@ The consequence is clear. Jake’s Week 2 recap ended with Seasonal Depression a
 
 **Brian’s depth carries First in and First Out? past Eric.**
 
-Week 3 in FoulknFootball brought a matchup that looked clean on paper and stayed that way on the scoreboard. Brian’s First in and First Out? handled Eric’s Sanders Boutte on Sunday, 185.72 to 129.94, and the margin was established even with a few quiet spots in Brian’s lineup. There was no need for one perfect card; the roster had enough weight across it to separate.
+Week 3 in The League brought a matchup that looked clean on paper and stayed that way on the scoreboard. Brian’s First in and First Out? handled Eric’s Sanders Boutte on Sunday, 185.72 to 129.94, and the margin was established even with a few quiet spots in Brian’s lineup. There was no need for one perfect card; the roster had enough weight across it to separate.
 
 Jonathan Taylor was the hero. Brian got 29.8 from the Colts running back against Tennessee, built on 102 rushing yards and 3 touchdowns, and he had sturdy support from Nico Collins’ 14.4 for Houston, the Seahawks’ 16.0 on defense, and the Colts’ 15.0 on defense. T.J. Hockenson also gave Brian a useful lift with 10.9 for Minnesota against Cincinnati. The call to ride First in and First Out? held up, though it was right team, wrong shape — projected 176.4 to 131.8, delivered 185.72 to 129.94.
 
@@ -74,7 +74,7 @@ On the other side, Eric had one number that kept this from getting away even ear
 
 That was the sharp difference. Brian survived busts from Malik Nabers, Jerry Jeudy, and Zay Flowers because Taylor gave him the kind of anchor that lets the rest of a lineup breathe, while Eric’s better pieces never had enough company around them to navigate the competitive landscape of a deep starting format.
 
-The consequence is straightforward in FoulknFootball. Brian’s win starts a two-game streak after last week’s 232.48, while Eric’s Week 2 win gives way to a 1-2 mark and sends Sanders Boutte on Sunday back under .500.
+The consequence is straightforward in The League. Brian’s win starts a two-game streak after last week’s 232.48, while Eric’s Week 2 win gives way to a 1-2 mark and sends Sanders Boutte on Sunday back under .500.
 
 ## Storylines
 

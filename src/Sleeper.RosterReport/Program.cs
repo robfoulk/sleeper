@@ -2,6 +2,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Sleeper.Api;
 using Sleeper.Api.Extensions;
+using Sleeper.Api.Injuries;
 using Sleeper.Api.Models;
 using Sleeper.Api.NflData;
 using Sleeper.Api.NflData.Analytics;
@@ -11,6 +12,7 @@ using Sleeper.Api.Services;
 using Sleeper.RosterReport;
 using Sleeper.RosterReport.AssetHistory;
 using Sleeper.RosterReport.Cli;
+using Sleeper.RosterReport.Copilot;
 using Sleeper.RosterReport.Recap;
 
 const int HistoryYears = 3;
@@ -23,6 +25,7 @@ var configuration = new ConfigurationBuilder()
     .AddEnvironmentVariables()
     .Build();
 var foundrySettings = FoundryAgentSettings.FromConfiguration(configuration);
+var copilotSettings = CopilotAgentSettings.FromConfiguration(configuration);
 
 var cliResult = ReportCli.Parse(args);
 if (cliResult is ReportCliHelpResult helpResult)
@@ -52,23 +55,104 @@ var sleeperService = sp.GetRequiredService<ISleeperService>();
 var nflData = sp.GetRequiredService<INflDataClient>();
 var fantasyService = sp.GetRequiredService<IFantasyService>();
 
-return await (invocation.Command switch
+// A season/league mismatch is a user error with an actionable message, so surface it
+// as a clean CLI failure rather than an unhandled stack trace.
+try
 {
-    ReportCommand.Keepers => RunKeeperAnalyzer((KeeperCommandOptions)invocation.Options),
-    ReportCommand.Board => RunLeagueBoard((BoardCommandOptions)invocation.Options),
-    ReportCommand.Player => RunPlayerDeepDive((PlayerCommandOptions)invocation.Options),
-    ReportCommand.Team => RunTeamDeepDive((TeamCommandOptions)invocation.Options),
-    ReportCommand.Matchup => RunMatchupScoreboard((MatchupCommandOptions)invocation.Options),
-    ReportCommand.Recap => RunWeeklyRecap((WeeklyRecapCommandOptions)invocation.Options),
-    ReportCommand.Season => RunSeasonRecap((SeasonRecapCommandOptions)invocation.Options),
-    ReportCommand.RostersHistory => RunRostersHistory((RostersHistoryCommandOptions)invocation.Options),
-    ReportCommand.AssetHistory => RunAssetHistory((AssetHistoryCommandOptions)invocation.Options),
-    _ => throw new InvalidOperationException($"Unsupported report command {invocation.Command}.")
-});
+    return await (invocation.Command switch
+    {
+        ReportCommand.Keepers => RunKeeperAnalyzer((KeeperCommandOptions)invocation.Options),
+        ReportCommand.Board => RunLeagueBoard((BoardCommandOptions)invocation.Options),
+        ReportCommand.Player => RunPlayerDeepDive((PlayerCommandOptions)invocation.Options),
+        ReportCommand.Team => RunTeamDeepDive((TeamCommandOptions)invocation.Options),
+        ReportCommand.Matchup => RunMatchupScoreboard((MatchupCommandOptions)invocation.Options),
+        ReportCommand.Injuries => RunWeeklyInjuries((InjuriesCommandOptions)invocation.Options),
+        ReportCommand.Recap => RunWeeklyRecap((WeeklyRecapCommandOptions)invocation.Options),
+        ReportCommand.CopilotReplay => RunCopilotReplay((CopilotReplayCommandOptions)invocation.Options),
+        ReportCommand.CopilotProofread => RunCopilotProofread((CopilotProofreadCommandOptions)invocation.Options),
+        ReportCommand.Season => RunSeasonRecap((SeasonRecapCommandOptions)invocation.Options),
+        ReportCommand.RostersHistory => RunRostersHistory((RostersHistoryCommandOptions)invocation.Options),
+        ReportCommand.Export => RunExport((ExportCommandOptions)invocation.Options),
+        ReportCommand.AssetHistory => RunAssetHistory((AssetHistoryCommandOptions)invocation.Options),
+        ReportCommand.SiteData => SiteDataBuilder.RunAsync(client),
+        _ => throw new InvalidOperationException($"Unsupported report command {invocation.Command}.")
+    });
+}
+catch (InvalidOperationException ex)
+{
+    Console.Error.WriteLine();
+    Console.Error.WriteLine($"Error: {ex.Message}");
+    Console.Error.WriteLine();
+    return 1;
+}
+
+async Task<int> ResolveLoreSeasonAsync(string leagueId, int? overrideSeason)
+{
+    if (overrideSeason is not null)
+        return overrideSeason.Value;
+
+    var league = await client.GetLeagueAsync(leagueId);
+    return int.TryParse(league?.Season, out var season)
+        ? season
+        : DateTime.UtcNow.Year;
+}
+
+async Task<int> RunCopilotReplay(CopilotReplayCommandOptions options)
+{
+    var runner = new CopilotRecapReplayRunner(client, sleeperService, nflData, copilotSettings);
+    try
+    {
+        var runDirectory = await runner.RunAsync(
+            options.LeagueId,
+            options.Season,
+            options.StartWeek,
+            options.EndWeek,
+            options.RunId);
+        Console.WriteLine();
+        Console.WriteLine($"Copilot replay completed: {runDirectory}");
+        return 0;
+    }
+    catch (Exception ex)
+    {
+        Console.Error.WriteLine($"Copilot replay failed: {ex.Message}");
+        return 1;
+    }
+}
+
+async Task<int> RunCopilotProofread(CopilotProofreadCommandOptions options)
+{
+    var runner = new CopilotProofreaderRunner(copilotSettings, options.Model);
+    try
+    {
+        await runner.RunAsync(options.Season, options.RunId);
+        return 0;
+    }
+    catch (Exception ex)
+    {
+        Console.Error.WriteLine($"Copilot proofreading failed: {ex.Message}");
+        return 1;
+    }
+}
 
 // ======================================================================
 // REPORT 1: KEEPER ANALYZER
 // ======================================================================
+async Task<int> RunWeeklyInjuries(InjuriesCommandOptions options)
+{
+    try
+    {
+        var report = await sp.GetRequiredService<WeeklyInjuryReportService>()
+            .BuildAsync(options.LeagueId, options.Season, options.Week, options.Window);
+        Console.WriteLine(options.Format == "json" ? report.ToJson() : report.ToMarkdown());
+        return 0;
+    }
+    catch (Exception exception)
+    {
+        Console.Error.WriteLine($"Injury report failed: {exception.Message}");
+        return 1;
+    }
+}
+
 async Task<int> RunKeeperAnalyzer(KeeperCommandOptions options)
 {
     var username = options.Username;
@@ -880,29 +964,46 @@ async Task<int> RunWeeklyRecap(WeeklyRecapCommandOptions options)
         return 1;
     }
 
-    var lore = LeagueLore.TryLoad(RecapPaths.LorePath);
+    var loreSeason = await ResolveLoreSeasonAsync(leagueId, overrideSeason);
+    var lore = LeagueLore.TryLoadLayers(
+        RecapPaths.LegacyLorePath,
+        RecapPaths.LoreDirectory,
+        loreSeason,
+        week);
     if (lore is null)
     {
-        Console.WriteLine($"  (warning: no lore file found at {RecapPaths.LorePath} -- proceeding without lore)");
+        Console.WriteLine($"  (warning: no lore files found -- proceeding without lore)");
         lore = LeagueLore.ParseFrom("");
     }
     else
     {
-        Console.WriteLine($"  (loaded lore for {lore.Owners.Count} owners, {lore.Relationships.Count} relationship rules)");
+        Console.WriteLine($"  (loaded {lore.Sources.Count} lore layers for {lore.Owners.Count} owners, {lore.Relationships.Count} relationship rules)");
     }
 
     Console.WriteLine($"Building recap envelope for week {week}...");
-    var builder = new RecapEnvelopeBuilder(client, sleeperService, nflData, lore);
-    var envelope = await builder.BuildAsync(leagueId, week, overrideSeason);
+    var builder = new RecapEnvelopeBuilder(client, sleeperService, nflData, lore,
+        sp.GetRequiredService<WeeklyInjuryReportService>());
+    RecapEnvelope envelope;
+    try
+    {
+        envelope = await builder.BuildAsync(leagueId, week, overrideSeason,
+            options: new RecapEnvelopeBuildOptions(InjuryWindow: options.InjuryWindow));
+    }
+    catch (Exception exception) when (options.InjuryWindow is not null)
+    {
+        Console.Error.WriteLine($"Recap with injury evidence failed: {exception.Message}");
+        return 1;
+    }
 
     Console.WriteLine($"  envelope: {envelope.Owners.Count} owners, {envelope.Games.Count} games, {envelope.Themes.WaiverGrades.Count} waivers, {envelope.Themes.Trades.Count} trades, {envelope.AgentFetchHints.Count} fetch hints");
 
-    var agent = await RecapAgent.TryCreateAsync(foundrySettings);
+    await using var agentProvider = await ReportAgentProvider.CreateAsync(copilotSettings);
+    var agent = await agentProvider.TryCreateRecapAgentAsync(foundrySettings);
     string output;
     if (agent is null)
     {
         Console.WriteLine();
-        Console.WriteLine($"  (AI recap disabled -- {foundrySettings.MissingConfigurationMessage})");
+        Console.WriteLine("  (AI recap disabled -- no Copilot session and no Foundry configuration)");
         Console.WriteLine("  (writing data-only envelope dump for debugging)");
         output = DumpEnvelopeAsMarkdown(envelope);
     }
@@ -928,7 +1029,11 @@ async Task<int> RunSeasonRecap(SeasonRecapCommandOptions options)
     var leagueId = options.LeagueId;
     var overrideSeason = options.Season;
 
-    var lore = LeagueLore.TryLoad(RecapPaths.LorePath) ?? LeagueLore.ParseFrom("");
+    var loreSeason = await ResolveLoreSeasonAsync(leagueId, overrideSeason);
+    var lore = LeagueLore.TryLoadLayers(
+        RecapPaths.LegacyLorePath,
+        RecapPaths.LoreDirectory,
+        loreSeason) ?? LeagueLore.ParseFrom("");
 
     Console.WriteLine($"Building season aggregate for league {leagueId}...");
     var seasonBuilder = new SeasonAggregateBuilder(client, sleeperService, nflData, lore);
@@ -963,12 +1068,13 @@ async Task<int> RunSeasonRecap(SeasonRecapCommandOptions options)
     Console.WriteLine($"  Loaded {digests.Count} weekly digests from disk");
 
     // Run the agent.
-    var agent = await SeasonAgent.TryCreateAsync(foundrySettings);
+    await using var agentProvider = await ReportAgentProvider.CreateAsync(copilotSettings);
+    var agent = await agentProvider.TryCreateSeasonAgentAsync(foundrySettings);
     string proseBody = "";
     if (agent is null)
     {
         Console.WriteLine();
-        Console.WriteLine($"  (Season agent disabled -- {foundrySettings.MissingConfigurationMessage})");
+        Console.WriteLine("  (Season agent disabled -- no Copilot session and no Foundry configuration)");
     }
     else
     {
@@ -984,6 +1090,9 @@ async Task<int> RunSeasonRecap(SeasonRecapCommandOptions options)
     Console.WriteLine();
     return 0;
 }
+Task<int> RunExport(ExportCommandOptions options)
+    => SeasonExporter.RunAsync(client, options.Season, options.LeagueId);
+
 async Task<int> RunRostersHistory(RostersHistoryCommandOptions options)
 {
     var season = options.Season;
@@ -999,17 +1108,25 @@ async Task<int> RunRostersHistory(RostersHistoryCommandOptions options)
     var rosters = await client.GetLeagueRostersAsync(leagueId);
     var players = await client.GetAllPlayersAsync();
 
+    // Resolve owner identity through lore so no Sleeper handle reaches these data files.
+    var historyLore = LeagueLore.TryLoadLayers(
+        RecapPaths.LegacyLorePath,
+        RecapPaths.LoreDirectory,
+        int.TryParse(seasonStr, out var loreSeasonYear) ? loreSeasonYear : DateTime.UtcNow.Year)
+        ?? LeagueLore.ParseFrom("");
+
     var ownerByRosterId = rosters.ToDictionary(
         r => r.RosterId,
         r =>
         {
             var u = users.FirstOrDefault(x => x.UserId == r.OwnerId);
+            var handle = u?.Username ?? u?.DisplayName ?? "";
+            historyLore.OwnersByUsername.TryGetValue(handle.ToLowerInvariant(), out var loreOwner);
             return new
             {
                 UserId = r.OwnerId,
-                Username = u?.Username ?? "",
-                DisplayName = u?.DisplayName ?? u?.Username ?? $"Roster {r.RosterId}",
-                TeamName = u?.Metadata != null && u.Metadata.TryGetValue("team_name", out var tn) && !string.IsNullOrWhiteSpace(tn) ? tn : (u?.DisplayName ?? "")
+                OwnerName = loreOwner?.Name ?? $"Roster {r.RosterId}",
+                TeamName = u?.Metadata != null && u.Metadata.TryGetValue("team_name", out var tn) && !string.IsNullOrWhiteSpace(tn) ? tn : ""
             };
         });
 
@@ -1066,8 +1183,7 @@ async Task<int> RunRostersHistory(RostersHistoryCommandOptions options)
             {
                 roster_id = m.RosterId,
                 user_id = o?.UserId,
-                username = o?.Username,
-                display_name = o?.DisplayName,
+                owner_name = o?.OwnerName,
                 team_name = o?.TeamName,
                 matchup_id = m.MatchupId,
                 points = m.Points,
@@ -1082,7 +1198,7 @@ async Task<int> RunRostersHistory(RostersHistoryCommandOptions options)
             season = seasonStr,
             week = w,
             league_id = leagueId,
-            league_name = league.Name,
+            league_name = FirstNonBlankName(historyLore.League.Name, "The League"),
             captured_at_utc = DateTime.UtcNow.ToString("o"),
             note = "Kickoff-locked roster snapshot derived from /league/{id}/matchups/{week}. Includes starters and bench at lock time, with per-player points scored that week.",
             teams
@@ -1140,47 +1256,69 @@ async Task<int> RunAssetHistory(AssetHistoryCommandOptions options)
     Console.WriteLine($"  Audited {audit.InitialAssetCount} Week 1 assets: {string.Join(", ", audit.ExitCounts.OrderBy(value => value.Key).Select(value => $"{value.Key}={value.Value}"))}");
     return 0;
 }
+static string FirstNonBlankName(params string?[] candidates)
+    => candidates.FirstOrDefault(c => !string.IsNullOrWhiteSpace(c)) ?? "The League";
 
 static string DumpEnvelopeAsMarkdown(RecapEnvelope env)
 {
     var sb = new System.Text.StringBuilder();
+
+    // Never leak Sleeper usernames into published markdown: map every owner handle
+    // (username or platform display name) to the lore first name. This fails CLOSED —
+    // an owner with no lore entry renders as "Roster N" rather than falling back to a
+    // platform handle, because most handles embed a surname.
+    var nameByHandle = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
+    foreach (var o in env.Owners)
+    {
+        var safe = !string.IsNullOrWhiteSpace(o.RealName) ? o.RealName! : $"Roster {o.RosterId}";
+        if (!string.IsNullOrWhiteSpace(o.Username)) nameByHandle[o.Username] = safe;
+        if (!string.IsNullOrWhiteSpace(o.DisplayName)) nameByHandle[o.DisplayName] = safe;
+    }
+    string Own(string? handle)
+    {
+        if (string.IsNullOrWhiteSpace(handle)) return "";
+        return nameByHandle.TryGetValue(handle.Trim(), out var n) ? n : "(owner)";
+    }
+
     sb.AppendLine($"# Week {env.Meta.Week} -- {env.Meta.LeagueName} ({env.Meta.Season})");
     sb.AppendLine();
     sb.AppendLine($"_Data-only dump (no AI agent configured). {env.Meta.SeasonType}{(env.Meta.PlayoffRound is null ? "" : $" / {env.Meta.PlayoffRound}")}._");
+    if (env.InjuryReport is not null)
+        sb.AppendLine(env.InjuryReport.ToMarkdown());
     sb.AppendLine();
     sb.AppendLine("## Standings");
     sb.AppendLine();
     sb.AppendLine("| Rank | Team | Owner | W-L-T | PF | PA | FAAB |");
     sb.AppendLine("|---:|---|---|:---:|---:|---:|---:|");
     foreach (var s in env.Standings)
-        sb.AppendLine($"| {s.Rank} | {s.TeamName} | {s.OwnerDisplay} | {s.Wins}-{s.Losses}-{s.Ties} | {s.PointsFor:F2} | {s.PointsAgainst:F2} | {s.WaiverBudgetRemaining?.ToString() ?? "—"} |");
+        sb.AppendLine($"| {s.Rank} | {s.TeamName} | {Own(s.OwnerDisplay)} | {s.Wins}-{s.Losses}-{s.Ties} | {s.PointsFor:F2} | {s.PointsAgainst:F2} | {s.WaiverBudgetRemaining?.ToString() ?? "—"} |");
     sb.AppendLine();
     sb.AppendLine("## Games");
     sb.AppendLine();
     foreach (var g in env.Games.OrderByDescending(g => g.Home.FinalScore + g.Away.FinalScore))
     {
-        sb.AppendLine($"### {g.Home.OwnerDisplay} ({g.Home.FinalScore:F2}) vs {g.Away.OwnerDisplay} ({g.Away.FinalScore:F2})" +
+        sb.AppendLine($"### {Own(g.Home.OwnerDisplay)} ({g.Home.FinalScore:F2}) vs {Own(g.Away.OwnerDisplay)} ({g.Away.FinalScore:F2})" +
                        (g.StoryHookLabel is null ? "" : $" -- _{g.StoryHookLabel}_"));
         sb.AppendLine($"- Margin: {g.Margin:F2}{(g.Blowout ? " (blowout)" : "")}");
-        if (g.Home.KeyPerformer is not null) sb.AppendLine($"- Hero ({g.Home.OwnerDisplay}): {g.Home.KeyPerformer.FullName} -- {g.Home.KeyPerformer.Points:F1}");
-        if (g.Away.KeyPerformer is not null) sb.AppendLine($"- Hero ({g.Away.OwnerDisplay}): {g.Away.KeyPerformer.FullName} -- {g.Away.KeyPerformer.Points:F1}");
-        if (g.LineupOptimalityHomePct.HasValue) sb.AppendLine($"- Optimality: {g.Home.OwnerDisplay} {g.LineupOptimalityHomePct:F1}% / {g.Away.OwnerDisplay} {g.LineupOptimalityAwayPct:F1}%");
+        if (g.Home.KeyPerformer is not null) sb.AppendLine($"- Hero ({Own(g.Home.OwnerDisplay)}): {g.Home.KeyPerformer.FullName} -- {g.Home.KeyPerformer.Points:F1}");
+        if (g.Away.KeyPerformer is not null) sb.AppendLine($"- Hero ({Own(g.Away.OwnerDisplay)}): {g.Away.KeyPerformer.FullName} -- {g.Away.KeyPerformer.Points:F1}");
+        if (g.LineupOptimalityHomePct.HasValue) sb.AppendLine($"- Optimality: {Own(g.Home.OwnerDisplay)} {g.LineupOptimalityHomePct:F1}% / {Own(g.Away.OwnerDisplay)} {g.LineupOptimalityAwayPct:F1}%");
         sb.AppendLine();
     }
     sb.AppendLine("## League themes");
     sb.AppendLine();
-    if (env.Themes.HighestScore is not null) sb.AppendLine($"- High: {env.Themes.HighestScore.OwnerDisplay} -- {env.Themes.HighestScore.Score:F2}");
-    if (env.Themes.LowestScore is not null) sb.AppendLine($"- Low: {env.Themes.LowestScore.OwnerDisplay} -- {env.Themes.LowestScore.Score:F2}");
+    if (env.Themes.HighestScore is not null) sb.AppendLine($"- High: {Own(env.Themes.HighestScore.OwnerDisplay)} -- {env.Themes.HighestScore.Score:F2}");
+    if (env.Themes.LowestScore is not null) sb.AppendLine($"- Low: {Own(env.Themes.LowestScore.OwnerDisplay)} -- {env.Themes.LowestScore.Score:F2}");
     sb.AppendLine();
     sb.AppendLine("**Top performers**");
     foreach (var p in env.Themes.TopFivePerformers)
-        sb.AppendLine($"- {p.FullName} ({p.Position}, {p.RealNflTeam}) -- {p.Points:F2} pts (owned by {p.OwnedByDisplay})");
+        sb.AppendLine($"- {p.FullName} ({p.Position}, {p.RealNflTeam}) -- {p.Points:F2} pts (owned by {Own(p.OwnedByDisplay)})");
     sb.AppendLine();
     if (env.Themes.WaiverGrades.Count > 0)
     {
         sb.AppendLine("**Waiver / FA splash**");
         foreach (var w in env.Themes.WaiverGrades.Take(8))
-            sb.AppendLine($"- {w.ClaimingDisplay} added {w.PlayerName}{(w.FaabBid is null ? "" : $" (${w.FaabBid})")}{(w.WeekPoints is null ? "" : $" -- {w.WeekPoints:F2} pts this week")}");
+            sb.AppendLine($"- {Own(w.ClaimingDisplay)} added {w.PlayerName}{(w.FaabBid is null ? "" : $" (${w.FaabBid})")}{(w.WeekPoints is null ? "" : $" -- {w.WeekPoints:F2} pts this week")}");
         sb.AppendLine();
     }
     if (env.Themes.Trades.Count > 0)
@@ -1190,7 +1328,7 @@ static string DumpEnvelopeAsMarkdown(RecapEnvelope env)
         {
             sb.AppendLine($"- Trade ({t.CompletedAt:yyyy-MM-dd}):");
             foreach (var side in t.Sides)
-                sb.AppendLine($"  - {side.OwnerDisplay} received: {string.Join(", ", side.ReceivedPlayers)}{(side.ReceivedDraftPicks.Count > 0 ? "; picks: " + string.Join(", ", side.ReceivedDraftPicks) : "")}{(side.FaabReceived > 0 ? $"; ${side.FaabReceived} FAAB" : "")}");
+                sb.AppendLine($"  - {Own(side.OwnerDisplay)} received: {string.Join(", ", side.ReceivedPlayers)}{(side.ReceivedDraftPicks.Count > 0 ? "; picks: " + string.Join(", ", side.ReceivedDraftPicks) : "")}{(side.FaabReceived > 0 ? $"; ${side.FaabReceived} FAAB" : "")}");
         }
         sb.AppendLine();
     }
@@ -1203,7 +1341,7 @@ static string DumpEnvelopeAsMarkdown(RecapEnvelope env)
     sb.AppendLine("## Look-ahead");
     sb.AppendLine();
     foreach (var m in env.LookAhead.Matchups)
-        sb.AppendLine($"- Week {env.LookAhead.NextWeek}: {m.HomeOwnerDisplay} ({m.HomeProjection?.ToString("F1") ?? "?"}) vs {m.AwayOwnerDisplay} ({m.AwayProjection?.ToString("F1") ?? "?"}){(m.StoryHookLabel is null ? "" : $" -- _{m.StoryHookLabel}_")}");
+        sb.AppendLine($"- Week {env.LookAhead.NextWeek}: {Own(m.HomeOwnerDisplay)} ({m.HomeProjection?.ToString("F1") ?? "?"}) vs {Own(m.AwayOwnerDisplay)} ({m.AwayProjection?.ToString("F1") ?? "?"}){(m.StoryHookLabel is null ? "" : $" -- _{m.StoryHookLabel}_")}");
     sb.AppendLine();
     sb.AppendLine("## Agent fetch hints");
     foreach (var h in env.AgentFetchHints) sb.AppendLine($"- {h}");

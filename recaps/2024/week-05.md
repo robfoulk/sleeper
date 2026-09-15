@@ -1,4 +1,4 @@
-# Week 5 Recap — FoulknFootball (2024)
+# Week 5 Recap — The League (2024)
 
 _Generated 2026-04-27 01:20 UTC._
 
@@ -8,9 +8,9 @@ _Generated 2026-04-27 01:20 UTC._
 
 ## Intro
 
-The calendar turned, a few NFL benches went dark, and Week 5 in FoulknFootball felt a little different. Depth started to matter in a more practical way, because the teams that have built enough usable answers could absorb a thin spot or two, while the teams still leaning on perfect Sundays found out how narrow that path can be. Rob’s Also too old to run gave the cleanest example, posting the week’s top score at 211.10 in the highest-scoring game on the board and moving back to No. 1 in the standings.
+The calendar turned, a few NFL benches went dark, and Week 5 in The League felt a little different. Depth started to matter in a more practical way, because the teams that have built enough usable answers could absorb a thin spot or two, while the teams still leaning on perfect Sundays found out how narrow that path can be. Rob’s Also too old to run gave the cleanest example, posting the week’s top score at 211.10 in the highest-scoring game on the board and moving back to No. 1 in the standings.
 
-That was the larger shape of the week. Rob and Dakota are still giving FoulknFootball the steadiest weekly volume, but Devin belongs in that line now after a third straight win and another 150-plus outing, while Michael’s slide reached five games and remains the league’s hardest truth. One sharp detail summed up the weekend: Brian scored 171.50 and still lost, which is what happens when byes arrive and there is no room left for dead spots.
+That was the larger shape of the week. Rob and Dakota are still giving The League the steadiest weekly volume, but Devin belongs in that line now after a third straight win and another 150-plus outing, while Michael’s slide reached five games and remains the league’s hardest truth. One sharp detail summed up the weekend: Brian scored 171.50 and still lost, which is what happens when byes arrive and there is no room left for dead spots.
 
 ## League Themes
 
@@ -28,7 +28,7 @@ The standings and power table are starting to line up with one another. Rob jump
 
 **Also too old to run keeps rolling, and Code 3 pays for the quiet spots.**
 
-Week 5 in FoulknFootball opened with a familiar read on Rob’s side and a harsher one on Michael’s. Also too old to run beat Code 3, 211.10 to 160.40, and the size of the number mattered as much as the margin. Rob did not need a perfect lineup, but he had too many premium scores for Michael to hold back for four quarters of the fantasy weekend.
+Week 5 in The League opened with a familiar read on Rob’s side and a harsher one on Michael’s. Also too old to run beat Code 3, 211.10 to 160.40, and the size of the number mattered as much as the margin. Rob did not need a perfect lineup, but he had too many premium scores for Michael to hold back for four quarters of the fantasy weekend.
 
 The hero was Ja’Marr Chase. Cincinnati’s wideout gave Rob 31.3 points against Baltimore on 10 catches for 193 yards and two touchdowns, and the rest of the card kept moving with him: Geno Smith added 22.56, James Cook supplied 15.9 for Buffalo against Houston, Kyren Williams scored 14.5 for the Rams against Green Bay, and Isaiah Likely turned three catches into two touchdowns and 13.3 points. We picked Also too old to run here last week, and the call held on the winner but not the shape of it — projected 146.8 to 112.9, delivered 211.10 to 160.40.
 
@@ -36,13 +36,13 @@ On the other side, Michael finally got a week that looked more like a functionin
 
 That is where the game turned. Rob absorbed only one true drag from Braelon Allen’s 2.8, and even then Brandon Aiyuk’s 14.7, Brian Robinson’s two-touchdown 13.8, and a pair of 8-point kickers kept replacing lost ground. Michael, meanwhile, left some help on the bench with Raheem Mostert at 9.8 and Jaylen Wright at 8.6, but this was more about Also too old to run reaching a level that would have strained most teams in the league.
 
-The consequence is a clear one in FoulknFootball. Rob extends Also too old to run’s streak of 150-point games to five straight after last week’s loss to BearDown, while Michael’s losing streak reaches five and Code 3 must regroup with the head-to-head tiebreaker now in Rob’s pocket.
+The consequence is a clear one in The League. Rob extends Also too old to run’s streak of 150-point games to five straight after last week’s loss to BearDown, while Michael’s losing streak reaches five and Code 3 must regroup with the head-to-head tiebreaker now in Rob’s pocket.
 
 ### Hauwk Tua (201.88) vs BearDown (157.74)
 
 **Hauwk Tua catches BearDown, and Dave ends Dakota’s unbeaten run.**
 
-Week 5 in FoulknFootball opened with BearDown carrying the league’s cleanest start, and it closed with Hauwk Tua putting the largest number on this particular field. Dave beat Dakota, 201.88 to 157.74, a 44.14-point result that turned on depth as much as star power. Bo Nix, the Denver rookie quarterback, led the way with 23.14 points, and Dave kept finding useful scores behind him.
+Week 5 in The League opened with BearDown carrying the league’s cleanest start, and it closed with Hauwk Tua putting the largest number on this particular field. Dave beat Dakota, 201.88 to 157.74, a 44.14-point result that turned on depth as much as star power. Bo Nix, the Denver rookie quarterback, led the way with 23.14 points, and Dave kept finding useful scores behind him.
 
 We picked BearDown last week, so this one deserves a direct correction. The call leaned on Dakota’s four-game win streak, and that part of the profile was real, but we missed how much Week 5 would belong to Dave’s middle of the lineup; right team, wrong shape would have been too generous here. Brock Bowers gave Hauwk Tua 15.7 with eight catches for 97 yards and a touchdown for Las Vegas, D’Andre Swift added 18.0 for Chicago against Carolina, Brian Thomas Jr. brought 18.2 for Jacksonville, and Josh Jacobs chipped in 15.4 for Green Bay.
 
@@ -50,13 +50,13 @@ On the other side, Dakota still posted a number that usually keeps a team in the
 
 Dave did have one miss of his own with Andy Dalton’s 3.74, but Hauwk Tua had too much working elsewhere for it to matter. Younghoe Koo supplied 16.0, the Packers defense added 14.0, Chuba Hubbard scored 13.5, and Rhamondre Stevenson added 15.2. One sharp note says plenty: Dave got six separate starters to 15 points or better, and Dakota got only three.
 
-The consequence is a clear one in FoulknFootball. Dakota’s four-game winning streak is over, and Dave not only hands BearDown its first loss but also takes the head-to-head tiebreaker after Hauwk Tua was projected to come up short.
+The consequence is a clear one in The League. Dakota’s four-game winning streak is over, and Dave not only hands BearDown its first loss but also takes the head-to-head tiebreaker after Hauwk Tua was projected to come up short.
 
 ### GibbMeDaRock (178.16) vs Steel City (171.50)
 
 **Devin edges Brian as GibbMeDaRock survives Steel City’s 171.50.**
 
-Week 5 in FoulknFootball gave us one of those matchups where the losing side still did almost everything right. Devin’s GibbMeDaRock beat Brian’s Steel City, 178.16 to 171.50, and both teams ran well past projection. After Brian was picked to bounce back, it was Devin who answered instead, leaning on quarterback strength and just enough timely support around it.
+Week 5 in The League gave us one of those matchups where the losing side still did almost everything right. Devin’s GibbMeDaRock beat Brian’s Steel City, 178.16 to 171.50, and both teams ran well past projection. After Brian was picked to bounce back, it was Devin who answered instead, leaning on quarterback strength and just enough timely support around it.
 
 The hero was Lamar Jackson. Baltimore’s quarterback gave Devin 33.42 points against Cincinnati, throwing for 348 yards and four touchdowns while adding 55 rushing yards, and Trevor Lawrence backed him with 21.24 after 371 passing yards and two scores for Jacksonville against Indianapolis. Devin also got a sharp lift from Tucker Kraft, whose two-touchdown day brought 20.8 points for Green Bay against Los Angeles, while Denver’s defense added 16.0. That mattered, because GibbMeDaRock had to carry some real misses from Marvin Harrison at 3.6, Aaron Jones at 5.3, and Jerry Jeudy at 1.6.
 
@@ -64,13 +64,13 @@ On the other side, Brian put up a number that wins most weeks. Kareem Hunt was S
 
 One sharp observation says plenty about the game. Brian got the steadier lineup top to bottom, but Devin had the two biggest quarterback numbers on the field, and in a 6.66-point game that was enough to cover a surprising amount of drag elsewhere.
 
-The consequence is a meaningful one in the middle of the table. Devin extends GibbMeDaRock’s winning streak to three games and, after sitting one spot behind Brian in last week’s standings, flips that head-to-head result in a part of FoulknFootball where the playoff line is starting to come into view.
+The consequence is a meaningful one in the middle of the table. Devin extends GibbMeDaRock’s winning streak to three games and, after sitting one spot behind Brian in last week’s standings, flips that head-to-head result in a part of The League where the playoff line is starting to come into view.
 
 ### Chase Brown Tanks (161.76) vs CeeDeez Nuts (143.84)
 
 **Chase Brown Tanks answer the call as Eric turns back Jake.**
 
-Week 5 in FoulknFootball brought a meeting between two teams that arrived from different directions, and this time Chase Brown Tanks had the steadier finish. Eric beat Jake, 161.76 to 143.84, in a game where both sides had enough production to matter but only one lineup kept finding the next useful number. After last week’s loss to Devin and the forecast leaning toward Jake, Eric’s team gave a direct response.
+Week 5 in The League brought a meeting between two teams that arrived from different directions, and this time Chase Brown Tanks had the steadier finish. Eric beat Jake, 161.76 to 143.84, in a game where both sides had enough production to matter but only one lineup kept finding the next useful number. After last week’s loss to Devin and the forecast leaning toward Jake, Eric’s team gave a direct response.
 
 The hero was Drake London. Atlanta’s wide receiver carried Chase Brown Tanks with 21.4 points against Tampa Bay, turning 13 targets into 12 catches, 154 yards, and a touchdown. Eric also got 19.72 from Washington quarterback Jayden Daniels, 15.94 from Houston’s C.J. Stroud, and 14.6 from Rashid Shaheed. And yet the telling part of the afternoon was that Chase Brown Tanks won despite lighter days from Jordan Mason at 7.8, DK Metcalf at 3.5, and Diontae Johnson at 2.9.
 
@@ -78,7 +78,7 @@ On the other side, CeeDeez Nuts had enough pieces to stay in range for most of t
 
 One sharp note says plenty about the result. Eric got touchdown help from Chase Brown and Jaleel McLaughlin in complementary spots, while Travis Kelce’s 9 catches for 70 yards gave Chase Brown Tanks a professional kind of floor. Jake had bench help available in Caleb Williams’ 23.56, but this was less about one missed start and more about how many short returns CeeDeez Nuts had to absorb at once.
 
-The consequence is a clear one in the Week 5 race. Eric takes the head-to-head tiebreaker over Jake, and after coming in at 1-3 with Chase Brown Tanks sitting sixth in last week’s FoulknFootball standings, that is the kind of result that can steady a season.
+The consequence is a clear one in the Week 5 race. Eric takes the head-to-head tiebreaker over Jake, and after coming in at 1-3 with Chase Brown Tanks sitting sixth in last week’s The League standings, that is the kind of result that can steady a season.
 
 ## Storylines
 

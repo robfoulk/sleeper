@@ -1,4 +1,4 @@
-# Week 15 Recap — FoulknFootball (2025)
+# Week 15 Recap — The League (2025)
 
 _Generated 2026-04-27 00:44 UTC._
 
@@ -12,7 +12,7 @@ _Generated 2026-04-27 00:44 UTC._
 
 ## Intro
 
-The regular season is closed now, and FoulknFootball has a cleaner picture because Week 15 forced it to happen. Brian stayed where he has been for a while now, steady at the top and now on a six-game winning streak, while the middle of the table finally gave up some of its ambiguity. Jake’s 237.94-point decisive victory was the highest score of the week, and it arrived at exactly the right moment for a team that had spent the past month trying to stop the slide before the bracket locked.
+The regular season is closed now, and The League has a cleaner picture because Week 15 forced it to happen. Brian stayed where he has been for a while now, steady at the top and now on a six-game winning streak, while the middle of the table finally gave up some of its ambiguity. Jake’s 237.94-point decisive victory was the highest score of the week, and it arrived at exactly the right moment for a team that had spent the past month trying to stop the slide before the bracket locked.
 
 That is the shape of this week. Some teams entered needing style points, others simply needed survival, and a few found out there is a difference. The highest-scoring game belonged to Jake and Devin, but the larger frame reached across the whole league: Brian kept the standard in place, Dave absorbed a costly loss at the wrong time, Michael finished strong again, and Dakota’s season ended with the standings saying plainly what the last few weeks had been hinting.
 
@@ -36,7 +36,7 @@ There is also a fair grade to apply to last week’s forecast. The calls on Bria
 
 **Jake’s Seasonal Depression answers the pressure and closes the regular season with a decisive victory.**
 
-In the final week of the FoulknFootball regular season, with the bracket about to lock, Seasonal Depression did not leave much to interpretation. Jake beat Devin, 237.94 to 187.56, in a high-stakes battle that turned into a clear result by the end. The score was large on both sides. The difference was that Jake had strength in more places, and he kept finding it all afternoon.
+In the final week of the League regular season, with the bracket about to lock, Seasonal Depression did not leave much to interpretation. Jake beat Devin, 237.94 to 187.56, in a high-stakes battle that turned into a clear result by the end. The score was large on both sides. The difference was that Jake had strength in more places, and he kept finding it all afternoon.
 
 The hero was Brock Purdy. San Francisco’s quarterback gave Jake 26.2 points against Tennessee with 295 passing yards, three touchdowns, and 44 rushing yards, and that set the tone for a lineup that stayed on schedule. Josh Jacobs added 21.2 for Green Bay against Denver, D’Andre Swift scored 21.6 for Chicago against Cleveland with two rushing touchdowns, and Jameson Williams brought 19.4 for Detroit against the Rams on 134 yards and a score. Puka Nacua was right there too, with 18.9 for the Rams against Detroit, while Ka'imi Fairbairn and the Bears defense each delivered 18.0.
 
@@ -46,11 +46,11 @@ Jake left 23.5 points from J.J. McCarthy on the bench, while Devin had 24.0 from
 
 The consequence is a simple one, and an important one after last week’s five-game slide: Jake stops the losing streak in the regular-season finale and does it against a direct competitor for the last playoff ground.
 
-### Sanders Boutte on Sunday (227.94) vs He hate me (195.74) — _Cousin Bowl_
+### Sanders Boutte on Sunday (227.94) vs He hate me (195.74) — _Cut-line clash_
 
-**Cousin Bowl: Eric lands the decisive victory Dave could not quite cover.**
+**Cut-Line Clash: Eric lands the decisive victory Dave could not quite cover.**
 
-In the final week of the FoulknFootball regular season, the cousin framing fit, but the bracket pressure mattered more. Eric’s Sanders Boutte on Sunday beat Dave’s He hate me, 227.94 to 195.74, in a high-stakes battle that carried real weight at the cut line. This was not a narrow game. It was a deep one, and Eric had more answers across the card.
+In the final week of the League regular season, the bracket pressure did the talking. Eric’s Sanders Boutte on Sunday beat Dave’s He hate me, 227.94 to 195.74, in a high-stakes battle that carried real weight at the cut line. This was not a narrow game. It was a deep one, and Eric had more answers across the card.
 
 The hero was Trey McBride. Arizona’s tight end gave Eric 25.4 points against Houston on 12 catches for 134 yards and two touchdowns, while Darren Waller added 18.6 with two scores of his own and C.J. Stroud supplied 23.4 for Houston with three touchdown passes against Arizona. Jason Myers’ 22.0 from the kicking spot mattered too, and Jacory Croskey-Merritt’s 15.6 for Washington against the Giants was one of those numbers that changes the shape of a Sunday. Our call last week to ride Dave was a miss, plain and simple; the win streak we cited for He hate me stopped here, and Eric’s tight ends were the detail we did not give enough weight.
 
@@ -60,11 +60,11 @@ And yet, the sharper detail sits with the pass-catching spots around those backs
 
 The consequence is a clear one from last week’s ledger. Dave’s run of six straight games above 150 points continues, but the four-game winning streak for He hate me ends in Week 15, and Eric closes the regular season with the kind of total that kept the bracket picture moving all the way to the line.
 
-### First in and First Out? (180.26) vs Unstoppable Farce (138.08) — _Brother Bowl_
+### First in and First Out? (180.26) vs Unstoppable Farce (138.08) — _Regular-season finale_
 
-**Brother Bowl: Brian closes the regular season with a decisive victory over Rob.**
+**Regular-Season Finale: Brian closes the regular season with a decisive victory over Rob.**
 
-The final week of the FoulknFootball regular season brought the Brother Bowl at exactly the right time, with bracket positions settling and very little room left for a soft afternoon. Brian’s First in and First Out? handled that setting the way it has handled most of this season, beating Rob’s Unstoppable Farce 180.26 to 138.08. It was a high-stakes battle on the schedule, but the result itself was firm.
+The final week of the League regular season arrived at exactly the right time, with bracket positions settling and very little room left for a soft afternoon. Brian’s First in and First Out? handled that setting the way it has handled most of this season, beating Rob’s Unstoppable Farce 180.26 to 138.08. It was a high-stakes battle on the schedule, but the result itself was firm.
 
 The hero was Travis Etienne. New Orleans’ back gave Brian 28.5 points, catching three touchdown passes against the Jets, and he had real support from Bijan Robinson’s 21.5 for Atlanta, Nico Collins’ 20.5 for Houston, and Zay Flowers’ 12.8 for Baltimore. The call to ride First in and First Out? held up, and this time it was fairly close to script — projected at 166.8-129.6, delivered at 180.26-138.08.
 
@@ -72,13 +72,13 @@ On the other side, Rob got the kind of quarterback production that usually keeps
 
 Brian was not perfect, which is part of what makes the number stand out. Patrick Mahomes managed 13.06 for Kansas City, Jonathan Taylor had 10.1 for Indianapolis, and Quinshon Judkins was held to 1.7 for Cleveland, but First in and First Out? still had enough coverage to keep control of the game. One sentence says a good deal here: Brian posted 180.26 even with Dalton Schultz’s 13.6 and Brandon McManus’ 16.0 left on the bench.
 
-The consequence is plain. Brian extends First in and First Out?’s winning streak from five games to six, and just as important, he finishes the FoulknFootball regular season having cleared 150 points in all 15 weeks.
+The consequence is plain. Brian extends First in and First Out?’s winning streak from five games to six, and just as important, he finishes the League regular season having cleared 150 points in all 15 weeks.
 
-### Disappointment (173.58) vs BearDown (116.04) — _Brother Bowl (Gen 2)_
+### Disappointment (173.58) vs BearDown (116.04) — _Regular-season finale_
 
-**Brother Bowl (Gen 2): Michael locks in the regular-season finish with a decisive victory.**
+**Regular-Season Finale: Michael locks in the regular-season finish with a decisive victory.**
 
-In the final week of the FoulknFootball regular season, the Brother Bowl carried the kind of weight that does not need much decoration. Michael’s Disappointment handled Dakota’s BearDown, 173.58 to 116.04, and the margin told the story plainly. This was a high-stakes battle on the schedule because the bracket was settling into place, but Disappointment never needed a perfect card to control it.
+In the final week of the League regular season, the game carried the kind of weight that does not need much decoration. Michael’s Disappointment handled Dakota’s BearDown, 173.58 to 116.04, and the margin told the story plainly. This was a high-stakes battle on the schedule because the bracket was settling into place, but Disappointment never needed a perfect card to control it.
 
 The hero was Drake Maye. The New England quarterback gave Michael 20.5 points against Buffalo, running for 43 yards and two touchdowns, while Baker Mayfield added 19.18 for Tampa Bay against Atlanta. Michael also got useful work from DJ Moore’s 18.9, George Kittle’s 14.8 for San Francisco against Tennessee, Brandon Aubrey’s 14.6, and Philadelphia’s defense with 16.0. The sharp point here is simple: Disappointment reached 173.58 even with Jahmyr Gibbs held to 5.8 and Kenneth Walker to 1.9, which is what depth looks like in December.
 
@@ -86,14 +86,14 @@ On the other side, Dakota had one strong answer in Tyrone Tracy. The Giants back
 
 There was also a start-sit gap, and it was large enough to matter. Michael left 17.3 points on the bench, while Dakota left 55.10, with Jacoby Brissett’s 20.56 and Cam Little’s 12.0 standing out most clearly. In a game decided by 57.54, that is not the whole story, but it is part of it.
 
-The consequence is a clear one. Michael’s Disappointment extends its run to seven straight weeks above 150 points and closes the regular season exactly where last week’s power board had it: No. 3 in FoulknFootball.
+The consequence is a clear one. Michael’s Disappointment extends its run to seven straight weeks above 150 points and closes the regular season exactly where last week’s power board had it: No. 3 in The League.
 
 ## Storylines
 
 - Brian’s six-game winning streak now carries into the bracket, and the question is whether the league’s most reliable 150-point machine can keep making “steady” feel inevitable.
 - The No. 4 spot may be settled on paper, but Jake’s late surge changed the texture of that side of the bracket in a way seeding alone does not capture.
 - Michael and Dave arrive at Week 16 as a power-ranking one-step matchup, and that game now looks closer than the seed line suggests.
-- Dakota enters the consolation side with the coldest recent trend in FoulknFootball, which puts immediate weight on whether BearDown can stop the slide before it defines the finish.
+- Dakota enters the consolation side with the coldest recent trend in The League, which puts immediate weight on whether BearDown can stop the slide before it defines the finish.
 
 ---
 

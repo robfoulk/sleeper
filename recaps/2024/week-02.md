@@ -1,22 +1,22 @@
-# Week 2 Recap — FoulknFootball (2024)
+# Week 2 Recap — The League (2024)
 
 _Generated 2026-04-27 01:16 UTC._
 
 ## Intro
 
-Two weeks into the regular season, the board in FoulknFootball is beginning to tell a cleaner story. Four teams are unbeaten, four are still looking for their first win, and while nobody is locked into anything this early, the separation already feels more real than it did seven days ago.
+Two weeks into the regular season, the board in The League is beginning to tell a cleaner story. Four teams are unbeaten, four are still looking for their first win, and while nobody is locked into anything this early, the separation already feels more real than it did seven days ago.
 
 The loudest result belonged to Dakota. BearDown posted the league’s top score of the week at 201.48 in a 48.90-point win over GibbMeDaRock, backing up last week’s place at the top with an even stronger number. That matters on a week when Brian kept rolling, Rob kept pace, and Jake made it a clean 4-for-4 for the unbeaten group. The early picture can still change, but it no longer feels like guesswork.
 
 ## League Themes
 
-Dakota set the pace in Week 2, and Alvin Kamara was the biggest reason why. His 42.0 points were the top individual score in FoulknFootball this week, the kind of number that changes a matchup before the rest of the lineup even settles in. BearDown also got the week’s highest team total, and that combination is why Dakota remains the team everyone else is measuring against right now.
+Dakota set the pace in Week 2, and Alvin Kamara was the biggest reason why. His 42.0 points were the top individual score in The League this week, the kind of number that changes a matchup before the rest of the lineup even settles in. BearDown also got the week’s highest team total, and that combination is why Dakota remains the team everyone else is measuring against right now.
 
 There was strength at the top beyond BearDown. Brian climbed one spot to No. 2 in the power rankings after Steel City put up 192.08, with Kyler Murray delivering 28.54 points and continuing a roster-wide trend that looks solid rather than fragile. Rob slipped one place in the power board despite scoring 179.20, which says more about the traffic near the top than any weakness in Also too old to run; James Cook’s 27.5 and Jalen Hurts’ 23.82 gave Rob another week with answers in multiple places.
 
 The most useful waiver move belonged to Brian. Quentin Johnston gave Steel City 17.1 points, the best immediate return among this week’s additions, and it fit a bigger point about good teams staying active even when the standings already look comfortable. Dave got 12.7 from Andrei Iosivas, which was a helpful find in a loss, while most of the other pickup returns were modest. There were no trades this week, so the movement came from the wire and from start/sit calls inside existing rosters.
 
-A few of the strangest lines on the board helped shape the week. Kamara crushed a 17.0-point projection with 42.0. James Cook more than doubled a 10.3 projection with 27.5. Marvin Harrison turned a 0.4 projection into 25.0 for Devin, which is the sort of number that usually wins you a week, except BearDown had too much coming back the other way. On the other side of the ledger, A.J. Brown posted 0.0 for Eric against a 17.9 projection, Joe Mixon finished at 5.0 against 23.8, and Cooper Kupp’s 3.7 against an 18.0 expectation left a dent even in a winning lineup. Through two weeks, the cleanest read is this: the top of FoulknFootball is scoring with range, and the teams chasing are losing too many points to one or two dead spots.
+A few of the strangest lines on the board helped shape the week. Kamara crushed a 17.0-point projection with 42.0. James Cook more than doubled a 10.3 projection with 27.5. Marvin Harrison turned a 0.4 projection into 25.0 for Devin, which is the sort of number that usually wins you a week, except BearDown had too much coming back the other way. On the other side of the ledger, A.J. Brown posted 0.0 for Eric against a 17.9 projection, Joe Mixon finished at 5.0 against 23.8, and Cooper Kupp’s 3.7 against an 18.0 expectation left a dent even in a winning lineup. Through two weeks, the cleanest read is this: the top of The League is scoring with range, and the teams chasing are losing too many points to one or two dead spots.
 
 ## Game by Game
 
@@ -24,7 +24,7 @@ A few of the strangest lines on the board helped shape the week. Kamara crushed 
 
 **BearDown rides Kamara past GibbMeDaRock and keeps pace at the top.**
 
-Week 2 in FoulknFootball brought another big BearDown total, and this one left little doubt by the end. Dakota’s club moved past Devin’s GibbMeDaRock, 201.48 to 152.58, a margin built on star power up top and enough support everywhere else. After opening with the highest score in the league in Week 1, BearDown followed it with the highest score on the board again.
+Week 2 in The League brought another big BearDown total, and this one left little doubt by the end. Dakota’s club moved past Devin’s GibbMeDaRock, 201.48 to 152.58, a margin built on star power up top and enough support everywhere else. After opening with the highest score in the league in Week 1, BearDown followed it with the highest score on the board again.
 
 The hero was Alvin Kamara. The Saints running back gave Dakota 42.0 points against Dallas, piling up 115 rushing yards, three rushing touchdowns, and another score through the air, and that became the center of the matchup. Malik Nabers added 18.7 for the Giants against Washington on 10 catches for 127 yards and a touchdown, Davante Adams brought 17.0 on nine catches for 110 yards and a score, and Joe Burrow contributed 17.22 with 258 passing yards and two touchdowns for Cincinnati. Even the kicking spots mattered, with Brandon Aubrey at 15.0 and Evan McPherson at 14.0.
 
@@ -32,13 +32,13 @@ On the other side, Devin had some real answers. Marvin Harrison Jr. gave GibbMeD
 
 The sharp observation is a simple one. BearDown got to 201.48 despite 0.0 from Keon Coleman and modest returns from Saquon Barkley, Tyler Lockett, Dallas Goedert, and Michael Pittman, which tells you how sturdy the rest of Dakota’s afternoon was. Devin’s lineup had the headline game from Harrison, but this result turned on depth more than one burst.
 
-The consequence is clear in the early table. Dakota moves to 2-0 in FoulknFootball and will look to build momentum with 382.78 points through two weeks, while Devin falls to 0-2 and BearDown claims the head-to-head tiebreaker.
+The consequence is clear in the early table. Dakota moves to 2-0 in The League and will look to build momentum with 382.78 points through two weeks, while Devin falls to 0-2 and BearDown claims the head-to-head tiebreaker.
 
 ### Also too old to run (179.20) vs Chase Brown Tanks (152.74)
 
 **Rob’s depth carries Also too old to run past Eric.**
 
-Week 2 in FoulknFootball began with a matchup that looked narrow on paper and finished with two strong totals anyway. Rob’s Also too old to run posted 179.20 and turned back Eric’s Chase Brown Tanks at 152.74, a 26.46-point margin built less on one perfect lineup than on the simple comfort of having production in enough places.
+Week 2 in The League began with a matchup that looked narrow on paper and finished with two strong totals anyway. Rob’s Also too old to run posted 179.20 and turned back Eric’s Chase Brown Tanks at 152.74, a 26.46-point margin built less on one perfect lineup than on the simple comfort of having production in enough places.
 
 James Cook was the hero for Rob, and the Buffalo back did the heavy lifting against Miami with 27.5 points on 78 rushing yards, three total touchdowns, and 17 receiving yards. Jalen Hurts added 23.82 for Philadelphia against Atlanta, Buffalo’s defense chipped in 18.0, and Brian Robinson’s 133 rushing yards gave Rob another sturdy number at 13.6. We picked Eric in this spot last week, 156.8-152.9, with Ja'Marr Chase as the X-factor, and that miss is clean: Chase gave Rob only 3.5, but Cook and Hurts carried the game in a shape the forecast did not catch.
 
@@ -46,13 +46,13 @@ On the other side, Eric had enough good work to win plenty of weeks. DK Metcalf 
 
 Rob had his own misses. Cooper Kupp managed 3.7, Isaiah Likely 2.6, Jaylen Waddle 4.5, and Jerome Ford 6.4. But this game had a clear balance to it, because Also too old to run kept finding useful points from Cook, Hurts, Buffalo’s defense, Zach Charbonnet, Kyren Williams, Brian Robinson, and two kickers, while Eric’s best numbers were asked to cover for too many light spots.
 
-The consequence is straightforward and important early. Rob moves to 2-0 in FoulknFootball and keeps pace near the top of the standings, while Eric drops to 0-2 despite scoring 152.74, and Rob now holds the head-to-head tiebreaker if that matters later.
+The consequence is straightforward and important early. Rob moves to 2-0 in The League and keeps pace near the top of the standings, while Eric drops to 0-2 despite scoring 152.74, and Rob now holds the head-to-head tiebreaker if that matters later.
 
 ### CeeDeez Nuts (180.86) vs Code 3 (149.02)
 
 **CeeDeez Nuts find separation as Jake hands Michael a second straight loss.**
 
-Week 2 in FoulknFootball brought another big number from Michael, but this time Jake had the fuller answer. CeeDeez Nuts beat Code 3, 180.86 to 149.02, a game that sat near the projection early and then drifted away on volume. Jake got there even with Jayden Reed held to 4.6 and Matthew Stafford to 6.64, which tells you how much support the rest of the lineup supplied.
+Week 2 in The League brought another big number from Michael, but this time Jake had the fuller answer. CeeDeez Nuts beat Code 3, 180.86 to 149.02, a game that sat near the projection early and then drifted away on volume. Jake got there even with Jayden Reed held to 4.6 and Matthew Stafford to 6.64, which tells you how much support the rest of the lineup supplied.
 
 The hero was De'Von Achane. Miami's back gave Jake 22.5 points against Buffalo, and Ka'imi Fairbairn added 19.0 for Houston while Chris Godwin scored 17.7 for Tampa Bay. Derrick Henry chipped in 15.6 for Baltimore, CeeDee Lamb gave him 15.0 for Dallas, and Trey McBride added 12.7 for Arizona; the Week 1 call to side with CeeDeez Nuts held up, though the shape was off — projected as a coin flip at 145.7-143.1, it finished as a 31.84-point spread.
 
@@ -60,13 +60,13 @@ On the other side, Michael had useful work in enough places to stay respectable,
 
 That was the sharp difference in the matchup. Code 3 had bright spots, but CeeDeez Nuts had fewer empty ones, and Jake's kickers alone supplied 25.0 points between Fairbairn and Greg Zuerlein. In a week when Michael needed his quarterbacks to steady the floor, Jake won by getting ordinary, useful production from one spot after another.
 
-The consequence is immediate. Jake moves to 2-0 and keeps CeeDeez Nuts near the top of the early FoulknFootball table, while Michael falls to 0-2 despite opening the season with 178.56 and 149.02 and will look to build momentum without the record yet matching the scoring ceiling.
+The consequence is immediate. Jake moves to 2-0 and keeps CeeDeez Nuts near the top of the early The League table, while Michael falls to 0-2 despite opening the season with 178.56 and 149.02 and will look to build momentum without the record yet matching the scoring ceiling.
 
 ### Steel City (192.08) vs Hauwk Tua (135.68)
 
 **Brian’s Steel City rolls past Dave’s Hauwk Tua behind Murray’s two-quarterback edge.**
 
-Week 2 in FoulknFootball brought two teams that scored well in the opener, but this one tilted early and stayed there. Brian’s Steel City handled Dave’s Hauwk Tua, 192.08 to 135.68, a 56.40-point margin built on depth, quarterback production, and enough support elsewhere to make a few misses irrelevant.
+Week 2 in The League brought two teams that scored well in the opener, but this one tilted early and stayed there. Brian’s Steel City handled Dave’s Hauwk Tua, 192.08 to 135.68, a 56.40-point margin built on depth, quarterback production, and enough support elsewhere to make a few misses irrelevant.
 
 The hero was Kyler Murray. Brian got 28.54 points from Murray on 266 passing yards, three touchdown throws, and 59 rushing yards, while Breece Hall added 17.4 for the Jets and Nico Collins gave Steel City 19.5 on eight catches for 135 yards and a score for Houston. DeVonta Smith, Zay Flowers, Travis Etienne, and the Jets defense all kept the board moving, and that is usually how a team gets to 192 even when Patrick Mahomes was only modest at 12.94 and Kenneth Walker gave nothing at all.
 
@@ -74,7 +74,7 @@ On the other side, Dave had some honest work from Rhamondre Stevenson, who led H
 
 One sharp number tells most of the story. Brian’s two quarterbacks, Murray and Mahomes, combined for 41.48 points; Dave’s pair, Tagovailoa and Goff, managed 14.28. In a format that asks for strength at that spot twice, Steel City had control of the game before the rest of the lineup was even added up.
 
-The consequence is plain enough after two weeks. Brian moves to 2-0 in FoulknFootball and will look to build momentum near the top of the standings, while Dave drops to 0-2 and cedes the early head-to-head tiebreaker to Steel City.
+The consequence is plain enough after two weeks. Brian moves to 2-0 in The League and will look to build momentum near the top of the standings, while Dave drops to 0-2 and cedes the early head-to-head tiebreaker to Steel City.
 
 ## Storylines
 

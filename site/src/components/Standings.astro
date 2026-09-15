@@ -1,0 +1,73 @@
+---
+import { record, pts, ownerSlug, type Standing } from '../lib/league';
+
+interface Props {
+  rows: Standing[];
+  season: number;
+  caption?: string;
+}
+
+const { rows, season, caption } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const ordered = rows.slice().sort((a, b) => a.final_place - b.final_place);
+---
+
+<div class="ledger-scroll">
+  <table class="ledger">
+    {caption && <caption>{caption}</caption>}
+    <thead>
+      <tr>
+        <th scope="col" class="num">#</th>
+        <th scope="col">Team</th>
+        <th scope="col">Owner</th>
+        <th scope="col" class="num">Reg</th>
+        <th scope="col" class="num">PF</th>
+        <th scope="col" class="num">PA</th>
+        <th scope="col" class="num">High</th>
+        <th scope="col" class="num">Low</th>
+      </tr>
+    </thead>
+    <tbody>
+      {ordered.map((r) => (
+        <tr>
+          <td class="num place">{r.final_place}</td>
+          <td class="wide team">
+            <a href={`${base}/franchises/${r.franchise_id}`}>{r.team_name}</a>
+          </td>
+          <td><a href={`${base}/owners/${ownerSlug(r.owner_name)}`}>{r.owner_name}</a></td>
+          <td class="num">{record(r.wins, r.losses, r.ties)}</td>
+          <td class="num">{pts(r.points_for)}</td>
+          <td class="num quiet">{pts(r.points_against)}</td>
+          <td class="num quiet">{pts(r.high_score)}<span class="wk"> w{r.high_score_week}</span></td>
+          <td class="num quiet">{pts(r.low_score)}<span class="wk"> w{r.low_score_week}</span></td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>
+<p class="foot slug">Final placing after {season} playoffs. Reg is the regular-season record.</p>
+
+<style>
+  .place {
+    color: var(--ink-faint);
+    width: 2rem;
+  }
+  .team a {
+    font-weight: 700;
+    text-decoration: none;
+  }
+  .quiet {
+    color: var(--ink-quiet);
+  }
+  .wk {
+    color: var(--ink-faint);
+    font-size: 0.8em;
+  }
+  .foot {
+    margin: 0.7rem 0 0;
+  }
+  tbody tr:first-child .place {
+    color: var(--stamp);
+    font-weight: 700;
+  }
+</style>

@@ -1,4 +1,4 @@
-# Week 13 Recap — FoulknFootball (2025)
+# Week 13 Recap — The League (2025)
 
 _Generated 2026-04-27 00:41 UTC._
 
@@ -13,19 +13,19 @@ _Generated 2026-04-27 00:41 UTC._
 
 ## Intro
 
-Two weeks remain in the FoulknFootball regular season, and the middle of the table has finally lost its cushion. The records still frame the picture, but now every point total feels like part of the standings too, because the line between third and sixth is narrow enough to move on one Sunday. Brian stayed on top with another strong week, Dave kept second with his own heavy total, and the teams clustered at 6-7 now head into Week 14 with very little room to waste.
+Two weeks remain in the League regular season, and the middle of the table has finally lost its cushion. The records still frame the picture, but now every point total feels like part of the standings too, because the line between third and sixth is narrow enough to move on one Sunday. Brian stayed on top with another strong week, Dave kept second with his own heavy total, and the teams clustered at 6-7 now head into Week 14 with very little room to waste.
 
 The clearest statement belonged to Eric. Sanders Boutte on Sunday posted the league’s highest score at 199.94 in a high-stakes battle with Jake, a result that did more than end one week cleanly. It lifted Eric two spots in the power rankings to No. 3, pushed Seasonal Depression deeper into a four-game slide, and reminded everyone on the bubble that the race is no longer theoretical.
 
 ## League Themes
 
-Week 13 had one obvious top line, and it came from Sanders Boutte on Sunday. Eric produced the week’s best score at 199.94, the strongest single team total in FoulknFootball, and did it while leading a week where several contenders cleared the upper range of expectation. Just behind that, Brian’s First in and First Out? reached 195.68 to move to 11-2, and the larger season marker now matters even more: Brian has scored 150 or more in all 13 weeks. That kind of weekly floor keeps first place stable, while the rest of the bracket keeps shifting beneath it.
+Week 13 had one obvious top line, and it came from Sanders Boutte on Sunday. Eric produced the week’s best score at 199.94, the strongest single team total in The League, and did it while leading a week where several contenders cleared the upper range of expectation. Just behind that, Brian’s First in and First Out? reached 195.68 to move to 11-2, and the larger season marker now matters even more: Brian has scored 150 or more in all 13 weeks. That kind of weekly floor keeps first place stable, while the rest of the bracket keeps shifting beneath it.
 
 The individual leaderboard had a few sharp entries. Rob got the biggest single-player score of the week from the Seattle defense at 32.0, which is the sort of number that can change a matchup before the Sunday afternoon games settle in. Brian then stacked two of the next three best performances with Patrick Mahomes at 29.44 and Bijan Robinson at 25.3, another sign of why First in and First Out? continues to look like the league’s most reliable roster. Michael’s A.J. Brown deserves mention too, not just for 25.2 points but for doing it against an 11.8 projection, one of the week’s cleanest projection beaters.
 
 The most useful waiver production came from Michael. Tyrod Taylor gave Disappointment 21.28 points, the best return among this week’s additions, and in a week decided by playoff pressure that kind of immediate help stands out even in a loss. Rob also got real value from his roster churn, with Adonai Mitchell scoring 16.2 and Devaughn Vele adding 15.3. Those are not cosmetic additions. They are the sort of pickups that keep a four-game winning streak alive, and Unstoppable Farce has now turned from afterthought to active threat on the edge of the top four.
 
-There were no trades, which fits the shape of the season. At this point in FoulknFootball, most teams are working the margins through waivers and start-sit calls rather than trying to change the whole structure of the roster.
+There were no trades, which fits the shape of the season. At this point in The League, most teams are working the margins through waivers and start-sit calls rather than trying to change the whole structure of the roster.
 
 The odd stat lines were strong enough to leave a mark on the standings. Lamar Jackson scored just 6.5 against a 13.5 projection, Jahmyr Gibbs managed only 8.6 against 24.3, Saquon Barkley finished at 5.6 against 13.5, and Sam Darnold came in at 3.1 against 13.5. On the other side, A.J. Brown’s 25.2 was the cleanest smash of the week. Jake remains the clearest season-arc concern here: Seasonal Depression has now lost four straight, and the longer trend is just as important, with the last three weeks down 18.1 percent from his season scoring average. Meanwhile, the biggest power-ranking move belonged to Eric, up two spots to No. 3, which feels earned after the league-high score and a timely correction at exactly the right point on the calendar.
 
@@ -35,7 +35,7 @@ The odd stat lines were strong enough to leave a mark on the standings. Lamar Ja
 
 **Dave’s depth carries He hate me past Devin in Week 13.**
 
-Week 13 in FoulknFootball had the shape of a high-scoring afternoon from the start, and Dave’s He hate me had a little more of it from nearly every layer of the lineup in a 194.16-166.50 win over Devin’s Amon Another level . The margin was 27.66, solid but not overwhelming, and the score tells the story better than any label would. Dave got there with balance. Rashee Rice led the way with 21.4 for Kansas City against Dallas, Brock Bowers added 18.3 for Las Vegas against the Chargers, RJ Harvey scored 18.2 for Denver against Washington, and Davante Adams chipped in 17.8 for the Rams against Carolina.
+Week 13 in The League had the shape of a high-scoring afternoon from the start, and Dave’s He hate me had a little more of it from nearly every layer of the lineup in a 194.16-166.50 win over Devin’s Amon Another level . The margin was 27.66, solid but not overwhelming, and the score tells the story better than any label would. Dave got there with balance. Rashee Rice led the way with 21.4 for Kansas City against Dallas, Brock Bowers added 18.3 for Las Vegas against the Chargers, RJ Harvey scored 18.2 for Denver against Washington, and Davante Adams chipped in 17.8 for the Rams against Carolina.
 
 The notable part is that He hate me reached 194.16 without much help from the usual quarterback ceiling. Josh Allen gave Dave 16.72 for Buffalo, Lamar Jackson managed 6.54 for Baltimore, and Jaxon Smith-Njigba followed last week’s big line with just 2.3 for Seattle. And yet, James Cook’s 15.7, Kyren Williams’ 13.2, the Carolina defense’s 14.0, and another 12 combined points from Zane Gonzalez and Harrison Butker kept the card moving. Our call on this game held on the winner — He hate me was the pick at 176.4-145.1 — but this was right team, wrong shape, because Devin pushed far closer to Dave’s total than the forecast suggested.
 
@@ -43,13 +43,13 @@ On the other side, Devin produced enough offense to win in many weeks. Evan McPh
 
 And yet, the sharp detail sits with Devin’s wide receivers. Justin Jefferson scored 0.4, Amon-Ra St. Brown finished at 0.0, Cooper Kupp had 2.4, Stefon Diggs 2.6, and DeVonta Smith 4.8. That is a hard profile to survive even when the rest of the lineup does honest work, and it left Amon Another level chasing from underneath for most of the day. Devin did have 22.54 from Bryce Young on the bench, but there was not a broad missed opportunity here; the starters simply did not give him enough at the premium pass-catching spots.
 
-The consequence is a clear one from the season ledger. Dave extends He hate me’s run to five straight games above 150, and in a regular season that only runs through Week 15, that kind of weekly floor keeps pressure near the top of FoulknFootball.
+The consequence is a clear one from the season ledger. Dave extends He hate me’s run to five straight games above 150, and in a regular season that only runs through Week 15, that kind of weekly floor keeps pressure near the top of The League.
 
 ### First in and First Out? (195.68) vs Disappointment (157.14)
 
 **Brian’s depth carries First in and First Out? past Michael.**
 
-Week 13 in FoulknFootball brought a high-stakes battle near the top half of the table, and Brian’s First in and First Out? answered it with another substantial number. The 195.68-157.14 win over Michael’s Disappointment was a blowout by margin, but it did not feel like one reckless spike week. It felt like a first-place team stacking enough good players in enough places to leave very little room for trouble.
+Week 13 in The League brought a high-stakes battle near the top half of the table, and Brian’s First in and First Out? answered it with another substantial number. The 195.68-157.14 win over Michael’s Disappointment was a blowout by margin, but it did not feel like one reckless spike week. It felt like a first-place team stacking enough good players in enough places to leave very little room for trouble.
 
 Patrick Mahomes was the hero. Kansas City’s quarterback gave Brian 29.44 points against Dallas, throwing for 261 yards and four touchdowns while adding 30 rushing yards, and Bijan Robinson followed with 25.3 for Atlanta against the Jets on 142 rushing yards, 51 receiving yards, and a touchdown. Derrick Henry added 16.4 for Baltimore, Nico Collins scored 16.5 for Houston, and the Jacksonville defense brought in 16.0. One sharp detail tells the story: Brian got to 195.68 even with Jonathan Taylor at 12.1 and Zay Flowers at -1.4.
 
@@ -57,13 +57,13 @@ On the other side, Michael had enough offense to make this respectable and, for 
 
 And yet, Disappointment could not carry enough of the lower scores. Jahmyr Gibbs, coming off last week’s 44.4-point headline, finished with 8.6 for Detroit against Green Bay, Sean Tucker gave Michael 0.0 for Tampa Bay, and DJ Moore managed 2.7. That is a difficult set of returns to survive against a team that again cleared 190, especially when Brian kept finding useful work from Bucky Irving, Quinshon Judkins, and both team defenses.
 
-The consequence is a clear one. Brian extends First in and First Out?’s streak to 13 straight weeks above 150, preserving the standard that has kept him on the 1 line in FoulknFootball, while Michael’s four-game run above 150 continues even in defeat.
+The consequence is a clear one. Brian extends First in and First Out?’s streak to 13 straight weeks above 150, preserving the standard that has kept him on the 1 line in The League, while Michael’s four-game run above 150 continues even in defeat.
 
-### Sanders Boutte on Sunday (199.94) vs Seasonal Depression (146.06) — _Cousin vs Nephew_
+### Sanders Boutte on Sunday (199.94) vs Seasonal Depression (146.06) — _Seed fight_
 
-**Cousin vs Nephew: Eric’s Sanders Boutte on Sunday takes the high-stakes battle.**
+**Seed Fight: Eric’s Sanders Boutte on Sunday takes the high-stakes battle.**
 
-With a playoff seed on the line in Week 13, the cousin-nephew angle gave this one its headline, but the numbers gave it its shape. Eric’s Sanders Boutte on Sunday beat Jake’s Seasonal Depression, 199.94 to 146.06, a 53.88-point margin that was every bit as clear as it sounds. After a three-game slide coming into the week, Eric did not need a perfect lineup. He needed a full one, and he got it.
+With a playoff seed on the line in Week 13, the numbers gave this one its shape. Eric’s Sanders Boutte on Sunday beat Jake’s Seasonal Depression, 199.94 to 146.06, a 53.88-point margin that was every bit as clear as it sounds. After a three-game slide coming into the week, Eric did not need a perfect lineup. He needed a full one, and he got it.
 
 The hero was Jason Myers. Seattle’s kicker supplied 18.0 points, and Eric had support all across the card. CeeDee Lamb gave Dallas 17.2 against Kansas City, Terry McLaurin posted 15.6 for Washington against Denver, Trey McBride added 14.2 for Arizona against Tampa Bay, and the Buffalo defense brought in 16.0. Christian McCaffrey came in well below his projection at 13.4 for San Francisco against Cleveland, but that is the sharp detail here: Sanders Boutte on Sunday reached 199.94 even without its biggest name carrying the day.
 
@@ -71,13 +71,13 @@ On the other side, Jake had enough from a few professionals to stay respectable,
 
 There were points left on Jake’s bench, most notably Brock Purdy’s 17.12, but this was not a narrow start-sit complaint disguised as analysis. Eric simply had more useful totals in more places. Courtland Sutton scored 12.2 for Denver, Breece Hall added 13.6 for the Jets, Chase Brown gave Cincinnati 11.3, Zach Charbonnet supplied 11.2 for Seattle, and even Kayshon Boutte chipped in 9.5. That kind of spread leaves very little room for the other side.
 
-The consequence is a meaningful one in FoulknFootball’s regular-season race. Eric snaps Sanders Boutte on Sunday’s three-game losing streak, while Jake’s Seasonal Depression falls to a fourth straight loss after last week’s slide had already become the league’s most urgent correction.
+The consequence is a meaningful one in The League’s regular-season race. Eric snaps Sanders Boutte on Sunday’s three-game losing streak, while Jake’s Seasonal Depression falls to a fourth straight loss after last week’s slide had already become the league’s most urgent correction.
 
-### Unstoppable Farce (182.34) vs BearDown (124.66) — _Old Guard vs Young Guns_
+### Unstoppable Farce (182.34) vs BearDown (124.66) — _Seed fight_
 
-**Old Guard, big number: Rob’s Unstoppable Farce handles Dakota’s BearDown.**
+**Seed Fight: Rob’s Unstoppable Farce handles Dakota’s BearDown.**
 
-Week 13 in FoulknFootball carried the feel of a high-stakes battle, with playoff position in view and very little room left in the regular season. In that setting, Rob’s Unstoppable Farce delivered the clearest score of the week, beating Dakota’s BearDown 182.34 to 124.66. The margin was 57.68, and it came from a lineup that kept finding useful totals even where it was not perfect.
+Week 13 in The League carried the feel of a high-stakes battle, with playoff position in view and very little room left in the regular season. In that setting, Rob’s Unstoppable Farce delivered the clearest score of the week, beating Dakota’s BearDown 182.34 to 124.66. The margin was 57.68, and it came from a lineup that kept finding useful totals even where it was not perfect.
 
 The hero was Seattle’s defense, which gave Rob 32.0 points and changed the shape of the afternoon by itself. Kimani Vidal added 19.7 for the Chargers against Las Vegas, Christian Watson brought 14.3 for Green Bay against Detroit, and Rob also got steady quarterback work from Bo Nix’s 16.44 for Denver and Jalen Hurts’ 16.3 for Philadelphia. We missed this one in last week’s forecast. The call leaned BearDown on projection edge, but that edge never arrived, and Seattle’s defense became the X-factor that mattered.
 

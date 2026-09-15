@@ -1,4 +1,4 @@
-# Week 9 Recap — FoulknFootball (2024)
+# Week 9 Recap — The League (2024)
 
 _Generated 2026-04-27 01:26 UTC._
 
@@ -10,7 +10,7 @@ _Generated 2026-04-27 01:26 UTC._
 
 ## Intro
 
-Two weeks from the trade deadline, FoulknFootball has reached that part of the season where the standings and the transaction log start telling the same story. Dakota put up the week’s biggest number in BearDown’s 227.12-182.78 win over Devin, and it landed at the top of a board that is no longer taking shape so much as tightening. The teams near the top are trying to protect position, the teams near the middle are deciding how hard to push, and the teams near the bottom have to decide whether the shortest path forward is still through this season’s bracket or through next year’s picks.
+Two weeks from the trade deadline, The League has reached that part of the season where the standings and the transaction log start telling the same story. Dakota put up the week’s biggest number in BearDown’s 227.12-182.78 win over Devin, and it landed at the top of a board that is no longer taking shape so much as tightening. The teams near the top are trying to protect position, the teams near the middle are deciding how hard to push, and the teams near the bottom have to decide whether the shortest path forward is still through this season’s bracket or through next year’s picks.
 
 Last week, Jake’s 238.66 gave CeeDeez Nuts the loudest note in the league and nudged the table upward around him. This week, Dakota answered with the highest score of Week 9 and kept BearDown in first place at 7-2, while Eric’s Chase Brown Tanks quietly kept the most important active run in the league moving. At the other end, Michael’s skid is now nine games, and that fact sits over every lower-table result. The rosters will keep changing, but the pressure points are already in plain view.
 
@@ -24,7 +24,7 @@ The trade market, though, was active enough to fit the mood of the week. Rob sen
 
 A few stat lines were sharp enough to move the whole week. Saquon Barkley nearly doubled a 13.2-point projection with 29.9, and Jaxon Smith-Njigba went far past a 5.9 projection with his 30.0. On the other side, Brian Robinson’s 0.0 against a 13.0 expectation, Tee Higgins’ 0.0 against 12.1, and Jonathan Taylor’s 5.9 against 18.4 all left real dents. So did Ja'Marr Chase at 4.3 and A.J. Brown at 3.6. Those misses help explain why GibbMeDaRock can still sit fifth at 5-4 despite the league’s hottest recent scoring profile, and why BearDown’s rise to No. 3 in the power rankings feels earned rather than cosmetic.
 
-The biggest season fact remains Eric’s run. Chase Brown Tanks have now won five straight and scored 150 or more in six straight weeks, which makes them the cleanest pressure team in FoulknFootball even from the No. 4 seed line. Dakota’s BearDown have won three in a row and climbed two spots in the power rankings, the largest move near the top, while Brian’s Steel City picked up a needed win even with a cold three-week scoring trend still attached. At this point of the regular season, form matters, but timing matters just as much.
+The biggest season fact remains Eric’s run. Chase Brown Tanks have now won five straight and scored 150 or more in six straight weeks, which makes them the cleanest pressure team in The League even from the No. 4 seed line. Dakota’s BearDown have won three in a row and climbed two spots in the power rankings, the largest move near the top, while Brian’s Steel City picked up a needed win even with a cold three-week scoring trend still attached. At this point of the regular season, form matters, but timing matters just as much.
 
 ## Game by Game
 
@@ -32,7 +32,7 @@ The biggest season fact remains Eric’s run. Chase Brown Tanks have now won fiv
 
 **Dakota and BearDown turn back Devin with a bigger ground game.**
 
-Week 9 in FoulknFootball set two of the steadier teams on the same line, and Dakota’s BearDown answered with the fuller card. The final was 227.12 to 182.78 over Devin’s GibbMeDaRock, a 44.34-point margin that came from strength at the top and enough support underneath it. BearDown cleared its projection by a wide margin, and that told the story before the night was done.
+Week 9 in The League set two of the steadier teams on the same line, and Dakota’s BearDown answered with the fuller card. The final was 227.12 to 182.78 over Devin’s GibbMeDaRock, a 44.34-point margin that came from strength at the top and enough support underneath it. BearDown cleared its projection by a wide margin, and that told the story before the night was done.
 
 The hero was Saquon Barkley. Philadelphia’s running back gave Dakota 29.9 points against Jacksonville, and he had real company: Joe Burrow threw five touchdown passes for Cincinnati and scored 29.14, Alvin Kamara ran for 155 yards for New Orleans and finished with 21.5, and J.K. Dobbins added 22.5 on two rushing scores for Denver. The call last week missed cleanly. We rode Devin on the projection gap, but that X-factor never arrived, while BearDown’s backs and quarterbacks carried this one well past the forecast.
 
@@ -40,13 +40,13 @@ On the other side, Devin still posted a respectable total, and Lamar Jackson’s
 
 That was the sharp note here. Dakota got busts from DJ Moore, Keon Coleman, and Michael Pittman and still reached 227.12, which usually means the engine of the lineup was running in the right places. BearDown also showcased their aspirations by winning through the spine of the roster, with Burrow, Barkley, Kamara, Pollard, and Dobbins doing the heavy work.
 
-The consequence is a meaningful one from last week’s table. Dakota came in on a two-game winning streak and extends it to three, while Devin takes a second straight loss after the five-game run that had GibbMeDaRock near the top of the FoulknFootball board.
+The consequence is a meaningful one from last week’s table. Dakota came in on a two-game winning streak and extends it to three, while Devin takes a second straight loss after the five-game run that had GibbMeDaRock near the top of the League board.
 
 ### CeeDeez Nuts (214.52) vs Code 3 (151.94)
 
 **Jake and CeeDeez Nuts keep rolling past Michael and Code 3.**
 
-Week 9 in FoulknFootball set up as a test of recent form, and Jake’s CeeDeez Nuts answered it cleanly. The final was 214.52 to 151.94, a 62.58-point margin, and the shape of the game told you plenty. Jake did not need every marquee name to hit, because the lineup kept producing from too many places for Michael to slow it down.
+Week 9 in The League set up as a test of recent form, and Jake’s CeeDeez Nuts answered it cleanly. The final was 214.52 to 151.94, a 62.58-point margin, and the shape of the game told you plenty. Jake did not need every marquee name to hit, because the lineup kept producing from too many places for Michael to slow it down.
 
 The hero was Derrick Henry. Baltimore’s running back gave Jake 25.3 points against Denver with 106 rushing yards and two touchdowns, while De’Von Achane added 24.1 for Miami against Buffalo and Garrett Wilson brought 21.0 on nine catches, 90 yards, and two scores for the Jets against Houston. Matthew Stafford chipped in 17.92 for the Rams against Seattle, Sam Darnold supplied 19.0, and Tank Dell added 12.6 for Houston. Even with Puka Nacua at 1.1 and Nick Chubb at 3.5, CeeDeez Nuts still reached 214.52, which is the kind of total that showcased their aspirations without needing much embellishment.
 
@@ -54,13 +54,13 @@ On the other side, Michael had professionals doing their part. Josh Allen led Co
 
 That was the sharp point here. Michael’s best numbers mostly asked Code 3 to keep pace, while Jake’s came in waves and from higher-leverage spots, and once Achane, Henry, and Wilson all cleared 20, this matchup stopped asking many questions. Meanwhile, Jake also had 48.1 coulda-shoulda points left on the bench, a reminder that the winning score was broad, not fragile.
 
-The consequence is plain enough from the season ledger. Jake extends the CeeDeez Nuts rise that started last week, while Michael’s losing streak moves from eight to nine in FoulknFootball.
+The consequence is plain enough from the season ledger. Jake extends the CeeDeez Nuts rise that started last week, while Michael’s losing streak moves from eight to nine in The League.
 
 ### Chase Brown Tanks (172.38) vs Also too old to run (155.62)
 
 **Eric and Chase Brown Tanks end Rob’s run with the deeper card.**
 
-Week 9 in FoulknFootball set up as one of the cleaner games on the board. Rob came in off consecutive wins and Eric brought a four-game streak with him, and by the end it was Chase Brown Tanks over Also too old to run, 172.38 to 155.62. The margin was 16.76, but the shape of it was steadier than that sounds because Eric kept finding answers even where the lineup had a few quiet spots.
+Week 9 in The League set up as one of the cleaner games on the board. Rob came in off consecutive wins and Eric brought a four-game streak with him, and by the end it was Chase Brown Tanks over Also too old to run, 172.38 to 155.62. The margin was 16.76, but the shape of it was steadier than that sounds because Eric kept finding answers even where the lineup had a few quiet spots.
 
 The hero was Chase Brown. Cincinnati’s running back gave Eric 21.7 points against Las Vegas on 27 carries for 120 yards, plus five catches for 37 yards and a receiving touchdown, and that fit the larger theme of the afternoon. Jayden Daniels added 19.86 for Washington against the Giants, Joe Mixon brought 16.6 against the Jets, Courtland Sutton posted 16.28 for Denver against Baltimore, and Terry McLaurin turned just two catches into two touchdowns. We missed this one last week. The call was for Rob to edge it 167.9 to 163.1, but Eric’s streak did not stop at four; it reached five because the middle of his lineup held up better than we gave it credit for.
 
@@ -74,7 +74,7 @@ The consequence is a real one in the Week 9 ledger: Eric extends the Chase Brown
 
 **Brian gets Steel City back on line over Dave and Hauwk Tua.**
 
-Week 9 in FoulknFootball set up as a meeting between two teams trying to change the direction of the middle of the table, and Brian’s Steel City did just enough more than Dave’s Hauwk Tua to take it, 163.26 to 149.82. The margin was 13.44, and the shape of it was interesting: both sides cleared their projections, but Steel City carried a little more answer through the lineup even with a few quiet spots of its own.
+Week 9 in The League set up as a meeting between two teams trying to change the direction of the middle of the table, and Brian’s Steel City did just enough more than Dave’s Hauwk Tua to take it, 163.26 to 149.82. The margin was 13.44, and the shape of it was interesting: both sides cleared their projections, but Steel City carried a little more answer through the lineup even with a few quiet spots of its own.
 
 The hero was Zay Flowers. Baltimore’s wide receiver gave Brian 24.7 points against Denver on five catches for 127 yards and two touchdowns, while Patrick Mahomes added 24.54 for Kansas City against Tampa Bay with 291 passing yards and three touchdowns. Kareem Hunt brought 17.7 on 27 carries and a rushing score in that same Chiefs game, Rico Dowdle added 16.7, and DeVonta Smith supplied 14.7 for Philadelphia against Jacksonville. That was enough to cover for lighter returns from Xavier Worthy at -1.0, Chris Olave at 1.3, and Cole Kmet at 0.0.
 
@@ -89,7 +89,7 @@ The consequence is a clear one from last week’s ledger: Brian snaps Steel City
 - Eric carries the league’s clearest active run into Week 10, and the question is whether Chase Brown Tanks can keep a five-game streak alive long enough to turn the No. 4 seed line into something firmer.
 - Jake and Dakota meet with the top of the table in view, and it is the kind of game that can clarify whether first place is stable or just rented week to week.
 - Devin gets the only 0-9 team on the board, which makes this less about projection than about whether GibbMeDaRock can stop a two-game slide before the bubble tightens.
-- Rob and Brian bring a little extra family texture to a matchup that also matters cleanly in the standings, with Steel City trying to chase the cut line and Also too old to run trying not to give away more ground.
+- Rob and Brian meet in a matchup that matters cleanly in the standings, with Steel City trying to chase the cut line and Also too old to run trying not to give away more ground.
 
 ---
 

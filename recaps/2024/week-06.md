@@ -1,4 +1,4 @@
-# Week 6 Recap — FoulknFootball (2024)
+# Week 6 Recap — The League (2024)
 
 _Generated 2026-04-27 01:22 UTC._
 
@@ -9,7 +9,7 @@ _Generated 2026-04-27 01:22 UTC._
 
 ## Intro
 
-Six weeks into the regular season, FoulknFootball is starting to tell the truth about itself. The standings still have company at the top with four teams at 4-2, but the weekly profiles are separating a little more cleanly now, and Week 6 gave that read some force. Jake’s CeeDeez Nuts put up the league’s highest score at 232.16 against Dave, Brian answered with 205.88 in a needed win, and Eric handed first-place BearDown another loss. The noise of September is fading, while the byes and thin depth spots are beginning to ask harder questions.
+Six weeks into the regular season, The League is starting to tell the truth about itself. The standings still have company at the top with four teams at 4-2, but the weekly profiles are separating a little more cleanly now, and Week 6 gave that read some force. Jake’s CeeDeez Nuts put up the league’s highest score at 232.16 against Dave, Brian answered with 205.88 in a needed win, and Eric handed first-place BearDown another loss. The noise of September is fading, while the byes and thin depth spots are beginning to ask harder questions.
 
 That left a clear shape to the week. Jake climbed three spots to No. 1 in the power rankings and looked every bit the part, Rob’s slide from first to third in the standings held for another week after the league’s lowest score at 123.86, and Michael’s season reached its hardest point with a sixth straight loss. One result summed it up well: Devin beat Rob 140.18 to 123.86 in the week’s closest game, and even that modest margin felt like a firm correction rather than a fluke.
 
@@ -27,7 +27,7 @@ A few stat lines bent the week hard enough to shape outcomes. Marvin Harrison an
 
 **Jake answers Dave with a Week 6 number that held all day.**
 
-Week 6 in FoulknFootball opened with both teams carrying some real scoring form, and the game played to that expectation. Jake’s CeeDeez Nuts beat Dave’s Hauwk Tua, 232.16 to 185.38, a result that cleared every projection on the page and then kept going. It was a broad, professional lineup from Jake, and the one sharp detail is this: he got to 232.16 even with Dak Prescott giving him only 3.22.
+Week 6 in The League opened with both teams carrying some real scoring form, and the game played to that expectation. Jake’s CeeDeez Nuts beat Dave’s Hauwk Tua, 232.16 to 185.38, a result that cleared every projection on the page and then kept going. It was a broad, professional lineup from Jake, and the one sharp detail is this: he got to 232.16 even with Dak Prescott giving him only 3.22.
 
 The hero was Caleb Williams. The Chicago rookie gave Jake 28.64 points against Jacksonville, throwing for 226 yards and four touchdowns while adding 56 rushing yards, and that performance fit neatly beside the rest of the card. Derrick Henry scored 25.2 for Baltimore against Washington, Chris Godwin brought 24.5 for Tampa Bay against New Orleans, Bijan Robinson added 22.5 for Atlanta against Carolina, and David Montgomery supplied 20.0 with two rushing touchdowns.
 
@@ -41,7 +41,7 @@ The consequence is a clear one. Jake not only avenges last week’s loss with th
 
 **Chase Brown Tanks have the range, and Eric turns back Dakota.**
 
-Week 6 in FoulknFootball opened as a meeting of two teams that had already made a habit of putting real numbers on the board, and this one rose well beyond that. Eric’s Chase Brown Tanks beat Dakota’s BearDown, 209.34 to 168.22, a 41.12-point result that was broad as much as it was top-heavy. Joe Mixon set the tone with 25.2 points against New England, and Eric kept finding the next useful score behind him.
+Week 6 in The League opened as a meeting of two teams that had already made a habit of putting real numbers on the board, and this one rose well beyond that. Eric’s Chase Brown Tanks beat Dakota’s BearDown, 209.34 to 168.22, a 41.12-point result that was broad as much as it was top-heavy. Joe Mixon set the tone with 25.2 points against New England, and Eric kept finding the next useful score behind him.
 
 We picked Chase Brown Tanks last week, and the call on the winner held up even if the shape of it did not — projected 159.4 to 154.1, delivered 209.34 to 168.22. Jayden Daniels gave Eric 20.96 for Washington against Baltimore, Terry McLaurin paired with him for 17.3 and two touchdowns, A.J. Brown added 17.6 for Philadelphia against Cleveland, and Tyrone Tracy’s 16.7 was one of the quiet swing pieces of the afternoon. Even with James Conner at 2.6 and DK Metcalf at 4.8, Chase Brown Tanks still cleared 200, which tells you how much of the lineup was working.
 
@@ -55,7 +55,7 @@ The consequence is a clean one. Eric not only takes the Week 6 result, he extend
 
 **Steel City answers in full, and Code 3 cannot keep pace.**
 
-Week 6 in FoulknFootball opened with Brian needing a steadier Sunday after three straight losses, and it closed with Steel City posting the biggest number in this matchup by a wide margin. Brian beat Michael, 205.88 to 137.36, a result that was settled less by one monster score than by how many useful ones Steel City kept stacking across the card.
+Week 6 in The League opened with Brian needing a steadier Sunday after three straight losses, and it closed with Steel City posting the biggest number in this matchup by a wide margin. Brian beat Michael, 205.88 to 137.36, a result that was settled less by one monster score than by how many useful ones Steel City kept stacking across the card.
 
 The hero was Jordan Love. Green Bay’s quarterback gave Brian 25.62 points against Arizona with 258 passing yards and four touchdowns, and he had plenty of company. Cole Kmet added 19.0 for Chicago with two touchdown catches against Jacksonville, Tampa Bay’s defense brought 19.0 against New Orleans, Jake Bates supplied 17.0, Breece Hall ran for 113 yards on his way to 16.9, and Bucky Irving added 16.5 with a touchdown for Tampa Bay. We picked Steel City last week, and the call held on the winner but not the shape of it — projected 145.2 to 131.4, delivered 205.88 to 137.36.
 
@@ -69,7 +69,7 @@ The consequence is a clear one. Brian’s three-game losing streak is over, and 
 
 **Devin hands Rob a measured Week 6 setback.**
 
-In a Week 6 meeting that carried some early standings weight in FoulknFootball, GibbMeDaRock beat Also too old to run, 140.18 to 123.86. The score was solid rather than overwhelming, and that fit the shape of the day. Devin did not get a clean card, but he found enough answers in the middle of the lineup while Rob’s bigger names left too much behind.
+In a Week 6 meeting that carried some early standings weight in The League, GibbMeDaRock beat Also too old to run, 140.18 to 123.86. The score was solid rather than overwhelming, and that fit the shape of the day. Devin did not get a clean card, but he found enough answers in the middle of the lineup while Rob’s bigger names left too much behind.
 
 The hero was Lamar Jackson, even in a quieter game by his standards. Baltimore’s quarterback gave Devin 18.92 points with 323 passing yards and 40 more on the ground, and Trevor Lawrence added 17.06 behind him. Just as important, Najee Harris supplied 18.2 with 106 rushing yards and a touchdown against Las Vegas, while Tyler Allgeier matched that steady lift with 18.8 on 105 yards and a score of his own. Sam LaPorta also helped turn the board with 11.2 on one catch, because it went for 52 yards and a touchdown.
 
@@ -84,7 +84,7 @@ The consequence is a clear one. After Rob sat No. 1 in last week’s standings a
 - Devin’s four-game run now meets the pressure that comes with holding the projected No. 4 seed, because one more result could either steady that spot or reopen the whole middle.
 - Rob and Jake arrive from opposite directions in the power rankings, and Week 7 offers a clean test of whether the standings favorite or the form team is more trustworthy.
 - Michael is running out of harmless weeks; at 0-6, every loss makes the bottom of the table feel less temporary and more structural.
-- BearDown have lost two straight despite a six-week run of 150-plus scoring, which is a rare combination and a reminder that the top of FoulknFootball is less secure than it looks.
+- BearDown have lost two straight despite a six-week run of 150-plus scoring, which is a rare combination and a reminder that the top of The League is less secure than it looks.
 
 ---
 

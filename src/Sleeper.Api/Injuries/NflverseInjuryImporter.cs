@@ -67,7 +67,9 @@ public sealed class NflverseInjuryImporter : IInjuryImporter
             var status = NormalizeValue(player?.InjuryStatus);
             var practice = NormalizeValue(player?.PracticeParticipation);
             var injuryStart = NormalizeValue(player?.InjuryStartDate);
-            var hasDesignation = status is not null || practice is not null || injuryStart is not null;
+            var injury = NormalizeValue(player?.InjuryBodyPart);
+            var notes = NormalizeValue(player?.InjuryNotes);
+            var hasDesignation = status is not null || practice is not null || injuryStart is not null || injury is not null;
             if (hasDesignation)
                 injuredCount++;
 
@@ -77,10 +79,10 @@ public sealed class NflverseInjuryImporter : IInjuryImporter
                 sourceUrl,
                 status ?? (hasDesignation ? "practice" : "healthy"),
                 practice ?? (hasDesignation ? null : "full"),
-                null,
+                injury,
                 null,
                 hasDesignation
-                    ? $"Complete Sleeper player snapshot; injury_start_date={injuryStart ?? "unknown"}."
+                    ? $"Complete Sleeper player snapshot; injury_start_date={injuryStart ?? "unknown"}. {notes}".TrimEnd()
                     : "Complete Sleeper player snapshot contained no current injury designation.",
                 "platform",
                 observedAt,

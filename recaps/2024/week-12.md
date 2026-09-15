@@ -1,4 +1,4 @@
-# Week 12 Recap — FoulknFootball (2024)
+# Week 12 Recap — The League (2024)
 
 _Generated 2026-04-27 01:30 UTC._
 
@@ -9,13 +9,13 @@ _Generated 2026-04-27 01:30 UTC._
 
 ## Intro
 
-There are three weeks left in the regular season in FoulknFootball, and the board is starting to narrow without becoming simpler. The top four are separated by a game, the bubble still has real tension in it, and every score now carries two uses: the win in front of you, and the points-for cushion you may need later. Week 12 gave the standings a little more shape, but not much room to relax.
+There are three weeks left in the regular season in The League, and the board is starting to narrow without becoming simpler. The top four are separated by a game, the bubble still has real tension in it, and every score now carries two uses: the win in front of you, and the points-for cushion you may need later. Week 12 gave the standings a little more shape, but not much room to relax.
 
 The biggest game on the slate belonged to Jake, whose 200.72 from CeeDeez Nuts held off Eric’s 188.08 from Chase Brown Tanks in the week’s highest-scoring matchup. That result matters on its own, and it matters a little more because Jake’s winning streak now sits at five, the longest active run among contenders. Rob stayed level at 9-3 with his own third straight win, while Devin and Dakota kept the pressure on from just behind. At the other end, Michael’s season keeps moving in one direction, and by this point even modest margins feel heavier than they did a month ago.
 
 ## League Themes
 
-The cleanest theme of Week 12 was the one sitting at the top of the table. Jake not only posted the league’s high score at 200.72, he did it in the narrowest game of the week, surviving Eric’s 188.08 in a result that says plenty about both teams. CeeDeez Nuts has now won five straight, and that is the central fact of the week in FoulknFootball. A streak that long in late November is not just form; it starts to shape the bracket around it.
+The cleanest theme of Week 12 was the one sitting at the top of the table. Jake not only posted the league’s high score at 200.72, he did it in the narrowest game of the week, surviving Eric’s 188.08 in a result that says plenty about both teams. CeeDeez Nuts has now won five straight, and that is the central fact of the week in The League. A streak that long in late November is not just form; it starts to shape the bracket around it.
 
 Around the league, the biggest individual performance came from Dakota’s lineup. Saquon Barkley delivered 42.2 for BearDown, a number that led all scorers and comfortably cleared his projection. Jayden Daniels gave Eric 30.4 in a loss, Patrick Mahomes posted 28.76 for Brian, Josh Jacobs added 28.6 for Devin, and Rob got 28.48 from Tua Tagovailoa. It was a useful snapshot of where the league sits now: the stars are still deciding weeks, but several contenders have reached the point where one big game is being paired with enough steady work to keep the total climbing.
 
@@ -23,7 +23,7 @@ On waivers, Brian got the best immediate return. Ameer Abdullah gave Steel City 
 
 The power board shifted slightly, and the notable mover was Devin. GibbMeDaRock climbed one spot to No. 3, trading places with BearDown after another strong week, and that rise tracks with the season ledger: Devin has now scored 150 or more in six straight weeks. Rob has done the same, which helps explain why Also too old to run continues to sit just behind Jake despite not holding first place. Eric’s loss stings a little less when viewed through the longer line, because Chase Brown Tanks has still scored 150 or more in nine straight weeks. That is a serious floor, even if the standings do not always reward it in a given week.
 
-A few stat lines bent matchups in obvious ways. Barkley’s 42.2 against a 20.2 projection was the loudest overage on the board, while several established names went the other way. Joe Mixon finished at 4.5 against a 21.1 expectation, Brock Purdy gave a dead-zero against 21.3, Amon-Ra St. Brown came in at 6.2 against 14.5, and James Conner managed 4.9 against 14.3. The sharp observation this late in the season is a simple one: nobody is chasing perfection anymore. The teams that matter most in FoulknFootball are the ones surviving the misses.
+A few stat lines bent matchups in obvious ways. Barkley’s 42.2 against a 20.2 projection was the loudest overage on the board, while several established names went the other way. Joe Mixon finished at 4.5 against a 21.1 expectation, Brock Purdy gave a dead-zero against 21.3, Amon-Ra St. Brown came in at 6.2 against 14.5, and James Conner managed 4.9 against 14.3. The sharp observation this late in the season is a simple one: nobody is chasing perfection anymore. The teams that matter most in The League are the ones surviving the misses.
 
 ## Game by Game
 
@@ -31,7 +31,7 @@ A few stat lines bent matchups in obvious ways. Barkley’s 42.2 against a 20.2 
 
 **Jake and CeeDeez Nuts outlast Eric’s 188-point Sunday.**
 
-Week 12 in FoulknFootball had the feel of a game that would demand a real number, and Jake gave it one. CeeDeez Nuts beat Eric’s Chase Brown Tanks 200.72 to 188.08, a strong answer to last week’s forecast and another entry in what has become a sturdy run for the league leader. The hero was Sam Darnold, who gave Jake 21.1 points with 330 passing yards and two touchdowns, and Nick Chubb’s 18.0 on two rushing scores gave the lineup a welcome push beyond projection.
+Week 12 in The League had the feel of a game that would demand a real number, and Jake gave it one. CeeDeez Nuts beat Eric’s Chase Brown Tanks 200.72 to 188.08, a strong answer to last week’s forecast and another entry in what has become a sturdy run for the league leader. The hero was Sam Darnold, who gave Jake 21.1 points with 330 passing yards and two touchdowns, and Nick Chubb’s 18.0 on two rushing scores gave the lineup a welcome push beyond projection.
 
 Jake’s total is easier to appreciate when you look at what did not arrive. CeeDee Lamb managed 6.8 despite 12 targets for Dallas against Washington, Jayden Reed scored 2.6 for Green Bay against San Francisco, and Rome Odunze finished at 3.9 even with 10 targets for Chicago. And yet CeeDeez Nuts kept moving because the production was spread across the card: Matthew Stafford added 19.22, De’Von Achane scored 17.6 on two receiving touchdowns for Miami, Derrick Henry ran for 140 yards, and Trey McBride caught 12 balls for 133 yards against Seattle.
 
@@ -39,13 +39,13 @@ On the other side, Eric posted the kind of number that wins most weeks. Jayden D
 
 The sharp turn came in Eric’s running back room, where too much expected scoring stayed on the table. Joe Mixon finished with 4.5, Christian McCaffrey had 4.8, James Conner posted 4.9, and Tyrone Tracy came in at 5.0. That left Chase Brown Tanks asking its quarterbacks and wideouts to carry an already heavy afternoon, and even 188.08 was not quite enough.
 
-The consequence is a clear one in the FoulknFootball race: Jake extends CeeDeez Nuts’ winning streak from four games to five, while Eric’s run of eight straight weeks above 150 stays alive in a loss as Chase Brown Tanks look to build momentum from the scoring base even without the result.
+The consequence is a clear one in the League race: Jake extends CeeDeez Nuts’ winning streak from four games to five, while Eric’s run of eight straight weeks above 150 stays alive in a loss as Chase Brown Tanks look to build momentum from the scoring base even without the result.
 
 ### GibbMeDaRock (196.54) vs Steel City (162.98)
 
 **Devin’s GibbMeDaRock stays steady, and Brian’s Steel City pays for a few empty spots.**
 
-Week 12 in FoulknFootball gave us a game with real weight in the middle of the table, and Devin handled it with the broader lineup. GibbMeDaRock beat Brian’s Steel City 196.54 to 162.98, a 33.56-point margin, and the shape of it was simple enough: Devin got premium running back production and just enough support around it to keep the board moving all day.
+Week 12 in The League gave us a game with real weight in the middle of the table, and Devin handled it with the broader lineup. GibbMeDaRock beat Brian’s Steel City 196.54 to 162.98, a 33.56-point margin, and the shape of it was simple enough: Devin got premium running back production and just enough support around it to keep the board moving all day.
 
 Josh Jacobs was the hero. Green Bay’s back went for 28.6 points against San Francisco on 106 rushing yards and three touchdowns, while Jahmyr Gibbs added 21.9 for Detroit against Indianapolis and Jordan Addison brought 22.2 for Minnesota on eight catches, 162 yards, and a score against Chicago. Lamar Jackson gave GibbMeDaRock 22.58 for Baltimore, and Aaron Jones chipped in 16.9. We had the call right a week ago when we rode GibbMeDaRock, but this was right team, wrong shape: the projection said 161.4–134.2, and these two pushed well past that at 196.54–162.98.
 
@@ -59,7 +59,7 @@ The consequence is a clear one from last week’s ledger. GibbMeDaRock extends i
 
 **BearDown leaves no doubt as Dakota rolls past Dave.**
 
-Week 12 in FoulknFootball set up as a close game on paper and turned quickly into something else. Dakota’s BearDown handled Dave’s Hauwk Tua, 192.06-122.58, with the margin widening on the strength of one elite afternoon and enough support around it to keep the board moving. Saquon Barkley was the hero, and once the Philadelphia back got loose against Los Angeles, this matchup belonged to BearDown.
+Week 12 in The League set up as a close game on paper and turned quickly into something else. Dakota’s BearDown handled Dave’s Hauwk Tua, 192.06-122.58, with the margin widening on the strength of one elite afternoon and enough support around it to keep the board moving. Saquon Barkley was the hero, and once the Philadelphia back got loose against Los Angeles, this matchup belonged to BearDown.
 
 Barkley’s 42.2 points gave Dakota the week’s defining number. He ran for 255 yards and two touchdowns, added four catches for 47 yards, and changed the scale of the game by himself. BearDown also got 19.9 from DJ Moore, 18.9 from Tony Pollard, 14.6 from Keenan Allen, 18.0 from the Texans defense, and 10 points apiece from Brandon Aubrey and Brandon McManus. We had the pick right last week when we rode BearDown, but it was right team, wrong shape; the forecast called for 128.7-123.4, and Dakota nearly reached 200.
 
@@ -73,7 +73,7 @@ The consequence is a clean one. Dakota stops BearDown’s two-game slide after l
 
 **Rob and Also too old to run keep pace, turning back Michael and Code 3 163.54-138.36.**
 
-Week 12 in FoulknFootball opened with a familiar question for Rob: could Also too old to run keep that steady scoring run alive. The answer was yes, and in a game that stayed respectable on both sides, Rob’s club beat Michael’s Code 3 by 25.18 points. The scene was set early by quarterback depth, and that is usually a sound place to begin.
+Week 12 in The League opened with a familiar question for Rob: could Also too old to run keep that steady scoring run alive. The answer was yes, and in a game that stayed respectable on both sides, Rob’s club beat Michael’s Code 3 by 25.18 points. The scene was set early by quarterback depth, and that is usually a sound place to begin.
 
 The hero was Tua Tagovailoa, who gave Also too old to run 28.48 points on 317 passing yards and four touchdowns against New England. Rob also got 20.4 from Jaylen Waddle on eight catches for 144 yards and a score, plus 15.06 from Jalen Hurts and 13.0 from the Miami defense. And yet the sharpest note may be this: Also too old to run reached 163.54 even with quiet afternoons from Brian Robinson at 2.4, D'Andre Swift at 6.5, and Isaiah Likely at 0.0.
 

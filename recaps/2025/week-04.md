@@ -1,16 +1,16 @@
-# Week 4 Recap — FoulknFootball (2025)
+# Week 4 Recap — The League (2025)
 
 _Generated 2026-04-27 00:29 UTC._
 
 ## Intro
 
-Four weeks in, FoulknFootball is giving a cleaner read. The top of the table is not just winning, it is winning in recognizable ways, and the teams near the bottom are starting to see the same pressure points each Sunday. Brian remains first in both standings and power, Jake and Dave are close enough to matter every week, and the middle already has that familiar early-season tension where one result changes the shape of the bracket.
+Four weeks in, The League is giving a cleaner read. The top of the table is not just winning, it is winning in recognizable ways, and the teams near the bottom are starting to see the same pressure points each Sunday. Brian remains first in both standings and power, Jake and Dave are close enough to matter every week, and the middle already has that familiar early-season tension where one result changes the shape of the bracket.
 
 The week’s highest-scoring game said most of it out loud. Brian’s First in and First Out? put up 219.70 in a win over Devin, and it came with the kind of steady force that is becoming a pattern rather than an exception. BearDown’s rise from seventh to fourth, which we flagged last week, now looks real after a 196.74-point answer. Rob and Eric, meanwhile, are finding out that decent totals are no protection if the full lineup does not arrive.
 
 ## League Themes
 
-The best players of Week 4 came from teams that already feel established. Jake got 31.5 from Ashton Jeanty and 27.7 from Josh Jacobs in Seasonal Depression’s win, the sort of backfield pairing that gives a lineup a firm floor and a little reach beyond it. Dakota received 30.96 from Dak Prescott in BearDown’s needed result, Patrick Mahomes gave Michael 27.3 in a losing effort, and Justin Fields supplied 27.14 for Devin. There is a shape to the top of FoulknFootball now: Brian, Dave, and Jake have all scored 150 or more in all four weeks, and that kind of repeatability tends to travel well into October.
+The best players of Week 4 came from teams that already feel established. Jake got 31.5 from Ashton Jeanty and 27.7 from Josh Jacobs in Seasonal Depression’s win, the sort of backfield pairing that gives a lineup a firm floor and a little reach beyond it. Dakota received 30.96 from Dak Prescott in BearDown’s needed result, Patrick Mahomes gave Michael 27.3 in a losing effort, and Justin Fields supplied 27.14 for Devin. There is a shape to the top of The League now: Brian, Dave, and Jake have all scored 150 or more in all four weeks, and that kind of repeatability tends to travel well into October.
 
 The most useful waiver work belonged to Rob, even in defeat. Woody Marks produced 23.9 points for Unstoppable Farce, comfortably the best return among this week’s adds, and Darren Waller added another 14.7 as Rob tried to patch over a roster that has now dropped three straight. Devin also found a workable quarterback week in Jaxson Dart at 19.84, while Michael got a smaller return from Luke McCaffrey. There were no trades on the board this week, which left the wire as the only real instrument for teams trying to look to refine the edges of their roster before byes begin to force harder choices.
 
@@ -22,7 +22,7 @@ A few stat lines bent matchups away from their expected script. Jeanty’s 31.5 
 
 **Brian stays on top as First in and First Out? handles Devin.**
 
-Week 4 in FoulknFootball brought the league leader into a matchup with a Devin team that had just found its footing, and Brian answered with another number that carries weight. First in and First Out? beat Amon Another level  219.70 to 176.08, clearing its projection by nearly 40 points and putting this one out of reach with strength across the middle of the lineup. It was not a perfect card, but it was a deep one.
+Week 4 in The League brought the league leader into a matchup with a Devin team that had just found its footing, and Brian answered with another number that carries weight. First in and First Out? beat Amon Another level  219.70 to 176.08, clearing its projection by nearly 40 points and putting this one out of reach with strength across the middle of the lineup. It was not a perfect card, but it was a deep one.
 
 The hero was Jordan Love. Brian got 26.28 from the Green Bay quarterback against Dallas, and the support around him was steady and substantial: Bijan Robinson gave Atlanta 24.10, Bucky Irving piled up 20.50 for Tampa Bay against Philadelphia, Travis Etienne added 18.50 for New Orleans, Quinshon Judkins scored 17.50 for Cleveland, and Detroit’s defense delivered 20.00. The sharp point is simple. Brian reached 219.70 even while carrying just 2.00 from Malik Nabers of the Giants and 9.60 from Jonathan Taylor of Indianapolis.
 
@@ -36,7 +36,7 @@ The consequence is clear. After entering Week 4 on a two-game winning streak and
 
 **Seasonal Depression has the bigger answers in a 211.46–179.44 win over Unstoppable Farce.**
 
-Week 4 in FoulknFootball brought a matchup with real weight for two teams coming off very different Sundays, and Jake’s Seasonal Depression controlled the shape of it early. The final was 211.46 to 179.44 over Rob’s Unstoppable Farce, a strong total on both sides but one that kept leaning back toward Jake whenever the board seemed ready to tighten. Ashton Jeanty of the Raiders was the hero with 31.5 points against Chicago, and Josh Jacobs gave Green Bay 27.7 more in a lineup that had room for star turns and support.
+Week 4 in The League brought a matchup with real weight for two teams coming off very different Sundays, and Jake’s Seasonal Depression controlled the shape of it early. The final was 211.46 to 179.44 over Rob’s Unstoppable Farce, a strong total on both sides but one that kept leaning back toward Jake whenever the board seemed ready to tighten. Ashton Jeanty of the Raiders was the hero with 31.5 points against Chicago, and Josh Jacobs gave Green Bay 27.7 more in a lineup that had room for star turns and support.
 
 The numbers tell you why the margin held. Puka Nacua caught 13 balls for 170 yards and a touchdown for the Rams on his way to 23.0, Quentin Johnston added 15.8 for the Chargers, Garrett Wilson posted 14.2 for the Jets, and Javonte Williams chipped in 16.0 for Dallas. Seasonal Depression also survived a few quiet spots from Tre Tucker at 2.2, Jameson Williams at 3.7, and Daniel Jones at 10.38, which is usually the mark of a team with enough depth across the card. The call to ride Seasonal Depression held up, but it was right team, wrong shape — projected at 151.6–127.9, delivered at 211.46–179.44.
 
@@ -44,13 +44,13 @@ On the other side, Rob had plenty that would win most weeks. Bo Nix led the way 
 
 There was also one clean lineup note in the background. Jake left 25.4 from Kenneth Gainwell on the bench, while Rob had 14.5 from Marvin Mims and 13.0 from Kyle Pitts unused, so this was not a case of one start/sit choice swinging the whole afternoon. The sharper point is simpler: Seasonal Depression got the week’s most forceful rushing line from Jeanty and still had enough receiving volume around it to keep Rob from ever really erasing the gap.
 
-The consequence is clear in FoulknFootball. Jake answers last week’s loss with a statement score, while Rob’s losing streak extends to three games after a second straight defeat last week.
+The consequence is clear in The League. Jake answers last week’s loss with a statement score, while Rob’s losing streak extends to three games after a second straight defeat last week.
 
 ### BearDown (196.74) vs Sanders Boutte on Sunday (157.34)
 
 **Dakota rides Dak Prescott and a wide Sunday to a needed BearDown win.**
 
-Week 4 in FoulknFootball brought two teams from the bottom of last week’s table, and BearDown gave the cleaner response. Dakota beat Eric, 196.74 to 157.34, a margin that grew from strength across the lineup more than any single rescue act. BearDown set the scene early with 12.0 from the Steelers defense, 12.0 from New England’s defense, and 17.0 from Cairo Santos, and that kind of floor changes the rest of the afternoon.
+Week 4 in The League brought two teams from the bottom of last week’s table, and BearDown gave the cleaner response. Dakota beat Eric, 196.74 to 157.34, a margin that grew from strength across the lineup more than any single rescue act. BearDown set the scene early with 12.0 from the Steelers defense, 12.0 from New England’s defense, and 17.0 from Cairo Santos, and that kind of floor changes the rest of the afternoon.
 
 The hero was Prescott. Dallas’ quarterback gave Dakota 30.96 points against Green Bay on 319 passing yards and 3 touchdown passes, and he even added a rushing score. George Pickens, also for Dallas, was right there with 25.4 on 8 catches for 134 yards and 2 touchdowns, while Chargers rookie Omarion Hampton supplied 22.5 with 128 rushing yards, a score, and 5 catches. The sharp point is simple: BearDown reached 196.74 even with Caleb Williams at 11.78 and Ja'Marr Chase held to 2.3.
 
@@ -64,7 +64,7 @@ The consequence is immediate. Dakota snaps BearDown’s two-game losing streak f
 
 **He hate me has just enough across the board to turn back Disappointment.**
 
-Week 4 in FoulknFootball brought two teams from the upper half of the early table, and the scoring held to that standard. Dave’s He hate me beat Michael’s Disappointment, 178.64 to 158.06, in a game that was rarely about one overwhelming number and more about the breadth of Dave’s card. Josh Allen set the tone with 24.86 for Buffalo against New Orleans, James Cook added 19.50 in the same game, and Drake London gave Atlanta 17.00 on eight catches for 110 yards and a score against Washington.
+Week 4 in The League brought two teams from the upper half of the early table, and the scoring held to that standard. Dave’s He hate me beat Michael’s Disappointment, 178.64 to 158.06, in a game that was rarely about one overwhelming number and more about the breadth of Dave’s card. Josh Allen set the tone with 24.86 for Buffalo against New Orleans, James Cook added 19.50 in the same game, and Drake London gave Atlanta 17.00 on eight catches for 110 yards and a score against Washington.
 
 The interesting part is that He hate me won cleanly without getting a full week from every star. Lamar Jackson, acquired in that Week 3 quarterback trade, managed just 10.68 for Baltimore against Kansas City, and Keenan Allen gave Dave only 3.70. And yet, there was enough support to keep the floor high: Emeka Egbuka scored 16.10 for Tampa Bay, Davante Adams added 11.60 for the Rams, and Dave got 24 combined points from Harrison Butker and Brandon McManus. The call to ride He hate me held up, though it was right team, wrong shape — projected 170.2 to 141.5, delivered 178.64 to 158.06.
 
@@ -72,7 +72,7 @@ On the other side, Michael had quarterback play good enough to carry many weeks.
 
 That was the turn in the matchup. A.J. Brown finished with 0.70 for Philadelphia, Calvin Austin had 1.30, Jakobi Meyers scored 3.00, DJ Moore 3.80, and Tee Higgins 3.20, and those quieter totals left Michael chasing despite a strong total overall. Michael did have 23.22 from Drake Maye on the bench, but his coulda-shoulda gap was just 15.66; this was less about one missed start/sit call than a lineup that never found enough lift at wideout.
 
-The consequence is immediate. Dave moves to 3-1 after posting the week’s best number in Week 3 and now extending that run with another win, while Michael’s two-game winning streak ends as He hate me keeps hold of its place near the top of FoulknFootball.
+The consequence is immediate. Dave moves to 3-1 after posting the week’s best number in Week 3 and now extending that run with another win, while Michael’s two-game winning streak ends as He hate me keeps hold of its place near the top of The League.
 
 ## Storylines
 

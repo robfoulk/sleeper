@@ -1,10 +1,10 @@
-# Week 11 Recap — FoulknFootball (2025)
+# Week 11 Recap — The League (2025)
 
 _Generated 2026-04-27 00:38 UTC._
 
 ## Intro
 
-By Week 11, FoulknFootball has a settled look on paper and a restless feel underneath. The deadline has passed, the rosters are largely what they are, and with five weeks left in the regular season the separation now comes from surviving a few bad slots without letting the whole card go with them. That is where this part of the year gets honest. Depth matters. Start/sit calls matter. A team can play well and still leave Sunday needing one more answer.
+By Week 11, The League has a settled look on paper and a restless feel underneath. The deadline has passed, the rosters are largely what they are, and with five weeks left in the regular season the separation now comes from surviving a few bad slots without letting the whole card go with them. That is where this part of the year gets honest. Depth matters. Start/sit calls matter. A team can play well and still leave Sunday needing one more answer.
 
 The clearest example was the highest-scoring game on the board. Dave’s He hate me put up 209.70 against Michael’s 186.56, a number strong enough to command the week and timely enough to push Dave up to first in the power rankings. Brian still holds first place in the standings at 9-2, and his run of 150 or more reached 11 straight weeks even in a narrower, more workmanlike win. Just beneath him, the middle remains crowded. Four teams are between 5-6 and 6-5, and the line between fourth place and sixth is now thin enough that one uneven Sunday can move the whole picture.
 
@@ -14,7 +14,7 @@ Dave supplied the standard for Week 11, and He hate me earned it with the league
 
 Brian remains the steadier season-long marker. First in and First Out? moved to 9-2, kept control of first place, and extended the league’s most reliable scoring note with an 11th straight game above 150. That consistency matters even more now because the field behind him is still shifting. Michael was one of the week’s notable movers, up two spots to fifth in the power rankings despite the loss, and that rise fits the broader read on Disappointment: the record is 5-6, but the recent scoring has been strong enough to keep Michael squarely in the middle race.
 
-The best waiver return belonged to Jake. Michael Wilson gave Seasonal Depression 18.5 points right away, the strongest immediate production among this week’s adds, and in a lower-scoring loss that kind of pickup at least kept part of the lineup upright. Elsewhere on waivers, Devin got 11.04 from Jameis Winston, while several other additions were quieter and felt more like roster maintenance than instant help. That is often the shape of November in FoulknFootball. The move can be sound, and the payoff can still be modest.
+The best waiver return belonged to Jake. Michael Wilson gave Seasonal Depression 18.5 points right away, the strongest immediate production among this week’s adds, and in a lower-scoring loss that kind of pickup at least kept part of the lineup upright. Elsewhere on waivers, Devin got 11.04 from Jameis Winston, while several other additions were quieter and felt more like roster maintenance than instant help. That is often the shape of November in The League. The move can be sound, and the payoff can still be modest.
 
 The week’s only trade brought the sharper long-view question. Rob sent a future second-round pick package the other way and Devin received De'Von Achane, who delivered 16.5 points in his first week for Amon Another level. That does not settle the trade, but it does give Devin an immediate usable piece at a point in the season when there is very little time left for patience. Rob, meanwhile, keeps trying to thread a difficult path from 4-7, and that is a fair reflection of the standings around the bottom half where every decision now carries two clocks: this season’s chase and next season’s setup.
 
@@ -28,7 +28,7 @@ Eric’s loss deserves a note as well, because Sanders Boutte on Sunday still cl
 
 **Dave gets the better of Michael as He hate me stays hot.**
 
-Week 11 in FoulknFootball had the look of another big-number afternoon for Dave, and He hate me delivered again in a 209.70-186.56 win over Michael’s Disappointment. The margin was 23.14, but the score reads closer to the truth than the shape of the day: both teams had enough offense to win elsewhere, and Dave simply found the stronger answers at the top of the card.
+Week 11 in The League had the look of another big-number afternoon for Dave, and He hate me delivered again in a 209.70-186.56 win over Michael’s Disappointment. The margin was 23.14, but the score reads closer to the truth than the shape of the day: both teams had enough offense to win elsewhere, and Dave simply found the stronger answers at the top of the card.
 
 The hero was Josh Allen. Buffalo’s quarterback carried He hate me with 42.68 points against Tampa Bay, throwing for 317 yards and three touchdowns while adding 40 rushing yards and three more scores on the ground. He had help, too. TreVeyon Henderson gave Dave 27.3 for New England against the Jets, Tetairoa McMillan added 25.0 for Carolina against Atlanta, and James Cook chipped in 17.4 in the same Buffalo game that fueled Allen. And yet, the sharp detail here is that Dave reached 209.70 while getting only 4.72 from Lamar Jackson and 1.1 from Isaiah Davis. That is usually how a week gets out of reach.
 
@@ -42,7 +42,7 @@ The consequence is straightforward. After losing a 199.52-193.38 game to Rob in 
 
 **Dakota gets just enough, and BearDown slips past Eric.**
 
-Week 11 in FoulknFootball had the feel of a game that would need everything on both sides, and that is exactly what it became. Dakota’s BearDown edged Eric’s Sanders Boutte on Sunday, 179.24 to 177.22, a two-point result built on volume, a few well-timed spikes, and one defense that changed the texture of the afternoon. The hero was Dak Prescott. Dallas’ quarterback threw for 268 yards and four touchdowns against Las Vegas, giving BearDown 24.32 in a game that never offered much room for error.
+Week 11 in The League had the feel of a game that would need everything on both sides, and that is exactly what it became. Dakota’s BearDown edged Eric’s Sanders Boutte on Sunday, 179.24 to 177.22, a two-point result built on volume, a few well-timed spikes, and one defense that changed the texture of the afternoon. The hero was Dak Prescott. Dallas’ quarterback threw for 268 yards and four touchdowns against Las Vegas, giving BearDown 24.32 in a game that never offered much room for error.
 
 We picked Eric coming in, and that miss is ours directly. The forecast leaned on BearDown’s five-game slide and projected a comfortable Sanders Boutte on Sunday win at 154.9 to 121.3; what we missed was that Dakota’s lineup had enough cover for quiet games from Caleb Williams, Ja'Marr Chase, and David Njoku, while Pittsburgh’s defense supplied 22.0 and kept BearDown afloat. That is the unpredictable nature of fantasy football, and sometimes one slot tells the larger story better than a full page of explanation.
 
@@ -56,7 +56,7 @@ The result is a clear one for Dakota. BearDown’s five-game losing streak, the 
 
 **Brian stays clear at the top as Bijan Robinson carries First in and First Out? past Devin.**
 
-There was a familiar shape to this one in FoulknFootball. Brian’s First in and First Out? again cleared 150, and this time it came in a 163.48-141.86 win over Devin’s Amon Another level . The margin was 21.62, comfortable enough on the page, though the path there had a few turns that fit the unpredictable nature of fantasy football.
+There was a familiar shape to this one in The League. Brian’s First in and First Out? again cleared 150, and this time it came in a 163.48-141.86 win over Devin’s Amon Another level . The margin was 21.62, comfortable enough on the page, though the path there had a few turns that fit the unpredictable nature of fantasy football.
 
 The hero was Bijan Robinson. Atlanta’s back gave Brian 26.3 points against Carolina, rushing 23 times for 104 yards and two touchdowns while adding four catches for 39 yards. Travis Etienne added 19.3 for New Orleans against the Chargers, Derrick Henry brought 18.2 for Baltimore against Cleveland, and Nico Collins supplied 15.2 for Houston against Tennessee. That was the spine of Brian’s afternoon, and it mattered because First in and First Out? did not get much help from Justin Herbert’s 3.34 or Patrick Mahomes’ 13.34.
 
@@ -64,13 +64,13 @@ On the other side, Devin got the biggest single number in the game from Bryce Yo
 
 One sharp detail decided the rest. Brian got 12.0 from the Jacksonville defense and 10.0 from Jake Elliott, while Devin took a 0.0 from Brandon McManus and a -1.0 from the Arizona defense. In a matchup where both teams still beat projection, that special-teams and defense gap gave First in and First Out? the breathing room it needed.
 
-The consequence is clear and specific. Brian extends First in and First Out?’s streak to 11 straight games above 150, a run that keeps him where he was a week ago: first place in FoulknFootball.
+The consequence is clear and specific. Brian extends First in and First Out?’s streak to 11 straight games above 150, a run that keeps him where he was a week ago: first place in The League.
 
 ### Unstoppable Farce (139.20) vs Seasonal Depression (125.86)
 
 **Wil Lutz steadies Unstoppable Farce, and Rob turns back Jake.**
 
-Week 11 in FoulknFootball had the look of a game that would be decided in the margins, and that is exactly where Rob found it. Unstoppable Farce beat Jake’s Seasonal Depression 139.20 to 125.86, a measured win built less on one overwhelming star than on a few timely numbers that held their shape while other spots around the matchup gave way. The hero was Wil Lutz, and Denver’s kicker supplied 18.0 points against Kansas City, the best single total in Rob’s lineup.
+Week 11 in The League had the look of a game that would be decided in the margins, and that is exactly where Rob found it. Unstoppable Farce beat Jake’s Seasonal Depression 139.20 to 125.86, a measured win built less on one overwhelming star than on a few timely numbers that held their shape while other spots around the matchup gave way. The hero was Wil Lutz, and Denver’s kicker supplied 18.0 points against Kansas City, the best single total in Rob’s lineup.
 
 Rob did not get a clean afternoon from his marquee positions. Bo Nix finished with 12.6 for Denver, Jalen Hurts gave Philadelphia 14.5 against Detroit, and several flex spots stayed quiet, with Tez Johnson at 0.6, Ladd McConkey at 1.3, and Kimani Vidal at 1.2. And yet, Unstoppable Farce kept finding enough adult production around that. Devin Singletary scored 16.7 for the Giants with two rushing touchdowns against Green Bay, Kareem Hunt added 12.2 against Denver, Houston’s defense chipped in 10.0, and Eddy Pineiro’s 9.0 gave Rob another useful push. We missed this one coming in. The call was Seasonal Depression, 145.8-139.6, and the streak we cited for Jake never helped because the quarterback room gave him too little to work with.
 
