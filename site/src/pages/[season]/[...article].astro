@@ -21,8 +21,8 @@ const { Content } = await render(entry);
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const season = Number(Astro.params.season);
 const indexed = data.articles.find((a) => articleSlug(a.path) === entry.id);
-const title = indexed?.title ?? entry.id;
-const kind = indexed?.kind ?? 'weekly-recap';
+const title = entry.data.title ?? indexed?.title ?? entry.id;
+const kind = entry.data.kind ?? indexed?.kind ?? 'weekly-recap';
 const week = indexed?.week;
 
 const s = seasonOf(season);

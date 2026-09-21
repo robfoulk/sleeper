@@ -1,4 +1,5 @@
 ---
+import { getCollection } from 'astro:content';
 import Scoreboard from './Scoreboard.astro';
 import Standings from './Standings.astro';
 import { articleSlug, data, pts, record, shortTitle, type Edition } from '../lib/league';
@@ -8,6 +9,9 @@ const { edition } = Astro.props;
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const recap = data.articles.find((article) => article.path === edition.recap_path);
 const preview = data.articles.find((article) => article.path === edition.preview_path);
+const watch = (await getCollection('articles')).find((article) =>
+  article.id === `${edition.season}/week-${String(edition.next_week).padStart(2, '0')}-what-to-watch`
+  && article.data.kind === 'monday-watch');
 const latest = edition.weeks.find((week) => week.week === edition.completed_week)!;
 const scored = latest.games.flatMap((game) => [game.home, game.away]).sort((first, second) => second.points - first.points);
 const topScore = Math.max(1, ...scored.map((side) => side.points));
@@ -38,6 +42,7 @@ const upcoming = edition.upcoming.slice().sort((first, second) =>
       <nav class="edition__links" aria-label="This week's articles">
         {recap && <a href={`${base}/${articleSlug(recap.path)}/`}>Week {edition.completed_week} final recap</a>}
         {preview && <a href={`${base}/${articleSlug(preview.path)}/`}>Week {edition.next_week} preview</a>}
+        {watch && <a href={`${base}/${watch.id}/`}>Week {edition.next_week} What to Watch: Monday night</a>}
       </nav>
       <p class="slug edition__cutoff"><time datetime={edition.captured_at}>{captured}</time> snapshot</p>
     </section>
@@ -47,6 +52,13 @@ const upcoming = edition.upcoming.slice().sort((first, second) =>
     </section>
   </div>
 </div>
+
+{watch && <section class="sheet band">
+  <p class="slug">Filed {watch.data.filed} / Pregame update</p>
+  <h2 class="ruled"><a href={`${base}/${watch.id}/`}>Week {edition.next_week}: What to Watch</a></h2>
+  <p>The Monday-night matchups, remaining starters, injury watch, and the original prediction receipts.</p>
+  <p><a class="more" href={`${base}/${watch.id}/`}>Read the Monday-night filing</a></p>
+</section>}
 
 <div class="sheet band edition__columns">
   <section>
