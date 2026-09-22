@@ -1,0 +1,15 @@
+Asset movement audit: 2026
+League: 1312539280601522176
+Week 1 assets: 240
+Exit classes: Dropped=14, Retained=218, Trade=7, WaiverOrFreeAgentMove=1
+Starts for original roster: 137
+Starts for another roster: 0
+
+Traded Week 1 assets
+- W1: A.J. Brown (WR, NE) R3->R1; starts original/elsewhere 0/0; sender package received players [Isaac TeSlaa (WR)], picks [2027 R4].
+- W2: Jared Goff (QB, DET) R4->R3; starts original/elsewhere 0/0; sender package received players [Sam Darnold (QB)], picks [2027 R5].
+- W2: Justin Jefferson (WR, MIN) R2->R3; starts original/elsewhere 1/0; sender package received players [Lamar Jackson (QB)], picks [2027 R15].
+- W2: Kaelon Black (RB, SF) R5->R4; starts original/elsewhere 1/0; sender package received players [Omarion Hampton (RB)], picks [2027 R20, 2027 R6].
+- W2: Lamar Jackson (QB, BAL) R3->R2; starts original/elsewhere 1/0; sender package received players [Justin Jefferson (WR)], picks [2027 R8].
+- W2: Omarion Hampton (RB, LAC) R4->R5; starts original/elsewhere 1/0; sender package received players [Kaelon Black (RB)], picks [2027 R3, 2027 R9].
+- W2: Sam Darnold (QB, SEA) R3->R4; starts original/elsewhere 0/0; sender package received players [Jared Goff (QB)], picks [2027 R11].
