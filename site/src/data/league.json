@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-21T02:34:57.3525069Z",
+  "generated_at_utc": "2026-10-26T22:33:30.2949950Z",
   "league_name": "The League",
   "current_edition": {
     "season": 2026,
@@ -31156,7 +31156,7 @@
       },
       {
         "position": "WR",
-        "player_count": 159,
+        "player_count": 158,
         "leader": {
           "rank": 1,
           "player_id": "00-0038543",
@@ -34181,26 +34181,6 @@
           },
           {
             "rank": 151,
-            "player_id": "00-0040390",
-            "player_name": "Jackson Meeks",
-            "position": "WR",
-            "team": "DET",
-            "games": 1,
-            "total_points": 0.8,
-            "points_per_game": 0.2,
-            "weekly_points": [
-              0,
-              0,
-              0.8,
-              0
-            ],
-            "best_week": 3,
-            "best_week_points": 0.8,
-            "consistency": 0.35,
-            "trend": 0
-          },
-          {
-            "rank": 152,
             "player_id": "00-0037231",
             "player_name": "Kevin Austin Jr.",
             "position": "WR",
@@ -34220,7 +34200,7 @@
             "trend": 0
           },
           {
-            "rank": 153,
+            "rank": 152,
             "player_id": "00-0038573",
             "player_name": "Derius Davis",
             "position": "WR",
@@ -34240,7 +34220,7 @@
             "trend": 0.6
           },
           {
-            "rank": 154,
+            "rank": 153,
             "player_id": "00-0041529",
             "player_name": "Kevin Coleman Jr.",
             "position": "WR",
@@ -34260,7 +34240,7 @@
             "trend": 0.3
           },
           {
-            "rank": 155,
+            "rank": 154,
             "player_id": "00-0039589",
             "player_name": "Kameron Johnson",
             "position": "WR",
@@ -34280,7 +34260,7 @@
             "trend": 0.3
           },
           {
-            "rank": 156,
+            "rank": 155,
             "player_id": "00-0039365",
             "player_name": "Jacob Cowing",
             "position": "WR",
@@ -34300,7 +34280,7 @@
             "trend": 0.2
           },
           {
-            "rank": 157,
+            "rank": 156,
             "player_id": "00-0041051",
             "player_name": "Zavion Thomas",
             "position": "WR",
@@ -34320,7 +34300,7 @@
             "trend": 0
           },
           {
-            "rank": 158,
+            "rank": 157,
             "player_id": "00-0041099",
             "player_name": "Barion Brown",
             "position": "WR",
@@ -34340,7 +34320,7 @@
             "trend": -0.8
           },
           {
-            "rank": 159,
+            "rank": 158,
             "player_id": "00-0040894",
             "player_name": "Malik Benson",
             "position": "WR",
@@ -34363,7 +34343,7 @@
       },
       {
         "position": "TE",
-        "player_count": 91,
+        "player_count": 92,
         "leader": {
           "rank": 1,
           "player_id": "00-0033288",
@@ -36048,6 +36028,26 @@
           },
           {
             "rank": 84,
+            "player_id": "00-0040390",
+            "player_name": "Jackson Meeks",
+            "position": "TE",
+            "team": "DET",
+            "games": 1,
+            "total_points": 0.8,
+            "points_per_game": 0.2,
+            "weekly_points": [
+              0,
+              0,
+              0.8,
+              0
+            ],
+            "best_week": 3,
+            "best_week_points": 0.8,
+            "consistency": 0.35,
+            "trend": 0
+          },
+          {
+            "rank": 85,
             "player_id": "00-0041041",
             "player_name": "Oscar Delp",
             "position": "TE",
@@ -36067,7 +36067,7 @@
             "trend": 0
           },
           {
-            "rank": 85,
+            "rank": 86,
             "player_id": "00-0036590",
             "player_name": "Quintin Morris",
             "position": "TE",
@@ -36087,7 +36087,7 @@
             "trend": 0
           },
           {
-            "rank": 86,
+            "rank": 87,
             "player_id": "00-0039912",
             "player_name": "Ben Sinnott",
             "position": "TE",
@@ -36107,7 +36107,7 @@
             "trend": 0
           },
           {
-            "rank": 87,
+            "rank": 88,
             "player_id": "00-0039814",
             "player_name": "Erick All",
             "position": "TE",
@@ -36127,7 +36127,7 @@
             "trend": 0
           },
           {
-            "rank": 88,
+            "rank": 89,
             "player_id": "00-0034798",
             "player_name": "Durham Smythe",
             "position": "TE",
@@ -36147,7 +36147,7 @@
             "trend": -0.4
           },
           {
-            "rank": 89,
+            "rank": 90,
             "player_id": "00-0040215",
             "player_name": "Gavin Bartholomew",
             "position": "TE",
@@ -36167,7 +36167,7 @@
             "trend": 0.4
           },
           {
-            "rank": 90,
+            "rank": 91,
             "player_id": "00-0033757",
             "player_name": "Robert Tonyan",
             "position": "TE",
@@ -36187,7 +36187,7 @@
             "trend": 0
           },
           {
-            "rank": 91,
+            "rank": 92,
             "player_id": "00-0040736",
             "player_name": "Mason Taylor",
             "position": "TE",
@@ -43440,7 +43440,8 @@
     },
     {
       "season": 2026,
-      "kind": "article",
+      "week": 2,
+      "kind": "monday-watch",
       "path": "recaps/2026/week-02-what-to-watch.md",
       "title": "Week 2 What to Watch: Monday Night and the Original Receipts"
     },
@@ -43460,7 +43461,8 @@
     },
     {
       "season": 2026,
-      "kind": "article",
+      "week": 3,
+      "kind": "monday-watch",
       "path": "recaps/2026/week-03-what-to-watch.md",
       "title": "Week 3 Monday Watch: One Wrong Pick, Three Still Live"
     },
@@ -43501,7 +43503,8 @@
     },
     {
       "season": 2026,
-      "kind": "article",
+      "week": 6,
+      "kind": "monday-watch",
       "path": "recaps/2026/week-06-what-to-watch.md",
       "title": "Week 6 Monday Watch: Jake Needs the Two-in-831 Night"
     },
@@ -43518,6 +43521,13 @@
       "kind": "weekly-preview",
       "path": "recaps/2026/week-07-preview.md",
       "title": "Week 7 Preview: Three on IR, Two Quarterbacks, One Empty Win Column"
+    },
+    {
+      "season": 2026,
+      "week": 7,
+      "kind": "monday-watch",
+      "path": "recaps/2026/week-07-what-to-watch.md",
+      "title": "Week 7 Monday Watch: Jake Needs a Barkley Miracle"
     }
   ],
   "draft": {

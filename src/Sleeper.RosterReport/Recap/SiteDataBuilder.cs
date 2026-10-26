@@ -923,10 +923,19 @@ internal static class SiteDataBuilder
 
     internal static (string Kind, int? Week) ClassifyArticle(string name)
     {
-        var match = System.Text.RegularExpressions.Regex.Match(name, @"^week-(\d{2})(-preview)?$",
+        var match = System.Text.RegularExpressions.Regex.Match(name, @"^week-(\d{2})(-preview|-what-to-watch)?$",
             System.Text.RegularExpressions.RegexOptions.IgnoreCase);
         if (match.Success)
-            return (match.Groups[2].Success ? "weekly-preview" : "weekly-recap", int.Parse(match.Groups[1].Value));
+        {
+            var suffix = match.Groups[2].Value;
+            var kind = suffix switch
+            {
+                "-preview" => "weekly-preview",
+                "-what-to-watch" => "monday-watch",
+                _ => "weekly-recap"
+            };
+            return (kind, int.Parse(match.Groups[1].Value));
+        }
 
         return (name switch
         {

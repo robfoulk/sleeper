@@ -325,6 +325,7 @@ export const ordinal = (n: number) => ORDINALS[n] ?? `${n}th`;
 export const KIND_LABEL: Record<string, string> = {
   'weekly-recap': 'Weekly recap',
   'weekly-preview': 'Weekly preview',
+  'monday-watch': 'Monday watch',
   'season-review': 'Season in review',
   'draft-recap': 'Draft recap',
   'season-preview': 'Season preview',

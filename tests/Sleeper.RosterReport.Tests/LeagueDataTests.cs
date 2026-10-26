@@ -14,6 +14,7 @@ public class LeagueDataTests
     [Theory]
     [InlineData("week-01", "weekly-recap", 1)]
     [InlineData("week-02-preview", "weekly-preview", 2)]
+    [InlineData("week-07-what-to-watch", "monday-watch", 7)]
     [InlineData("preview", "season-preview", null)]
     [InlineData("season", "season-review", null)]
     public void ArticleKindsDistinguishPreviewFromResults(string name, string kind, int? week)
