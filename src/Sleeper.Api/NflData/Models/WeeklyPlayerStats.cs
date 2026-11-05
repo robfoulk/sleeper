@@ -120,6 +120,12 @@ public class WeeklyPlayerStats
     public decimal? TargetShare { get; set; }
 
     // Special Teams
+    [Name("fumbles_total")]
+    public int? FumblesTotal { get; set; }
+
+    [Name("fumbles_lost_total")]
+    public int? FumblesLostTotal { get; set; }
+
     [Name("special_teams_tds")]
     public int? SpecialTeamsTds { get; set; }
 

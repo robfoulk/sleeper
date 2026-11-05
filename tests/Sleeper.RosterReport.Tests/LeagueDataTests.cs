@@ -252,5 +252,91 @@ public class LeagueDataTests
                     "an unresolved owner means the lore join key is broken");
             }
         }
+
+    }
+
+    [Fact]
+    public void SecondQuarterContainsOnlyItsOwnCapturedWeeksAndReconciledScores()
+    {
+        var root = Load();
+        var edition = root.GetProperty("current_edition");
+        var completedWeek = edition.GetProperty("completed_week").GetInt32();
+        if (completedWeek < 5)
+        {
+            root.TryGetProperty("second_quarter", out _).Should().BeFalse();
+            return;
+        }
+
+        var quarter = root.GetProperty("second_quarter");
+        var throughWeek = Math.Min(8, completedWeek);
+        quarter.GetProperty("start_week").GetInt32().Should().Be(5);
+        quarter.GetProperty("end_week").GetInt32().Should().Be(8);
+        quarter.GetProperty("through_week").GetInt32().Should().Be(throughWeek);
+        quarter.GetProperty("weekly_totals").EnumerateArray().Select(week => week.GetProperty("week").GetInt32())
+            .Should().Equal(Enumerable.Range(5, throughWeek - 4));
+        var reports = quarter.GetProperty("team_position_reports").EnumerateArray().ToList();
+        var weeks = edition.GetProperty("weeks").EnumerateArray()
+            .Where(week => week.GetProperty("week").GetInt32() >= 5
+                && week.GetProperty("week").GetInt32() <= throughWeek).ToList();
+        foreach (var report in reports)
+        {
+            var position = report.GetProperty("position").GetString();
+            foreach (var team in report.GetProperty("rankings").EnumerateArray())
+            {
+                var rosterId = team.GetProperty("roster_id").GetInt32();
+                var expected = weeks.Select(week =>
+                {
+                    var side = week.GetProperty("games").EnumerateArray()
+                        .SelectMany(game => new[] { game.GetProperty("home"), game.GetProperty("away") })
+                        .Single(entry => entry.GetProperty("franchise_id").GetInt32() == rosterId);
+                    return position == "TOTAL" ? side.GetProperty("points").GetDecimal()
+                        : side.GetProperty("players").EnumerateArray()
+                            .Where(player => player.GetProperty("starter").GetBoolean()
+                                && player.GetProperty("position").GetString() == position)
+                            .Sum(player => player.GetProperty("points").GetDecimal());
+                }).ToList();
+                var actual = team.GetProperty("weekly_points").EnumerateArray().Select(point => point.GetDecimal()).ToList();
+                actual.Should().HaveCount(4);
+                actual.Take(expected.Count).Should().Equal(expected);
+                team.GetProperty("total_points").GetDecimal().Should().Be(expected.Sum());
+            }
+        }
+
+        foreach (var report in quarter.GetProperty("position_reports").EnumerateArray())
+        {
+            var players = report.GetProperty("rankings").EnumerateArray().ToList();
+            players.Select(player => player.GetProperty("rank").GetInt32()).Should()
+                .Equal(Enumerable.Range(1, players.Count));
+            players.Select(player => player.GetProperty("total_points").GetDecimal()).Should().BeInDescendingOrder();
+            foreach (var player in players)
+            {
+                var points = player.GetProperty("weekly_points").EnumerateArray().Select(point => point.GetDecimal()).ToList();
+                points.Should().HaveCount(4);
+                player.GetProperty("total_points").GetDecimal().Should().Be(points.Sum());
+                player.GetProperty("best_week").GetInt32().Should().BeInRange(5, throughWeek);
+            }
+        }
+        if (quarter.GetProperty("season").GetInt32() == 2026 && throughWeek == 8)
+        {
+            var coker = quarter.GetProperty("position_reports").EnumerateArray()
+                .Single(report => report.GetProperty("position").GetString() == "WR")
+                .GetProperty("rankings").EnumerateArray()
+                .Single(player => player.GetProperty("player_name").GetString() == "Jalen Coker");
+            coker.GetProperty("weekly_points")[3].GetDecimal().Should().Be(7.60m);
+        }
+    }
+
+    [Fact]
+    public void FirstQuarterStillMatchesItsOriginalFiledData()
+    {
+        var root = Load();
+        var first = root.GetProperty("first_quarter");
+        var path = Path.Combine(RecapPaths.WorkspaceRoot, "recaps",
+            first.GetProperty("season").GetInt32().ToString(), "quarter-01-04-data.json");
+        using var filed = JsonDocument.Parse(File.ReadAllText(path));
+
+        JsonSerializer.Serialize(first).Should().Be(JsonSerializer.Serialize(filed.RootElement));
+        SiteDataBuilder.LoadFiledQuarterReport(Path.Combine(RecapPaths.WorkspaceRoot, "recaps"),
+            first.GetProperty("season").GetInt32(), 1, 4).Should().NotBeNull();
     }
 }

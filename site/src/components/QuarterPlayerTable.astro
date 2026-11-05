@@ -1,0 +1,68 @@
+---
+import { pts, type QuarterPlayer } from '../lib/league';
+
+interface Props {
+  players: QuarterPlayer[];
+  weeks: number[];
+  caption: string;
+}
+
+const { players, weeks, caption } = Astro.props;
+const signed = (value: number) => `${value > 0 ? '+' : ''}${pts(value)}`;
+const sparkline = (player: QuarterPlayer) => {
+  const values = player.weekly_points.slice(0, weeks.length);
+  const low = Math.min(...values, 0);
+  const high = Math.max(...values, 1);
+  return values.map((value, index) => {
+    const x = values.length === 1 ? 50 : index / (values.length - 1) * 100;
+    const y = 27 - (value - low) / (high - low) * 24;
+    return `${x.toFixed(1)},${y.toFixed(1)}`;
+  }).join(' ');
+};
+---
+
+<div class="ledger-scroll" role="region" aria-label={caption} tabindex="0">
+  <table class="ledger">
+    <caption>{caption}</caption>
+    <thead>
+      <tr>
+        <th scope="col" class="num">Rank</th>
+        <th scope="col">Player</th>
+        <th scope="col">NFL</th>
+        {weeks.map((week) => <th scope="col" class="num">W{week}</th>)}
+        <th scope="col" class="num">Total</th>
+        <th scope="col" class="num">Per week</th>
+        <th scope="col" class="num">Peak</th>
+        <th scope="col" class="num">W{weeks.at(-1)} − W{weeks[0]}</th>
+        <th scope="col">Shape</th>
+      </tr>
+    </thead>
+    <tbody>
+      {players.map((player) => (
+        <tr>
+          <td class="num">{player.rank}</td>
+          <th scope="row">{player.player_name}</th>
+          <td>{player.team ?? 'FA'}</td>
+          {player.weekly_points.slice(0, weeks.length).map((points) => <td class="num">{pts(points)}</td>)}
+          <td class="num total">{pts(player.total_points)}</td>
+          <td class="num">{pts(player.points_per_game)}</td>
+          <td class="num">{pts(player.best_week_points)} <small>W{player.best_week}</small></td>
+          <td class="num">{signed(player.trend)}</td>
+          <td>
+            <svg viewBox="0 0 100 30" role="img" aria-label={`${player.player_name}: ${player.weekly_points.slice(0, weeks.length).map((points, index) => `Week ${weeks[index]} ${pts(points)}`).join(', ')}`}>
+              <polyline points={sparkline(player)} />
+            </svg>
+          </td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>
+
+<style>
+  .total { font-weight: 700; }
+  small { color: var(--ink-quiet); }
+  svg { display: block; width: 5rem; height: 1.8rem; overflow: visible; }
+  polyline { fill: none; stroke: var(--violet); stroke-width: 2; vector-effect: non-scaling-stroke; }
+  .ledger-scroll:focus-visible { outline: 2px solid var(--violet); outline-offset: 4px; }
+</style>

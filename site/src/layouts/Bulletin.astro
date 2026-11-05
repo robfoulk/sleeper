@@ -1,6 +1,6 @@
 ---
 import '../styles/bulletin.css';
-import { CURRENT_EDITION, FIRST_QUARTER } from '../lib/league';
+import { CURRENT_EDITION, FIRST_QUARTER, SECOND_QUARTER } from '../lib/league';
 
 interface Props {
   title: string;
@@ -21,6 +21,7 @@ const nav = [
   { label: '2025', to: '/2025' },
   { label: '2024', to: '/2024' },
   ...(FIRST_QUARTER ? [{ label: 'Q1 Report', to: '/first-quarter' }] : []),
+  ...(SECOND_QUARTER ? [{ label: 'Q2 Report', to: '/second-quarter' }] : []),
   { label: 'Teams', to: '/franchises' },
   { label: 'Record Book', to: '/records' },
   { label: 'Awards', to: '/awards' },

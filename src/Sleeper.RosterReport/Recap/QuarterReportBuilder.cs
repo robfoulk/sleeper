@@ -4,13 +4,11 @@ using Sleeper.Api.NflData.Scoring;
 
 namespace Sleeper.RosterReport.Recap;
 
-internal static class FirstQuarterReportBuilder
+internal static class QuarterReportBuilder
 {
-    private const int FirstWeek = 1;
-    private const int LastWeek = 4;
     private static readonly string[] PositionOrder = ["QB", "RB", "WR", "TE", "K", "DEF"];
 
-    public static async Task<FirstQuarterReport?> BuildAsync(
+    public static async Task<QuarterReport?> BuildAsync(
         INflDataClient nflData,
         int season,
         int completedWeek,
@@ -18,45 +16,68 @@ internal static class FirstQuarterReportBuilder
         IEnumerable<QuarterDefenseWeekScore> defenseScores,
         IEnumerable<QuarterTeamWeekScore> teamScores,
         IEnumerable<QuarterLineupWeekScore> lineupScores,
+        int firstWeek = 1,
+        int lastWeek = 4,
         CancellationToken cancellationToken = default)
     {
-        var throughWeek = Math.Min(completedWeek, LastWeek);
-        if (throughWeek < FirstWeek || scoringSettings.Count == 0)
+        ArgumentOutOfRangeException.ThrowIfLessThan(firstWeek, 1);
+        ArgumentOutOfRangeException.ThrowIfLessThan(lastWeek, firstWeek);
+        var throughWeek = Math.Min(completedWeek, lastWeek);
+        if (throughWeek < firstWeek || scoringSettings.Count == 0)
             return null;
 
         var weeklyStats = await nflData.GetWeeklyStatsAsync(season, cancellationToken).ConfigureAwait(false);
-        return Build(season, throughWeek, scoringSettings, weeklyStats, defenseScores, teamScores, lineupScores);
+        foreach (var week in Enumerable.Range(firstWeek, throughWeek - firstWeek + 1))
+        {
+            if (!weeklyStats.Any(stat => stat.Season == season && stat.Week == week
+                && string.Equals(stat.SeasonType, "REG", StringComparison.OrdinalIgnoreCase)))
+            {
+                throw new InvalidOperationException(
+                    $"NFL player stats are missing for {season} Week {week}; the quarter report cannot be completed.");
+            }
+        }
+        return Build(season, throughWeek, scoringSettings, weeklyStats, defenseScores, teamScores, lineupScores,
+            firstWeek, lastWeek);
     }
 
-    internal static FirstQuarterReport Build(
+    internal static QuarterReport Build(
         int season,
         int throughWeek,
         Dictionary<string, decimal> scoringSettings,
         IEnumerable<WeeklyPlayerStats> allStats,
         IEnumerable<QuarterDefenseWeekScore>? defenseScores = null,
         IEnumerable<QuarterTeamWeekScore>? teamScores = null,
-        IEnumerable<QuarterLineupWeekScore>? lineupScores = null)
+        IEnumerable<QuarterLineupWeekScore>? lineupScores = null,
+        int firstWeek = 1,
+        int lastWeek = 4)
     {
-        throughWeek = Math.Clamp(throughWeek, FirstWeek, LastWeek);
+        ArgumentOutOfRangeException.ThrowIfLessThan(firstWeek, 1);
+        ArgumentOutOfRangeException.ThrowIfLessThan(lastWeek, firstWeek);
+        throughWeek = Math.Clamp(throughWeek, firstWeek, lastWeek);
+        var completedWeeks = throughWeek - firstWeek + 1;
         var scorer = new FantasyScorer(scoringSettings);
-        var weeks = Enumerable.Range(FirstWeek, LastWeek).ToArray();
+        var weeks = Enumerable.Range(firstWeek, lastWeek - firstWeek + 1).ToArray();
+        var quarterTeamScores = (teamScores ?? [])
+            .Where(score => score.Week >= firstWeek && score.Week <= throughWeek).ToList();
+        var quarterLineupScores = (lineupScores ?? [])
+            .Where(score => score.Week >= firstWeek && score.Week <= throughWeek).ToList();
 
         var players = allStats
             .Where(stat =>
                 stat.Season == season
                 && string.Equals(stat.SeasonType, "REG", StringComparison.OrdinalIgnoreCase)
-                && stat.Week >= FirstWeek
+                && stat.Week >= firstWeek
                 && stat.Week <= throughWeek
                 && stat.Position is not null
                 && PositionOrder.Contains(stat.Position, StringComparer.OrdinalIgnoreCase))
             .GroupBy(stat => stat.PlayerId)
-            .Select(group => BuildPlayer(group, scorer, weeks, throughWeek))
+            .Select(group => BuildPlayer(group, scorer, weeks, completedWeeks))
             .Where(player => player.TotalPoints != 0m)
             .ToList();
         players.AddRange((defenseScores ?? [])
-            .Where(score => score.Week >= FirstWeek && score.Week <= throughWeek)
+            .Where(score => score.Week >= firstWeek && score.Week <= throughWeek)
             .GroupBy(score => score.Team)
-            .Select(group => BuildDefense(group, weeks, throughWeek))
+            .Select(group => BuildDefense(group, weeks, completedWeeks))
             .Where(player => player.TotalPoints != 0m));
 
         var positionReports = PositionOrder
@@ -88,10 +109,10 @@ internal static class FirstQuarterReportBuilder
             .Take(12)
             .ToList();
 
-        var weeklyTotals = Enumerable.Range(FirstWeek, throughWeek)
+        var weeklyTotals = Enumerable.Range(firstWeek, completedWeeks)
             .Select(week =>
             {
-                var weekIndex = week - FirstWeek;
+                var weekIndex = week - firstWeek;
                 var active = rankedPlayers.Where(player => player.WeeklyPoints[weekIndex] != 0m).ToList();
                 return new QuarterWeek(
                     Week: week,
@@ -117,21 +138,21 @@ internal static class FirstQuarterReportBuilder
             .SelectMany(report => report.Rankings.Take(10))
             .ToList();
         var biggestWeek = rankedPlayers
-            .SelectMany(player => player.WeeklyPoints.Select((points, index) => new
+            .SelectMany(player => player.WeeklyPoints.Take(completedWeeks).Select((points, index) => new
             {
                 Player = player,
-                Week = index + FirstWeek,
+                Week = index + firstWeek,
                 Points = points
             }))
             .OrderByDescending(entry => entry.Points)
             .FirstOrDefault();
         var steadiest = contenders
-            .Where(player => player.Games >= Math.Min(3, throughWeek))
+            .Where(player => player.Games >= Math.Min(3, completedWeeks))
             .OrderBy(player => player.Consistency)
             .ThenByDescending(player => player.TotalPoints)
             .FirstOrDefault();
         var hottestFinish = contenders
-            .Where(player => throughWeek > FirstWeek)
+            .Where(player => completedWeeks > 1)
             .OrderByDescending(player => player.Trend)
             .ThenByDescending(player => player.TotalPoints)
             .FirstOrDefault();
@@ -143,21 +164,21 @@ internal static class FirstQuarterReportBuilder
                 biggestWeek.Player.Team,
                 biggestWeek.Week,
                 biggestWeek.Points);
-        var teamPositionReports = BuildTeamPositionReports(teamScores ?? [], weeks, throughWeek);
+        var teamPositionReports = BuildTeamPositionReports(quarterTeamScores, weeks, completedWeeks);
         var markGroups = BuildMarkGroups(
             positionReports,
             teamPositionReports,
-            teamScores ?? [],
-            lineupScores ?? [],
-            throughWeek,
+            quarterTeamScores,
+            quarterLineupScores,
+            completedWeeks,
             biggestMoment);
 
-        return new FirstQuarterReport(
+        return new QuarterReport(
             Season: season,
-            StartWeek: FirstWeek,
-            EndWeek: LastWeek,
+            StartWeek: firstWeek,
+            EndWeek: lastWeek,
             ThroughWeek: throughWeek,
-            Status: throughWeek == LastWeek ? "complete" : "in-progress",
+            Status: throughWeek == lastWeek ? "complete" : "in-progress",
             Positions: positionReports.Select(report => report.Position).ToArray(),
             ScoringRules: scoringSettings
                 .Where(rule => rule.Value != 0m)
@@ -180,7 +201,7 @@ internal static class FirstQuarterReportBuilder
         IReadOnlyList<QuarterTeamPositionReport> teamPositionReports,
         IEnumerable<QuarterTeamWeekScore> teamScores,
         IEnumerable<QuarterLineupWeekScore> lineupScores,
-        int throughWeek,
+        int completedWeeks,
         QuarterMoment? biggestWeek)
     {
         var playerMarks = new List<QuarterMark>();
@@ -196,11 +217,11 @@ internal static class FirstQuarterReportBuilder
 
         var floorLeader = positionReports
             .SelectMany(report => report.Rankings.Take(5))
-            .Where(player => player.Games >= throughWeek)
+            .Where(player => player.Games >= completedWeeks)
             .Select(player => new
             {
                 Player = player,
-                Floor = player.WeeklyPoints.Take(throughWeek).Min()
+                Floor = player.WeeklyPoints.Take(completedWeeks).Min()
             })
             .OrderByDescending(entry => entry.Floor)
             .ThenByDescending(entry => entry.Player.TotalPoints)
@@ -480,7 +501,7 @@ internal static class FirstQuarterReportBuilder
         IGrouping<string, WeeklyPlayerStats> group,
         FantasyScorer scorer,
         IReadOnlyList<int> weeks,
-        int throughWeek)
+        int completedWeeks)
     {
         var rows = group.OrderBy(stat => stat.Week).ToList();
         var latest = rows[^1];
@@ -490,12 +511,12 @@ internal static class FirstQuarterReportBuilder
                 week => week.Key,
                 week => Round(week.Sum(stat => scorer.ScoreWeekly(stat).TotalPoints)));
         var weeklyPoints = weeks.Select(week => scoredByWeek.GetValueOrDefault(week)).ToArray();
-        var completedPoints = weeklyPoints.Take(throughWeek).ToArray();
+        var completedPoints = weeklyPoints.Take(completedWeeks).ToArray();
         var total = Round(completedPoints.Sum());
-        var average = Round(total / throughWeek);
+        var average = Round(total / completedWeeks);
         var variance = completedPoints.Average(points => (double)((points - average) * (points - average)));
         var best = completedPoints
-            .Select((points, index) => new { Points = points, Week = index + FirstWeek })
+            .Select((points, index) => new { Points = points, Week = weeks[index] })
             .OrderByDescending(entry => entry.Points)
             .First();
 
@@ -512,7 +533,7 @@ internal static class FirstQuarterReportBuilder
             BestWeek: best.Week,
             BestWeekPoints: best.Points,
             Consistency: Round((decimal)Math.Sqrt(variance)),
-            Trend: throughWeek == FirstWeek
+            Trend: completedWeeks == 1
                 ? 0m
                 : Round(completedPoints[^1] - completedPoints[0]));
     }
@@ -520,7 +541,7 @@ internal static class FirstQuarterReportBuilder
     private static QuarterPlayer BuildDefense(
         IGrouping<string, QuarterDefenseWeekScore> group,
         IReadOnlyList<int> weeks,
-        int throughWeek)
+        int completedWeeks)
     {
         var rows = group.OrderBy(score => score.Week).ToList();
         var latest = rows[^1];
@@ -528,12 +549,12 @@ internal static class FirstQuarterReportBuilder
             .GroupBy(score => score.Week)
             .ToDictionary(week => week.Key, week => Round(week.Sum(score => score.Points)));
         var weeklyPoints = weeks.Select(week => scoredByWeek.GetValueOrDefault(week)).ToArray();
-        var completedPoints = weeklyPoints.Take(throughWeek).ToArray();
+        var completedPoints = weeklyPoints.Take(completedWeeks).ToArray();
         var total = Round(completedPoints.Sum());
-        var average = Round(total / throughWeek);
+        var average = Round(total / completedWeeks);
         var variance = completedPoints.Average(points => (double)((points - average) * (points - average)));
         var best = completedPoints
-            .Select((points, index) => new { Points = points, Week = index + FirstWeek })
+            .Select((points, index) => new { Points = points, Week = weeks[index] })
             .OrderByDescending(entry => entry.Points)
             .First();
 
@@ -550,7 +571,7 @@ internal static class FirstQuarterReportBuilder
             BestWeek: best.Week,
             BestWeekPoints: best.Points,
             Consistency: Round((decimal)Math.Sqrt(variance)),
-            Trend: throughWeek == FirstWeek
+            Trend: completedWeeks == 1
                 ? 0m
                 : Round(completedPoints[^1] - completedPoints[0]));
     }
@@ -558,10 +579,10 @@ internal static class FirstQuarterReportBuilder
     private static List<QuarterTeamPositionReport> BuildTeamPositionReports(
         IEnumerable<QuarterTeamWeekScore> teamScores,
         IReadOnlyList<int> weeks,
-        int throughWeek)
+        int completedWeeks)
     {
         var scores = teamScores
-            .Where(score => score.Week >= FirstWeek && score.Week <= throughWeek)
+            .Where(score => score.Week >= weeks[0] && score.Week < weeks[0] + completedWeeks)
             .ToList();
 
         return new[] { "TOTAL" }
@@ -584,8 +605,8 @@ internal static class FirstQuarterReportBuilder
                             OwnerName: latest.OwnerName,
                             TeamName: latest.TeamName,
                             Position: position,
-                            TotalPoints: Round(weeklyPoints.Take(throughWeek).Sum()),
-                            PointsPerWeek: Round(weeklyPoints.Take(throughWeek).Average()),
+                            TotalPoints: Round(weeklyPoints.Take(completedWeeks).Sum()),
+                            PointsPerWeek: Round(weeklyPoints.Take(completedWeeks).Average()),
                             WeeklyPoints: weeklyPoints);
                     })
                     .OrderByDescending(team => team.TotalPoints)
@@ -631,7 +652,7 @@ internal sealed record QuarterLineupWeekScore(
     string? BestBenchPosition,
     decimal BestBenchPoints);
 
-internal sealed record FirstQuarterReport(
+internal sealed record QuarterReport(
     int Season,
     int StartWeek,
     int EndWeek,

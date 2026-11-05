@@ -26,7 +26,7 @@ public class FirstQuarterReportBuilderTests
             QuarterLine("rb-a", "Runner One", "RB", 2, rushingYards: 80)
         };
 
-        var report = FirstQuarterReportBuilder.Build(2026, 2, scoring, stats);
+        var report = QuarterReportBuilder.Build(2026, 2, scoring, stats);
 
         report.Status.Should().Be("in-progress");
         report.ThroughWeek.Should().Be(2);
@@ -56,7 +56,7 @@ public class FirstQuarterReportBuilderTests
             QuarterLine("rb-boom", "Boom Back", "RB", 4, rushingYards: 250)
         };
 
-        var report = FirstQuarterReportBuilder.Build(2026, 4, scoring, stats);
+        var report = QuarterReportBuilder.Build(2026, 4, scoring, stats);
 
         report.Status.Should().Be("complete");
         report.Superlatives.Steadiest!.PlayerName.Should().Be("Steady Back");
@@ -78,7 +78,7 @@ public class FirstQuarterReportBuilderTests
             new QuarterDefenseWeekScore("PIT", "Pittsburgh Steelers", 2, 11m)
         };
 
-        var report = FirstQuarterReportBuilder.Build(
+        var report = QuarterReportBuilder.Build(
             2026,
             2,
             new Dictionary<string, decimal> { ["pass_td"] = 4m },
@@ -112,7 +112,7 @@ public class FirstQuarterReportBuilderTests
             new QuarterTeamWeekScore(2, "Jake", "Team Two", "RB", 2, 65m)
         };
 
-        var report = FirstQuarterReportBuilder.Build(
+        var report = QuarterReportBuilder.Build(
             2026,
             2,
             new Dictionary<string, decimal> { ["pass_td"] = 4m },
@@ -154,7 +154,7 @@ public class FirstQuarterReportBuilderTests
             new QuarterLineupWeekScore(4, "D", "Team D", 1, 60m, 100m, "Bench D", "TE", 15m)
         };
 
-        var report = FirstQuarterReportBuilder.Build(
+        var report = QuarterReportBuilder.Build(
             2026,
             1,
             new Dictionary<string, decimal> { ["pass_td"] = 4m },

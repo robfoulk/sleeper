@@ -351,6 +351,29 @@ optimal-lineup efficiency, bench scoring, actual wins, all-play expected wins, a
 The report updates on every `site-data` run and powers `/first-quarter`; player ranks do not use
 nflverse's default fantasy-point columns.
 
+The same scoring engine also exports `second_quarter` for Weeks 5–8 once Week 5 is complete,
+with a complete four-week report after Week 8. It powers `/second-quarter` and adds a Q2
+navigation link without replacing the Q1 page. Q2 team, defense, and lineup analysis uses the
+latest weekly edition's captured historical player rosters and official totals, including
+score corrections; it never rewrites older roster snapshots. Missing completed-week NFL
+stats or captured matchups fail the build rather than producing a misleading complete report.
+Weekly arrays contain four entries starting at Week 5, and averages divide by completed
+weeks within that window, not the season week number.
+
+The Q2 page first presents its own weekly scoring, player and team-position rankings, and
+12 player/team/lineup/luck findings. A separate comparison section uses the original Q1
+report as the baseline for team scoring changes, quarter-only records, scoring-rank
+movement, and individual position leaders. Neither leaderboard is cumulative across eight
+weeks. Position filters are progressive enhancement; all rankings remain available without
+JavaScript.
+
+Filed complete reports at `recaps/{season}/quarter-NN-NN-data.json` are reused only when their
+season, window, completed status, and weekly labels match. An invalid filing fails explicitly.
+The original Weeks 1–4 report is pinned this way so scoring fixes do not rewrite its published
+rankings. New calculations use nflverse aggregate fumble totals when supplied, including
+return-game fumbles, and otherwise retain the older split-field calculation without double
+counting. The Q2 methodology discloses this correction and the as-filed Q1 comparison basis.
+
 It also fails loudly rather than degrading: an award whose owner cannot be resolved, or a
 franchise with no current owner in the export, throws with the season and the award named.
 

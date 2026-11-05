@@ -118,11 +118,13 @@ public class FantasyScorer
         AddIfNotNull(map, "rec_td", s.ReceivingTds);
         AddIfNotNull(map, "rec_2pt", s.Receiving2PtConversions);
 
-        // Fumbles — combine all sources
-        var totalFumblesLost = (s.RushingFumblesLost ?? 0) + (s.ReceivingFumblesLost ?? 0) + (s.SackFumblesLost ?? 0);
+        // Aggregate fields also include return-game fumbles; older feeds only have split fields.
+        var totalFumblesLost = s.FumblesLostTotal
+            ?? (s.RushingFumblesLost ?? 0) + (s.ReceivingFumblesLost ?? 0) + (s.SackFumblesLost ?? 0);
         if (totalFumblesLost != 0) map["fum_lost"] = totalFumblesLost;
 
-        var totalFumbles = (s.RushingFumbles ?? 0) + (s.ReceivingFumbles ?? 0) + (s.SackFumbles ?? 0);
+        var totalFumbles = s.FumblesTotal
+            ?? (s.RushingFumbles ?? 0) + (s.ReceivingFumbles ?? 0) + (s.SackFumbles ?? 0);
         if (totalFumbles != 0) map["fum"] = totalFumbles;
 
         // Special Teams
@@ -166,11 +168,12 @@ public class FantasyScorer
         AddIfNotNull(map, "rec_td", s.ReceivingTds);
         AddIfNotNull(map, "rec_2pt", s.Receiving2PtConversions);
 
-        // Fumbles — combine all sources
-        var totalFumblesLost = (s.RushingFumblesLost ?? 0) + (s.ReceivingFumblesLost ?? 0) + (s.SackFumblesLost ?? 0);
+        var totalFumblesLost = s.FumblesLostTotal
+            ?? (s.RushingFumblesLost ?? 0) + (s.ReceivingFumblesLost ?? 0) + (s.SackFumblesLost ?? 0);
         if (totalFumblesLost != 0) map["fum_lost"] = totalFumblesLost;
 
-        var totalFumbles = (s.RushingFumbles ?? 0) + (s.ReceivingFumbles ?? 0) + (s.SackFumbles ?? 0);
+        var totalFumbles = s.FumblesTotal
+            ?? (s.RushingFumbles ?? 0) + (s.ReceivingFumbles ?? 0) + (s.SackFumbles ?? 0);
         if (totalFumbles != 0) map["fum"] = totalFumbles;
 
         // Special Teams

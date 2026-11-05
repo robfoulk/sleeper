@@ -41,6 +41,39 @@ public class FantasyScorerTests
     private static FantasyScorer CreateStandard() => new(StandardScoring);
     private static FantasyScorer CreatePpr() => new(PprScoring);
 
+    [Theory]
+    [InlineData(null, 0, 9.6)]
+    [InlineData(1, 0, 7.6)]
+    [InlineData(1, 1, 7.6)]
+    [InlineData(0, 1, 9.6)]
+    [InlineData(null, 1, 7.6)]
+    public void AggregateFumblesIncludeReturnsWithoutDoubleCounting(int? aggregateLost, int splitLost, decimal expected)
+    {
+        var weekly = new WeeklyPlayerStats
+        {
+            ReceivingYards = 36m, ReceivingTds = 1,
+            FumblesLostTotal = aggregateLost, ReceivingFumblesLost = splitLost
+        };
+        var season = new SeasonPlayerStats
+        {
+            ReceivingYards = 36m, ReceivingTds = 1,
+            FumblesLostTotal = aggregateLost, ReceivingFumblesLost = splitLost
+        };
+
+        CreateStandard().ScoreWeekly(weekly).TotalPoints.Should().Be(expected);
+        CreateStandard().ScoreSeason(season).TotalPoints.Should().Be(expected);
+    }
+
+    [Fact]
+    public void AggregateFumbleCountsTakePrecedenceWhenTheLeaguePenalizesAllFumbles()
+    {
+        var scorer = new FantasyScorer(new Dictionary<string, decimal> { ["fum"] = -1m });
+        scorer.ScoreWeekly(new WeeklyPlayerStats { FumblesTotal = 2, ReceivingFumbles = 1 })
+            .TotalPoints.Should().Be(-2m);
+        scorer.ScoreSeason(new SeasonPlayerStats { FumblesTotal = 2, ReceivingFumbles = 1 })
+            .TotalPoints.Should().Be(-2m);
+    }
+
     // -- QB Tests --
 
     [Fact]

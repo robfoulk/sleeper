@@ -168,7 +168,7 @@ export type QuarterMarkGroup = {
   marks: QuarterMark[];
 };
 
-export type FirstQuarterReport = {
+export type QuarterReport = {
   season: number;
   start_week: number;
   end_week: number;
@@ -209,6 +209,8 @@ export type FirstQuarterReport = {
   };
 };
 
+export type FirstQuarterReport = QuarterReport;
+
 export type QuarterTeam = {
   rank: number;
   roster_id: number;
@@ -225,6 +227,7 @@ export const data = league as unknown as {
   league_name: string;
   current_edition?: Edition;
   first_quarter?: FirstQuarterReport;
+  second_quarter?: QuarterReport;
   seasons: Season[];
   franchises: Franchise[];
   owners: Owner[];
@@ -265,6 +268,7 @@ export const PLAYED_SEASONS = data.seasons.map((s) => s.season).sort((a, b) => b
 
 export const CURRENT_EDITION = data.current_edition ?? null;
 export const FIRST_QUARTER = data.first_quarter ?? null;
+export const SECOND_QUARTER = data.second_quarter ?? null;
 
 export const ALL_SEASONS = Array.from(
   new Set([

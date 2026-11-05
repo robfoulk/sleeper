@@ -1,0 +1,397 @@
+---
+import Bulletin from '../layouts/Bulletin.astro';
+import QuarterPlayerTable from '../components/QuarterPlayerTable.astro';
+import { CURRENT_EDITION, FIRST_QUARTER, SECOND_QUARTER, pts } from '../lib/league';
+
+const quarter = SECOND_QUARTER;
+const first = FIRST_QUARTER?.season === quarter?.season ? FIRST_QUARTER : null;
+const edition = CURRENT_EDITION?.season === quarter?.season ? CURRENT_EDITION : null;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const weeks = quarter
+  ? Array.from({ length: quarter.through_week - quarter.start_week + 1 }, (_, index) => quarter.start_week + index)
+  : [];
+const totals = quarter?.team_position_reports.find((report) => report.position === 'TOTAL');
+const priorTotals = first?.team_position_reports.find((report) => report.position === 'TOTAL');
+const signed = (value: number) => `${value > 0 ? '+' : ''}${pts(value)}`;
+const record = (rosterId: number, start: number, end: number) => {
+  let wins = 0;
+  let losses = 0;
+  let ties = 0;
+  for (const week of edition?.weeks ?? []) {
+    if (week.week < start || week.week > end) continue;
+    for (const game of week.games) {
+      const side = game.home.franchise_id === rosterId ? game.home
+        : game.away.franchise_id === rosterId ? game.away : null;
+      if (!side) continue;
+      const opponent = side === game.home ? game.away : game.home;
+      if (side.points > opponent.points) wins++;
+      else if (side.points < opponent.points) losses++;
+      else ties++;
+    }
+  }
+  return `${wins}-${losses}${ties ? `-${ties}` : ''}`;
+};
+const weekly = quarter?.weekly_totals.map((week, index) => {
+  const scores = totals?.rankings.map((team) => ({ ...team, points: team.weekly_points[index] }))
+    .sort((a, b) => b.points - a.points) ?? [];
+  return {
+    week: week.week,
+    average: scores.reduce((sum, team) => sum + team.points, 0) / Math.max(scores.length, 1),
+    high: scores[0],
+    low: scores.at(-1),
+    player: week.leaders.slice().sort((a, b) => b.points - a.points)[0],
+  };
+}) ?? [];
+const comparable = quarter?.status === 'complete' && first?.status === 'complete'
+  && quarter.through_week - quarter.start_week === first.through_week - first.start_week;
+const comparisons = comparable ? totals?.rankings.flatMap((team) => {
+  const previous = priorTotals?.rankings.find((entry) => entry.roster_id === team.roster_id);
+  return previous ? [{
+    team,
+    previous,
+    delta: team.total_points - previous.total_points,
+    rankChange: previous.rank - team.rank,
+  }] : [];
+}).sort((a, b) => b.delta - a.delta) ?? [] : [];
+const handoffs = comparable ? quarter.position_reports.flatMap((report) => {
+  const previous = first.position_reports.find((entry) => entry.position === report.position);
+  return previous ? [{ position: report.position, previous: previous.leader, current: report.leader }] : [];
+}) : [];
+const improver = comparisons[0];
+const markCount = quarter?.mark_groups.reduce((sum, group) => sum + group.marks.length, 0) ?? 0;
+const captured = edition ? new Date(edition.captured_at).toLocaleString('en-US', {
+  timeZone: 'America/New_York', dateStyle: 'medium', timeStyle: 'short',
+}) : null;
+---
+
+<Bulletin
+  title="Second Quarter Report — The League"
+  slug={`The file · ${quarter?.season ?? 'Current season'} · Weeks 5–8`}
+  description="Weeks 5–8 on their own: custom-scored player rankings, team production, lineup decisions and schedule luck. Plus a separate comparison with Weeks 1–4."
+>
+  {!quarter ? (
+    <section class="sheet band">
+      <h1>Second Quarter Report</h1>
+      <p>The Weeks 5–8 review will appear after a weekly edition includes completed Week 5 results.</p>
+      <a href={`${base}/first-quarter`}>Read the Weeks 1–4 report</a>
+    </section>
+  ) : (
+    <>
+      <header class="sheet hero">
+        <div>
+          <p class="slug">{quarter.status === 'complete' ? 'Second quarter closed' : `Second quarter · through Week ${quarter.through_week}`}</p>
+          <h1>Four more weeks.<br /><span>A fresh argument.</span></h1>
+          <p class="dek">
+            Weeks <strong>{quarter.start_week}–{quarter.through_week}</strong>, counted on their own under
+            The League’s custom scoring. September does not get to pad this report.
+          </p>
+          <nav class="jump slug" aria-label="Report sections">
+            <a href="#weekly">Weekly pulse</a>
+            <a href="#teams">Teams</a>
+            <a href="#players">Players</a>
+            <a href="#findings">Quarter marks</a>
+            {comparable && <a href="#comparison">Q1 vs Q2</a>}
+          </nav>
+        </div>
+        {quarter.overall_leaders[0] && (
+          <aside class="leader" aria-label="Second quarter scoring leader">
+            <p class="slug">Q2 scoring leader</p>
+            <strong class="leader__number">{pts(quarter.overall_leaders[0].total_points)}</strong>
+            <h2>{quarter.overall_leaders[0].player_name}</h2>
+            <p class="slug">{quarter.overall_leaders[0].position} · {quarter.overall_leaders[0].team ?? 'FA'}</p>
+            <p>Weeks {quarter.start_week}–{quarter.through_week} only</p>
+          </aside>
+        )}
+      </header>
+
+      <section class="sheet band" id="weekly" aria-labelledby="weekly-title">
+        <div class="section-head">
+          <div><p class="slug">The weekly pulse</p><h2 id="weekly-title">Four different Sundays</h2></div>
+          <p>The fantasy-team average, the extremes, and the player who supplied the loudest individual score.</p>
+        </div>
+        <div class="weekly-grid">
+          {weekly.map((week) => (
+            <article>
+              <h3>Week {week.week}</h3>
+              <p class="weekly-number">{pts(week.average)}</p>
+              <p class="slug">League average</p>
+              <dl>
+                <div><dt>High</dt><dd>{week.high?.owner_name} · <strong>{pts(week.high?.points)}</strong></dd></div>
+                <div><dt>Low</dt><dd>{week.low?.owner_name} · <strong>{pts(week.low?.points)}</strong></dd></div>
+                <div><dt>Player high</dt><dd>{week.player?.player_name} · <strong>{pts(week.player?.points)}</strong></dd></div>
+              </dl>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section class="sheet band" id="teams" aria-labelledby="teams-title">
+        <div class="section-head">
+          <div><p class="slug">The clean Q2 ledger</p><h2 id="teams-title">Who supplied the points?</h2></div>
+          <p>Official team totals first. Switch positions to isolate the points scored by the starters actually used, not the names on today’s roster.</p>
+        </div>
+        <div class="selectors" data-quarter-switcher="teams" role="group" aria-label="Team scoring category" hidden>
+          {quarter.team_position_reports.map((report) => (
+            <button type="button" data-choice={report.position} aria-controls={`teams-${report.position.toLowerCase()}`} aria-pressed="false">
+              {report.position === 'TOTAL' ? 'ALL' : report.position}
+            </button>
+          ))}
+        </div>
+        {quarter.team_position_reports.map((report) => (
+          <section id={`teams-${report.position.toLowerCase()}`} data-quarter-panel="teams" data-choice={report.position}>
+            <h3>{report.position === 'TOTAL' ? 'Total team scoring' : `${report.position} starting-lineup scoring`}</h3>
+            <div class="ledger-scroll" role="region" aria-label={`${report.position} team rankings`} tabindex="0">
+              <table class="ledger">
+                <caption>{report.position === 'TOTAL' ? 'Official points' : `${report.position} starters`} · Weeks {quarter.start_week}–{quarter.through_week}</caption>
+                <thead>
+                  <tr>
+                    <th scope="col" class="num">Rank</th><th scope="col">Team / owner</th>
+                    {weeks.map((week) => <th scope="col" class="num">W{week}</th>)}
+                    <th scope="col" class="num">Total</th><th scope="col" class="num">Per week</th>
+                    {report.position === 'TOTAL' && <th scope="col">Q2 record</th>}
+                  </tr>
+                </thead>
+                <tbody>
+                  {report.rankings.map((team) => (
+                    <tr>
+                      <td class="num">{team.rank}</td>
+                      <th scope="row"><a href={`${base}/franchises/${team.roster_id}`}>{team.team_name}</a><small>{team.owner_name}</small></th>
+                      {team.weekly_points.slice(0, weeks.length).map((points) => <td class="num">{pts(points)}</td>)}
+                      <td class="num total">{pts(team.total_points)}</td><td class="num">{pts(team.points_per_week)}</td>
+                      {report.position === 'TOTAL' && <td>{record(team.roster_id, quarter.start_week, quarter.through_week)}</td>}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </section>
+        ))}
+      </section>
+
+      <section class="sheet band" aria-labelledby="dozen-title">
+        <div class="section-head">
+          <div><p class="slug">Across every position</p><h2 id="dozen-title">The second-quarter dozen</h2></div>
+          <p>The twelve highest totals under this league’s rules. A positional rank is not an overall rank; both are shown here.</p>
+        </div>
+        <ol class="dozen">
+          {quarter.overall_leaders.map((player, index) => (
+            <li>
+              <span class="slug">{String(index + 1).padStart(2, '0')}</span>
+              <span><strong>{player.player_name}</strong><small>{player.position}{player.rank} · {player.team ?? 'FA'}</small></span>
+              <strong>{pts(player.total_points)}</strong>
+            </li>
+          ))}
+        </ol>
+      </section>
+
+      <section class="sheet band" id="players" aria-labelledby="players-title">
+        <div class="section-head">
+          <div><p class="slug">The full field</p><h2 id="players-title">Position by position</h2></div>
+          <p>Top ten up front; every remaining scorer below. Totals rank the field. The average includes byes and missed weeks, so it is per calendar week, not per appearance.</p>
+        </div>
+        <div class="selectors" data-quarter-switcher="players" role="group" aria-label="Player ranking position" hidden>
+          {quarter.position_reports.map((report) => (
+            <button type="button" data-choice={report.position} aria-controls={`players-${report.position.toLowerCase()}`} aria-pressed="false">{report.position}</button>
+          ))}
+        </div>
+        {quarter.position_reports.map((report) => (
+          <section id={`players-${report.position.toLowerCase()}`} data-quarter-panel="players" data-choice={report.position}>
+            <div class="position-head">
+              <h3>{report.position} · {report.player_count} scorers</h3>
+              <p class="slug">Top-ten average: {pts(report.top_ten_average)}</p>
+            </div>
+            <QuarterPlayerTable players={report.rankings.slice(0, 10)} weeks={weeks} caption={`${report.position} leaders · Weeks ${quarter.start_week}–${quarter.through_week}`} />
+            {report.rankings.length > 10 && (
+              <details>
+                <summary>Show ranks 11–{report.rankings.length}</summary>
+                <QuarterPlayerTable players={report.rankings.slice(10)} weeks={weeks} caption={`${report.position} ranks 11–${report.rankings.length} · Weeks ${quarter.start_week}–${quarter.through_week}`} />
+              </details>
+            )}
+          </section>
+        ))}
+      </section>
+
+      <section class="sheet band" id="findings" aria-labelledby="findings-title">
+        <div class="section-head">
+          <div><p class="slug">{markCount} findings · this quarter only</p><h2 id="findings-title">The numbers have receipts</h2></div>
+          <p>Scoring, roster construction, lineup hindsight, and the schedule. Four different ways to explain the same group chat.</p>
+        </div>
+        <div class="findings">
+          {quarter.mark_groups.map((group) => (
+            <section aria-label={`${group.group} findings`}>
+              <h3 class="ruled">{group.group}</h3>
+              {group.marks.map((mark) => (
+                <article>
+                  <p class="slug">{mark.label}</p>
+                  <h4>{mark.subject}</h4>
+                  <p class="mark-value">{mark.display_value}</p>
+                  <p>{mark.detail}</p>
+                </article>
+              ))}
+            </section>
+          ))}
+        </div>
+      </section>
+
+      {comparable && (
+        <section class="sheet band comparison" id="comparison" aria-labelledby="comparison-title">
+          <div class="section-head">
+            <div><p class="slug">Bonus round · Q1 vs Q2</p><h2 id="comparison-title">Who changed the argument?</h2></div>
+            <p>The quarter review above stands on its own. This is the side-by-side: two separate four-week windows, not a cumulative eight-week leaderboard.</p>
+          </div>
+          {improver && (
+            <p class="comparison-lede">
+              <strong>{improver.team.owner_name}</strong> made the biggest scoring jump:
+              <strong> {signed(improver.delta)}</strong> points over Q1.
+              The record went from <strong>{record(improver.team.roster_id, 1, 4)}</strong> to
+              <strong> {record(improver.team.roster_id, 5, 8)}</strong>. Looking better and getting paid for it are still separate questions.
+            </p>
+          )}
+          <div class="ledger-scroll" role="region" aria-label="Q1 versus Q2 team comparison" tabindex="0">
+            <table class="ledger">
+              <caption>Sorted by scoring improvement · Weeks 1–4 versus Weeks 5–8</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Owner / Q2 team</th><th scope="col" class="num">Q1 points</th><th scope="col" class="num">Q2 points</th>
+                  <th scope="col" class="num">Change</th><th scope="col">Scoring rank</th><th scope="col">Q1 record</th><th scope="col">Q2 record</th>
+                </tr>
+              </thead>
+              <tbody>
+                {comparisons.map(({ team, previous, delta, rankChange }) => (
+                  <tr>
+                    <th scope="row"><a href={`${base}/owners/${team.owner_name.toLowerCase()}`}>{team.owner_name}</a><small>{team.team_name}</small></th>
+                    <td class="num">{pts(previous.total_points)}</td><td class="num">{pts(team.total_points)}</td>
+                    <td class:list={['num', { loss: delta < 0 }]}>{signed(delta)}</td>
+                    <td>{previous.rank} → {team.rank} <small>{rankChange > 0 ? `up ${rankChange}` : rankChange < 0 ? `down ${-rankChange}` : 'unchanged'}</small></td>
+                    <td>{record(team.roster_id, 1, 4)}</td><td>{record(team.roster_id, 5, 8)}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <h3 class="handoff-title">Same scoring rules. New position leaders?</h3>
+          <div class="ledger-scroll" role="region" aria-label="Position leaders by quarter" tabindex="0">
+            <table class="ledger">
+              <caption>Individual position leaders · each quarter ranked independently</caption>
+              <thead><tr><th scope="col">Position</th><th scope="col">Q1 leader</th><th scope="col" class="num">Q1 points</th><th scope="col">Q2 leader</th><th scope="col" class="num">Q2 points</th></tr></thead>
+              <tbody>
+                {handoffs.map(({ position, previous, current }) => (
+                  <tr>
+                    <th scope="row">{position}</th><td>{previous.player_name}</td><td class="num">{pts(previous.total_points)}</td>
+                    <td>{current.player_name}</td><td class="num">{pts(current.total_points)}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p class="archive-link"><a href={`${base}/first-quarter`}>Read the original Weeks 1–4 report →</a> Its rankings and page have not been rewritten.</p>
+        </section>
+      )}
+
+      <section class="sheet band methodology" aria-labelledby="method-title">
+        <p class="slug">Show the work</p>
+        <h2 id="method-title">Scope, sources, and the fine print</h2>
+        <ul>
+          <li>QB, RB, WR, TE and K ranks use <a href="https://github.com/nflverse/nflverse-data/releases/tag/stats_player">nflverse regular-season stat lines</a>, recalculated with the captured league scoring settings—not a default fantasy-points column. Players are not restricted to fantasy rosters.</li>
+          <li>Team totals, historical starters, bench points and rostered DEF scores come from the <a href={`${base}/${quarter.season}/week-${String(edition?.completed_week ?? quarter.through_week).padStart(2, '0')}`}>captured weekly edition</a>, filed {captured} Eastern. That capture includes score corrections already recorded at filing; earlier snapshots are unchanged.</li>
+          <li>All calculations above use Weeks {quarter.start_week}–{quarter.through_week} only. Each weekly array starts at Week {quarter.start_week}; byes and absent stat lines count as zero. “Per week” uses {weeks.length} completed calendar weeks.</li>
+          <li>Lineup findings are hindsight: the highest-scoring eligible combination of that week’s roster under the league’s position and flex slots. Schedule expectations compare a team with every other team that week; ties count as half a win.</li>
+          <li>The comparison uses the original Q1 report as its baseline. Scoring-rank movement is not standings movement, and a positional scoring gap is not a forecast.</li>
+          <li>Q1 remains exactly as filed. Q2 player scoring now includes aggregate fumbles lost, including returns, correcting a gap in the earlier scorer. The published Q1 player field has not been rescored for that correction.</li>
+        </ul>
+        <details>
+          <summary>Captured scoring settings ({quarter.scoring_rules.length} nonzero rules)</summary>
+          <div class="ledger-scroll" role="region" aria-label="League scoring settings" tabindex="0">
+            <table class="ledger">
+              <caption>Rules used to score the NFL player field</caption>
+              <thead><tr><th scope="col">Rule</th><th scope="col" class="num">Points per unit</th></tr></thead>
+              <tbody>{quarter.scoring_rules.map((rule) => <tr><th scope="row">{rule.key}</th><td class="num">{rule.points_per_unit}</td></tr>)}</tbody>
+            </table>
+          </div>
+        </details>
+      </section>
+    </>
+  )}
+</Bulletin>
+
+<script>
+  for (const switcher of document.querySelectorAll<HTMLElement>('[data-quarter-switcher]')) {
+    const group = switcher.dataset.quarterSwitcher;
+    const buttons = Array.from(switcher.querySelectorAll<HTMLButtonElement>('button[data-choice]'));
+    const panels = Array.from(document.querySelectorAll<HTMLElement>(`[data-quarter-panel="${group}"]`));
+    const select = (choice: string | undefined) => {
+      for (const button of buttons) button.setAttribute('aria-pressed', String(button.dataset.choice === choice));
+      for (const panel of panels) panel.hidden = panel.dataset.choice !== choice;
+    };
+    for (const button of buttons) button.addEventListener('click', () => select(button.dataset.choice));
+    const selectHash = () => {
+      const panel = panels.find((panel) => `#${panel.id}` === location.hash);
+      if (panel) select(panel.dataset.choice);
+    };
+    select(buttons[0]?.dataset.choice);
+    selectHash();
+    window.addEventListener('hashchange', selectHash);
+    switcher.hidden = false;
+  }
+</script>
+
+<style>
+  .band { padding-block: clamp(2.5rem, 6vw, 4rem); border-bottom: 1px solid var(--rule-strong); min-width: 0; }
+  .hero { display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(15rem, 0.8fr); gap: 3rem; padding-block: clamp(3rem, 7vw, 5rem); border-bottom: 3px double var(--rule-strong); }
+  h1 { font-size: clamp(2.3rem, 5vw, 4.5rem); line-height: 1.08; letter-spacing: -0.035em; margin-block: 1rem 1.5rem; }
+  h1 span { color: var(--violet); }
+  h2 { font-size: clamp(1.6rem, 3vw, 2.3rem); line-height: 1.2; margin-block: 0.5rem 1rem; }
+  h3 { font-size: 1.25rem; margin-block: 1.2rem; }
+  h4 { font-size: 1.2rem; line-height: 1.3; margin-block: 0.5rem; }
+  .dek { font-size: 1.16rem; max-width: 55ch; }
+  .jump { display: flex; flex-wrap: wrap; gap: 0.7rem 1.2rem; margin-top: 1.8rem; }
+  .leader { border-left: 2px solid var(--rule-strong); padding-left: 2rem; align-self: center; min-width: 0; }
+  .leader__number { display: block; font-size: clamp(2.6rem, 5vw, 4.5rem); line-height: 1.1; color: var(--stamp); }
+  .leader h2 { font-size: 1.5rem; }
+  .leader > p:last-child { color: var(--ink-quiet); font-size: 0.85rem; }
+  .section-head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 2rem; margin-bottom: 1.5rem; }
+  .section-head > p { align-self: end; color: var(--ink-quiet); margin: 0; }
+  .weekly-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.5rem; }
+  .weekly-grid article { border-top: 2px solid var(--rule-strong); }
+  .weekly-number { font-size: 2rem; font-weight: 700; line-height: 1; margin-block: 1rem 0.5rem; }
+  dl { margin-bottom: 0; }
+  dl > div { padding-block: 0.65rem; border-top: 1px solid var(--rule); }
+  dt { color: var(--ink-quiet); font-size: 0.8rem; }
+  dd { margin: 0; font-size: 0.92rem; }
+  .selectors { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem; }
+  .selectors[hidden], [data-quarter-panel][hidden] { display: none; }
+  button { font: inherit; font-size: 0.82rem; padding: 0.6rem 1rem; color: var(--ink); background: transparent; border: 1px solid var(--rule-strong); cursor: pointer; min-height: 44px; }
+  button[aria-pressed='true'] { color: var(--ground); background: var(--ink); border-color: var(--ink); }
+  button:focus-visible, .ledger-scroll:focus-visible { outline: 2px solid var(--violet); outline-offset: 4px; }
+  .ledger th small, .dozen small { display: block; color: var(--ink-quiet); font-weight: 400; font-size: 0.8rem; }
+  .ledger .total { font-weight: 700; }
+  .dozen { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 2rem; padding: 0; margin: 0; list-style: none; }
+  .dozen li { display: grid; grid-template-columns: 2ch minmax(0, 1fr) auto; gap: 0.8rem; align-items: baseline; padding-block: 1rem; border-top: 1px solid var(--rule); }
+  .position-head { display: flex; justify-content: space-between; gap: 1rem; align-items: baseline; flex-wrap: wrap; }
+  details { margin-top: 1.3rem; }
+  summary { cursor: pointer; color: var(--violet); padding-block: 0.6rem; }
+  .findings { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem 3rem; }
+  .findings article { border-bottom: 1px solid var(--rule); padding-block: 1rem; }
+  .findings article > p:last-child { color: var(--ink-quiet); font-size: 0.9rem; }
+  .mark-value { color: var(--stamp); font-weight: 700; font-size: 1.8rem; line-height: 1.2; margin-block: 0.7rem; }
+  .comparison-lede { max-width: 75ch; font-size: 1.15rem; margin-bottom: 2rem; }
+  .loss { color: var(--stamp); }
+  .handoff-title { margin-top: 2.5rem; }
+  .archive-link { margin-top: 2rem; }
+  .methodology { font-size: 0.92rem; color: var(--ink-quiet); }
+  .methodology li + li { margin-top: 0.8rem; }
+  @media (max-width: 1100px) {
+    .weekly-grid, .dozen { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+  @media (max-width: 700px) {
+    .hero, .section-head, .findings { grid-template-columns: minmax(0, 1fr); gap: 1.5rem; }
+    .hero { padding-block: 2.2rem; }
+    .leader { padding-left: 1.2rem; }
+    .dozen { grid-template-columns: minmax(0, 1fr); }
+    .weekly-grid { gap: 1.2rem; }
+    .weekly-number { font-size: 1.6rem; }
+    .selectors { gap: 0.4rem; }
+    button { padding-inline: 0.85rem; }
+  }
+  @media (max-width: 370px) { .weekly-grid { grid-template-columns: minmax(0, 1fr); } }
+</style>

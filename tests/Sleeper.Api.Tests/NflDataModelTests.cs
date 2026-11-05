@@ -50,6 +50,21 @@ public class NflDataModelTests
     }
 
     [Fact]
+    public void AggregateFumbleFieldsParseFromBothStatFeeds()
+    {
+        const string csv = "player_id,fumbles_total,fumbles_lost_total\nreturner,2,1";
+        using var weeklyReader = new CsvReader(new StringReader(csv), CsvConfig);
+        var weekly = weeklyReader.GetRecords<WeeklyPlayerStats>().Single();
+        using var seasonReader = new CsvReader(new StringReader(csv), CsvConfig);
+        var season = seasonReader.GetRecords<SeasonPlayerStats>().Single();
+
+        weekly.FumblesTotal.Should().Be(2);
+        weekly.FumblesLostTotal.Should().Be(1);
+        season.FumblesTotal.Should().Be(2);
+        season.FumblesLostTotal.Should().Be(1);
+    }
+
+    [Fact]
     public void SeasonPlayerStats_ParsesFromCsv()
     {
         // Minimal CSV with just the fields we care about — CsvHelper matches by header name
