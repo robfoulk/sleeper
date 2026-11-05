@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "leagueId": "1312539280601522176",
-  "capturedAtUtc": "2026-10-27T14:03:11.0935612+00:00",
+  "capturedAtUtc": "2026-11-05T17:08:26.0644181+00:00",
   "weeks": [
     {
       "week": 1,
@@ -4051,6 +4051,410 @@
       "week": 7,
       "transactions": [
         {
+          "transaction_id": "1421032279249002496",
+          "type": "waiver",
+          "status": "complete",
+          "status_updated": 1793171532251,
+          "roster_ids": [
+            4
+          ],
+          "adds": {
+            "13301": 4
+          },
+          "drops": {
+            "8135": 4
+          },
+          "draft_picks": [],
+          "creator": "1121459919724728320",
+          "created": 1793163006177,
+          "consenter_ids": [
+            4
+          ],
+          "leg": 7,
+          "settings": {
+            "priority": 3,
+            "seq": 11
+          },
+          "metadata": {
+            "notes": "Your waiver claim was processed successfully!"
+          },
+          "waiver_budget": []
+        },
+        {
+          "transaction_id": "1420993091183063040",
+          "type": "waiver",
+          "status": "complete",
+          "status_updated": 1793171532251,
+          "roster_ids": [
+            1
+          ],
+          "adds": {
+            "12487": 1
+          },
+          "drops": {
+            "4147": 1
+          },
+          "draft_picks": [],
+          "creator": "1112856951387414528",
+          "created": 1793153663015,
+          "consenter_ids": [
+            1
+          ],
+          "leg": 7,
+          "settings": {
+            "priority": 1,
+            "seq": 5
+          },
+          "metadata": {
+            "notes": "Your waiver claim was processed successfully!"
+          },
+          "waiver_budget": []
+        },
+        {
+          "transaction_id": "1420975429526831104",
+          "type": "trade",
+          "status": "complete",
+          "status_updated": 1793149694710,
+          "roster_ids": [
+            3,
+            8
+          ],
+          "adds": {
+            "6813": 3
+          },
+          "drops": {
+            "6813": 8
+          },
+          "draft_picks": [
+            {
+              "season": "2027",
+              "round": 4,
+              "roster_id": 1,
+              "previous_owner_id": 3,
+              "owner_id": 8
+            },
+            {
+              "season": "2027",
+              "round": 6,
+              "roster_id": 3,
+              "previous_owner_id": 3,
+              "owner_id": 8
+            }
+          ],
+          "creator": "1121310753874604032",
+          "created": 1793149452148,
+          "consenter_ids": [
+            3,
+            8
+          ],
+          "leg": 7,
+          "settings": null,
+          "metadata": null,
+          "waiver_budget": []
+        },
+        {
+          "transaction_id": "1420946483364040704",
+          "type": "waiver",
+          "status": "complete",
+          "status_updated": 1793171532251,
+          "roster_ids": [
+            8
+          ],
+          "adds": {
+            "4454": 8
+          },
+          "drops": {
+            "8676": 8
+          },
+          "draft_picks": [],
+          "creator": "1334313985066958848",
+          "created": 1793142550844,
+          "consenter_ids": [
+            8
+          ],
+          "leg": 7,
+          "settings": {
+            "seq": 1
+          },
+          "metadata": {
+            "notes": "Your waiver claim was processed successfully!"
+          },
+          "waiver_budget": []
+        },
+        {
+          "transaction_id": "1420914727868964864",
+          "type": "waiver",
+          "status": "complete",
+          "status_updated": 1793171532251,
+          "roster_ids": [
+            4
+          ],
+          "adds": {
+            "12469": 4
+          },
+          "drops": {
+            "4950": 4
+          },
+          "draft_picks": [],
+          "creator": "1121459919724728320",
+          "created": 1793134979745,
+          "consenter_ids": [
+            4
+          ],
+          "leg": 7,
+          "settings": {
+            "priority": 1,
+            "seq": 6
+          },
+          "metadata": {
+            "notes": "Your waiver claim was processed successfully!"
+          },
+          "waiver_budget": []
+        },
+        {
+          "transaction_id": "1420902848446607360",
+          "type": "waiver",
+          "status": "failed",
+          "status_updated": 1793171532251,
+          "roster_ids": [
+            1
+          ],
+          "adds": {
+            "13345": 1
+          },
+          "drops": null,
+          "draft_picks": [],
+          "creator": "1112856951387414528",
+          "created": 1793132147470,
+          "consenter_ids": [
+            1
+          ],
+          "leg": 7,
+          "settings": {
+            "priority": 0,
+            "seq": 4
+          },
+          "metadata": {
+            "notes": "This player was claimed by another owner."
+          },
+          "waiver_budget": []
+        },
+        {
+          "transaction_id": "1420854525236887552",
+          "type": "trade",
+          "status": "complete",
+          "status_updated": 1793123115802,
+          "roster_ids": [
+            2,
+            4
+          ],
+          "adds": {
+            "12527": 2,
+            "12534": 4
+          },
+          "drops": {
+            "12527": 4,
+            "12534": 2
+          },
+          "draft_picks": [
+            {
+              "season": "2028",
+              "round": 4,
+              "roster_id": 2,
+              "previous_owner_id": 2,
+              "owner_id": 4
+            },
+            {
+              "season": "2028",
+              "round": 10,
+              "roster_id": 4,
+              "previous_owner_id": 4,
+              "owner_id": 2
+            }
+          ],
+          "creator": "1121310424491864064",
+          "created": 1793120626318,
+          "consenter_ids": [
+            2,
+            4
+          ],
+          "leg": 7,
+          "settings": null,
+          "metadata": null,
+          "waiver_budget": []
+        },
+        {
+          "transaction_id": "1420835579901292544",
+          "type": "waiver",
+          "status": "complete",
+          "status_updated": 1793171532251,
+          "roster_ids": [
+            1
+          ],
+          "adds": {
+            "TB": 1
+          },
+          "drops": {
+            "PHI": 1
+          },
+          "draft_picks": [],
+          "creator": "1112856951387414528",
+          "created": 1793116109398,
+          "consenter_ids": [
+            1
+          ],
+          "leg": 7,
+          "settings": {
+            "priority": 3,
+            "seq": 9
+          },
+          "metadata": {
+            "notes": "Your waiver claim was processed successfully!"
+          },
+          "waiver_budget": []
+        },
+        {
+          "transaction_id": "1420835348136648704",
+          "type": "waiver",
+          "status": "failed",
+          "status_updated": 1793171532251,
+          "roster_ids": [
+            1
+          ],
+          "adds": {
+            "CIN": 1
+          },
+          "drops": null,
+          "draft_picks": [],
+          "creator": "1112856951387414528",
+          "created": 1793116054142,
+          "consenter_ids": [
+            1
+          ],
+          "leg": 7,
+          "settings": {
+            "priority": 2,
+            "seq": 8
+          },
+          "metadata": {
+            "notes": "This player was claimed by another owner."
+          },
+          "waiver_budget": []
+        },
+        {
+          "transaction_id": "1420813294016421888",
+          "type": "waiver",
+          "status": "complete",
+          "status_updated": 1793171532251,
+          "roster_ids": [
+            2
+          ],
+          "adds": {
+            "CIN": 2
+          },
+          "drops": {
+            "NYJ": 2
+          },
+          "draft_picks": [],
+          "creator": "1121310424491864064",
+          "created": 1793110796030,
+          "consenter_ids": [
+            2
+          ],
+          "leg": 7,
+          "settings": {
+            "seq": 7
+          },
+          "metadata": {
+            "notes": "Your waiver claim was processed successfully!"
+          },
+          "waiver_budget": []
+        },
+        {
+          "transaction_id": "1420813223858335744",
+          "type": "waiver",
+          "status": "complete",
+          "status_updated": 1793171532251,
+          "roster_ids": [
+            2
+          ],
+          "adds": {
+            "13968": 2
+          },
+          "drops": {
+            "5189": 2
+          },
+          "draft_picks": [],
+          "creator": "1121310424491864064",
+          "created": 1793110779302,
+          "consenter_ids": [
+            2
+          ],
+          "leg": 7,
+          "settings": {
+            "seq": 3
+          },
+          "metadata": {
+            "notes": "Your waiver claim was processed successfully!"
+          },
+          "waiver_budget": []
+        },
+        {
+          "transaction_id": "1420813190463234048",
+          "type": "waiver",
+          "status": "failed",
+          "status_updated": 1793171532251,
+          "roster_ids": [
+            2
+          ],
+          "adds": {
+            "13345": 2
+          },
+          "drops": null,
+          "draft_picks": [],
+          "creator": "1121310424491864064",
+          "created": 1793110771341,
+          "consenter_ids": [
+            2
+          ],
+          "leg": 7,
+          "settings": {
+            "seq": 2
+          },
+          "metadata": {
+            "notes": "This player was claimed by another owner."
+          },
+          "waiver_budget": []
+        },
+        {
+          "transaction_id": "1420804217701982208",
+          "type": "waiver",
+          "status": "failed",
+          "status_updated": 1793171532251,
+          "roster_ids": [
+            4
+          ],
+          "adds": {
+            "TB": 4
+          },
+          "drops": null,
+          "draft_picks": [],
+          "creator": "1121459919724728320",
+          "created": 1793108632067,
+          "consenter_ids": [
+            4
+          ],
+          "leg": 7,
+          "settings": {
+            "priority": 2,
+            "seq": 10
+          },
+          "metadata": {
+            "notes": "This player was claimed by another owner."
+          },
+          "waiver_budget": []
+        },
+        {
           "transaction_id": "1420803984712531968",
           "type": "free_agent",
           "status": "complete",
@@ -4071,6 +4475,34 @@
           "leg": 7,
           "settings": null,
           "metadata": null,
+          "waiver_budget": []
+        },
+        {
+          "transaction_id": "1420803600883396608",
+          "type": "waiver",
+          "status": "complete",
+          "status_updated": 1793171532251,
+          "roster_ids": [
+            4
+          ],
+          "adds": {
+            "13345": 4
+          },
+          "drops": null,
+          "draft_picks": [],
+          "creator": "1121459919724728320",
+          "created": 1793108485007,
+          "consenter_ids": [
+            4
+          ],
+          "leg": 7,
+          "settings": {
+            "priority": 0,
+            "seq": 0
+          },
+          "metadata": {
+            "notes": "Your waiver claim was processed successfully!"
+          },
           "waiver_budget": []
         },
         {
@@ -4463,11 +4895,794 @@
     },
     {
       "week": 8,
-      "transactions": []
+      "transactions": [
+        {
+          "transaction_id": "1423518055857672192",
+          "type": "waiver",
+          "status": "complete",
+          "status_updated": 1793779978966,
+          "roster_ids": [
+            6
+          ],
+          "adds": {
+            "TB": 6
+          },
+          "drops": {
+            "4663": 6
+          },
+          "draft_picks": [],
+          "creator": "1122570164190466048",
+          "created": 1793755661505,
+          "consenter_ids": [
+            6
+          ],
+          "leg": 8,
+          "settings": {
+            "seq": 2
+          },
+          "metadata": {
+            "notes": "Your waiver claim was processed successfully!"
+          },
+          "waiver_budget": []
+        },
+        {
+          "transaction_id": "1423389394261266432",
+          "type": "free_agent",
+          "status": "complete",
+          "status_updated": 1793724986190,
+          "roster_ids": [
+            7
+          ],
+          "adds": null,
+          "drops": {
+            "11435": 7
+          },
+          "draft_picks": [],
+          "creator": "1123415443601010688",
+          "created": 1793724986190,
+          "consenter_ids": [
+            7
+          ],
+          "leg": 8,
+          "settings": null,
+          "metadata": null,
+          "waiver_budget": []
+        },
+        {
+          "transaction_id": "1423337175818178560",
+          "type": "waiver",
+          "status": "complete",
+          "status_updated": 1793779978966,
+          "roster_ids": [
+            3
+          ],
+          "adds": {
+            "5001": 3
+          },
+          "drops": null,
+          "draft_picks": [],
+          "creator": "1121310753874604032",
+          "created": 1793712536342,
+          "consenter_ids": [
+            3
+          ],
+          "leg": 8,
+          "settings": {
+            "seq": 1
+          },
+          "metadata": {
+            "notes": "Your waiver claim was processed successfully!"
+          },
+          "waiver_budget": []
+        },
+        {
+          "transaction_id": "1423214442681729024",
+          "type": "waiver",
+          "status": "complete",
+          "status_updated": 1793779978966,
+          "roster_ids": [
+            4
+          ],
+          "adds": {
+            "11783": 4
+          },
+          "drops": {
+            "12530": 4
+          },
+          "draft_picks": [],
+          "creator": "1121459919724728320",
+          "created": 1793683274483,
+          "consenter_ids": [
+            4
+          ],
+          "leg": 8,
+          "settings": {
+            "seq": 3
+          },
+          "metadata": {
+            "notes": "Your waiver claim was processed successfully!"
+          },
+          "waiver_budget": []
+        },
+        {
+          "transaction_id": "1423214257226395648",
+          "type": "waiver",
+          "status": "complete",
+          "status_updated": 1793779978966,
+          "roster_ids": [
+            4
+          ],
+          "adds": {
+            "6011": 4
+          },
+          "drops": {
+            "4892": 4
+          },
+          "draft_picks": [],
+          "creator": "1121459919724728320",
+          "created": 1793683230266,
+          "consenter_ids": [
+            4
+          ],
+          "leg": 8,
+          "settings": {
+            "seq": 0
+          },
+          "metadata": {
+            "notes": "Your waiver claim was processed successfully!"
+          },
+          "waiver_budget": []
+        },
+        {
+          "transaction_id": "1422778014327926784",
+          "type": "free_agent",
+          "status": "complete",
+          "status_updated": 1793579221855,
+          "roster_ids": [
+            5
+          ],
+          "adds": {
+            "7561": 5
+          },
+          "drops": {
+            "8129": 5
+          },
+          "draft_picks": [],
+          "creator": "1122536845449072640",
+          "created": 1793579221855,
+          "consenter_ids": [
+            5
+          ],
+          "leg": 8,
+          "settings": null,
+          "metadata": null,
+          "waiver_budget": []
+        },
+        {
+          "transaction_id": "1422624259406041088",
+          "type": "free_agent",
+          "status": "complete",
+          "status_updated": 1793542563825,
+          "roster_ids": [
+            4
+          ],
+          "adds": {
+            "6130": 4
+          },
+          "drops": {
+            "9482": 4
+          },
+          "draft_picks": [],
+          "creator": "1121459919724728320",
+          "created": 1793542563825,
+          "consenter_ids": [
+            4
+          ],
+          "leg": 8,
+          "settings": null,
+          "metadata": null,
+          "waiver_budget": []
+        },
+        {
+          "transaction_id": "1421960000024104960",
+          "type": "waiver",
+          "status": "complete",
+          "status_updated": 1793535146352,
+          "roster_ids": [
+            1
+          ],
+          "adds": {
+            "11565": 1
+          },
+          "drops": {
+            "TB": 1
+          },
+          "draft_picks": [],
+          "creator": "1112856951387414528",
+          "created": 1793384192046,
+          "consenter_ids": [
+            1
+          ],
+          "leg": 8,
+          "settings": {
+            "seq": 0
+          },
+          "metadata": {
+            "notes": "Your waiver claim was processed successfully!"
+          },
+          "waiver_budget": []
+        },
+        {
+          "transaction_id": "1421883164271427584",
+          "type": "free_agent",
+          "status": "complete",
+          "status_updated": 1793365872975,
+          "roster_ids": [
+            8
+          ],
+          "adds": {
+            "8135": 8
+          },
+          "drops": null,
+          "draft_picks": [],
+          "creator": "1334313985066958848",
+          "created": 1793365872975,
+          "consenter_ids": [
+            8
+          ],
+          "leg": 8,
+          "settings": null,
+          "metadata": null,
+          "waiver_budget": []
+        },
+        {
+          "transaction_id": "1421883055542480896",
+          "type": "free_agent",
+          "status": "complete",
+          "status_updated": 1793365847052,
+          "roster_ids": [
+            8
+          ],
+          "adds": null,
+          "drops": {
+            "5927": 8
+          },
+          "draft_picks": [],
+          "creator": "1334313985066958848",
+          "created": 1793365847052,
+          "consenter_ids": [
+            8
+          ],
+          "leg": 8,
+          "settings": null,
+          "metadata": null,
+          "waiver_budget": []
+        },
+        {
+          "transaction_id": "1421882974290317312",
+          "type": "free_agent",
+          "status": "complete",
+          "status_updated": 1793365827680,
+          "roster_ids": [
+            7
+          ],
+          "adds": {
+            "11647": 7
+          },
+          "drops": {
+            "11565": 7
+          },
+          "draft_picks": [],
+          "creator": "1123415443601010688",
+          "created": 1793365827680,
+          "consenter_ids": [
+            7
+          ],
+          "leg": 8,
+          "settings": null,
+          "metadata": null,
+          "waiver_budget": []
+        },
+        {
+          "transaction_id": "1421881904101109760",
+          "type": "trade",
+          "status": "complete",
+          "status_updated": 1793365699516,
+          "roster_ids": [
+            7,
+            8
+          ],
+          "adds": {
+            "7543": 8,
+            "8183": 7
+          },
+          "drops": {
+            "7543": 7,
+            "8183": 8
+          },
+          "draft_picks": [
+            {
+              "season": "2027",
+              "round": 10,
+              "roster_id": 7,
+              "previous_owner_id": 7,
+              "owner_id": 8
+            },
+            {
+              "season": "2027",
+              "round": 3,
+              "roster_id": 7,
+              "previous_owner_id": 7,
+              "owner_id": 8
+            },
+            {
+              "season": "2027",
+              "round": 26,
+              "roster_id": 8,
+              "previous_owner_id": 8,
+              "owner_id": 7
+            },
+            {
+              "season": "2027",
+              "round": 27,
+              "roster_id": 8,
+              "previous_owner_id": 8,
+              "owner_id": 7
+            }
+          ],
+          "creator": "1123415443601010688",
+          "created": 1793365572527,
+          "consenter_ids": [
+            7,
+            8
+          ],
+          "leg": 8,
+          "settings": null,
+          "metadata": null,
+          "waiver_budget": []
+        },
+        {
+          "transaction_id": "1421880725015195648",
+          "type": "free_agent",
+          "status": "complete",
+          "status_updated": 1793365291411,
+          "roster_ids": [
+            8
+          ],
+          "adds": {
+            "4147": 8
+          },
+          "drops": null,
+          "draft_picks": [],
+          "creator": "1334313985066958848",
+          "created": 1793365291411,
+          "consenter_ids": [
+            8
+          ],
+          "leg": 8,
+          "settings": null,
+          "metadata": null,
+          "waiver_budget": []
+        },
+        {
+          "transaction_id": "1421591397059903488",
+          "type": "free_agent",
+          "status": "complete",
+          "status_updated": 1793296310251,
+          "roster_ids": [
+            7
+          ],
+          "adds": {
+            "BUF": 7
+          },
+          "drops": null,
+          "draft_picks": [],
+          "creator": "1123415443601010688",
+          "created": 1793296310251,
+          "consenter_ids": [
+            7
+          ],
+          "leg": 8,
+          "settings": null,
+          "metadata": null,
+          "waiver_budget": []
+        },
+        {
+          "transaction_id": "1421591294098108416",
+          "type": "free_agent",
+          "status": "complete",
+          "status_updated": 1793296285704,
+          "roster_ids": [
+            7
+          ],
+          "adds": null,
+          "drops": {
+            "13150": 7
+          },
+          "draft_picks": [],
+          "creator": "1123415443601010688",
+          "created": 1793296285704,
+          "consenter_ids": [
+            7
+          ],
+          "leg": 8,
+          "settings": null,
+          "metadata": null,
+          "waiver_budget": []
+        },
+        {
+          "transaction_id": "1421587483807801344",
+          "type": "free_agent",
+          "status": "complete",
+          "status_updated": 1793295377260,
+          "roster_ids": [
+            1
+          ],
+          "adds": {
+            "SF": 1
+          },
+          "drops": {
+            "11581": 1
+          },
+          "draft_picks": [],
+          "creator": "1112856951387414528",
+          "created": 1793295377260,
+          "consenter_ids": [
+            1
+          ],
+          "leg": 8,
+          "settings": null,
+          "metadata": null,
+          "waiver_budget": []
+        },
+        {
+          "transaction_id": "1421231546324566016",
+          "type": "free_agent",
+          "status": "complete",
+          "status_updated": 1793210515150,
+          "roster_ids": [
+            5
+          ],
+          "adds": {
+            "10955": 5
+          },
+          "drops": {
+            "12713": 5
+          },
+          "draft_picks": [],
+          "creator": "1122536845449072640",
+          "created": 1793210515150,
+          "consenter_ids": [
+            5
+          ],
+          "leg": 8,
+          "settings": null,
+          "metadata": null,
+          "waiver_budget": []
+        },
+        {
+          "transaction_id": "1421230865870024704",
+          "type": "free_agent",
+          "status": "complete",
+          "status_updated": 1793210352918,
+          "roster_ids": [
+            5
+          ],
+          "adds": {
+            "GB": 5
+          },
+          "drops": {
+            "CAR": 5
+          },
+          "draft_picks": [],
+          "creator": "1122536845449072640",
+          "created": 1793210352918,
+          "consenter_ids": [
+            5
+          ],
+          "leg": 8,
+          "settings": null,
+          "metadata": null,
+          "waiver_budget": []
+        },
+        {
+          "transaction_id": "1421230682339868672",
+          "type": "free_agent",
+          "status": "complete",
+          "status_updated": 1793210309161,
+          "roster_ids": [
+            5
+          ],
+          "adds": {
+            "ATL": 5
+          },
+          "drops": {
+            "TEN": 5
+          },
+          "draft_picks": [],
+          "creator": "1122536845449072640",
+          "created": 1793210309161,
+          "consenter_ids": [
+            5
+          ],
+          "leg": 8,
+          "settings": null,
+          "metadata": null,
+          "waiver_budget": []
+        },
+        {
+          "transaction_id": "1421227679801171968",
+          "type": "free_agent",
+          "status": "complete",
+          "status_updated": 1793209593299,
+          "roster_ids": [
+            6
+          ],
+          "adds": {
+            "13305": 6
+          },
+          "drops": {
+            "11575": 6
+          },
+          "draft_picks": [],
+          "creator": "1122570164190466048",
+          "created": 1793209593299,
+          "consenter_ids": [
+            6
+          ],
+          "leg": 8,
+          "settings": null,
+          "metadata": null,
+          "waiver_budget": []
+        },
+        {
+          "transaction_id": "1421223877878550528",
+          "type": "free_agent",
+          "status": "complete",
+          "status_updated": 1793208686851,
+          "roster_ids": [
+            3
+          ],
+          "adds": null,
+          "drops": {
+            "11655": 3
+          },
+          "draft_picks": [],
+          "creator": "1121310753874604032",
+          "created": 1793208686851,
+          "consenter_ids": [
+            3
+          ],
+          "leg": 8,
+          "settings": null,
+          "metadata": null,
+          "waiver_budget": []
+        },
+        {
+          "transaction_id": "1421220060810248192",
+          "type": "free_agent",
+          "status": "complete",
+          "status_updated": 1793207776790,
+          "roster_ids": [
+            1
+          ],
+          "adds": {
+            "DET": 1
+          },
+          "drops": {
+            "11783": 1
+          },
+          "draft_picks": [],
+          "creator": "1112856951387414528",
+          "created": 1793207776790,
+          "consenter_ids": [
+            1
+          ],
+          "leg": 8,
+          "settings": null,
+          "metadata": null,
+          "waiver_budget": []
+        },
+        {
+          "transaction_id": "1421166498738606080",
+          "type": "free_agent",
+          "status": "complete",
+          "status_updated": 1793195006598,
+          "roster_ids": [
+            3
+          ],
+          "adds": null,
+          "drops": {
+            "8142": 3
+          },
+          "draft_picks": [],
+          "creator": "1121310753874604032",
+          "created": 1793195006598,
+          "consenter_ids": [
+            3
+          ],
+          "leg": 8,
+          "settings": null,
+          "metadata": null,
+          "waiver_budget": []
+        },
+        {
+          "transaction_id": "1421135245159202816",
+          "type": "free_agent",
+          "status": "complete",
+          "status_updated": 1793187555164,
+          "roster_ids": [
+            4
+          ],
+          "adds": {
+            "WAS": 4
+          },
+          "drops": null,
+          "draft_picks": [],
+          "creator": "1121459919724728320",
+          "created": 1793187555164,
+          "consenter_ids": [
+            4
+          ],
+          "leg": 8,
+          "settings": null,
+          "metadata": null,
+          "waiver_budget": []
+        }
+      ]
     },
     {
       "week": 9,
-      "transactions": []
+      "transactions": [
+        {
+          "transaction_id": "1423919591821692928",
+          "type": "free_agent",
+          "status": "complete",
+          "status_updated": 1793851395138,
+          "roster_ids": [
+            2
+          ],
+          "adds": {
+            "DAL": 2
+          },
+          "drops": {
+            "PIT": 2
+          },
+          "draft_picks": [],
+          "creator": "1121310424491864064",
+          "created": 1793851395138,
+          "consenter_ids": [
+            2
+          ],
+          "leg": 9,
+          "settings": null,
+          "metadata": null,
+          "waiver_budget": []
+        },
+        {
+          "transaction_id": "1423771626784198656",
+          "type": "free_agent",
+          "status": "complete",
+          "status_updated": 1793816117525,
+          "roster_ids": [
+            6
+          ],
+          "adds": {
+            "5119": 6
+          },
+          "drops": {
+            "LV": 6
+          },
+          "draft_picks": [],
+          "creator": "1122570164190466048",
+          "created": 1793816117525,
+          "consenter_ids": [
+            6
+          ],
+          "leg": 9,
+          "settings": null,
+          "metadata": null,
+          "waiver_budget": []
+        },
+        {
+          "transaction_id": "1423770634642583552",
+          "type": "free_agent",
+          "status": "complete",
+          "status_updated": 1793815880979,
+          "roster_ids": [
+            1
+          ],
+          "adds": {
+            "11625": 1
+          },
+          "drops": {
+            "5012": 1
+          },
+          "draft_picks": [],
+          "creator": "1112856951387414528",
+          "created": 1793815880979,
+          "consenter_ids": [
+            1
+          ],
+          "leg": 9,
+          "settings": null,
+          "metadata": null,
+          "waiver_budget": []
+        },
+        {
+          "transaction_id": "1423768647129657344",
+          "type": "free_agent",
+          "status": "complete",
+          "status_updated": 1793815407119,
+          "roster_ids": [
+            1
+          ],
+          "adds": {
+            "5189": 1
+          },
+          "drops": {
+            "12711": 1
+          },
+          "draft_picks": [],
+          "creator": "1112856951387414528",
+          "created": 1793815407119,
+          "consenter_ids": [
+            1
+          ],
+          "leg": 9,
+          "settings": null,
+          "metadata": null,
+          "waiver_budget": []
+        },
+        {
+          "transaction_id": "1423765703634227200",
+          "type": "free_agent",
+          "status": "complete",
+          "status_updated": 1793814705336,
+          "roster_ids": [
+            4
+          ],
+          "adds": {
+            "NO": 4
+          },
+          "drops": {
+            "WAS": 4
+          },
+          "draft_picks": [],
+          "creator": "1121459919724728320",
+          "created": 1793814705336,
+          "consenter_ids": [
+            4
+          ],
+          "leg": 9,
+          "settings": null,
+          "metadata": null,
+          "waiver_budget": []
+        },
+        {
+          "transaction_id": "1423729992088510464",
+          "type": "free_agent",
+          "status": "complete",
+          "status_updated": 1793806191039,
+          "roster_ids": [
+            7
+          ],
+          "adds": {
+            "11729": 7
+          },
+          "drops": null,
+          "draft_picks": [],
+          "creator": "1123415443601010688",
+          "created": 1793806191039,
+          "consenter_ids": [
+            7
+          ],
+          "leg": 9,
+          "settings": null,
+          "metadata": null,
+          "waiver_budget": []
+        }
+      ]
     },
     {
       "week": 10,
