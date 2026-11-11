@@ -14,15 +14,33 @@
 - Prefer separate commands or multiline script blocks. PowerShell 7 supports `&&` and `||`, but Windows PowerShell 5.1 does not; do not confuse this with Bash compatibility. A semicolon does not stop execution when the preceding command fails.
 - Use PowerShell cmdlets for filesystem and HTTP operations, such as `Get-ChildItem`, `Get-Content`, `Select-Object`, `Invoke-RestMethod`, and `Invoke-WebRequest`. `rg` is appropriate for code searches when installed. Avoid ambiguous aliases such as `curl`, `wget`, `ls`, and `cat`.
 - Use single-quoted strings for literal paths, JSON, and regex patterns; use double quotes only when interpolation is intended. Backslash does not escape a quote in PowerShell. Invoke a quoted executable path with the call operator: `& 'C:\Program Files\Example\tool.exe'`.
-- Use `${name}` before a literal colon in an interpolated string, and `$($object.Property)` for interpolated property access. PowerShell variable names are case-insensitive; do not assign to automatic variables such as `$PID` or `$Host`.
+- Use `${name}` before a literal colon in an interpolated string, and `$($object.Property)` for interpolated property access. PowerShell variable names are case-insensitive; do not assign to automatic variables such as `$PID`, `$Host`, or `$HOME`. Use names such as `$homeMatch` instead.
 - Prefer argument arrays and splatting over command strings, `Invoke-Expression`, or fragile backtick line continuations. Pass native executable arguments separately instead of assembling one command string.
 - For multiline literal text, use a single-quoted here-string: put `@'` on its own opening line and `'@` at the start of its own closing line. Do not use Bash heredoc syntax.
 - Parse and generate JSON with `ConvertFrom-Json` and `ConvertTo-Json`; specify a sufficient serialization `-Depth` for nested data. Use `Get-Content -Raw` to read a complete JSON document. Avoid hand-escaped JSON passed through multiple shells.
 - For dynamic JSON property names, use `$object.PSObject.Properties[$key].Value`, or parse with `ConvertFrom-Json -AsHashtable` and index with `[$key]`. Wrap pipeline results in `@(...)` when later code requires a consistently shaped array.
+- For `Sort-Object`, pass all properties to `-Property` and put `-Descending` once after the complete list: `Sort-Object -Property wins,points_for -Descending`. Never insert `-Descending` between comma-separated properties. For mixed directions, use per-property hashtables: `Sort-Object -Property @{ Expression = 'wins'; Descending = $true }, @{ Expression = 'points_for'; Descending = $false }`.
+- Do not pipe directly after a `foreach` statement. Assign its output first, then pipe the resulting variable.
 - Use `$ErrorActionPreference = 'Stop'` in scripts that must stop on PowerShell errors. Check `$LASTEXITCODE` immediately after native commands such as `dotnet` or `git`; the preference alone does not reliably turn native nonzero exits into terminating errors.
 - Specify encoding when writing text artifacts, normally `-Encoding utf8`. Do not assume Windows PowerShell 5.1 has the same encoding defaults or cmdlet parameters as PowerShell 7.
 
 ## Validation
+
+- Before running a generated inline command with loops, calculated properties, multi-key sorts, multiple statements, or complex quoting, parse its exact complete text with `Parser.ParseInput`. Fix and recheck any errors before executing that same command. For example:
+
+```powershell
+$commandText = @'
+$rows | Sort-Object -Property wins,points_for -Descending
+'@
+$parseTokens = $null
+$parseErrors = $null
+[System.Management.Automation.Language.Parser]::ParseInput(
+    $commandText, [ref]$parseTokens, [ref]$parseErrors
+) | Out-Null
+if ($parseErrors.Count -gt 0) {
+    throw ($parseErrors.Message -join [Environment]::NewLine)
+}
+```
 
 - Before running a newly written or changed `.ps1` script, check syntax with the installed PowerShell parser. Then run the smallest safe behavior check; parsing alone does not validate runtime behavior or native argument quoting.
 

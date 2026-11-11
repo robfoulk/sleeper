@@ -25,6 +25,11 @@
       "season": 2026,
       "week": 8,
       "sentience_level": 1
+    },
+    {
+      "season": 2026,
+      "week": 9,
+      "sentience_level": 2
     }
   ]
 }

@@ -78,6 +78,31 @@ public class PrivacyGuardTests
             "Published output must use first names only.");
     }
 
+    private static readonly Regex FamilyRelationshipFraming = new(
+        @"\b(father|fathers|son|sons|brother|brothers|cousin|cousins|nephew|nephews|" +
+        @"uncle|uncles|sibling|siblings|dad|dads|family|families|generational|" +
+        @"old guard|young guns)\b",
+        RegexOptions.IgnoreCase);
+
+    private static string[] FindFamilyRelationshipFraming(string text)
+    {
+        // The NFL player's full name also appears hyphenated in source URLs.
+        text = text.Replace("Kirk Cousins", "Kirk C.", StringComparison.OrdinalIgnoreCase)
+            .Replace("Kirk-Cousins", "Kirk-C.", StringComparison.OrdinalIgnoreCase);
+
+        return FamilyRelationshipFraming.Matches(text).Select(m => m.Value).Distinct().ToArray();
+    }
+
+    [Theory]
+    [InlineData("Kirk Cousins is joining Minnesota.", false)]
+    [InlineData("[Minnesota](https://example.com/kirk-cousins-trade)", false)]
+    [InlineData("Kirk Cousins and his cousins watched the game.", true)]
+    [InlineData("Two managers are cousins.", true)]
+    public void FamilyRelationshipFramingDistinguishesThePlayer(string text, bool expected)
+    {
+        Assert.Equal(expected, FindFamilyRelationshipFraming(text).Length > 0);
+    }
+
     [Fact]
     public void PublishedMarkdownContainsNoFamilyRelationshipFraming()
     {
@@ -85,12 +110,6 @@ public class PrivacyGuardTests
         // Singular forms are included: "Rob's son" and "Jake's cousin" are exactly
         // the framing the mandate forbids. "Old Guard vs Young Guns" was the
         // generational (Gen 1 vs Gen 2) hook label, not a football descriptor.
-        var framing = new Regex(
-            @"\b(father|fathers|son|sons|brother|brothers|cousin|cousins|nephew|nephews|" +
-            @"uncle|uncles|sibling|siblings|dad|dads|family|families|generational|" +
-            @"old guard|young guns)\b",
-            RegexOptions.IgnoreCase);
-
         var root = RecapPaths.WorkspaceRoot;
         var recapDir = Path.Combine(root, "recaps");
         if (!Directory.Exists(recapDir)) return;
@@ -99,11 +118,8 @@ public class PrivacyGuardTests
         foreach (var file in Directory.EnumerateFiles(recapDir, "*.md", SearchOption.AllDirectories))
         {
             var text = File.ReadAllText(file);
-            // "Kirk Cousins" is an NFL player, not a relationship.
-            text = text.Replace("Kirk Cousins", "Kirk C.", StringComparison.OrdinalIgnoreCase);
-
-            var hits = framing.Matches(text).Select(m => m.Value).Distinct().ToList();
-            if (hits.Count > 0)
+            var hits = FindFamilyRelationshipFraming(text);
+            if (hits.Length > 0)
                 offenders.Add($"{Path.GetRelativePath(root, file)} ({string.Join(", ", hits)})");
         }
 
