@@ -52,6 +52,26 @@ public class LeagueDataTests
         snapshot.TryGetProperty("champion", out _).Should().BeFalse();
     }
 
+    [Fact]
+    public void LatestEditionScoresMatchTheCompletedWeekRosterSnapshot()
+    {
+        var edition = SiteDataBuilder.LoadWeeklyEdition(Path.Combine(RecapPaths.WorkspaceRoot, "recaps"))!.Value;
+        var season = edition.GetProperty("season").GetInt32();
+        var week = edition.GetProperty("completed_week").GetInt32();
+        var path = Path.Combine(RecapPaths.WorkspaceRoot, "datafiles", season.ToString(), $"week-{week:D2}.json");
+        using var rosterSnapshot = JsonDocument.Parse(File.ReadAllText(path));
+        var expectedScores = rosterSnapshot.RootElement.GetProperty("teams").EnumerateArray()
+            .ToDictionary(team => team.GetProperty("roster_id").GetInt32(), team => team.GetProperty("points").GetDecimal());
+        var results = edition.GetProperty("weeks").EnumerateArray()
+            .Single(result => result.GetProperty("week").GetInt32() == week);
+        var sides = results.GetProperty("games").EnumerateArray()
+            .SelectMany(game => new[] { game.GetProperty("home"), game.GetProperty("away") }).ToList();
+
+        sides.Should().HaveCount(expectedScores.Count);
+        foreach (var side in sides)
+            side.GetProperty("points").GetDecimal().Should().Be(expectedScores[side.GetProperty("franchise_id").GetInt32()]);
+    }
+
     [Theory]
     [InlineData(0, false)]
     [InlineData(6, false)]

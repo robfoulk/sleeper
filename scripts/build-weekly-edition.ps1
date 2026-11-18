@@ -101,6 +101,16 @@ function Get-SleeperJson([string]$Path) {
     return ,((Invoke-WebRequest "https://api.sleeper.app/v1/$Path").Content | ConvertFrom-Json -AsHashtable)
 }
 
+function ConvertTo-FantasyPoints([object]$Value) {
+    if ($Value -is [double] -or $Value -is [float]) {
+        return [decimal]::Parse(
+            $Value.ToString('R', [System.Globalization.CultureInfo]::InvariantCulture),
+            [System.Globalization.NumberStyles]::Float,
+            [System.Globalization.CultureInfo]::InvariantCulture)
+    }
+    return [decimal]$Value
+}
+
 $league = Get-SleeperJson "league/$LeagueId"
 $state = Get-SleeperJson 'state/nfl'
 if ([int]$league.season -ne $Season) { throw 'League season does not match the requested season.' }
@@ -185,13 +195,13 @@ for ($weekNumber = 1; $weekNumber -le $Week; $weekNumber++) {
         foreach ($matchup in $pair.Group) {
             if ($null -eq $matchup.points) { throw 'Missing final score.' }
             $team = $teams[[int]$matchup.roster_id]
-            $points = if ($null -ne $matchup.custom_points) { [decimal]$matchup.custom_points } else { [decimal]$matchup.points }
+            $points = if ($null -ne $matchup.custom_points) { ConvertTo-FantasyPoints $matchup.custom_points } else { ConvertTo-FantasyPoints $matchup.points }
             $sides += [ordered]@{
                 franchise_id = $team.franchise_id
                 owner_name = $team.owner_name
                 team_name = $team.team_name
                 points = $points
-                players = @($matchup.players | Where-Object { $_ -ne '0' } | ForEach-Object { Get-PublicPlayer $_ ([decimal]$matchup.players_points[$_]) ($_ -in $matchup.starters) })
+                players = @($matchup.players | Where-Object { $_ -ne '0' } | ForEach-Object { Get-PublicPlayer $_ (ConvertTo-FantasyPoints $matchup.players_points[$_]) ($_ -in $matchup.starters) })
             }
         }
         for ($sideIndex = 0; $sideIndex -lt 2; $sideIndex++) {

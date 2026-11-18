@@ -431,6 +431,8 @@ uses weekly matchup lineups for historical points, and captures current rosters,
 team names, provisional upcoming starters, full completed trade packages, and Sleeper
 availability designations. Transactions retain their actual completion dates; Week 1's
 feed can include offseason activity. Previous name snapshots are read, never rewritten.
+Matchup and player scores are converted to decimals without binary floating-point
+artifacts before calculating standings and margins.
 Platform tags do not establish injury onset. Add dated official reporting to the articles.
 
 File the final recap as `week-01.md` and the separate next-week preview as

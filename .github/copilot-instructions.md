@@ -4,6 +4,7 @@
 
 - This workspace runs on Windows. The verified repository location is `E:\dev\sleeper`; use workspace-relative paths rather than hard-coding that location.
 - The agent terminal uses **PowerShell Core (`pwsh`)**, verified as **7.6.6** on 2026-09-14. It is not Bash, cmd.exe, or Windows PowerShell 5.1 (`powershell.exe`).
+- Invoke Python with the Windows launcher `py`, not `python`.
 - Write terminal commands and `.ps1` scripts for PowerShell 7 on Windows unless a different target is explicitly requested. Do not assume WSL, Git Bash, or Unix utilities are installed.
 - Use the existing PowerShell session directly. Avoid nested `pwsh -Command` or `powershell -Command` invocations, which introduce another quoting and interpolation layer. When launching a script in a separate process is necessary, prefer `pwsh -NoProfile -File ./scripts/example.ps1`.
 
