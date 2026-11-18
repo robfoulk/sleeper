@@ -23,7 +23,7 @@ Eric can send C.J. Stroud against Indianapolis on Thursday and Joe Burrow to Was
 
 ## Devin vs Jake: Four Byes Meet Two Out Tags
 
-**Amon Another level (6-4) vs Crazy J's Bed & Breakfast (1-9).** Devin has the better record and three more wins; Jake gets a real opening from Devin's bye list.
+**Amon Another level (6-4) vs Crazy J's Bed & Breakfast (1-9).** Devin has the better record and five more wins; Jake gets a real opening from Devin's bye list.
 
 Four of Devin's current starters are attached to Atlanta, Los Angeles, or Seattle: Bijan Robinson, Kyren Williams, Jaxon Smith-Njigba, and Jadarian Price. Dak Prescott hosts Tennessee, Amon-Ra St. Brown hosts Tampa Bay, and George Kittle gets Minnesota.
 
